@@ -1,0 +1,13 @@
+.card {
+    position: relative;
+    padding: 0;
+}
+
+.card p {
+    color: black;
+    position: absolute;
+    top: 10px;
+    left: 55px;
+    font-size: 34px;
+    font-weight: bold;
+}
