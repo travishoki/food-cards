@@ -1,16 +1,24 @@
 import './Card.css'
+import { foods } from './food.ts'
+import type { Food } from './types'
 
 type CardProps = {
-  image: string
-  width?: string
-  height?: string
+  id: number
 }
 
-function Card({ image, width = '750px', height = '1050px' }: CardProps) {
+const width = '750px'
+const height = '1050px'
+
+
+function Card({id}: CardProps) {
+  const food = foods.find((food: Food) => food.id === id)
+
+  if (!food) return null
+
   return (
     <div className="card">
-      <p>French Bread</p>
-      <img src={image} width={width} height={height} />
+      <p>{food.name}</p>
+      <img src={food.image} width={width} height={height} />
     </div>
   )
 }
