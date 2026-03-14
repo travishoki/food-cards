@@ -1,10 +1,10 @@
 import type { Food } from "./types";
-import sugarFatSalt1 from './assets/1-red.png';
-import fatsOils2 from './assets/2-yellow.png';
-import protien3 from './assets/3-orange.png';
-import dairy4 from './assets/4-blue.png';
-import grains5 from './assets/5-purple.png';
-import vegitablesFruit6 from './assets/6-green.png';
+import sugarFatSalt1 from './assets/backgrounds/1-red.png';
+import fatsOils2 from './assets/backgrounds/2-yellow.png';
+import protien3 from './assets/backgrounds/3-orange.png';
+import dairy4 from './assets/backgrounds/4-blue.png';
+import grains5 from './assets/backgrounds/5-purple.png';
+import vegitablesFruit6 from './assets/backgrounds/6-green.png';
 
 export const foods: Food[] = [
     {
