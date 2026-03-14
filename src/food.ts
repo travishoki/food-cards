@@ -1,16 +1,40 @@
 import type { Food } from "./types";
-import background1 from './assets/1-red.png'
-import background2 from './assets/2-yellow.png'
+import sugarFatSalt1 from './assets/1-red.png';
+import fatsOils2 from './assets/2-yellow.png';
+import protien3 from './assets/3-orange.png';
+import dairy4 from './assets/4-blue.png';
+import grains5 from './assets/5-purple.png';
+import vegitablesFruit6 from './assets/6-green.png';
 
 export const foods: Food[] = [
     {
-        "id": 1,
-        "name": "French Bread",
-        "image": background1
+        id: 1,
+        name: "Donut",
+        image: sugarFatSalt1
     },
     {
-        "id": 2,
-        "name": "Peanut Butter & Jelly",
-        "image": background2
+        id: 2,
+        name: "Texas Toast",
+        image: fatsOils2
+    },
+    {
+        id: 3,
+        name: "Peanut Butter",
+        image: protien3
+    },
+    {
+        id: 4,
+        name: "Milk",
+        image: dairy4
+    },
+    {
+        id: 5,
+        name: "Mashed Potatoes",
+        image: grains5
+    },
+    {
+        id: 6,
+        name: "Grapes",
+        image: vegitablesFruit6
     }
 ]

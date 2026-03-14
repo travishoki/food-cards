@@ -2,12 +2,13 @@ import './App.css'
 import Card from './Card'
 
 
+const foodList = [1, 2, 3, 4, 5, 6]
+
 function App() {
   return (
     <>
       <h1>Food Cards</h1>
-      <Card id={1}/>
-      <Card id={2}/>
+      {foodList.map((id) => <Card id={id}/>)}
     </>
   )
 }
