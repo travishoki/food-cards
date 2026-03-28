@@ -3,11 +3,16 @@
     padding: 0;
 }
 
-.card p {
+.card p.title {
     color: black;
     position: absolute;
     top: 10px;
     left: 55px;
     font-size: 34px;
     font-weight: bold;
+}
+
+.foodImg {
+    position: absolute;
+    top: 112px;
 }
