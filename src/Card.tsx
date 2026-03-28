@@ -7,6 +7,9 @@ type CardProps = {
   id: number
 }
 
+const iconWidth = 54;
+const iconHeight = iconWidth;
+
 function Card({id}: CardProps) {
   const food = foods.find((food: Food) => food.id === id)
 
@@ -17,6 +20,7 @@ function Card({id}: CardProps) {
   return (
     <div className="card">
       <p className="title">{food.name}</p>
+      <img className="iconImg" src={food.foodGroup.icon} width={iconWidth} height={iconHeight} />
       <img className="foodImg" src={food.image} style={{left: `${foodXPos}px`}} width={foodWidth} height={foodHeight} />
       <img src={food.background} width={backgroundWidth} height={backgroundHeight} />
     </div>
