@@ -1,24 +1,24 @@
-import type { Food, FoodGroup } from "./types";
+import type { Food, FoodGroup } from "../../types";
 
 // Backgrounds
-import sugarFatSalt1 from './assets/backgrounds/1-red.png';
-import fatsOils2 from './assets/backgrounds/2-yellow.png';
-import protien3 from './assets/backgrounds/3-orange.png';
-import dairy4 from './assets/backgrounds/4-blue.png';
-import grains5 from './assets/backgrounds/5-purple.png';
-import vegitablesFruit6 from './assets/backgrounds/6-green.png';
+import sugarFatSalt1 from '../backgrounds/1-red.png';
+import fatsOils2 from '../backgrounds/2-yellow.png';
+import protien3 from '../backgrounds/3-orange.png';
+import dairy4 from '../backgrounds/4-blue.png';
+import grains5 from '../backgrounds/5-purple.png';
+import vegitablesFruit6 from '../backgrounds/6-green.png';
 
 // Foods
-import glazedDonut from './assets/image/glazed-donut.jpg';
-import grapes from './assets/image/grapes.jpg';
-import mashedPotatoes from './assets/image/mashed-potatoes.jpg';
-import milk from './assets/image/milk.jpg';
-import peanutButter from './assets/image/peanut-butter.jpg';
-import texasToast from './assets/image/texas-toast.jpg';
+import glazedDonut from '../image/glazed-donut.jpg';
+import grapes from '../image/grapes.jpg';
+import mashedPotatoes from '../image/mashed-potatoes.jpg';
+import milk from '../image/milk.jpg';
+import peanutButter from '../image/peanut-butter.jpg';
+import texasToast from '../image/texas-toast.jpg';
 
 // Icons
-import fruit from './assets/icons/fruit.png';
-import dairy from './assets/icons/dairy.png';
+import fruit from '../icons/fruit.png';
+import dairy from '../icons/dairy.png';
 
 const FruitAndVegi: FoodGroup = {
     icon: fruit

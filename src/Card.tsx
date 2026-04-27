@@ -1,6 +1,6 @@
 import { backgroundHeight, backgroundWidth, foodHeight, foodWidth } from './Card.const.ts'
 import './Card.css'
-import { foods } from './food.ts'
+import { foods } from './assets/foods/food.ts'
 import type { Food } from './types'
 
 type CardProps = {
