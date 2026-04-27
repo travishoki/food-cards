@@ -9,12 +9,12 @@ import grains5 from './assets/backgrounds/5-purple.png';
 import vegitablesFruit6 from './assets/backgrounds/6-green.png';
 
 // Foods
-import glazedDonut from './assets/food/glazed-donut.jpg';
-import grapes from './assets/food/grapes.jpg';
-import mashedPotatoes from './assets/food/mashed-potatoes.jpg';
-import milk from './assets/food/milk.jpg';
-import peanutButter from './assets/food/peanut-butter.jpg';
-import texasToast from './assets/food/texas-toast.jpg';
+import glazedDonut from './assets/image/glazed-donut.jpg';
+import grapes from './assets/image/grapes.jpg';
+import mashedPotatoes from './assets/image/mashed-potatoes.jpg';
+import milk from './assets/image/milk.jpg';
+import peanutButter from './assets/image/peanut-butter.jpg';
+import texasToast from './assets/image/texas-toast.jpg';
 
 // Icons
 import fruit from './assets/icons/fruit.png';
