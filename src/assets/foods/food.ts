@@ -1,73 +1,14 @@
-import type { Food, FoodGroup } from "../../types";
-
-// Backgrounds
-import sugarFatSalt1 from '../backgrounds/1-red.png';
-import fatsOils2 from '../backgrounds/2-yellow.png';
-import protien3 from '../backgrounds/3-orange.png';
-import dairy4 from '../backgrounds/4-blue.png';
-import grains5 from '../backgrounds/5-purple.png';
-import vegitablesFruit6 from '../backgrounds/6-green.png';
-
-// Foods
-import glazedDonut from '../image/glazed-donut.jpg';
-import grapes from '../image/grapes.jpg';
-import mashedPotatoes from '../image/mashed-potatoes.jpg';
-import milk from '../image/milk.jpg';
-import peanutButter from '../image/peanut-butter.jpg';
-import texasToast from '../image/texas-toast.jpg';
-
-// Icons
-import fruit from '../icons/fruit.png';
-import dairy from '../icons/dairy.png';
-
-const FruitAndVegi: FoodGroup = {
-    icon: fruit
-}
-const Dairy: FoodGroup = {
-    icon: dairy
-}
+import type { Food } from "../../types";
+import { fruitAndVegiFoods } from "./fruit-and-vegi";
+import { fatsOilsFoods } from "./fats-oils";
+import { protienFoods } from "./protien";
+import { dairyFoods } from "./dairy";
+import { grainsFoods } from "./grains";
 
 export const foods: Food[] = [
-    {
-        id: 1,
-        name: "Donut",
-        background: sugarFatSalt1,
-        foodGroup: FruitAndVegi,
-        image: glazedDonut,
-    },
-    {
-        id: 2,
-        name: "Texas Toast",
-        background: fatsOils2,
-        foodGroup: FruitAndVegi,
-        image: texasToast,
-    },
-    {
-        id: 3,
-        name: "Peanut Butter",
-        background: protien3,
-        foodGroup: FruitAndVegi,
-        image: peanutButter,
-    },
-    {
-        id: 4,
-        name: "Milk",
-        background: dairy4,
-        foodGroup: Dairy,
-        image: milk,
-    },
-    {
-        id: 5,
-        name: "Mashed Potatoes",
-        background: grains5,
-        foodGroup: FruitAndVegi,
-        image: mashedPotatoes,
-    },
-    {
-        id: 6,
-        name: "Grapes",
-        background: vegitablesFruit6,
-        foodGroup: FruitAndVegi,
-        image: grapes,
-    }
+    ...fruitAndVegiFoods,
+    ...fatsOilsFoods,
+    ...protienFoods,
+    ...dairyFoods,
+    ...grainsFoods,
 ]
