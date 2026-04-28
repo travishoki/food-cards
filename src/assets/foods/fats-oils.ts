@@ -4,7 +4,7 @@ import type { Food, FoodGroup } from "../../types";
 import fatsOils2 from "../backgrounds/2-yellow.png";
 
 // Foods
-import texasToast from "../image/texas-toast.jpg";
+import texasToast from "../image/fats-oils/texas-toast.jpg";
 
 // Icons
 import fruit from "../icons/fruit.png";

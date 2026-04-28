@@ -4,7 +4,7 @@ import type { Food, FoodGroup } from "../../types";
 import protien3 from "../backgrounds/3-orange.png";
 
 // Foods
-import peanutButter from "../image/peanut-butter.jpg";
+import peanutButter from "../image/protien/peanut-butter.jpg";
 
 // Icons
 import fruit from "../icons/fruit.png";

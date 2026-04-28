@@ -4,7 +4,7 @@ import type { Food, FoodGroup } from "../../types";
 import dairy4 from "../backgrounds/4-blue.png";
 
 // Foods
-import milk from "../image/milk.jpg";
+import milk from "../image/dairy/milk.jpg";
 
 // Icons
 import dairy from "../icons/dairy.png";

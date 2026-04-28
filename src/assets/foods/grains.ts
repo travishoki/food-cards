@@ -4,7 +4,7 @@ import type { Food, FoodGroup } from "../../types";
 import grains5 from "../backgrounds/5-purple.png";
 
 // Foods
-import mashedPotatoes from "../image/mashed-potatoes.jpg";
+import mashedPotatoes from "../image/grains/mashed-potatoes.jpg";
 
 // Icons
 import fruit from "../icons/fruit.png";
