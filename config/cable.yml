@@ -1,0 +1,10 @@
+# frozen_string_literal: true
+
+development:
+  adapter: async
+
+test:
+  adapter: test
+
+production:
+  adapter: async

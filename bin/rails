@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+set -euo pipefail
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# shellcheck source=bin/_path_with_homebrew_ruby.sh
+source "${SCRIPT_DIR}/_path_with_homebrew_ruby.sh"
+exec ruby "${SCRIPT_DIR}/_rails_command.rb" "$@"

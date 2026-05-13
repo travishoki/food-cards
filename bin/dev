@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+set -euo pipefail
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# shellcheck source=bin/_path_with_homebrew_ruby.sh
+source "${SCRIPT_DIR}/_path_with_homebrew_ruby.sh"
+cd "${SCRIPT_DIR}/.."
+
+if [[ ! -d frontend/node_modules ]]; then
+  echo "Installing frontend dependencies…"
+  (cd frontend && npm install)
+fi
+
+exec bundle exec foreman start -f Procfile.dev "$@"

@@ -1,0 +1,7 @@
+<h1>Food Cards</h1>
+
+<div class="food-cards">
+  <% @food_ids.each do |id| %>
+    <%= render "food_card", id: id %>
+  <% end %>
+</div>

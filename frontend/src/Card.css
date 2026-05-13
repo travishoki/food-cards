@@ -1,0 +1,36 @@
+.card {
+  position: relative;
+  padding: 0;
+  display: inline-block;
+  vertical-align: top;
+  margin: 1rem;
+}
+
+.card p.title {
+  color: black;
+  position: absolute;
+  top: 10px;
+  left: 55px;
+  font-size: 34px;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.foodImg {
+  position: absolute;
+  top: 112px;
+  z-index: 1;
+}
+
+.iconImg {
+  position: absolute;
+  top: 30px;
+  right: 45px;
+  z-index: 2;
+}
+
+.card > img:last-child {
+  display: block;
+  position: relative;
+  z-index: 0;
+}

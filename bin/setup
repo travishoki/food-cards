@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+set -euo pipefail
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# shellcheck source=bin/_path_with_homebrew_ruby.sh
+source "${SCRIPT_DIR}/_path_with_homebrew_ruby.sh"
+cd "${SCRIPT_DIR}/.."
+
+if ! command -v bundle >/dev/null 2>&1; then
+  echo "bundle: command not found. Install Ruby (e.g. brew install ruby) and run again." >&2
+  exit 1
+fi
+
+if ! bundle -v >/dev/null 2>&1; then
+  echo "bundle failed to run (often a broken asdf shim). Tried prepending Homebrew Ruby; either:" >&2
+  echo "  - brew install ruby   # then run bin/setup again" >&2
+  echo "  - or remove ~/.asdf/shims from PATH / reinstall asdf" >&2
+  exit 1
+fi
+
+bundle check || bundle install
+bin/rails db:prepare
+
+echo "Ready. Start with: bin/rails server"
