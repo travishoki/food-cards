@@ -13,7 +13,7 @@ const SugarFatSalt: FoodGroup = {
     icon: fruit
 }
 
-export const sugarFatSaltFoods: Food[] = [
+export const sugarFatSaltList: Food[] = [
     {
         id: 1,
         name: "Donut",

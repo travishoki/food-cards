@@ -13,7 +13,7 @@ const FatsOils: FoodGroup = {
     icon: fruit
 }
 
-export const fatsOilsFoods: Food[] = [
+export const fatsOilsList: Food[] = [
     {
         id: 2,
         name: "Texas Toast",

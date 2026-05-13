@@ -13,7 +13,7 @@ const Protien: FoodGroup = {
     icon: fruit
 }
 
-export const protienFoods: Food[] = [
+export const protienList: Food[] = [
     {
         id: 3,
         name: "Peanut Butter",

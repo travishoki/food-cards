@@ -13,7 +13,7 @@ const FruitAndVegi: FoodGroup = {
     icon: fruit
 }
 
-export const fruitAndVegiFoods: Food[] = [
+export const fruitAndVegiList: Food[] = [
     {
         id: 6,
         name: "Grapes",

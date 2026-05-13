@@ -13,7 +13,7 @@ const Grains: FoodGroup = {
     icon: fruit
 }
 
-export const grainsFoods: Food[] = [
+export const grainsList: Food[] = [
     {
         id: 5,
         name: "Mashed Potatoes",

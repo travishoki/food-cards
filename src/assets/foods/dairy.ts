@@ -13,7 +13,7 @@ const Dairy: FoodGroup = {
     icon: dairy
 }
 
-export const dairyFoods: Food[] = [
+export const dairyList: Food[] = [
     {
         id: 4,
         name: "Milk",
