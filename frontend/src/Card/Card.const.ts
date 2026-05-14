@@ -17,3 +17,4 @@ export const ICON_PADDING = 2
 
 // Title
 export const TITLE_TOP =  30
+export const TITLE_FONT_SIZE = 48

@@ -1,5 +1,5 @@
-import { getDimensions, getTop } from "./Graphic.helpers"
 import { getCenteredLeft } from "../Card.helpers"
+import { GRAPHIC_HEIGHT, GRAPHIC_TOP, GRAPHIC_WIDTH } from "../Card.const"
 import "./Graphic.css"
 
 type GraphicProps = {
@@ -11,9 +11,11 @@ type GraphicProps = {
 
 
 export const Graphic = ({cardRatio, cardW, name, src}: GraphicProps) => {
-    const { height, width } = getDimensions(cardRatio)
+    const width = GRAPHIC_WIDTH * cardRatio
+    const height = GRAPHIC_HEIGHT * cardRatio
+
     const left = getCenteredLeft(width, cardW)
-    const top = getTop(cardRatio)
+    const top = GRAPHIC_TOP * cardRatio
 
     return (
         <img

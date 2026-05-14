@@ -1,6 +1,6 @@
-import { getIconDimensions, getPadding, getTop } from "./Icon.helpers"
-import "./Icon.css"
 import { getSidePadding } from "../Card.helpers"
+import { ICON_PADDING, ICON_SIZE, ICON_TOP } from "../Card.const"
+import "./Icon.css"
 
 type IconProps = {
     cardRatio: number
@@ -8,9 +8,11 @@ type IconProps = {
 }
 
 export const Icon = ({cardRatio, src}: IconProps) => {
-    const { height, width } = getIconDimensions(cardRatio)
-    const top = getTop(cardRatio) + getPadding(cardRatio)
-    const right = getSidePadding(cardRatio) + getPadding(cardRatio);
+    const width = ICON_SIZE * cardRatio
+    const height = width
+    const padding = ICON_PADDING * cardRatio
+    const top = ICON_TOP * cardRatio
+    const right = getSidePadding(cardRatio) + padding;
 
     return (
         <img

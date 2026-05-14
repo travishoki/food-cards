@@ -1,5 +1,5 @@
 import { getSidePadding } from "../Card.helpers"
-import { getTop } from "./Title.helpers"
+import { TITLE_FONT_SIZE, TITLE_TOP } from "../Card.const"
 import "./Title.css"
 
 type TitleProps = {
@@ -8,13 +8,15 @@ type TitleProps = {
 }
 
 export const Title = ({cardRatio, name}: TitleProps) => {
-    const top = getTop(cardRatio);
+    const top = TITLE_TOP * cardRatio
     const left = getSidePadding(cardRatio);
+    const fontSize = TITLE_FONT_SIZE * cardRatio;
 
     return (
         <p
             className="card-title"
             style={{
+                fontSize: `${fontSize}px`,
                 left: `${left}px`,
                 top: `${top}px`
             }}
