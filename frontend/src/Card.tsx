@@ -1,5 +1,6 @@
 import { backgroundWidth, backgroundHeight, foodWidth, foodHeight } from "./Card.const"
 import "./Card.css"
+import { InfoBar } from "./InfoBar"
 import type { Food } from "./types"
 
 const iconWidth = 54
@@ -30,6 +31,9 @@ export default function Card({ food }: CardProps) {
         height={foodHeight}
         alt={food.name}
       />
+      {food.info && (
+      <InfoBar text={food.info} />
+      )}
       <img
         src={food.background_url}
         width={backgroundWidth}

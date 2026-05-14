@@ -14,7 +14,8 @@ module Api
           category_label: food.category_label,
           background_url: "#{base}#{h.asset_path(food.background)}",
           icon_url: "#{base}#{h.asset_path(food.icon)}",
-          image_url: "#{base}#{h.asset_path(food.image)}"
+          image_url: "#{base}#{h.asset_path(food.image)}",
+          info: food.info
         }
       end
 

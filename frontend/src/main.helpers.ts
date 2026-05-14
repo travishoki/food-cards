@@ -3,6 +3,7 @@ import { Food } from "./types"
 
 export function normalizeFoods(raw: unknown): Food[] {
     if (!Array.isArray(raw)) return []
+
     return raw.map((row) => {
       const o = row as Record<string, unknown>
       return {
@@ -13,6 +14,7 @@ export function normalizeFoods(raw: unknown): Food[] {
         background_url: String(o.background_url ?? o.backgroundUrl ?? ""),
         icon_url: String(o.icon_url ?? o.iconUrl ?? ""),
         image_url: String(o.image_url ?? o.imageUrl ?? ""),
+        info: String(o.info),
       }
     })
   }
