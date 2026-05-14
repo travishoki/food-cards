@@ -1,19 +1,19 @@
 import { getBackgroundDimensions } from "./Background.helpers"
 
 type BackgroundProps = {
-    cardWidth: number
+    cardRatio: number
     src: string
 }
 
-export const Background = ({cardWidth, src}: BackgroundProps) => {
-    const { height, width } = getBackgroundDimensions(cardWidth)
+export const Background = ({cardRatio, src}: BackgroundProps) => {
+    const { height, width } = getBackgroundDimensions(cardRatio)
 
     return (
         <img
-        src={src}
-        width={width}
-        height={height}
-        alt=""
+            src={src}
+            width={width}
+            height={height}
+            alt=""
       />
     )
 }
