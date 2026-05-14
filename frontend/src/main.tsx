@@ -1,4 +1,4 @@
-import { StrictMode, useEffect, useMemo, useState } from "react"
+import { useEffect, useMemo, useState } from "react"
 import { createRoot } from "react-dom/client"
 import Card from "./Card"
 import { CATEGORY_ORDER } from "./categoryOrder"
@@ -21,13 +21,26 @@ function App() {
   const [menuSelection, setMenuSelection] = useState<MenuSelection>("all")
 
   useEffect(() => {
-    fetch("/api/foods")
+    let cancelled = false
+    const ac = new AbortController()
+
+    fetch("/api/foods", { signal: ac.signal })
       .then((res) => {
         if (!res.ok) throw new Error(`HTTP ${res.status}`)
         return res.json() as Promise<Food[]>
       })
-      .then(setFoods)
-      .catch(() => setError("Could not load foods. Is Rails running on port 3000?"))
+      .then((data) => {
+        if (!cancelled) setFoods(data)
+      })
+      .catch((err) => {
+        if (cancelled || (err instanceof DOMException && err.name === "AbortError")) return
+        setError("Could not load foods. Is Rails running on port 3000?")
+      })
+
+    return () => {
+      cancelled = true
+      ac.abort()
+    }
   }, [])
 
   const menu = useMemo(() => (foods ? menuFromFoods(foods) : []), [foods])
@@ -75,8 +88,4 @@ function App() {
   )
 }
 
-createRoot(document.getElementById("root")!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>
-)
+createRoot(document.getElementById("root")!).render(<App />)
