@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react"
 import { createRoot } from "react-dom/client"
-import Card from "./Card"
+import Card from "./Card/Card"
 import type { Food, MenuSelection } from "./types"
 import "./index.css"
 import { normalizeFoods, menuFromFoods } from "./main.helpers"
