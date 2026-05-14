@@ -26,7 +26,7 @@ class FoodCatalog
         icon: "icons/fruit.png",
         image: "image/sugar-fat-salt/glazed-donut.jpg",
         category_key: "sugar_fat_salt",
-        category_label: "Sugar, fat & salt"
+        category_label: "Sugar, Fat & Salt"
       ),
       Entry.new(
         id: 2,
@@ -35,7 +35,7 @@ class FoodCatalog
         icon: "icons/fruit.png",
         image: "image/fats-oils/texas-toast.jpg",
         category_key: "fats_oils",
-        category_label: "Fats & oils"
+        category_label: "Fats & Oils"
       ),
       Entry.new(
         id: 3,
@@ -56,11 +56,20 @@ class FoodCatalog
         category_label: "Dairy"
       ),
       Entry.new(
-        id: 7,
-        name: "Cheese",
+        id: 8,
+        name: "Chocolate Milk",
         background: "backgrounds/4-blue.png",
         icon: "icons/dairy.png",
-        image: "image/dairy/cheese.jpg",
+        image: "image/dairy/chocolate-milk.jpg",
+        category_key: "dairy",
+        category_label: "Dairy"
+      ),
+      Entry.new(
+        id: 7,
+        name: "Babybel Cheese",
+        background: "backgrounds/4-blue.png",
+        icon: "icons/dairy.png",
+        image: "image/dairy/babybel-cheese.jpg",
         category_key: "dairy",
         category_label: "Dairy"
       ),
@@ -80,7 +89,7 @@ class FoodCatalog
         icon: "icons/fruit.png",
         image: "image/fruit-and-vegi/grapes.jpg",
         category_key: "fruit_veg",
-        category_label: "Fruit & vegetables"
+        category_label: "Fruit & Vegetables"
       )
     ]
   end
