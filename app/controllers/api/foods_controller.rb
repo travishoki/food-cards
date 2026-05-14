@@ -16,7 +16,7 @@ module Api
           icon_url: "#{base}#{h.asset_path(food.icon)}",
           image_url: "#{base}#{h.asset_path(food.image)}",
           info: food.info
-        }
+      }.compact
       end
 
       render json: foods

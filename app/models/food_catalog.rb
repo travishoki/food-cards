@@ -34,7 +34,7 @@ class FoodCatalog
         background: "backgrounds/2-yellow.png",
         icon: "icons/fruit.png",
         image: "image/fats-oils/texas-toast.jpg",
-        info: "Preheat oven to 425",
+        info: "Preheat oven to 425°",
         category_key: "fats_oils",
         category_label: "Fats & Oils"
       ),

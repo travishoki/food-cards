@@ -6,7 +6,7 @@ export function normalizeFoods(raw: unknown): Food[] {
 
     return raw.map((row) => {
       const o = row as Record<string, unknown>
-      return {
+      const resp = {
         id: Number(o.id),
         name: String(o.name ?? ""),
         category_key: String(o.category_key ?? o.categoryKey ?? "").trim(),
@@ -14,8 +14,11 @@ export function normalizeFoods(raw: unknown): Food[] {
         background_url: String(o.background_url ?? o.backgroundUrl ?? ""),
         icon_url: String(o.icon_url ?? o.iconUrl ?? ""),
         image_url: String(o.image_url ?? o.imageUrl ?? ""),
-        info: String(o.info),
       }
+      
+      if (o.info) resp.info = String(o.info)
+
+      return resp
     })
   }
   
