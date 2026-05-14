@@ -59,6 +59,11 @@ h1 {
   border-color: rgba(255, 255, 255, 0.22);
 }
 
+.category-menu__link.is-active {
+  background: rgba(100, 108, 255, 0.35);
+  border-color: rgba(100, 108, 255, 0.55);
+}
+
 @media (prefers-color-scheme: light) {
   .category-menu {
     border-bottom-color: rgba(0, 0, 0, 0.12);
@@ -72,6 +77,11 @@ h1 {
   .category-menu__link:hover {
     background: rgba(0, 0, 0, 0.08);
     border-color: rgba(0, 0, 0, 0.16);
+  }
+
+  .category-menu__link.is-active {
+    background: rgba(100, 108, 255, 0.2);
+    border-color: rgba(80, 88, 220, 0.45);
   }
 }
 

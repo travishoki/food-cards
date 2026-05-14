@@ -56,6 +56,15 @@ class FoodCatalog
         category_label: "Dairy"
       ),
       Entry.new(
+        id: 7,
+        name: "Cheese",
+        background: "backgrounds/4-blue.png",
+        icon: "icons/dairy.png",
+        image: "image/dairy/cheese.jpg",
+        category_key: "dairy",
+        category_label: "Dairy"
+      ),
+      Entry.new(
         id: 5,
         name: "Mashed Potatoes",
         background: "backgrounds/5-purple.png",

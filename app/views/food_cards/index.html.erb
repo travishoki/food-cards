@@ -1,9 +1,9 @@
 <h1 id="top">Food Cards</h1>
 
 <nav class="category-menu" aria-label="Food categories">
-  <a class="category-menu__link" href="#top">All</a>
+  <%= link_to "All", root_path, class: "category-menu__link#{' is-active' if @active_category.blank?}" %>
   <% @categories.each do |cat| %>
-    <a class="category-menu__link" href="#cat-<%= cat[:key] %>"><%= cat[:label] %></a>
+    <%= link_to cat[:label], root_path(category: cat[:key]), class: "category-menu__link#{' is-active' if @active_category == cat[:key]}" %>
   <% end %>
 </nav>
 

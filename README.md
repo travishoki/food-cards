@@ -35,6 +35,8 @@ cd frontend && npm install && npm run dev
 
 Open **5173** for React. Rails must be on **3000** first so the proxy and image URLs resolve.
 
+On the Rails HTML app (`http://127.0.0.1:3000/`), category links use **`?category=`** (for example `/?category=dairy`) so only that category’s cards are shown on the page—**Dairy** includes both Milk and Cheese.
+
 ### Nothing loads on port 5173?
 
 1. **Confirm Vite is running** — you should see `Local: http://127.0.0.1:5173/` (or similar) in the terminal where `npm run dev` or `bin/dev` started. If that process exited, check for “Port 5173 is in use” (`strictPort: true`) or a Node version error.
