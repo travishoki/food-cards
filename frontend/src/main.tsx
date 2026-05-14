@@ -1,35 +1,9 @@
 import { useEffect, useMemo, useState } from "react"
 import { createRoot } from "react-dom/client"
 import Card from "./Card"
-import { CATEGORY_ORDER } from "./categoryOrder"
-import type { Food } from "./types"
+import type { Food, MenuSelection } from "./types"
 import "./index.css"
-
-type MenuSelection = "all" | string
-
-function normalizeFoods(raw: unknown): Food[] {
-  if (!Array.isArray(raw)) return []
-  return raw.map((row) => {
-    const o = row as Record<string, unknown>
-    return {
-      id: Number(o.id),
-      name: String(o.name ?? ""),
-      category_key: String(o.category_key ?? o.categoryKey ?? "").trim(),
-      category_label: String(o.category_label ?? o.categoryLabel ?? "").trim(),
-      background_url: String(o.background_url ?? o.backgroundUrl ?? ""),
-      icon_url: String(o.icon_url ?? o.iconUrl ?? ""),
-      image_url: String(o.image_url ?? o.imageUrl ?? ""),
-    }
-  })
-}
-
-function menuFromFoods(foods: Food[]) {
-  return CATEGORY_ORDER.map((key) => {
-    const food = foods.find((f) => f.category_key === key)
-    if (!food) return null
-    return { key, label: food.category_label }
-  }).filter(Boolean) as { key: string; label: string }[]
-}
+import { normalizeFoods, menuFromFoods } from "./main.helpers"
 
 function App() {
   const [foods, setFoods] = useState<Food[] | null>(null)

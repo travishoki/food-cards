@@ -7,3 +7,5 @@ export type Food = {
   icon_url: string
   image_url: string
 }
+
+export type MenuSelection = "all" | string
