@@ -1,8 +1,11 @@
-export const backgroundWidth = 750
-export const backgroundHeight = 1050
+// Background
+export const BACKGROUND_WIDTH = 750
+export const BACKGROUND_HEIGHT = 1050
 
-export const foodWidth = 613
-export const foodHeight = 406
-export const foodTop = 112
+// Graphic
+export const GRAPHIC_WIDTH = 613
+export const GRAPHIC_HEIGHT = 406
+export const GRAPHIC_TOP = 112
 
-export const iconSize = 54
+// Icon
+export const ICON_SIZE = 54

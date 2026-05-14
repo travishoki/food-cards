@@ -1,9 +1,9 @@
-import { backgroundHeight, backgroundWidth } from "../Card.const"
+import { BACKGROUND_HEIGHT, BACKGROUND_WIDTH } from "../Card.const"
 
 export const getBackgroundDimensions = (cardWidth: number) => {
     const width = cardWidth
-    const wRatio = cardWidth / backgroundWidth
-    const height = backgroundHeight * wRatio
+    const wRatio = cardWidth / BACKGROUND_WIDTH
+    const height = BACKGROUND_HEIGHT * wRatio
 
     return {
         height,

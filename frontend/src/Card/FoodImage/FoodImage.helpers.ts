@@ -1,10 +1,10 @@
-import { backgroundWidth, foodWidth, foodHeight, foodTop } from "../Card.const"
+import { BACKGROUND_WIDTH, GRAPHIC_WIDTH, GRAPHIC_HEIGHT, GRAPHIC_TOP } from "../Card.const"
 
 export const getFoodImageDimensions = (cardWidth: number) => {
-    const wRatio = foodWidth / backgroundWidth
+    const wRatio = GRAPHIC_WIDTH / BACKGROUND_WIDTH
     const width = wRatio * cardWidth
-    const hRatio = foodHeight / foodWidth
-    const height = hRatio * foodHeight
+    const hRatio = GRAPHIC_HEIGHT / GRAPHIC_WIDTH
+    const height = hRatio * GRAPHIC_HEIGHT
 
     return {
         height,
@@ -13,10 +13,10 @@ export const getFoodImageDimensions = (cardWidth: number) => {
 }
 
 export const getTop = (cardWidth: number) => {
-    const wRatio = foodWidth / backgroundWidth
+    const wRatio = GRAPHIC_WIDTH / BACKGROUND_WIDTH
     const width = wRatio * cardWidth
-    const hRatio = foodHeight / foodWidth
-    const top = foodTop * hRatio
+    const hRatio = GRAPHIC_HEIGHT / GRAPHIC_WIDTH
+    const top = GRAPHIC_TOP * hRatio
 
     return top
 }
