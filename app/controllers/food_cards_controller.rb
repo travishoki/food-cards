@@ -2,6 +2,7 @@
 
 class FoodCardsController < ApplicationController
   def index
-    @food_ids = (1..6).to_a
+    @categories = FoodCatalog.menu_categories
+    @foods_by_category = FoodCatalog.foods_grouped_for_index
   end
 end

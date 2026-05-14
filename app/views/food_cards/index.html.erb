@@ -1,7 +1,21 @@
-<h1>Food Cards</h1>
+<h1 id="top">Food Cards</h1>
+
+<nav class="category-menu" aria-label="Food categories">
+  <a class="category-menu__link" href="#top">All</a>
+  <% @categories.each do |cat| %>
+    <a class="category-menu__link" href="#cat-<%= cat[:key] %>"><%= cat[:label] %></a>
+  <% end %>
+</nav>
 
 <div class="food-cards">
-  <% @food_ids.each do |id| %>
-    <%= render "food_card", id: id %>
+  <% @foods_by_category.each do |group| %>
+    <section id="cat-<%= group[:key] %>" class="category-section" aria-labelledby="heading-<%= group[:key] %>">
+      <h2 class="category-section__title" id="heading-<%= group[:key] %>"><%= group[:label] %></h2>
+      <div class="category-section__cards">
+        <% group[:foods].each do |food| %>
+          <%= render "food_card", id: food.id %>
+        <% end %>
+      </div>
+    </section>
   <% end %>
 </div>
