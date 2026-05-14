@@ -1,4 +1,4 @@
-
+import "./Title.css"
 
 type TitleProps = {
     name: string
@@ -6,6 +6,6 @@ type TitleProps = {
 
 export const Title = ({name}: TitleProps) => {
     return (
-        <p className="title">{name}</p>
+        <p className="card-title">{name}</p>
     )
 }

@@ -1,0 +1,9 @@
+.card-title {
+    color: black;
+    position: absolute;
+    top: 10px;
+    left: 55px;
+    font-size: 34px;
+    font-weight: bold;
+    z-index: 2;
+  }

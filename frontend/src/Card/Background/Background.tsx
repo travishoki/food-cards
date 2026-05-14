@@ -1,15 +1,18 @@
-import { backgroundWidth, backgroundHeight } from "../Card.const"
+import { getBackgroundDimensions } from "./Background.helpers"
 
 type BackgroundProps = {
+    cardWidth: number
     src: string
 }
 
-export const Background = ({src}: BackgroundProps) => {
+export const Background = ({cardWidth, src}: BackgroundProps) => {
+    const { height, width } = getBackgroundDimensions(cardWidth)
+
     return (
         <img
         src={src}
-        width={backgroundWidth}
-        height={backgroundHeight}
+        width={width}
+        height={height}
         alt=""
       />
     )
