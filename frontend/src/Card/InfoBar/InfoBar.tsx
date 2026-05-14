@@ -1,15 +1,24 @@
+import { INFO_BAR_TOP } from "../Card.const"
 import "./InfoBar.css"
 
 type InfoBarProps = {
+    cardRatio: number
     text: string
 }
 
 const base = "http://127.0.0.1:3000"
 const asset_path = "/assets"
 
-export const InfoBar = ({text}: InfoBarProps) => {
+export const InfoBar = ({cardRatio, text}: InfoBarProps) => {
+  const top = INFO_BAR_TOP * cardRatio
+
   return (
-    <div className="info-bar">
+    <div
+      className="info-bar"
+      style={{
+        top: `${top}px`
+    }}
+>
       <div className="info-bar-inner">
       <p>{text}</p>
           <img

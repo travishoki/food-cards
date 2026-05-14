@@ -30,7 +30,7 @@ export default function Card({ food }: CardProps) {
       <Icon cardRatio={cardRatio} src={food.icon_url}/>
       <Graphic cardRatio={cardRatio} cardW={cardW} name={food.name} src={food.image_url} />
       {food.info && (
-          <InfoBar text={food.info} />
+          <InfoBar cardRatio={cardRatio} text={food.info} />
       )}
       <Background cardH={cardH} cardW={cardW} src={food.background_url} />
     </div>

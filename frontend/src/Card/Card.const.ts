@@ -16,5 +16,8 @@ export const ICON_TOP = 36
 export const ICON_PADDING = 2
 
 // Title
-export const TITLE_TOP =  30
+export const TITLE_TOP =  28
 export const TITLE_FONT_SIZE = 48
+
+// Info Bar
+export const INFO_BAR_TOP = 550
