@@ -8,7 +8,7 @@ export const FOODS: Food[] = [
     category_label: "Sugar, Fat & Salt",
     background_url: "/backgrounds/1-red.png",
     icon_url: "/icons/fruit.png",
-    image_url: "/image/sugar-fat-salt/glazed-donut.jpg",
+    image_url: "/images/sugar-fat-salt/glazed-donut.jpg",
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ export const FOODS: Food[] = [
     category_label: "Fats & Oils",
     background_url: "/backgrounds/2-yellow.png",
     icon_url: "/icons/fruit.png",
-    image_url: "/image/fats-oils/texas-toast.jpg",
+    image_url: "/images/fats-oils/texas-toast.jpg",
     info: "Preheat oven to 425°",
   },
   {
@@ -27,7 +27,7 @@ export const FOODS: Food[] = [
     category_label: "Protein",
     background_url: "/backgrounds/3-orange.png",
     icon_url: "/icons/fruit.png",
-    image_url: "/image/protien/peanut-butter.jpg",
+    image_url: "/images/protien/peanut-butter.jpg",
   },
   {
     id: 4,
@@ -36,7 +36,7 @@ export const FOODS: Food[] = [
     category_label: "Dairy",
     background_url: "/backgrounds/4-blue.png",
     icon_url: "/icons/dairy.png",
-    image_url: "/image/dairy/milk.jpg",
+    image_url: "/images/dairy/milk.jpg",
   },
   {
     id: 7,
@@ -45,7 +45,7 @@ export const FOODS: Food[] = [
     category_label: "Dairy",
     background_url: "/backgrounds/4-blue.png",
     icon_url: "/icons/dairy.png",
-    image_url: "/image/dairy/babybel-cheese.jpg",
+    image_url: "/images/dairy/babybel-cheese.jpg",
   },
   {
     id: 8,
@@ -54,7 +54,7 @@ export const FOODS: Food[] = [
     category_label: "Dairy",
     background_url: "/backgrounds/4-blue.png",
     icon_url: "/icons/dairy.png",
-    image_url: "/image/dairy/chocolate-milk.jpg",
+    image_url: "/images/dairy/chocolate-milk.jpg",
   },
   {
     id: 5,
@@ -63,7 +63,7 @@ export const FOODS: Food[] = [
     category_label: "Grains",
     background_url: "/backgrounds/5-purple.png",
     icon_url: "/icons/fruit.png",
-    image_url: "/image/grains/mashed-potatoes.jpg",
+    image_url: "/images/grains/mashed-potatoes.jpg",
   },
   {
     id: 6,
@@ -72,6 +72,6 @@ export const FOODS: Food[] = [
     category_label: "Fruit & Vegetables",
     background_url: "/backgrounds/6-green.png",
     icon_url: "/icons/fruit.png",
-    image_url: "/image/fruit-and-vegi/grapes.jpg",
+    image_url: "/images/fruit-and-vegi/grapes.jpg",
   },
 ]
