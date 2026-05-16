@@ -1,9 +1,0 @@
-<% food = FoodCatalog.find(id) %>
-<% if food %>
-  <div class="card">
-    <p class="title"><%= food.name %></p>
-    <%= image_tag food.icon, class: "iconImg", width: 54, height: 54, alt: "" %>
-    <%= image_tag food.image, class: "foodImg", style: "left: #{food_image_left_px}px;", width: 613, height: 406, alt: food.name %>
-    <%= image_tag food.background, width: 750, height: 1050, alt: "" %>
-  </div>
-<% end %>

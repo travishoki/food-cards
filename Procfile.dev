@@ -1,2 +1,0 @@
-web: bin/rails server -p 3000
-frontend: sh -c 'cd frontend && exec npm run dev'

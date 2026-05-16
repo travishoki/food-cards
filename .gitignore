@@ -1,39 +1,17 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# Vite / Node (legacy; remove if fully on Rails)
 node_modules
 dist
 dist-ssr
 *.local
 
-# Rails
-/.bundle/
-/vendor/bundle
-/log/*
-/tmp/*
-!/log/.keep
-!/tmp/.keep
-/tmp/pids/*
-!/tmp/pids/.keep
-/storage/*
-!/storage/.keep
-/public/assets
-.byebug_history
-config/master.key
-
-# Environment
 .env
 .env*.local
 
-# Logs
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
-lerna-debug.log*
 
-# Editor
 .vscode/*
 !.vscode/extensions.json
 .idea
