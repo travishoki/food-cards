@@ -68,10 +68,19 @@ export const FOODS: Food[] = [
   {
     id: 6,
     name: "Grapes",
-    category_key: "fruit_veg",
-    category_label: "Fruit & Vegetables",
+    category_key: "fruit",
+    category_label: "Fruit",
     background_url: "/backgrounds/6-green.png",
     icon_url: "/icons/fruit.png",
-    image_url: "/images/fruit-and-vegi/grapes.jpg",
+    image_url: "/images/fruit/grapes.jpg",
+  },
+  {
+    id: 9,
+    name: "Carrots",
+    category_key: "vegetables",
+    category_label: "Vegetables",
+    background_url: "/backgrounds/6-green.png",
+    icon_url: "/icons/fruit.png",
+    image_url: "/images/vegetables/carrots.jpg",
   },
 ]
