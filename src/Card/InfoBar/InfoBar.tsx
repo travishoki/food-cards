@@ -1,4 +1,4 @@
-import { INFO_BAR_TOP } from "../Card.const"
+import { INFO_BAR_HEIGHT, INFO_BAR_TEXT_LEFT_PADDING, INFO_BAR_TEXT_TOP_PADDING, INFO_BAR_TOP, INFO_BAR_WIDTH, PADDING_LEFT } from "../Card.const"
 import "./InfoBar.css"
 
 type InfoBarProps = {
@@ -6,11 +6,13 @@ type InfoBarProps = {
     text: string
 }
 
-const base = "http://127.0.0.1:3000"
-const asset_path = "/assets"
-
 export const InfoBar = ({cardRatio, text}: InfoBarProps) => {
   const top = INFO_BAR_TOP * cardRatio
+  const textMargin = PADDING_LEFT * cardRatio
+  const width = INFO_BAR_WIDTH * cardRatio
+  const height = INFO_BAR_HEIGHT * cardRatio
+  const textPaddingLeft = INFO_BAR_TEXT_LEFT_PADDING * cardRatio
+  const textPaddingTop = INFO_BAR_TEXT_TOP_PADDING * cardRatio
 
   return (
     <div
@@ -20,11 +22,17 @@ export const InfoBar = ({cardRatio, text}: InfoBarProps) => {
     }}
 >
       <div className="info-bar-inner">
-      <p>{text}</p>
+          <p
+            style={{
+              marginLeft: textMargin,
+              marginRight: textMargin,
+              padding: `${textPaddingTop}px ${textPaddingLeft}px`,
+            }}
+          >{text}</p>
           <img
-              src={`${base}${asset_path}/image/card-accents/info-bar.png`}
-              width={651}
-              height={60}
+              src="/card-accents/info-bar.png"
+              width={width}
+              height={height}
               alt="Info Bar"
           />
       </div>

@@ -21,3 +21,8 @@ export const TITLE_FONT_SIZE = 48
 
 // Info Bar
 export const INFO_BAR_TOP = 550
+export const INFO_BAR_WIDTH = 651
+export const INFO_BAR_HEIGHT = 60
+export const INFO_BAR_TEXT_LEFT_PADDING = 20
+export const INFO_BAR_TEXT_TOP_PADDING = 5
+
