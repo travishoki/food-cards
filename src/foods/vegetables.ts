@@ -8,6 +8,6 @@ export const VEGETABLES_FOODS: Food[] = [
     category_key: CATEGORIES.vegetables,
     background_url: "/backgrounds/6-green.png",
     icon_url: "/icons/fruit.png",
-    image_url: "/images/main/vegetables/carrots.jpg",
+    image_url: "/graphics/main/vegetables/carrots.jpg",
   },
 ]

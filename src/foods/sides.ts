@@ -8,6 +8,6 @@ export const SIDES_FOODS: Food[] = [
     category_key: CATEGORIES.sides,
     background_url: "/backgrounds/5-purple.png",
     icon_url: "/icons/fruit.png",
-    image_url: "/images/sides/sides/mashed-potatoes.jpg",
+    image_url: "/graphics/sides/sides/mashed-potatoes.jpg",
   },
 ]

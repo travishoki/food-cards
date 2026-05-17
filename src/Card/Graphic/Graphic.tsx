@@ -21,7 +21,7 @@ export const Graphic = ({cardRatio, cardW, name, src}: GraphicProps) => {
         <img
             className="graphicImg"
             src={src}
-            onError={(e) => { e.currentTarget.src = "/images/missing/missing.jpg" }}
+            onError={(e) => { e.currentTarget.src = "/missing/missing.jpg" }}
             style={{
                 left: `${left}px`,
                 top: `${top}px`

@@ -8,6 +8,6 @@ export const GRAINS_FOODS: Food[] = [
     category_key: CATEGORIES.grains,
     background_url: "/backgrounds/5-purple.png",
     icon_url: "/icons/fruit.png",
-    image_url: "/images/snack/grains/banana-bars.jpg",
+    image_url: "/graphics/snack/grains/banana-bars.jpg",
   },
 ]
