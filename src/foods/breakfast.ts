@@ -14,6 +14,14 @@ export const BREAKFAST_FOODS: Food[] = [
       "2 ½ teaspoons vegetable oil, divided",
       "1 pinch salt",
     ],
-    toppings: ["Strawberry", "Blue Berries"],
+    toppings: [
+      "Strawberry",
+      "Blue Berries",
+      "Banana",
+      "Carmel",
+      "Chocolate Syrup",
+      "Whipped Cream",
+      "Powdered Sugar"
+    ],
   },
 ]

@@ -52,6 +52,7 @@ export default function Card({ food }: CardProps) {
       <Title cardRatio={cardRatio} name={food.name} />
       <Icon cardRatio={cardRatio} categoryKey={food.category_key}/>
       <Graphic cardRatio={cardRatio} cardW={cardW} name={food.name} src={food.image_url} />
+
       <div style={{
           position: "absolute",
           top: `${CARD_INFO_TOP * cardRatio}px`,
@@ -61,15 +62,26 @@ export default function Card({ food }: CardProps) {
           {food.info && (
               <InfoBar cardRatio={cardRatio} text={food.info} />
           )}
+
           {food.instructions && (
               <Instructions cardRatio={cardRatio} text={food.instructions} />
           )}
-          {food.ingredients && (
-              <Ingredients cardRatio={cardRatio} items={food.ingredients} />
+
+          {(food.ingredients || food.toppings) && (
+              <div style={{ display: "flex" }}>
+                  {food.ingredients && (
+                      <div style={{ width: "50%" }}>
+                          <Ingredients cardRatio={cardRatio} items={food.ingredients} />
+                      </div>
+                  )}
+                  {food.toppings && (
+                      <div style={{ width: "50%" }}>
+                          <Toppings cardRatio={cardRatio} items={food.toppings} />
+                      </div>
+                  )}
+              </div>
           )}
-          {food.toppings && (
-              <Toppings cardRatio={cardRatio} items={food.toppings} />
-          )}
+
           {food.cookTime && (
               <CookTime cardRatio={cardRatio} time={food.cookTime.time} instructions={food.cookTime.instructions} />
           )}
