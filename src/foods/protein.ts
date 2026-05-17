@@ -7,5 +7,6 @@ export const PROTEIN_FOODS: Food[] = [
     name: "Peanut Butter",
     category_key: CATEGORIES.protein,
     image_url: "/graphics/snack/protein/peanut-butter.jpg",
+    instructions: "Just a spoon fool of Peanut Butter can be a good snack.",
   },
 ]

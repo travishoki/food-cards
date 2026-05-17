@@ -63,10 +63,6 @@ export default function Card({ food }: CardProps) {
               <InfoBar cardRatio={cardRatio} text={food.info} />
           )}
 
-          {food.instructions && (
-              <Instructions cardRatio={cardRatio} text={food.instructions} />
-          )}
-
           {(food.ingredients || food.toppings) && (
               <div style={{ display: "flex" }}>
                   {food.ingredients && (
@@ -81,6 +77,11 @@ export default function Card({ food }: CardProps) {
                   )}
               </div>
           )}
+
+          {food.instructions && (
+              <Instructions cardRatio={cardRatio} text={food.instructions} />
+          )}
+
 
           {food.cookTime && (
               <CookTime cardRatio={cardRatio} time={food.cookTime.time} instructions={food.cookTime.instructions} />

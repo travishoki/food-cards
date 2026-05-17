@@ -19,8 +19,6 @@ export const InfoBar = ({cardRatio, text}: InfoBarProps) => {
       <div className="info-bar-inner">
           <p
             style={{
-              marginLeft: textMargin,
-              marginRight: textMargin,
               padding: `${textPaddingTop}px ${textPaddingLeft}px`,
             }}
           >{text}</p>

@@ -6,7 +6,7 @@ export type Food = {
   info?: string
   ingredients?: string[]
   toppings?: string[]
-  instructions?: string
+  instructions?: string | string[]
   cookTime?: { time: string; instructions: string }
 }
 
