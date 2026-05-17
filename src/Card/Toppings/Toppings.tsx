@@ -1,5 +1,4 @@
-import { TOPPINGS_FONT_SIZE, TOPPINGS_TOP } from "../Card.const"
-import { getSidePadding } from "../Card.helpers"
+import { CARD_INFO_PADDING_BOTTOM, TOPPINGS_FONT_SIZE } from "../Card.const"
 import "./Toppings.css"
 
 type ToppingsProps = {
@@ -8,12 +7,11 @@ type ToppingsProps = {
 }
 
 export const Toppings = ({ cardRatio, items }: ToppingsProps) => {
-    const top = TOPPINGS_TOP * cardRatio
     const fontSize = TOPPINGS_FONT_SIZE * cardRatio
-    const left = getSidePadding(cardRatio)
+    const paddingBottom = CARD_INFO_PADDING_BOTTOM * cardRatio
 
     return (
-        <div className="toppings" style={{ top: `${top}px`, left: `${left}px`, fontSize: `${fontSize}px` }}>
+        <div className="toppings" style={{ fontSize: `${fontSize}px`, paddingBottom: `${paddingBottom}px` }}>
             <span className="toppings__label">Toppings</span>
             <ul>
                 {items.map((item) => (

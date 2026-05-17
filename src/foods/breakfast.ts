@@ -7,7 +7,13 @@ export const BREAKFAST_FOODS: Food[] = [
     name: "Crepes",
     category_key: CATEGORIES.breakfast,
     image_url: "/graphics/main/breakfast/crepes.jpg",
-    ingredients: ["Flour", "Egg"],
+    ingredients: [
+      "1 cup milk",
+      "⅔ cup all-purpose flour",
+      "2 large eggs",
+      "2 ½ teaspoons vegetable oil, divided",
+      "1 pinch salt",
+    ],
     toppings: ["Strawberry", "Blue Berries"],
   },
 ]

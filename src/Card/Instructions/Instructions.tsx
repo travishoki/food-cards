@@ -1,5 +1,4 @@
-import { INSTRUCTIONS_FONT_SIZE, INSTRUCTIONS_TOP } from "../Card.const"
-import { getSidePadding } from "../Card.helpers"
+import { CARD_INFO_PADDING_BOTTOM, INSTRUCTIONS_FONT_SIZE } from "../Card.const"
 import "./Instructions.css"
 
 type InstructionsProps = {
@@ -8,15 +7,11 @@ type InstructionsProps = {
 }
 
 export const Instructions = ({ cardRatio, text }: InstructionsProps) => {
-    const top = INSTRUCTIONS_TOP * cardRatio
-    const left = getSidePadding(cardRatio)
     const fontSize = INSTRUCTIONS_FONT_SIZE * cardRatio
+    const paddingBottom = CARD_INFO_PADDING_BOTTOM * cardRatio
 
     return (
-        <p
-            className="instructions"
-            style={{ top: `${top}px`, left: `${left}px`, fontSize: `${fontSize}px` }}
-        >
+        <p className="instructions" style={{ fontSize: `${fontSize}px`, paddingBottom: `${paddingBottom}px` }}>
             {text}
         </p>
     )

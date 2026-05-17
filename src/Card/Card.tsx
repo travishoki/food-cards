@@ -9,7 +9,8 @@ import { Background } from "./Background/Background"
 import { Graphic } from "./Graphic/Graphic"
 import { Icon } from "./Icon/Icon"
 import { Title } from "./Title/Title"
-import { getCardHeight, getCardRatio } from "./Card.helpers"
+import { getCardHeight, getCardRatio, getSidePadding } from "./Card.helpers"
+import { CARD_INFO_TOP } from "./Card.const"
 import { toFoodSlug } from "../helpers"
 import "./Card.css"
 
@@ -51,21 +52,28 @@ export default function Card({ food }: CardProps) {
       <Title cardRatio={cardRatio} name={food.name} />
       <Icon cardRatio={cardRatio} categoryKey={food.category_key}/>
       <Graphic cardRatio={cardRatio} cardW={cardW} name={food.name} src={food.image_url} />
-      {food.info && (
-          <InfoBar cardRatio={cardRatio} text={food.info} />
-      )}
-      {food.instructions && (
-          <Instructions cardRatio={cardRatio} text={food.instructions} />
-      )}
-      {food.ingredients && (
-          <Ingredients cardRatio={cardRatio} items={food.ingredients} />
-      )}
-      {food.toppings && (
-          <Toppings cardRatio={cardRatio} items={food.toppings} />
-      )}
-      {food.cookTime && (
-          <CookTime cardRatio={cardRatio} time={food.cookTime.time} instructions={food.cookTime.instructions} />
-      )}
+      <div style={{
+          position: "absolute",
+          top: `${CARD_INFO_TOP * cardRatio}px`,
+          left: `${getSidePadding(cardRatio)}px`,
+          right: `${getSidePadding(cardRatio)}px`,
+      }}>
+          {food.info && (
+              <InfoBar cardRatio={cardRatio} text={food.info} />
+          )}
+          {food.instructions && (
+              <Instructions cardRatio={cardRatio} text={food.instructions} />
+          )}
+          {food.ingredients && (
+              <Ingredients cardRatio={cardRatio} items={food.ingredients} />
+          )}
+          {food.toppings && (
+              <Toppings cardRatio={cardRatio} items={food.toppings} />
+          )}
+          {food.cookTime && (
+              <CookTime cardRatio={cardRatio} time={food.cookTime.time} instructions={food.cookTime.instructions} />
+          )}
+      </div>
       <Background cardH={cardH} cardW={cardW} categoryKey={food.category_key} />
     </div>
   )

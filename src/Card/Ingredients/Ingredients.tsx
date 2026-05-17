@@ -1,5 +1,4 @@
-import { INGREDIENTS_FONT_SIZE, INGREDIENTS_TOP } from "../Card.const"
-import { getSidePadding } from "../Card.helpers"
+import { CARD_INFO_PADDING_BOTTOM, INGREDIENTS_FONT_SIZE } from "../Card.const"
 import "./Ingredients.css"
 
 type IngredientsProps = {
@@ -8,12 +7,11 @@ type IngredientsProps = {
 }
 
 export const Ingredients = ({ cardRatio, items }: IngredientsProps) => {
-    const top = INGREDIENTS_TOP * cardRatio
     const fontSize = INGREDIENTS_FONT_SIZE * cardRatio
-    const left = getSidePadding(cardRatio)
+    const paddingBottom = CARD_INFO_PADDING_BOTTOM * cardRatio
 
     return (
-        <div className="ingredients" style={{ top: `${top}px`, left: `${left}px`, fontSize: `${fontSize}px` }}>
+        <div className="ingredients" style={{ fontSize: `${fontSize}px`, paddingBottom: `${paddingBottom}px` }}>
             <span className="ingredients__label">Ingredients</span>
             <ul>
                 {items.map((item) => (

@@ -1,4 +1,4 @@
-import { INFO_BAR_HEIGHT, INFO_BAR_TEXT_LEFT_PADDING, INFO_BAR_TEXT_TOP_PADDING, INFO_BAR_TOP, INFO_BAR_WIDTH, PADDING_LEFT } from "../Card.const"
+import { CARD_INFO_PADDING_BOTTOM, INFO_BAR_HEIGHT, INFO_BAR_TEXT_LEFT_PADDING, INFO_BAR_TEXT_TOP_PADDING, INFO_BAR_WIDTH, PADDING_LEFT } from "../Card.const"
 import "./InfoBar.css"
 
 type InfoBarProps = {
@@ -7,20 +7,15 @@ type InfoBarProps = {
 }
 
 export const InfoBar = ({cardRatio, text}: InfoBarProps) => {
-  const top = INFO_BAR_TOP * cardRatio
   const textMargin = PADDING_LEFT * cardRatio
   const width = INFO_BAR_WIDTH * cardRatio
   const height = INFO_BAR_HEIGHT * cardRatio
   const textPaddingLeft = INFO_BAR_TEXT_LEFT_PADDING * cardRatio
   const textPaddingTop = INFO_BAR_TEXT_TOP_PADDING * cardRatio
+  const paddingBottom = CARD_INFO_PADDING_BOTTOM * cardRatio
 
   return (
-    <div
-      className="info-bar"
-      style={{
-        top: `${top}px`
-    }}
->
+    <div className="info-bar" style={{ paddingBottom: `${paddingBottom}px` }}>
       <div className="info-bar-inner">
           <p
             style={{

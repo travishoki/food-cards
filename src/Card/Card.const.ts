@@ -19,8 +19,11 @@ export const ICON_PADDING = 2
 export const TITLE_TOP =  28
 export const TITLE_FONT_SIZE = 48
 
+// Card Info Section
+export const CARD_INFO_TOP = Math.round(BACKGROUND_HEIGHT * 0.52)
+export const CARD_INFO_PADDING_BOTTOM = 10
+
 // Instructions
-export const INSTRUCTIONS_TOP = 630
 export const INSTRUCTIONS_FONT_SIZE = 24
 
 // Ingredients
