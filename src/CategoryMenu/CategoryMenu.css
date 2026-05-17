@@ -20,7 +20,7 @@
   text-decoration: none;
   color: inherit;
   background: #353535;
-  border-color: #4e4e4e;
+  border: 1px solid #4e4e4e;
   transition: background 0.15s ease, border-color 0.15s ease;
 }
 
