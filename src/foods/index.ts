@@ -1,5 +1,5 @@
-import { CATEGORIES } from "./categories"
-import type { Food } from "./types"
+import { CATEGORIES } from "../categories"
+import type { Food } from "../types"
 
 export const FOODS: Food[] = [
   {
