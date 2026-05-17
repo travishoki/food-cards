@@ -46,6 +46,14 @@ describe("subCategoriesForTop", () => {
         expect(keys).toContain("dessert")
     })
 
+    it("puts drinks under drinks", () => {
+        expect(subCategoriesForTop("drinks").map((i) => i.key)).toContain("drinks")
+    })
+
+    it("puts sides under sides", () => {
+        expect(subCategoriesForTop("sides").map((i) => i.key)).toContain("sides")
+    })
+
     it("returns an empty array for an unknown top key", () => {
         expect(subCategoriesForTop("unknown")).toHaveLength(0)
     })

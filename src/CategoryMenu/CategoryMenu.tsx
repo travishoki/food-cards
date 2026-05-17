@@ -44,7 +44,7 @@ export const CategoryMenu = ({ menuSelection, setMenuSelection }: CategoryMenuPr
                     </button>
                 ))}
             </nav>
-            {subMenu.length > 0 && (
+            {subMenu.length > 1 && (
                 <nav className="category-menu" aria-label="Food subcategories">
                     <button
                         type="button"
