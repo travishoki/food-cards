@@ -15,7 +15,7 @@ export const Toppings = ({ cardRatio, items }: ToppingsProps) => {
     return (
         <div className="toppings" style={{ top: `${top}px`, left: `${left}px`, fontSize: `${fontSize}px` }}>
             <span className="toppings__label">Toppings</span>
-            <ul style={{ paddingLeft: `${20 * cardRatio}px` }}>
+            <ul>
                 {items.map((item) => (
                     <li key={item}>{item}</li>
                 ))}

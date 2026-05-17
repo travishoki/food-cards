@@ -21,11 +21,11 @@ export const TITLE_FONT_SIZE = 48
 
 // Ingredients
 export const INGREDIENTS_TOP = 560
-export const INGREDIENTS_FONT_SIZE = 28
+export const INGREDIENTS_FONT_SIZE = 24
 
 // Toppings
 export const TOPPINGS_TOP = 700
-export const TOPPINGS_FONT_SIZE = 28
+export const TOPPINGS_FONT_SIZE = 24
 
 // Info Bar
 export const INFO_BAR_TOP = 550

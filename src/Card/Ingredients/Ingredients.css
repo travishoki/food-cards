@@ -7,17 +7,16 @@
 .ingredients__label {
     display: block;
     font-weight: 700;
+    text-align: left;
     color: black;
 }
 
 .ingredients ul {
-    list-style: none;
-    margin: 0;
+    margin: 0 0 0 20px;
     padding: 0;
 }
 
 .ingredients li {
-    list-style: disc;
     text-align: left;
     color: black;
     font-weight: 600;
