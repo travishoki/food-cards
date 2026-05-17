@@ -1,6 +1,5 @@
 import { useParams } from "react-router-dom"
 import Card from "../Card/Card"
-import { CategoryMenu } from "../CategoryMenu/CategoryMenu"
 import { FOODS } from "../foods"
 import { foodBySlug } from "../helpers"
 import { Food } from "../types"
@@ -13,13 +12,9 @@ export const FoodPage = () => {
     if (!food) return <p>Food not found.</p>
 
     return (
-        <>
-            <h1 id="top">Food Cards</h1>
-            <CategoryMenu />
-            <div className="food-cards">
-                <BackButton />
-                <Card food={food} />
-            </div>
-        </>
+        <div className="food-cards">
+            <BackButton />
+            <Card food={food} />
+        </div>
     )
 }

@@ -1,43 +1,31 @@
-import { useMemo } from "react"
 import { createRoot } from "react-dom/client"
-import { createBrowserRouter, RouterProvider, useParams } from "react-router-dom"
-import Card from "./Card/Card"
+import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom"
 import { CategoryMenu } from "./CategoryMenu/CategoryMenu"
 import { FoodPage } from "./FoodPage/FoodPage"
+import { FoodsPage } from "./FoodsPage/FoodsPage"
 import "./index.css"
-import { FOODS } from "./foods"
-import { TOP_CATEGORY_SUBCATEGORIES } from "./categories"
 
 function App() {
-    const { topCategory, subCategory } = useParams<{ topCategory?: string; subCategory?: string }>()
-
-    const visibleFoods = useMemo(() => {
-        if (!topCategory) return FOODS
-        if (!subCategory) {
-            const keys = TOP_CATEGORY_SUBCATEGORIES[topCategory as keyof typeof TOP_CATEGORY_SUBCATEGORIES]
-            return keys ? FOODS.filter((f) => keys.includes(f.category_key)) : FOODS
-        }
-        return [...FOODS.filter((f) => f.category_key === subCategory)].sort((a, b) => a.id - b.id)
-    }, [topCategory, subCategory])
-
     return (
         <>
             <h1 id="top">Food Cards</h1>
             <CategoryMenu />
-            <div className="food-cards">
-                {visibleFoods.map((food) => (
-                    <Card key={food.id} food={food} />
-                ))}
-            </div>
+            <Outlet />
         </>
     )
 }
 
 const router = createBrowserRouter([
-    { path: "/", element: <App /> },
-    { path: "/food/:foodName", element: <FoodPage /> },
-    { path: "/:topCategory", element: <App /> },
-    { path: "/:topCategory/:subCategory", element: <App /> },
+    {
+        path: "/",
+        element: <App />,
+        children: [
+            { index: true, element: <FoodsPage /> },
+            { path: "food/:foodName", element: <FoodPage /> },
+            { path: ":topCategory", element: <FoodsPage /> },
+            { path: ":topCategory/:subCategory", element: <FoodsPage /> },
+        ],
+    },
 ])
 
 createRoot(document.getElementById("root")!).render(<RouterProvider router={router} />)
