@@ -4,12 +4,13 @@ import { FOODS } from "../foods"
 import { foodBySlug } from "../helpers"
 import { Food } from "../types"
 import { BackButton } from "./BackButton"
+import { MissingFood } from "./MissingFood"
 
 export const FoodPage = () => {
     const { foodName } = useParams<{ foodName: string }>()
     const food = foodBySlug(FOODS, foodName ?? "") as Food
 
-    if (!food) return <p>Food not found.</p>
+    if (!food) return <MissingFood />
 
     return (
         <div className="food-cards">
