@@ -32,12 +32,12 @@ describe("subCategoriesForTop", () => {
         })
     })
 
-    it("puts vegetables under main", () => {
-        expect(subCategoriesForTop("main").map((i) => i.key)).toContain("vegetables")
+    it("puts entree under main", () => {
+        expect(subCategoriesForTop("main").map((i) => i.key)).toContain("entree")
     })
 
-    it("does not put vegetables under snack", () => {
-        expect(subCategoriesForTop("snack").map((i) => i.key)).not.toContain("vegetables")
+    it("does not put entree under snack", () => {
+        expect(subCategoriesForTop("snack").map((i) => i.key)).not.toContain("entree")
     })
 
     it("puts candy and dessert under sweets", () => {

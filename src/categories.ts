@@ -28,7 +28,7 @@ export const CATEGORIES = {
     grains: 'grains',
     protein: 'protein',
     sides: 'sides',
-    vegetables: 'vegetables',
+    entree: 'entree',
 }
 
 export const DRINKS_CATEGORY_ORDER = [
@@ -37,7 +37,7 @@ export const DRINKS_CATEGORY_ORDER = [
 
 export const MAIN_CATEGORY_ORDER = [
     CATEGORIES.breakfast,
-    CATEGORIES.vegetables,
+    CATEGORIES.entree,
 ]
 
 export const SIDES_CATEGORY_ORDER = [
@@ -73,7 +73,7 @@ export { FRUIT_CATEGORY_DATA } from "./categories/fruit"
 export { GRAINS_CATEGORY_DATA } from "./categories/grains"
 export { PROTEIN_CATEGORY_DATA } from "./categories/protein"
 export { SIDES_CATEGORY_DATA } from "./categories/sides"
-export { VEGETABLES_CATEGORY_DATA } from "./categories/vegetables"
+export { ENTREE_CATEGORY_DATA } from "./categories/entree"
 
 import { BREAKFAST_CATEGORY_DATA } from "./categories/breakfast"
 import { CANDY_CATEGORY_DATA } from "./categories/candy"
@@ -84,7 +84,7 @@ import { FRUIT_CATEGORY_DATA } from "./categories/fruit"
 import { GRAINS_CATEGORY_DATA } from "./categories/grains"
 import { PROTEIN_CATEGORY_DATA } from "./categories/protein"
 import { SIDES_CATEGORY_DATA } from "./categories/sides"
-import { VEGETABLES_CATEGORY_DATA } from "./categories/vegetables"
+import { ENTREE_CATEGORY_DATA } from "./categories/entree"
 
 export const CATEGORY_DATA: Record<string, { label: string }> = {
     [CATEGORIES.breakfast]: BREAKFAST_CATEGORY_DATA,
@@ -96,5 +96,5 @@ export const CATEGORY_DATA: Record<string, { label: string }> = {
     [CATEGORIES.grains]: GRAINS_CATEGORY_DATA,
     [CATEGORIES.protein]: PROTEIN_CATEGORY_DATA,
     [CATEGORIES.sides]: SIDES_CATEGORY_DATA,
-    [CATEGORIES.vegetables]: VEGETABLES_CATEGORY_DATA,
+    [CATEGORIES.entree]: ENTREE_CATEGORY_DATA,
 }

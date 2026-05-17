@@ -7,7 +7,7 @@ import { FRUIT_FOODS } from "./fruit"
 import { GRAINS_FOODS } from "./grains"
 import { PROTEIN_FOODS } from "./protein"
 import { SIDES_FOODS } from "./sides"
-import { VEGETABLES_FOODS } from "./vegetables"
+import { ENTREE_FOODS } from "./entree"
 
 export const FOODS = [
   ...BREAKFAST_FOODS,
@@ -19,5 +19,5 @@ export const FOODS = [
   ...GRAINS_FOODS,
   ...PROTEIN_FOODS,
   ...SIDES_FOODS,
-  ...VEGETABLES_FOODS,
+  ...ENTREE_FOODS,
 ]
