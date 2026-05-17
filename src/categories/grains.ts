@@ -1,1 +1,1 @@
-export const GRAINS_CATEGORY_DATA = { label: "Grains" }
+export const GRAINS_CATEGORY_DATA = { label: "Grain/Bread" }

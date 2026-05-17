@@ -19,11 +19,11 @@ export const TOP_CATEGORY_DATA: Record<TopCategoryKey, { label: string }> = {
 }
 
 export const CATEGORIES = {
+    breakfast: 'breakfast',
     candy: 'candy',
     dairy: 'dairy',
     dessert: 'dessert',
     drinks: 'drinks',
-    fats_oils: 'fats_oils',
     fruit: 'fruit',
     grains: 'grains',
     protein: 'protein',
@@ -36,6 +36,7 @@ export const DRINKS_CATEGORY_ORDER = [
 ]
 
 export const MAIN_CATEGORY_ORDER = [
+    CATEGORIES.breakfast,
     CATEGORIES.vegetables,
 ]
 
@@ -45,7 +46,6 @@ export const SIDES_CATEGORY_ORDER = [
 
 export const SNACK_CATEGORY_ORDER = [
     CATEGORIES.dairy,
-    CATEGORIES.fats_oils,
     CATEGORIES.fruit,
     CATEGORIES.grains,
     CATEGORIES.protein,
@@ -64,22 +64,22 @@ export const TOP_CATEGORY_SUBCATEGORIES: Record<TopCategoryKey, string[]> = {
     sweets: SWEETS_CATEGORY_ORDER,
 }
 
+export { BREAKFAST_CATEGORY_DATA } from "./categories/breakfast"
 export { CANDY_CATEGORY_DATA } from "./categories/candy"
 export { DAIRY_CATEGORY_DATA } from "./categories/dairy"
 export { DESSERT_CATEGORY_DATA } from "./categories/dessert"
 export { DRINKS_CATEGORY_DATA } from "./categories/drinks"
-export { FATS_OILS_CATEGORY_DATA } from "./categories/fats_oils"
 export { FRUIT_CATEGORY_DATA } from "./categories/fruit"
 export { GRAINS_CATEGORY_DATA } from "./categories/grains"
 export { PROTEIN_CATEGORY_DATA } from "./categories/protein"
 export { SIDES_CATEGORY_DATA } from "./categories/sides"
 export { VEGETABLES_CATEGORY_DATA } from "./categories/vegetables"
 
+import { BREAKFAST_CATEGORY_DATA } from "./categories/breakfast"
 import { CANDY_CATEGORY_DATA } from "./categories/candy"
 import { DAIRY_CATEGORY_DATA } from "./categories/dairy"
 import { DESSERT_CATEGORY_DATA } from "./categories/dessert"
 import { DRINKS_CATEGORY_DATA } from "./categories/drinks"
-import { FATS_OILS_CATEGORY_DATA } from "./categories/fats_oils"
 import { FRUIT_CATEGORY_DATA } from "./categories/fruit"
 import { GRAINS_CATEGORY_DATA } from "./categories/grains"
 import { PROTEIN_CATEGORY_DATA } from "./categories/protein"
@@ -87,11 +87,11 @@ import { SIDES_CATEGORY_DATA } from "./categories/sides"
 import { VEGETABLES_CATEGORY_DATA } from "./categories/vegetables"
 
 export const CATEGORY_DATA: Record<string, { label: string }> = {
+    [CATEGORIES.breakfast]: BREAKFAST_CATEGORY_DATA,
     [CATEGORIES.candy]: CANDY_CATEGORY_DATA,
     [CATEGORIES.dairy]: DAIRY_CATEGORY_DATA,
     [CATEGORIES.dessert]: DESSERT_CATEGORY_DATA,
     [CATEGORIES.drinks]: DRINKS_CATEGORY_DATA,
-    [CATEGORIES.fats_oils]: FATS_OILS_CATEGORY_DATA,
     [CATEGORIES.fruit]: FRUIT_CATEGORY_DATA,
     [CATEGORIES.grains]: GRAINS_CATEGORY_DATA,
     [CATEGORIES.protein]: PROTEIN_CATEGORY_DATA,
