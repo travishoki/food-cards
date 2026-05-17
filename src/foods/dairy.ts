@@ -8,7 +8,7 @@ export const DAIRY_FOODS: Food[] = [
     category_key: CATEGORIES.dairy,
     background_url: "/backgrounds/4-blue.png",
     icon_url: "/icons/dairy.png",
-    image_url: "/images/dairy/milk.jpg",
+    image_url: "/images/snack/dairy/milk.jpg",
   },
   {
     id: 8,
@@ -16,6 +16,6 @@ export const DAIRY_FOODS: Food[] = [
     category_key: CATEGORIES.dairy,
     background_url: "/backgrounds/4-blue.png",
     icon_url: "/icons/dairy.png",
-    image_url: "/images/dairy/chocolate-milk.jpg",
+    image_url: "/images/snack/dairy/chocolate-milk.jpg",
   },
 ]

@@ -8,6 +8,6 @@ export const CANDY_FOODS: Food[] = [
     category_key: CATEGORIES.candy,
     background_url: "/backgrounds/1-red.png",
     icon_url: "/icons/fruit.png",
-    image_url: "/images/sugar-fat-salt/andes-mints.jpg",
+    image_url: "/images/sweets/candy/andes-mints.jpg",
   },
 ]
