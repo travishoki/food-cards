@@ -20,12 +20,13 @@ const CARD_WIDTH = 500;
 
 export default function Card({ food }: CardProps) {
   const navigate = useNavigate()
-  const { topCategory, subCategory } = useParams<{ topCategory?: string; subCategory?: string }>()
+  const { topCategory, subCategory, foodName } = useParams<{ topCategory?: string; subCategory?: string; foodName?: string }>()
   const cardW = CARD_WIDTH
   const cardH = getCardHeight(cardW)
   const cardRatio = getCardRatio(cardW)
+  const isDetailView = !!foodName
 
-  const handleClick = () => {
+  const handleClick = isDetailView ? undefined : () => {
     const slug = toFoodSlug(food.name)
     if (topCategory && subCategory) {
       navigate(`/${topCategory}/${subCategory}/food/${slug}`)
@@ -42,7 +43,7 @@ export default function Card({ food }: CardProps) {
       style={{
         height: `${cardH}px`,
         width: `${cardW}px`,
-        cursor: "pointer",
+        cursor: isDetailView ? "default" : "pointer",
       }}
       onClick={handleClick}
     >
