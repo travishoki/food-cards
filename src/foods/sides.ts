@@ -14,5 +14,6 @@ export const SIDES_FOODS: Food[] = [
     category_key: CATEGORIES.sides,
     image_url: "/graphics/sides/sides/texas-toast.jpg",
     info: "Preheat oven to 425°",
+    cookTime: { time: "8m", instructions: "Cook in oven" },
   },
 ]

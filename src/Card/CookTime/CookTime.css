@@ -1,0 +1,19 @@
+.cook-time {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-top: 2px solid #000000;
+}
+
+.cook-time__time {
+    font-weight: 700;
+    color: #000000;
+}
+
+.cook-time__instructions {
+    flex: 1;
+    text-align: center;
+    color: #000000;
+    font-weight: 500;
+}

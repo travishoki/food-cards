@@ -1,5 +1,6 @@
 import { useNavigate, useParams } from "react-router-dom"
 import { InfoBar } from "./InfoBar/InfoBar"
+import { CookTime } from "./CookTime/CookTime"
 import { Ingredients } from "./Ingredients/Ingredients"
 import { Toppings } from "./Toppings/Toppings"
 import type { Food } from "../types"
@@ -56,6 +57,9 @@ export default function Card({ food }: CardProps) {
       )}
       {food.toppings && (
           <Toppings cardRatio={cardRatio} items={food.toppings} />
+      )}
+      {food.cookTime && (
+          <CookTime cardRatio={cardRatio} time={food.cookTime.time} instructions={food.cookTime.instructions} />
       )}
       <Background cardH={cardH} cardW={cardW} categoryKey={food.category_key} />
     </div>
