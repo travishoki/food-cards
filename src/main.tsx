@@ -3,9 +3,10 @@ import { createRoot } from "react-dom/client"
 import { createBrowserRouter, RouterProvider, useParams } from "react-router-dom"
 import Card from "./Card/Card"
 import { CategoryMenu } from "./CategoryMenu/CategoryMenu"
+import { FoodPage } from "./FoodPage/FoodPage"
 import "./index.css"
 import { FOODS } from "./foods"
-import { TOP_CATEGORY_ORDER, TOP_CATEGORY_SUBCATEGORIES } from "./categories"
+import { TOP_CATEGORY_SUBCATEGORIES } from "./categories"
 
 function App() {
     const { topCategory, subCategory } = useParams<{ topCategory?: string; subCategory?: string }>()
@@ -34,6 +35,7 @@ function App() {
 
 const router = createBrowserRouter([
     { path: "/", element: <App /> },
+    { path: "/food/:foodName", element: <FoodPage /> },
     { path: "/:topCategory", element: <App /> },
     { path: "/:topCategory/:subCategory", element: <App /> },
 ])
