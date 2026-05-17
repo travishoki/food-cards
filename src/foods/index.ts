@@ -36,14 +36,6 @@ export const FOODS: Food[] = [
     image_url: "/images/dairy/milk.jpg",
   },
   {
-    id: 7,
-    name: "Babybel Cheese",
-    category_key: CATEGORIES.dairy,
-    background_url: "/backgrounds/4-blue.png",
-    icon_url: "/icons/dairy.png",
-    image_url: "/images/dairy/babybel-cheese.jpg",
-  },
-  {
     id: 8,
     name: "Chocolate Milk",
     category_key: CATEGORIES.dairy,
