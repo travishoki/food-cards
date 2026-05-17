@@ -7,6 +7,6 @@ export const FRUIT_FOODS: Food[] = [
     name: "Grapes",
     category_key: CATEGORIES.fruit,
     image_url: "/graphics/snack/fruit/grapes.jpg",
-    instructions: ["Wash grapes in the sync", "Put the grapes in a bowl."]
+    instructions: ["Wash grapes in the sink", "Put the grapes in a bowl."]
   },
 ]

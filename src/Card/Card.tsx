@@ -18,15 +18,16 @@ type CardProps = {
   food: Food
 }
 
-const CARD_WIDTH = 500;
+const CARD_WIDTH_DETAIL = 500;
+const CARD_WIDTH_LIST = 400;
 
 export default function Card({ food }: CardProps) {
   const navigate = useNavigate()
   const { topCategory, subCategory, foodName } = useParams<{ topCategory?: string; subCategory?: string; foodName?: string }>()
-  const cardW = CARD_WIDTH
+  const isDetailView = !!foodName
+  const cardW = isDetailView ? CARD_WIDTH_DETAIL : CARD_WIDTH_LIST
   const cardH = getCardHeight(cardW)
   const cardRatio = getCardRatio(cardW)
-  const isDetailView = !!foodName
 
   const handleClick = isDetailView ? undefined : () => {
     const slug = toFoodSlug(food.name)
