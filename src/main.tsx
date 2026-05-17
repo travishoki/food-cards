@@ -1,28 +1,28 @@
-import { useMemo, useState } from "react"
+import { useMemo } from "react"
 import { createRoot } from "react-dom/client"
+import { createBrowserRouter, RouterProvider, useParams } from "react-router-dom"
 import Card from "./Card/Card"
 import { CategoryMenu } from "./CategoryMenu/CategoryMenu"
-import type { MenuSelection } from "./types"
 import "./index.css"
 import { FOODS } from "./foods"
 import { TOP_CATEGORY_ORDER, TOP_CATEGORY_SUBCATEGORIES } from "./categories"
 
 function App() {
-    const [menuSelection, setMenuSelection] = useState<MenuSelection>("all")
+    const { topCategory, subCategory } = useParams<{ topCategory?: string; subCategory?: string }>()
 
     const visibleFoods = useMemo(() => {
-        if (menuSelection === "all") return FOODS
-        if ((TOP_CATEGORY_ORDER as string[]).includes(menuSelection)) {
-            const keys = TOP_CATEGORY_SUBCATEGORIES[menuSelection as keyof typeof TOP_CATEGORY_SUBCATEGORIES]
-            return FOODS.filter((f) => keys.includes(f.category_key))
+        if (!topCategory) return FOODS
+        if (!subCategory) {
+            const keys = TOP_CATEGORY_SUBCATEGORIES[topCategory as keyof typeof TOP_CATEGORY_SUBCATEGORIES]
+            return keys ? FOODS.filter((f) => keys.includes(f.category_key)) : FOODS
         }
-        return [...FOODS.filter((f) => f.category_key === menuSelection)].sort((a, b) => a.id - b.id)
-    }, [menuSelection])
+        return [...FOODS.filter((f) => f.category_key === subCategory)].sort((a, b) => a.id - b.id)
+    }, [topCategory, subCategory])
 
     return (
         <>
             <h1 id="top">Food Cards</h1>
-            <CategoryMenu menuSelection={menuSelection} setMenuSelection={setMenuSelection} />
+            <CategoryMenu />
             <div className="food-cards">
                 {visibleFoods.map((food) => (
                     <Card key={food.id} food={food} />
@@ -32,4 +32,10 @@ function App() {
     )
 }
 
-createRoot(document.getElementById("root")!).render(<App />)
+const router = createBrowserRouter([
+    { path: "/", element: <App /> },
+    { path: "/:topCategory", element: <App /> },
+    { path: "/:topCategory/:subCategory", element: <App /> },
+])
+
+createRoot(document.getElementById("root")!).render(<RouterProvider router={router} />)
