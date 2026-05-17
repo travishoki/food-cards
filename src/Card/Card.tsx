@@ -2,6 +2,7 @@ import { useNavigate, useParams } from "react-router-dom"
 import { InfoBar } from "./InfoBar/InfoBar"
 import { CookTime } from "./CookTime/CookTime"
 import { Ingredients } from "./Ingredients/Ingredients"
+import { Instructions } from "./Instructions/Instructions"
 import { Toppings } from "./Toppings/Toppings"
 import type { Food } from "../types"
 import { Background } from "./Background/Background"
@@ -52,6 +53,9 @@ export default function Card({ food }: CardProps) {
       <Graphic cardRatio={cardRatio} cardW={cardW} name={food.name} src={food.image_url} />
       {food.info && (
           <InfoBar cardRatio={cardRatio} text={food.info} />
+      )}
+      {food.instructions && (
+          <Instructions cardRatio={cardRatio} text={food.instructions} />
       )}
       {food.ingredients && (
           <Ingredients cardRatio={cardRatio} items={food.ingredients} />

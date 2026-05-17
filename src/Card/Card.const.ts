@@ -19,6 +19,10 @@ export const ICON_PADDING = 2
 export const TITLE_TOP =  28
 export const TITLE_FONT_SIZE = 48
 
+// Instructions
+export const INSTRUCTIONS_TOP = 630
+export const INSTRUCTIONS_FONT_SIZE = 24
+
 // Ingredients
 export const INGREDIENTS_TOP = 560
 export const INGREDIENTS_FONT_SIZE = 24
