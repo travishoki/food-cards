@@ -1,11 +1,11 @@
+import { CATEGORIES } from "./categories"
 import type { Food } from "./types"
 
 export const FOODS: Food[] = [
   {
     id: 1,
     name: "Donut",
-    category_key: "sugar_fat_salt",
-    category_label: "Sugar, Fat & Salt",
+    category_key: CATEGORIES.sugar_fat_salt,
     background_url: "/backgrounds/1-red.png",
     icon_url: "/icons/fruit.png",
     image_url: "/images/sugar-fat-salt/glazed-donut.jpg",
@@ -13,8 +13,7 @@ export const FOODS: Food[] = [
   {
     id: 2,
     name: "Texas Toast",
-    category_key: "fats_oils",
-    category_label: "Fats & Oils",
+    category_key: CATEGORIES.fats_oils,
     background_url: "/backgrounds/2-yellow.png",
     icon_url: "/icons/fruit.png",
     image_url: "/images/fats-oils/texas-toast.jpg",
@@ -23,8 +22,7 @@ export const FOODS: Food[] = [
   {
     id: 3,
     name: "Peanut Butter",
-    category_key: "protein",
-    category_label: "Protein",
+    category_key: CATEGORIES.protein,
     background_url: "/backgrounds/3-orange.png",
     icon_url: "/icons/fruit.png",
     image_url: "/images/protien/peanut-butter.jpg",
@@ -32,8 +30,7 @@ export const FOODS: Food[] = [
   {
     id: 4,
     name: "Milk",
-    category_key: "dairy",
-    category_label: "Dairy",
+    category_key: CATEGORIES.dairy,
     background_url: "/backgrounds/4-blue.png",
     icon_url: "/icons/dairy.png",
     image_url: "/images/dairy/milk.jpg",
@@ -41,8 +38,7 @@ export const FOODS: Food[] = [
   {
     id: 7,
     name: "Babybel Cheese",
-    category_key: "dairy",
-    category_label: "Dairy",
+    category_key: CATEGORIES.dairy,
     background_url: "/backgrounds/4-blue.png",
     icon_url: "/icons/dairy.png",
     image_url: "/images/dairy/babybel-cheese.jpg",
@@ -50,8 +46,7 @@ export const FOODS: Food[] = [
   {
     id: 8,
     name: "Chocolate Milk",
-    category_key: "dairy",
-    category_label: "Dairy",
+    category_key: CATEGORIES.dairy,
     background_url: "/backgrounds/4-blue.png",
     icon_url: "/icons/dairy.png",
     image_url: "/images/dairy/chocolate-milk.jpg",
@@ -59,8 +54,7 @@ export const FOODS: Food[] = [
   {
     id: 5,
     name: "Mashed Potatoes",
-    category_key: "grains",
-    category_label: "Grains",
+    category_key: CATEGORIES.grains,
     background_url: "/backgrounds/5-purple.png",
     icon_url: "/icons/fruit.png",
     image_url: "/images/grains/mashed-potatoes.jpg",
@@ -68,8 +62,7 @@ export const FOODS: Food[] = [
   {
     id: 6,
     name: "Grapes",
-    category_key: "fruit",
-    category_label: "Fruit",
+    category_key: CATEGORIES.fruit,
     background_url: "/backgrounds/6-green.png",
     icon_url: "/icons/fruit.png",
     image_url: "/images/fruit/grapes.jpg",
@@ -77,8 +70,7 @@ export const FOODS: Food[] = [
   {
     id: 9,
     name: "Carrots",
-    category_key: "vegetables",
-    category_label: "Vegetables",
+    category_key: CATEGORIES.vegetables,
     background_url: "/backgrounds/6-green.png",
     icon_url: "/icons/fruit.png",
     image_url: "/images/vegetables/carrots.jpg",

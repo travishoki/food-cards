@@ -1,15 +1,13 @@
 import { useMemo, useState } from "react"
 import { createRoot } from "react-dom/client"
 import Card from "./Card/Card"
+import { CategoryMenu } from "./CategoryMenu/CategoryMenu"
 import type { MenuSelection } from "./types"
 import "./index.css"
-import { menuFromFoods } from "./main.helpers"
-import { FOODS } from "./data"
+import { FOODS } from "./foods"
 
 function App() {
   const [menuSelection, setMenuSelection] = useState<MenuSelection>("all")
-
-  const menu = useMemo(() => menuFromFoods(FOODS), [])
 
   const visibleFoods = useMemo(() => {
     const sel = menuSelection.trim()
@@ -22,25 +20,7 @@ function App() {
   return (
     <>
       <h1 id="top">Food Cards</h1>
-      <nav className="category-menu" aria-label="Food categories">
-        <button
-          type="button"
-          className={`category-menu__link ${menuSelection === "all" ? "is-active" : ""}`}
-          onClick={() => setMenuSelection("all")}
-        >
-          All
-        </button>
-        {menu.map((cat) => (
-          <button
-            key={cat.key}
-            type="button"
-            className={`category-menu__link ${menuSelection === cat.key ? "is-active" : ""}`}
-            onClick={() => setMenuSelection(cat.key)}
-          >
-            {cat.label}
-          </button>
-        ))}
-      </nav>
+      <CategoryMenu menuSelection={menuSelection} setMenuSelection={setMenuSelection} />
       <div className="food-cards">
         {visibleFoods.map((food) => (
           <Card key={food.id} food={food} />

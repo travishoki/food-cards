@@ -1,4 +1,3 @@
-import { CATEGORY_ORDER } from "./categoryOrder"
 import { Food } from "./types"
 
 export function normalizeFoods(raw: unknown): Food[] {
@@ -20,14 +19,5 @@ export function normalizeFoods(raw: unknown): Food[] {
 
       return resp
     })
-  }
-  
-export function menuFromFoods(foods: Food[]) {
-    return CATEGORY_ORDER.map((key) => {
-      const food = foods.find((f) => f.category_key === key)
-      if (!food) return null
-      
-      return { key, label: food.category_label }
-    }).filter(Boolean) as { key: string; label: string }[]
   }
   
