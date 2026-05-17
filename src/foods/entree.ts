@@ -11,4 +11,10 @@ export const ENTREE_FOODS: Food[] = [
     instructions: "Unwrap pizza. Put parchment on a cooking sheet. Add pepperonis.",
     cookTime: { time: "10–12m", instructions: "Cook in oven"}
   },
+  {
+    id: 20,
+    name: "French Bread Pizza",
+    category_key: CATEGORIES.entree,
+    image_url: "/graphics/main/entree/french-bread-pizza.jpg",
+  },
 ]

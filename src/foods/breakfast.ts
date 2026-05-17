@@ -24,4 +24,34 @@ export const BREAKFAST_FOODS: Food[] = [
       "Powdered Sugar"
     ],
   },
+  {
+    id: 15,
+    name: "French Toast",
+    category_key: CATEGORIES.breakfast,
+    image_url: "/graphics/main/breakfast/french-toast.jpg",
+  },
+  {
+    id: 16,
+    name: "Pancakes",
+    category_key: CATEGORIES.breakfast,
+    image_url: "/graphics/main/breakfast/pancakes.jpg",
+  },
+  {
+    id: 17,
+    name: "Puffy Oven Pancakes",
+    category_key: CATEGORIES.breakfast,
+    image_url: "/graphics/main/breakfast/puffy-oven-pancakes.jpg",
+  },
+  {
+    id: 18,
+    name: "Swedish Pancakes",
+    category_key: CATEGORIES.breakfast,
+    image_url: "/graphics/main/breakfast/swedish-pancakes.jpg",
+  },
+  {
+    id: 19,
+    name: "Waffles",
+    category_key: CATEGORIES.breakfast,
+    image_url: "/graphics/main/breakfast/waffles.jpg",
+  },
 ]

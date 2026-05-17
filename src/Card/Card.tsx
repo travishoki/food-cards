@@ -19,7 +19,7 @@ type CardProps = {
 }
 
 const CARD_WIDTH_DETAIL = 500;
-const CARD_WIDTH_LIST = 400;
+const CARD_WIDTH_LIST = 300;
 
 export default function Card({ food }: CardProps) {
   const navigate = useNavigate()

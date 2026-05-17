@@ -8,4 +8,10 @@ export const DAIRY_FOODS: Food[] = [
     category_key: CATEGORIES.dairy,
     image_url: "/graphics/snack/dairy/grated-cheese.jpg",
   },
+  {
+    id: 31,
+    name: "Gogurt",
+    category_key: CATEGORIES.dairy,
+    image_url: "/graphics/snack/dairy/gogurt.jpg",
+  },
 ]
