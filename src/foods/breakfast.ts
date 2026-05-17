@@ -7,5 +7,7 @@ export const BREAKFAST_FOODS: Food[] = [
     name: "Crepes",
     category_key: CATEGORIES.breakfast,
     image_url: "/graphics/main/breakfast/crepes.jpg",
+    ingredients: ["Strawberry", "Blue Berries"],
+    toppings: ["flour", "egg"],
   },
 ]

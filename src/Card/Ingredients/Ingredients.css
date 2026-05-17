@@ -1,0 +1,24 @@
+.ingredients {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+}
+
+.ingredients__label {
+    display: block;
+    font-weight: 700;
+    color: black;
+}
+
+.ingredients ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.ingredients li {
+    list-style: disc;
+    text-align: left;
+    color: black;
+    font-weight: 600;
+}

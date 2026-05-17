@@ -1,0 +1,24 @@
+.toppings {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+}
+
+.toppings__label {
+    display: block;
+    font-weight: 700;
+    color: black;
+}
+
+.toppings ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.toppings li {
+    list-style: disc;
+    text-align: left;
+    color: black;
+    font-weight: 600;
+}

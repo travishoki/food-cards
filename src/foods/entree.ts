@@ -3,9 +3,9 @@ import type { Food } from "../types"
 
 export const ENTREE_FOODS: Food[] = [
   {
-    id: 9,
-    name: "Carrots",
+    id: 14,
+    name: "Pizza",
     category_key: CATEGORIES.entree,
-    image_url: "/graphics/main/entree/carrots.jpg",
+    image_url: "/graphics/main/entree/pizza.jpg",
   },
 ]

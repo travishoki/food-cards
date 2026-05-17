@@ -4,6 +4,8 @@ export type Food = {
   category_key: string
   image_url: string
   info?: string
+  ingredients?: string[]
+  toppings?: string[]
 }
 
 export type MenuSelection = "all" | string

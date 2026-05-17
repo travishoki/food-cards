@@ -29,6 +29,7 @@ export const CATEGORIES = {
     protein: 'protein',
     sides: 'sides',
     entree: 'entree',
+    vegetables: 'vegetables',
 }
 
 export const DRINKS_CATEGORY_ORDER = [
@@ -49,6 +50,7 @@ export const SNACK_CATEGORY_ORDER = [
     CATEGORIES.fruit,
     CATEGORIES.grains,
     CATEGORIES.protein,
+    CATEGORIES.vegetables,
 ]
 
 export const SWEETS_CATEGORY_ORDER = [
@@ -74,6 +76,7 @@ export { GRAINS_CATEGORY_DATA } from "./categories/grains"
 export { PROTEIN_CATEGORY_DATA } from "./categories/protein"
 export { SIDES_CATEGORY_DATA } from "./categories/sides"
 export { ENTREE_CATEGORY_DATA } from "./categories/entree"
+export { VEGETABLES_CATEGORY_DATA } from "./categories/vegetables"
 
 import { BREAKFAST_CATEGORY_DATA } from "./categories/breakfast"
 import { CANDY_CATEGORY_DATA } from "./categories/candy"
@@ -85,6 +88,7 @@ import { GRAINS_CATEGORY_DATA } from "./categories/grains"
 import { PROTEIN_CATEGORY_DATA } from "./categories/protein"
 import { SIDES_CATEGORY_DATA } from "./categories/sides"
 import { ENTREE_CATEGORY_DATA } from "./categories/entree"
+import { VEGETABLES_CATEGORY_DATA } from "./categories/vegetables"
 
 export const CATEGORY_DATA: Record<string, { label: string }> = {
     [CATEGORIES.breakfast]: BREAKFAST_CATEGORY_DATA,
@@ -97,4 +101,5 @@ export const CATEGORY_DATA: Record<string, { label: string }> = {
     [CATEGORIES.protein]: PROTEIN_CATEGORY_DATA,
     [CATEGORIES.sides]: SIDES_CATEGORY_DATA,
     [CATEGORIES.entree]: ENTREE_CATEGORY_DATA,
+    [CATEGORIES.vegetables]: VEGETABLES_CATEGORY_DATA,
 }
