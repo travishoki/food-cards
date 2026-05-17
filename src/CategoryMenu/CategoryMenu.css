@@ -1,0 +1,35 @@
+.category-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 0.75rem;
+  padding: 0.75rem 1rem 1.25rem;
+  margin: 0 auto;
+  max-width: 960px;
+  border-bottom: 1px solid #80808059;
+}
+
+.category-menu__link {
+  display: inline-block;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  background: #353535;
+  border-color: #4e4e4e;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.category-menu__link:hover {
+  background: #434343;
+  border-color: #6c6c6c;
+}
+
+.category-menu__link.is-active {
+  background: #3a3e6d;
+  border-color: #4d55ab;
+}

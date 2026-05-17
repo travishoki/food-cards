@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react"
 import type { MenuSelection } from "../types"
 import { topMenuItems, subCategoriesForTop } from "./CategoryMenu.helpers"
+import "./CategoryMenu.css"
 
 type CategoryMenuProps = {
     menuSelection: MenuSelection

@@ -2,8 +2,7 @@
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
+  color: hsla(0, 0%, 100%, 0.871);
   background-color: #242424;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -23,73 +22,9 @@ h1 {
   text-align: center;
 }
 
-.category-menu {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.5rem 0.75rem;
-  padding: 0.75rem 1rem 1.25rem;
-  margin: 0 auto;
-  max-width: 960px;
-  border-bottom: 1px solid rgba(128, 128, 128, 0.35);
-}
-
-.category-menu__link {
-  display: inline-block;
-  padding: 0.45rem 0.9rem;
-  border-radius: 999px;
-  font-size: 0.95rem;
-  font-weight: 600;
-  font-family: inherit;
-  cursor: pointer;
-  text-decoration: none;
-  color: inherit;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  transition: background 0.15s ease, border-color 0.15s ease;
-}
-
-.category-menu__link:hover {
-  background: rgba(255, 255, 255, 0.14);
-  border-color: rgba(255, 255, 255, 0.22);
-}
-
-.category-menu__link.is-active {
-  background: rgba(100, 108, 255, 0.35);
-  border-color: rgba(100, 108, 255, 0.55);
-}
-
-@media (prefers-color-scheme: light) {
-  .category-menu {
-    border-bottom-color: rgba(0, 0, 0, 0.12);
-  }
-
-  .category-menu__link {
-    background: rgba(0, 0, 0, 0.04);
-    border-color: rgba(0, 0, 0, 0.1);
-  }
-
-  .category-menu__link:hover {
-    background: rgba(0, 0, 0, 0.08);
-    border-color: rgba(0, 0, 0, 0.16);
-  }
-
-  .category-menu__link.is-active {
-    background: rgba(100, 108, 255, 0.2);
-    border-color: rgba(80, 88, 220, 0.45);
-  }
-}
-
 .food-cards {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
 }
