@@ -66,6 +66,7 @@ export const GRAINS_FOODS: Food[] = [
     id: 56,
     name: "Jello",
     category_key: CATEGORIES.grains,
+    instructions: "Whipcream on top is a nice touch!",
     image_url: "/graphics/snack/grains/jello.jpg",
   },
   {
@@ -85,6 +86,7 @@ export const GRAINS_FOODS: Food[] = [
     name: "Popcorn",
     category_key: CATEGORIES.grains,
     image_url: "/graphics/snack/grains/popcorn.jpg",
+    instructions: 'Press the "poporn" button on the microwave.'
   },
   {
     id: 60,
