@@ -12,7 +12,7 @@ export const Ingredients = ({ cardRatio, items }: IngredientsProps) => {
 
     return (
         <div className="ingredients" style={{ fontSize: `${fontSize}px`, paddingBottom: `${paddingBottom}px` }}>
-            <span className="ingredients__label">Ingredients</span>
+            <span className="ingredients__label">Ingredients:</span>
             <ul>
                 {items.map((item) => (
                     <li key={item}>{item}</li>

@@ -2,11 +2,16 @@
     margin: 0;
     padding: 0;
     color: #000000;
-    font-weight: 500;
+    font-weight: 600;
     text-align: left;
     border-top: 2px solid #000000;
 }
 
-ol.instructions {
+.instructions ol {
     padding-left: 20px;
+    margin: 0;
+}
+
+.instructions p {
+    margin: 0;
 }

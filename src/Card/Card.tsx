@@ -66,7 +66,7 @@ export default function Card({ food }: CardProps) {
           {(food.ingredients || food.toppings) && (
               <div style={{ display: "flex" }}>
                   {food.ingredients && (
-                      <div style={{ width: "50%" }}>
+                      <div style={{ width: food.toppings ? "50%" : "100%" }}>
                           <Ingredients cardRatio={cardRatio} items={food.ingredients} />
                       </div>
                   )}

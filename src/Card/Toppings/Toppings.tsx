@@ -12,7 +12,7 @@ export const Toppings = ({ cardRatio, items }: ToppingsProps) => {
 
     return (
         <div className="toppings" style={{ fontSize: `${fontSize}px`, paddingBottom: `${paddingBottom}px` }}>
-            <span className="toppings__label">Toppings</span>
+            <span className="toppings__label">Toppings:</span>
             <ul>
                 {items.map((item) => (
                     <li key={item}>{item}</li>

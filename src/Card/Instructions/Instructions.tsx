@@ -11,17 +11,12 @@ export const Instructions = ({ cardRatio, text }: InstructionsProps) => {
     const paddingBottom = CARD_INFO_PADDING_BOTTOM * cardRatio
     const style = { fontSize: `${fontSize}px`, paddingBottom: `${paddingBottom}px` }
 
-    if (Array.isArray(text)) {
-        return (
-            <ol className="instructions" style={style}>
-                {text.map((item) => <li key={item}>{item}</li>)}
-            </ol>
-        )
-    }
-
     return (
-        <p className="instructions" style={style}>
-            {text}
-        </p>
+        <div className="instructions" style={style}>
+            {Array.isArray(text)
+                ? <ol>{text.map((item) => <li key={item}>{item}</li>)}</ol>
+                : <p>{text}</p>
+            }
+        </div>
     )
 }
