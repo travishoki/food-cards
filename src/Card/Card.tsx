@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 import { InfoBar } from "./InfoBar/InfoBar"
 import type { Food } from "../types"
 import { Background } from "./Background/Background"
@@ -17,9 +17,21 @@ const CARD_WIDTH = 500;
 
 export default function Card({ food }: CardProps) {
   const navigate = useNavigate()
+  const { topCategory, subCategory } = useParams<{ topCategory?: string; subCategory?: string }>()
   const cardW = CARD_WIDTH
   const cardH = getCardHeight(cardW)
   const cardRatio = getCardRatio(cardW)
+
+  const handleClick = () => {
+    const slug = toFoodSlug(food.name)
+    if (topCategory && subCategory) {
+      navigate(`/${topCategory}/${subCategory}/food/${slug}`)
+    } else if (topCategory) {
+      navigate(`/${topCategory}/food/${slug}`)
+    } else {
+      navigate(`/food/${slug}`)
+    }
+  }
 
   return (
     <div
@@ -29,7 +41,7 @@ export default function Card({ food }: CardProps) {
         width: `${cardW}px`,
         cursor: "pointer",
       }}
-      onClick={() => navigate(`/food/${toFoodSlug(food.name)}`)}
+      onClick={handleClick}
     >
       <Title cardRatio={cardRatio} name={food.name} />
       <Icon cardRatio={cardRatio} src={food.icon_url}/>

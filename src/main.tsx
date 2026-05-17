@@ -23,7 +23,9 @@ const router = createBrowserRouter([
             { index: true, element: <FoodsPage /> },
             { path: "food/:foodName", element: <FoodPage /> },
             { path: ":topCategory", element: <FoodsPage /> },
+            { path: ":topCategory/food/:foodName", element: <FoodPage /> },
             { path: ":topCategory/:subCategory", element: <FoodsPage /> },
+            { path: ":topCategory/:subCategory/food/:foodName", element: <FoodPage /> },
         ],
     },
 ])

@@ -1,8 +1,18 @@
-import { useNavigate } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 
 export const BackButton = () => {
     const navigate = useNavigate()
-    const onClick = () => navigate(-1)
+    const { topCategory, subCategory } = useParams<{ topCategory?: string; subCategory?: string }>()
+
+    const onClick = () => {
+        if (topCategory && subCategory) {
+            navigate(`/${topCategory}/${subCategory}`)
+        } else if (topCategory) {
+            navigate(`/${topCategory}`)
+        } else {
+            navigate("/")
+        }
+    }
 
     return (
         <button type="button" className="category-menu__link" onClick={onClick}>Back</button>
