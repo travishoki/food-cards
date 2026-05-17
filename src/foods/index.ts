@@ -1,70 +1,19 @@
-import { CATEGORIES } from "../categories"
-import type { Food } from "../types"
+import { CANDY_FOODS } from "./candy"
+import { DAIRY_FOODS } from "./dairy"
+import { DESSERT_FOODS } from "./dessert"
+import { FATS_OILS_FOODS } from "./fats_oils"
+import { FRUIT_FOODS } from "./fruit"
+import { GRAINS_FOODS } from "./grains"
+import { PROTEIN_FOODS } from "./protein"
+import { VEGETABLES_FOODS } from "./vegetables"
 
-export const FOODS: Food[] = [
-  {
-    id: 1,
-    name: "Donut",
-    category_key: CATEGORIES.sugar_fat_salt,
-    background_url: "/backgrounds/1-red.png",
-    icon_url: "/icons/fruit.png",
-    image_url: "/images/sugar-fat-salt/glazed-donut.jpg",
-  },
-  {
-    id: 2,
-    name: "Texas Toast",
-    category_key: CATEGORIES.fats_oils,
-    background_url: "/backgrounds/2-yellow.png",
-    icon_url: "/icons/fruit.png",
-    image_url: "/images/fats-oils/texas-toast.jpg",
-    info: "Preheat oven to 425°",
-  },
-  {
-    id: 3,
-    name: "Peanut Butter",
-    category_key: CATEGORIES.protein,
-    background_url: "/backgrounds/3-orange.png",
-    icon_url: "/icons/fruit.png",
-    image_url: "/images/protien/peanut-butter.jpg",
-  },
-  {
-    id: 4,
-    name: "Milk",
-    category_key: CATEGORIES.dairy,
-    background_url: "/backgrounds/4-blue.png",
-    icon_url: "/icons/dairy.png",
-    image_url: "/images/dairy/milk.jpg",
-  },
-  {
-    id: 8,
-    name: "Chocolate Milk",
-    category_key: CATEGORIES.dairy,
-    background_url: "/backgrounds/4-blue.png",
-    icon_url: "/icons/dairy.png",
-    image_url: "/images/dairy/chocolate-milk.jpg",
-  },
-  {
-    id: 5,
-    name: "Mashed Potatoes",
-    category_key: CATEGORIES.grains,
-    background_url: "/backgrounds/5-purple.png",
-    icon_url: "/icons/fruit.png",
-    image_url: "/images/grains/mashed-potatoes.jpg",
-  },
-  {
-    id: 6,
-    name: "Grapes",
-    category_key: CATEGORIES.fruit,
-    background_url: "/backgrounds/6-green.png",
-    icon_url: "/icons/fruit.png",
-    image_url: "/images/fruit/grapes.jpg",
-  },
-  {
-    id: 9,
-    name: "Carrots",
-    category_key: CATEGORIES.vegetables,
-    background_url: "/backgrounds/6-green.png",
-    icon_url: "/icons/fruit.png",
-    image_url: "/images/vegetables/carrots.jpg",
-  },
+export const FOODS = [
+  ...CANDY_FOODS,
+  ...DAIRY_FOODS,
+  ...DESSERT_FOODS,
+  ...FATS_OILS_FOODS,
+  ...FRUIT_FOODS,
+  ...GRAINS_FOODS,
+  ...PROTEIN_FOODS,
+  ...VEGETABLES_FOODS,
 ]
