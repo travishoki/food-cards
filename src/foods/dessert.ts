@@ -6,8 +6,6 @@ export const DESSERT_FOODS: Food[] = [
     id: 1,
     name: "Donut",
     category_key: CATEGORIES.dessert,
-    background_url: "/backgrounds/1-red.png",
-    icon_url: "/icons/fruit.png",
     image_url: "/graphics/sweets/dessert/glazed-donut.jpg",
   },
 ]

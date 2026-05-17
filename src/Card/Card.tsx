@@ -44,12 +44,12 @@ export default function Card({ food }: CardProps) {
       onClick={handleClick}
     >
       <Title cardRatio={cardRatio} name={food.name} />
-      <Icon cardRatio={cardRatio} src={food.icon_url}/>
+      <Icon cardRatio={cardRatio} categoryKey={food.category_key}/>
       <Graphic cardRatio={cardRatio} cardW={cardW} name={food.name} src={food.image_url} />
       {food.info && (
           <InfoBar cardRatio={cardRatio} text={food.info} />
       )}
-      <Background cardH={cardH} cardW={cardW} src={food.background_url} />
+      <Background cardH={cardH} cardW={cardW} categoryKey={food.category_key} />
     </div>
   )
 }

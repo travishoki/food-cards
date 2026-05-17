@@ -4,10 +4,10 @@ import "./Icon.css"
 
 type IconProps = {
     cardRatio: number
-    src: string
+    categoryKey: string
 }
 
-export const Icon = ({cardRatio, src}: IconProps) => {
+export const Icon = ({cardRatio, categoryKey}: IconProps) => {
     const width = ICON_SIZE * cardRatio
     const height = width
     const padding = ICON_PADDING * cardRatio
@@ -17,7 +17,7 @@ export const Icon = ({cardRatio, src}: IconProps) => {
     return (
         <img
             className="iconImg"
-            src={src}
+            src={`/icons/${categoryKey}.png`}
             style={{
                 right: `${right}px`,
                 top: `${top}px`,
