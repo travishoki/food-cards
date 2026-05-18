@@ -1,1 +1,1 @@
-export const SIDES_CATEGORY_DATA = { label: "Sides" }
+export const SIDES_CATEGORY_DATA = { label: "Sides" };

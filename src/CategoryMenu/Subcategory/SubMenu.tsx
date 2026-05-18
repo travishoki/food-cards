@@ -1,13 +1,19 @@
 import { useMemo } from "react";
-import { useNavigate, useParams } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom";
 import { subCategoriesForTop } from "../CategoryMenu.helpers";
 
 export const SubMenu = () => {
-    const { subCategory, topCategory } = useParams<{ subCategory?: string, topCategory?: string; }>()
-    const subMenu = useMemo(() => topCategory ? subCategoriesForTop(topCategory) : [], [topCategory])
-    const navigate = useNavigate()
+    const { subCategory, topCategory } = useParams<{
+        subCategory?: string;
+        topCategory?: string;
+    }>();
+    const subMenu = useMemo(
+        () => (topCategory ? subCategoriesForTop(topCategory) : []),
+        [topCategory],
+    );
+    const navigate = useNavigate();
 
-    if (subMenu.length <= 1) return null
+    if (subMenu.length <= 1) return null;
 
     return (
         <nav aria-label="Food subcategories" className="category-menu">
@@ -29,5 +35,5 @@ export const SubMenu = () => {
                 </button>
             ))}
         </nav>
-    )
-}
+    );
+};

@@ -1,8 +1,8 @@
 type BackgroundProps = {
-    cardH: number
-    cardW: number
-    categoryKey: string
-}
+    cardH: number;
+    cardW: number;
+    categoryKey: string;
+};
 
 export const Background = ({ cardH, cardW, categoryKey }: BackgroundProps) => {
     return (
@@ -11,6 +11,6 @@ export const Background = ({ cardH, cardW, categoryKey }: BackgroundProps) => {
             height={cardH}
             src={`/backgrounds/${categoryKey}.png`}
             width={cardW}
-      />
-    )
-}
+        />
+    );
+};

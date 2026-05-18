@@ -1,12 +1,12 @@
-import { useMemo } from "react"
-import { useNavigate, useParams } from "react-router-dom"
-import { topMenuItems } from "../CategoryMenu.helpers"
+import { useMemo } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import { topMenuItems } from "../CategoryMenu.helpers";
 
 export const Menu = () => {
-    const { topCategory } = useParams<{ topCategory?: string }>()
-    const navigate = useNavigate()
+    const { topCategory } = useParams<{ topCategory?: string }>();
+    const navigate = useNavigate();
 
-    const topMenu = useMemo(() => topMenuItems(), [])
+    const topMenu = useMemo(() => topMenuItems(), []);
 
     return (
         <nav aria-label="Food categories" className="category-menu">
@@ -28,5 +28,5 @@ export const Menu = () => {
                 </button>
             ))}
         </nav>
-    )
-}
+    );
+};

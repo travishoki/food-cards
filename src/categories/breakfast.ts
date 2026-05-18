@@ -1,1 +1,1 @@
-export const BREAKFAST_CATEGORY_DATA = { label: "Breakfast" }
+export const BREAKFAST_CATEGORY_DATA = { label: "Breakfast" };

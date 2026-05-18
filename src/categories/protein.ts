@@ -1,1 +1,1 @@
-export const PROTEIN_CATEGORY_DATA = { label: "Protein" }
+export const PROTEIN_CATEGORY_DATA = { label: "Protein" };

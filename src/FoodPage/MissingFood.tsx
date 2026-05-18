@@ -1,1 +1,1 @@
-export const MissingFood = () => <p>Food not found.</p>
+export const MissingFood = () => <p>Food not found.</p>;

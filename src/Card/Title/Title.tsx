@@ -1,14 +1,14 @@
-import { getSidePadding } from "../Card.helpers"
-import { TITLE_FONT_SIZE, TITLE_TOP } from "../Card.const"
-import "./Title.css"
+import { getSidePadding } from "../Card.helpers";
+import { TITLE_FONT_SIZE, TITLE_TOP } from "../Card.const";
+import "./Title.css";
 
 type TitleProps = {
-    cardRatio: number
-    name: string
-}
+    cardRatio: number;
+    name: string;
+};
 
-export const Title = ({cardRatio, name}: TitleProps) => {
-    const top = TITLE_TOP * cardRatio
+export const Title = ({ cardRatio, name }: TitleProps) => {
+    const top = TITLE_TOP * cardRatio;
     const left = getSidePadding(cardRatio);
     const fontSize = TITLE_FONT_SIZE * cardRatio;
 
@@ -18,8 +18,10 @@ export const Title = ({cardRatio, name}: TitleProps) => {
             style={{
                 fontSize: `${fontSize}px`,
                 left: `${left}px`,
-                top: `${top}px`
+                top: `${top}px`,
             }}
-        >{name}</p>
-    )
-}
+        >
+            {name}
+        </p>
+    );
+};

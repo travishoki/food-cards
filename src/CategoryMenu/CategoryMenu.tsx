@@ -1,6 +1,6 @@
-import { Menu } from "./Menu/Menu"
-import { SubMenu } from "./Subcategory/SubMenu"
-import "./CategoryMenu.css"
+import { Menu } from "./Menu/Menu";
+import { SubMenu } from "./Subcategory/SubMenu";
+import "./CategoryMenu.css";
 
 export const CategoryMenu = () => {
     return (
@@ -8,5 +8,5 @@ export const CategoryMenu = () => {
             <Menu />
             <SubMenu />
         </>
-    )
-}
+    );
+};
