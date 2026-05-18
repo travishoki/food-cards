@@ -32,9 +32,10 @@ export default function Card({ food }: CardProps) {
 		topCategory?: string;
 	}>();
 	const isDetailView = !!foodName;
+	const showAll = showFull || isDetailView;
 	const cardW = isDetailView ? CARD_WIDTH_DETAIL : CARD_WIDTH_LIST;
 	const cardRatio = getCardRatio(cardW);
-	const cardH = showFull ? getCardHeight(cardW) : GRAPHIC_HEIGHT * cardRatio;
+	const cardH = showAll ? getCardHeight(cardW) : GRAPHIC_HEIGHT * cardRatio;
 
 	const handleClick = isDetailView
 		? undefined
@@ -66,7 +67,7 @@ export default function Card({ food }: CardProps) {
 				name={food.name}
 				src={food.image_url}
 			/>
-			{showFull && (
+			{showAll && (
 				<>
 					<Title cardRatio={cardRatio} name={food.name} />
 					<Icon
