@@ -1,18 +1,18 @@
 .info-bar {
-    width: 100%;
-    z-index: 1;
+	width: 100%;
+	z-index: 1;
+
+	p {
+		color: $color-card-text;
+		font-weight: bold;
+		left: 2px;
+		margin: 0;
+		padding: 0;
+		position: absolute;
+		top: 2px;
+	}
 }
 
 .info-bar-inner {
-    position: relative;
-}
-
-.info-bar p {
-    color: black;
-    font-weight: bold;
-    left: 2px;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    top: 2px;
+	position: relative;
 }

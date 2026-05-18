@@ -1,30 +1,30 @@
 :root {
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  background-color: #242424;
-  color: hsla(0, 0%, 100%, 0.871);
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  font-synthesis: none;
-  font-weight: 400;
-  line-height: 1.5;
-  text-rendering: optimizeLegibility;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	background-color: $color-bg;
+	color: $color-text;
+	font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+	font-synthesis: none;
+	font-weight: 400;
+	line-height: 1.5;
+	text-rendering: optimizeLegibility;
 }
 
 body {
-  margin: 0;
-  min-height: 100vh;
-  min-width: 320px;
+	margin: 0;
+	min-height: 100vh;
+	min-width: 320px;
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-  text-align: center;
+	font-size: 3.2em;
+	line-height: 1.1;
+	text-align: center;
 }
 
 .food-cards {
-  margin: 0 auto;
-  max-width: 1280px;
-  padding: 2rem;
-  text-align: center;
+	margin: 0 auto;
+	max-width: 1280px;
+	padding: 2rem;
+	text-align: center;
 }

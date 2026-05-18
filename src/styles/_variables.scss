@@ -1,0 +1,22 @@
+// Surface / chrome colors (dark UI)
+$color-bg: #242424;
+$color-surface: #353535;
+$color-surface-hover: #434343;
+$color-border: #4e4e4e;
+$color-border-hover: #6c6c6c;
+$color-active-bg: #3a3e6d;
+$color-active-border: #4d55ab;
+$color-divider: #80808059;
+
+// Text colors
+$color-text: hsla(0, 0%, 100%, 0.871);
+$color-text-muted: hsla(0, 0%, 100%, 0.5);
+$color-text-white: #fff;
+
+// Card (light surface, painted on background image)
+$color-card-text: #000;
+
+// Shared values
+$card-section-border: 2px solid $color-card-text;
+$radius-sm: 4px;
+$radius-pill: 999px;

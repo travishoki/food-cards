@@ -17,17 +17,17 @@
 }
 
 .no-results__button {
-	background: #353535;
-	border: 1px solid #353535;
-	border-radius: 4px;
-	color: #fff;
+	background: $color-surface;
+	border: 1px solid $color-surface;
+	border-radius: $radius-sm;
+	color: $color-text-white;
 	cursor: pointer;
 	display: inline-block;
 	font-size: 0.95rem;
 	padding: 0.5rem 1rem;
 	text-decoration: none;
-}
 
-.no-results__button:hover {
-	background: #434343;
+	&:hover {
+		background: $color-surface-hover;
+	}
 }
