@@ -37,6 +37,11 @@ export const GRAINS_FOODS: Food[] = [
 		category_key: CATEGORIES.grains,
 		id: 51,
 		image_url: "/graphics/snack/grains/cinnamon-toast.jpg",
+		instructions: [
+			"Toast: Toast your bread to your desired darkness.",
+			"Butter: Immediately spread softened butter onto the hot toast.",
+			"Mix & Sprinkle: Sprinkle cinnamon-sugar over the buttered toast.",
+		],
 		name: "Cinnamon Toast",
 	},
 	{

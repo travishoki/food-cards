@@ -68,6 +68,15 @@ export const DESSERT_FOODS: Food[] = [
 		id: 81,
 		image_url: "/graphics/sweets/dessert/fruit-pizza.jpg",
 		name: "Fruit Pizza",
+		toppings: [
+			"Bananas",
+			"Black Berries",
+			"Blue Berries",
+			"Mandarine Oranges",
+			"Kiwis",
+			"Rasperries",
+			"Strawberries",
+		],
 	},
 	{
 		category_key: CATEGORIES.dessert,

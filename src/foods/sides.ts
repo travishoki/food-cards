@@ -67,18 +67,30 @@ export const SIDES_FOODS: Food[] = [
 		category_key: CATEGORIES.sides,
 		id: 27,
 		image_url: "/graphics/sides/sides/hashbrown.jpg",
+		instructions: [
+			"Toast in the toaster.",
+			"Flip over and toast again to make it extra crunchy.",
+		],
 		name: "Hashbrown",
 	},
 	{
 		category_key: CATEGORIES.sides,
 		id: 28,
 		image_url: "/graphics/sides/sides/scrambled-eggs.jpg",
+		instructions: [
+			"Prep the Eggs: Crack the eggs into a bowl. Add a pinch of salt and your milk or water, if using. Whisk until completely blended with no distinct streaks of egg white.",
+			"Heat the Pan: Place a nonstick skillet over medium-low heat. Add the butter and let it melt and foam, but do not let it brown.",
+			"Cook the Eggs: Pour the egg mixture into the pan. Let them sit for about 5 to 10 seconds, then use a heat-proof rubber spatula to gently pull the edges of the egg toward the center.",
+			"Fold and Scramble: Continue pulling and folding the eggs slowly across the bottom of the pan to form large, soft curds.",
+			"Remove from Heat: Take the pan off the heat just before the eggs are fully set and they still look a bit shiny or wet. The residual heat will finish cooking them.",
+		],
 		name: "Scrambled Eggs",
 	},
 	{
 		category_key: CATEGORIES.sides,
 		id: 29,
 		image_url: "/graphics/sides/sides/steak-fries.jpg",
+		instructions: "Extra yummy with Red Robbin seasoning.",
 		name: "Steak Fries",
 	},
 	{

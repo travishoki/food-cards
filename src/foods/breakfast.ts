@@ -76,7 +76,7 @@ export const BREAKFAST_FOODS: Food[] = [
 		category_key: CATEGORIES.breakfast,
 		id: 19,
 		image_url: "/graphics/main/breakfast/waffles.jpg",
-		name: "Waffles",
+		name: "Fresh Waffles",
 	},
 	{
 		category_key: CATEGORIES.breakfast,
