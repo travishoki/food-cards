@@ -5,7 +5,7 @@ import { FOODS } from "../foods"
 import { TOP_CATEGORY_SUBCATEGORIES } from "../categories"
 
 export const FoodsPage = () => {
-    const { topCategory, subCategory } = useParams<{ topCategory?: string; subCategory?: string }>()
+    const { subCategory, topCategory } = useParams<{ subCategory?: string, topCategory?: string; }>()
 
     const visibleFoods = useMemo(() => {
         if (!topCategory) return FOODS

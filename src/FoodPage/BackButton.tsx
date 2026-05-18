@@ -2,7 +2,7 @@ import { useNavigate, useParams } from "react-router-dom"
 
 export const BackButton = () => {
     const navigate = useNavigate()
-    const { topCategory, subCategory } = useParams<{ topCategory?: string; subCategory?: string }>()
+    const { subCategory, topCategory } = useParams<{ subCategory?: string, topCategory?: string; }>()
 
     const onClick = () => {
         if (topCategory && subCategory) {

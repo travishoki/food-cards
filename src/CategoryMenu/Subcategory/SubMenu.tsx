@@ -3,7 +3,7 @@ import { useNavigate, useParams } from "react-router-dom"
 import { subCategoriesForTop } from "../CategoryMenu.helpers";
 
 export const SubMenu = () => {
-    const { topCategory, subCategory } = useParams<{ topCategory?: string; subCategory?: string }>()
+    const { subCategory, topCategory } = useParams<{ subCategory?: string, topCategory?: string; }>()
     const subMenu = useMemo(() => topCategory ? subCategoriesForTop(topCategory) : [], [topCategory])
     const navigate = useNavigate()
 

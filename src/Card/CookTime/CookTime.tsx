@@ -8,11 +8,11 @@ import "./CookTime.css"
 
 type CookTimeProps = {
     cardRatio: number
+    instructions: string,
     time: string
-    instructions: string
 }
 
-export const CookTime = ({ cardRatio, time, instructions }: CookTimeProps) => {
+export const CookTime = ({ cardRatio, instructions, time }: CookTimeProps) => {
     const height = COOK_TIME_HEIGHT * cardRatio
     const clockSize = COOK_TIME_CLOCK_SIZE * cardRatio
     const fontSizeTime = COOK_TIME_FONT_SIZE_TIME * cardRatio

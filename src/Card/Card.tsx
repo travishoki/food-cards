@@ -23,7 +23,7 @@ const CARD_WIDTH_LIST = 300;
 
 export default function Card({ food }: CardProps) {
   const navigate = useNavigate()
-  const { topCategory, subCategory, foodName } = useParams<{ topCategory?: string; subCategory?: string; foodName?: string }>()
+  const { foodName, subCategory, topCategory } = useParams<{ foodName?: string, subCategory?: string; topCategory?: string; }>()
   const isDetailView = !!foodName
   const cardW = isDetailView ? CARD_WIDTH_DETAIL : CARD_WIDTH_LIST
   const cardH = getCardHeight(cardW)
