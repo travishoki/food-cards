@@ -1,18 +1,7 @@
-#-- Functions
+echo "\n==================== Git Commit ===================="
 
-function printTitle() {
-    echo "\n==================== Git Push ===================="
-}
+echo "\n---------- Lint Staged ----------\n"
 
-function printSectionTitle() {
-    echo "\n---------- $1 ----------\n"
-}
-
-#-- Run
-
-printTitle
-
-printSectionTitle "Lint Staged"
 yarn lint-staged
 
 
