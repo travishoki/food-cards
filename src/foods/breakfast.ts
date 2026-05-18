@@ -29,6 +29,19 @@ export const BREAKFAST_FOODS: Food[] = [
     name: "French Toast",
     category_key: CATEGORIES.breakfast,
     image_url: "/graphics/main/breakfast/french-toast.jpg",
+    ingredients: [
+      "1 egg",
+      "1 tsp All Natural Pure Vanilla Extract",
+      "1/2 tsp Ground Cinnamon",
+      "1/4 cup milk",
+      "4 slices hearty sandwich bread",
+    ],
+    instructions: [
+      "To make this Easy French Toast Recipe: Whisk egg, vanilla, and cinnamon in a shallow dish. Stir in milk.",
+      "Dip bread slices in egg mixture, turning to coat evenly on both sides.",
+      "Cook bread slices on a lightly greased nonstick griddle or skillet on medium heat until cooked through and browned on both sides.",
+      "Serve with butter, sprinkled with confectioners' sugar, or topped with fresh fruit. Also great with Easy Spiced Syrup (recipe follows), if desired.",
+    ]
   },
   {
     id: 16,
@@ -47,11 +60,30 @@ export const BREAKFAST_FOODS: Food[] = [
     name: "Swedish Pancakes",
     category_key: CATEGORIES.breakfast,
     image_url: "/graphics/main/breakfast/swedish-pancakes.jpg",
+    ingredients: [
+      "flour"
+    ],
+    toppings: [
+      "Strawberry",
+      "Blue Berries",
+      "Banana",
+      "Carmel",
+      "Chocolate Syrup",
+      "Whipped Cream",
+      "Powdered Sugar"
+    ],
+
   },
   {
     id: 19,
     name: "Waffles",
     category_key: CATEGORIES.breakfast,
     image_url: "/graphics/main/breakfast/waffles.jpg",
+  },
+  {
+    id: 97,
+    name: "Eggo Waffles",
+    category_key: CATEGORIES.breakfast,
+    image_url: "/graphics/main/breakfast/eggo-waffles.jpg",
   },
 ]

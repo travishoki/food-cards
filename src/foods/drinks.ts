@@ -19,12 +19,14 @@ export const DRINKS_FOODS: Food[] = [
     name: "Frazzle",
     category_key: CATEGORIES.drinks,
     image_url: "/graphics/drinks/drinks/frazzle.jpg",
+    instructions: "Worth the trip to a gas station.",
   },
   {
     id: 87,
     name: "Gatorade",
     category_key: CATEGORIES.drinks,
     image_url: "/graphics/drinks/drinks/gatorade.jpg",
+    instructions: "Important to get electrolites when excercising and paying hard.",
   },
   {
     id: 88,
@@ -55,6 +57,7 @@ export const DRINKS_FOODS: Food[] = [
     name: "Powerade",
     category_key: CATEGORIES.drinks,
     image_url: "/graphics/drinks/drinks/powerade.jpg",
+    instructions: "Important to get electrolites when excercising and paying hard.",
   },
   {
     id: 93,
@@ -67,6 +70,7 @@ export const DRINKS_FOODS: Food[] = [
     name: "Slurpee",
     category_key: CATEGORIES.drinks,
     image_url: "/graphics/drinks/drinks/slurpee.jpg",
+    instructions: "Worth the trip to a gas station.",
   },
   {
     id: 95,

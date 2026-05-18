@@ -80,6 +80,7 @@ export const GRAINS_FOODS: Food[] = [
     name: "Otter Pop",
     category_key: CATEGORIES.grains,
     image_url: "/graphics/snack/grains/otter-pop.jpg",
+    instructions: "Keeps you hydrated on a hot day."
   },
   {
     id: 59,
@@ -93,6 +94,7 @@ export const GRAINS_FOODS: Food[] = [
     name: "Popsicle",
     category_key: CATEGORIES.grains,
     image_url: "/graphics/snack/grains/popsicle.jpg",
+    instructions: "Keeps you hydrated on a hot day."
   },
   {
     id: 61,
