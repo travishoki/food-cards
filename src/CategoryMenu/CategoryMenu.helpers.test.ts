@@ -4,7 +4,7 @@ import {
 	TOP_CATEGORY_DATA,
 	TOP_CATEGORY_SUBCATEGORIES,
 	CATEGORY_DATA,
-} from "../categories";
+} from "../data/categories";
 
 describe("topMenuItems", () => {
 	it("returns one entry per top category", () => {

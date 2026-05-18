@@ -3,7 +3,7 @@ import {
 	TOP_CATEGORY_DATA,
 	TOP_CATEGORY_ORDER,
 	TOP_CATEGORY_SUBCATEGORIES,
-} from "../categories";
+} from "../data/categories";
 
 export function topMenuItems() {
 	return TOP_CATEGORY_ORDER.map((key) => ({

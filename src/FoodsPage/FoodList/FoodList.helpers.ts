@@ -1,5 +1,5 @@
-import { TOP_CATEGORY_SUBCATEGORIES } from "../../categories";
-import { FOODS } from "../../foods";
+import { FOODS } from "../../data";
+import { TOP_CATEGORY_SUBCATEGORIES } from "../../data/categories";
 import { Food } from "../../types";
 
 type GetVisibleFoodsArgs = {

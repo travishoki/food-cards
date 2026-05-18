@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 
 import Card from "../Card/Card";
-import { FOODS } from "../foods";
+import { FOODS } from "../data";
 import { foodBySlug } from "../helpers";
 import { Food } from "../types";
 import { BackButton } from "./BackButton";

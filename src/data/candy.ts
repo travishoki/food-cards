@@ -1,4 +1,4 @@
-import { CATEGORIES } from "../categories";
+import { CATEGORIES } from "./categories";
 
 import type { Food } from "../types";
 

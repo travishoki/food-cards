@@ -1,7 +1,7 @@
 import { getVisibleFoods } from "./FoodList.helpers";
-import { FOODS } from "../../foods";
+import { FOODS } from "../../data";
 
-jest.mock("../../foods", () => ({
+jest.mock("../../data", () => ({
 	FOODS: [
 		{ category_key: "fruit", id: 1, image_url: "", name: "Apple" },
 		{ category_key: "fruit", id: 2, image_url: "", name: "Banana" },
