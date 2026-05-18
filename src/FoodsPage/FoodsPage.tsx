@@ -12,9 +12,15 @@ export const FoodsPage = () => {
 	}>();
 
 	const [debouncedSearch, setDebouncedSearch] = useState("");
+	const [clearCount, setClearCount] = useState(0);
 
 	const handleDebouncedChange = useCallback(
 		(value: string) => setDebouncedSearch(value),
+		[],
+	);
+
+	const handleClearSearch = useCallback(
+		() => setClearCount((c) => c + 1),
 		[],
 	);
 
@@ -22,9 +28,10 @@ export const FoodsPage = () => {
 		<>
 			<SearchInput
 				onDebouncedChange={handleDebouncedChange}
-				resetKey={`${topCategory ?? ""}/${subCategory ?? ""}`}
+				resetKey={String(clearCount)}
 			/>
 			<FoodList
+				onClearSearch={handleClearSearch}
 				search={debouncedSearch}
 				subCategory={subCategory}
 				topCategory={topCategory}

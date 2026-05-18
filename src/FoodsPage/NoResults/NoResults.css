@@ -1,0 +1,33 @@
+.no-results {
+	margin: 2rem auto;
+	max-width: 480px;
+	text-align: center;
+}
+
+.no-results__message {
+	font-size: 1.1rem;
+	margin-bottom: 1rem;
+}
+
+.no-results__actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	justify-content: center;
+}
+
+.no-results__button {
+	background: #353535;
+	border: 1px solid #353535;
+	border-radius: 4px;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 0.95rem;
+	padding: 0.5rem 1rem;
+	text-decoration: none;
+}
+
+.no-results__button:hover {
+	background: #434343;
+}

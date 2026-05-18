@@ -2,14 +2,17 @@ import { useMemo } from "react";
 
 import { getVisibleFoods } from "./FoodList.helpers";
 import Card from "../../Card/Card";
+import { NoResults } from "../NoResults/NoResults";
 
 type FoodListProps = {
+	onClearSearch: () => void;
 	search: string;
 	subCategory?: string;
 	topCategory?: string;
 };
 
 export const FoodList = ({
+	onClearSearch,
 	search,
 	subCategory,
 	topCategory,
@@ -18,6 +21,16 @@ export const FoodList = ({
 		() => getVisibleFoods({ search, subCategory, topCategory }),
 		[topCategory, subCategory, search],
 	);
+
+	if (visibleFoods.length === 0 && search.trim()) {
+		return (
+			<NoResults
+				onClearSearch={onClearSearch}
+				subCategory={subCategory}
+				topCategory={topCategory}
+			/>
+		);
+	}
 
 	return (
 		<div className="food-cards">
