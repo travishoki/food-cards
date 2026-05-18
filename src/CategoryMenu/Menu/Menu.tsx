@@ -1,32 +1,34 @@
 import { useMemo } from "react";
+
 import { useNavigate, useParams } from "react-router-dom";
+
 import { topMenuItems } from "../CategoryMenu.helpers";
 
 export const Menu = () => {
-    const { topCategory } = useParams<{ topCategory?: string }>();
-    const navigate = useNavigate();
+	const { topCategory } = useParams<{ topCategory?: string }>();
+	const navigate = useNavigate();
 
-    const topMenu = useMemo(() => topMenuItems(), []);
+	const topMenu = useMemo(() => topMenuItems(), []);
 
-    return (
-        <nav aria-label="Food categories" className="category-menu">
-            <button
-                className={`category-menu__link ${!topCategory ? "is-active" : ""}`}
-                onClick={() => navigate("/")}
-                type="button"
-            >
-                All
-            </button>
-            {topMenu.map((cat) => (
-                <button
-                    className={`category-menu__link ${topCategory === cat.key ? "is-active" : ""}`}
-                    key={cat.key}
-                    onClick={() => navigate(`/${cat.key}`)}
-                    type="button"
-                >
-                    {cat.label}
-                </button>
-            ))}
-        </nav>
-    );
+	return (
+		<nav aria-label="Food categories" className="category-menu">
+			<button
+				className={`category-menu__link ${!topCategory ? "is-active" : ""}`}
+				onClick={() => navigate("/")}
+				type="button"
+			>
+				All
+			</button>
+			{topMenu.map((cat) => (
+				<button
+					key={cat.key}
+					className={`category-menu__link ${topCategory === cat.key ? "is-active" : ""}`}
+					onClick={() => navigate(`/${cat.key}`)}
+					type="button"
+				>
+					{cat.label}
+				</button>
+			))}
+		</nav>
+	);
 };

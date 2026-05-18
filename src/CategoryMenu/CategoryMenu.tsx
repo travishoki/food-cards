@@ -3,10 +3,10 @@ import { SubMenu } from "./Subcategory/SubMenu";
 import "./CategoryMenu.css";
 
 export const CategoryMenu = () => {
-    return (
-        <>
-            <Menu />
-            <SubMenu />
-        </>
-    );
+	return (
+		<>
+			<Menu />
+			<SubMenu />
+		</>
+	);
 };
