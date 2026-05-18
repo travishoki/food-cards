@@ -62,29 +62,33 @@ export const TOP_CATEGORY_SUBCATEGORIES: Record<TopCategoryKey, string[]> = {
 	sweets: SWEETS_CATEGORY_ORDER,
 };
 
-export { BREAKFAST_CATEGORY_DATA } from "./categories/breakfast";
-export { CANDY_CATEGORY_DATA } from "./categories/candy";
-export { DAIRY_CATEGORY_DATA } from "./categories/dairy";
-export { DESSERT_CATEGORY_DATA } from "./categories/dessert";
-export { DRINKS_CATEGORY_DATA } from "./categories/drinks";
-export { FRUIT_CATEGORY_DATA } from "./categories/fruit";
-export { GRAINS_CATEGORY_DATA } from "./categories/grains";
-export { PROTEIN_CATEGORY_DATA } from "./categories/protein";
-export { SIDES_CATEGORY_DATA } from "./categories/sides";
-export { ENTREE_CATEGORY_DATA } from "./categories/entree";
-export { VEGETABLES_CATEGORY_DATA } from "./categories/vegetables";
+export {
+	BREAKFAST_CATEGORY_DATA,
+	CANDY_CATEGORY_DATA,
+	DAIRY_CATEGORY_DATA,
+	DESSERT_CATEGORY_DATA,
+	DRINKS_CATEGORY_DATA,
+	ENTREE_CATEGORY_DATA,
+	FRUIT_CATEGORY_DATA,
+	GRAINS_CATEGORY_DATA,
+	PROTEIN_CATEGORY_DATA,
+	SIDES_CATEGORY_DATA,
+	VEGETABLES_CATEGORY_DATA,
+} from "./categories.const";
 
-import { BREAKFAST_CATEGORY_DATA } from "./categories/breakfast";
-import { CANDY_CATEGORY_DATA } from "./categories/candy";
-import { DAIRY_CATEGORY_DATA } from "./categories/dairy";
-import { DESSERT_CATEGORY_DATA } from "./categories/dessert";
-import { DRINKS_CATEGORY_DATA } from "./categories/drinks";
-import { ENTREE_CATEGORY_DATA } from "./categories/entree";
-import { FRUIT_CATEGORY_DATA } from "./categories/fruit";
-import { GRAINS_CATEGORY_DATA } from "./categories/grains";
-import { PROTEIN_CATEGORY_DATA } from "./categories/protein";
-import { SIDES_CATEGORY_DATA } from "./categories/sides";
-import { VEGETABLES_CATEGORY_DATA } from "./categories/vegetables";
+import {
+	BREAKFAST_CATEGORY_DATA,
+	CANDY_CATEGORY_DATA,
+	DAIRY_CATEGORY_DATA,
+	DESSERT_CATEGORY_DATA,
+	DRINKS_CATEGORY_DATA,
+	ENTREE_CATEGORY_DATA,
+	FRUIT_CATEGORY_DATA,
+	GRAINS_CATEGORY_DATA,
+	PROTEIN_CATEGORY_DATA,
+	SIDES_CATEGORY_DATA,
+	VEGETABLES_CATEGORY_DATA,
+} from "./categories.const";
 
 export const CATEGORY_DATA: Record<string, { label: string }> = {
 	[CATEGORIES.breakfast]: BREAKFAST_CATEGORY_DATA,
