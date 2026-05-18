@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 import { CATEGORY_DATA, TOP_CATEGORY_DATA } from "../../data/categories";
 
-import "./NoResults.css";
+import "./NoResults.scss";
 
 type NoResultsProps = {
 	onClearSearch: () => void;

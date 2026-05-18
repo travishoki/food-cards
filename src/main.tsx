@@ -4,7 +4,7 @@ import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import { CategoryMenu } from "./CategoryMenu/CategoryMenu";
 import { FoodPage } from "./FoodPage/FoodPage";
 import { FoodsPage } from "./FoodsPage/FoodsPage";
-import "./index.css";
+import "./index.scss";
 
 function App() {
 	return (

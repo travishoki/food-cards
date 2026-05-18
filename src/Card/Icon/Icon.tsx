@@ -1,6 +1,6 @@
 import { ICON_PADDING, ICON_SIZE, ICON_TOP } from "../Card.const";
 import { getSidePadding } from "../Card.helpers";
-import "./Icon.css";
+import "./Icon.scss";
 
 type IconProps = {
 	cardRatio: number;

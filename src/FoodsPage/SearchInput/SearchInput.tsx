@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import "./SearchInput.css";
+import "./SearchInput.scss";
 
 const SEARCH_DEBOUNCE_MS = 250;
 

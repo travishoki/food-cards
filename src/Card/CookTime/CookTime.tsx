@@ -4,7 +4,7 @@ import {
 	COOK_TIME_FONT_SIZE_TIME,
 	COOK_TIME_HEIGHT,
 } from "../Card.const";
-import "./CookTime.css";
+import "./CookTime.scss";
 
 type CookTimeProps = {
 	cardRatio: number;

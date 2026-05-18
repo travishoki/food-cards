@@ -1,6 +1,6 @@
 import { TITLE_FONT_SIZE, TITLE_TOP } from "../Card.const";
 import { getSidePadding } from "../Card.helpers";
-import "./Title.css";
+import "./Title.scss";
 
 type TitleProps = {
 	cardRatio: number;

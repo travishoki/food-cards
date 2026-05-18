@@ -2,7 +2,7 @@ import {
 	CARD_INFO_PADDING_BOTTOM,
 	INSTRUCTIONS_FONT_SIZE,
 } from "../Card.const";
-import "./Instructions.css";
+import "./Instructions.scss";
 
 type InstructionsProps = {
 	cardRatio: number;

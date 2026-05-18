@@ -1,6 +1,6 @@
 import { GRAPHIC_HEIGHT, GRAPHIC_TOP, GRAPHIC_WIDTH } from "../Card.const";
 import { getCenteredLeft } from "../Card.helpers";
-import "./Graphic.css";
+import "./Graphic.scss";
 
 type GraphicProps = {
 	cardRatio: number;

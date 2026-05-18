@@ -13,7 +13,7 @@ import { Title } from "./Title/Title";
 import { Toppings } from "./Toppings/Toppings";
 
 import type { Food } from "../types";
-import "./Card.css";
+import "./Card.scss";
 
 type CardProps = {
 	food: Food;
