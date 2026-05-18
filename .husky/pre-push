@@ -1,0 +1,19 @@
+#-- Functions
+
+function printTitle() {
+    echo "\n==================== Git Push ===================="
+}
+
+function printSectionTitle() {
+    echo "\n---------- $1 ----------\n"
+}
+
+#-- Run
+
+printTitle
+
+printSectionTitle "Typescripting"
+yarn ts-check
+
+printSectionTitle "Unit Testing"
+yarn test
