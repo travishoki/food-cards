@@ -1,0 +1,16 @@
+.food-search {
+	background: #353535;
+	border: 1px solid #353535;
+	border-radius: 4px;
+	color: #fff;
+	display: block;
+	font-size: 1rem;
+	margin: 1rem auto 0;
+	max-width: 400px;
+	padding: 0.5rem 0.75rem;
+	width: 90%;
+}
+
+.food-search::placeholder {
+	color: hsla(0, 0%, 100%, 0.5);
+}

@@ -1,10 +1,9 @@
-import { useMemo } from "react";
+import { useCallback, useState } from "react";
 
 import { useParams } from "react-router-dom";
 
-import Card from "../Card/Card";
-import { TOP_CATEGORY_SUBCATEGORIES } from "../categories";
-import { FOODS } from "../foods";
+import { FoodList } from "./FoodList/FoodList";
+import { SearchInput } from "./SearchInput/SearchInput";
 
 export const FoodsPage = () => {
 	const { subCategory, topCategory } = useParams<{
@@ -12,29 +11,24 @@ export const FoodsPage = () => {
 		topCategory?: string;
 	}>();
 
-	const visibleFoods = useMemo(() => {
-		if (!topCategory) return FOODS;
-		if (!subCategory) {
-			const keys =
-				TOP_CATEGORY_SUBCATEGORIES[
-					topCategory as keyof typeof TOP_CATEGORY_SUBCATEGORIES
-				];
+	const [debouncedSearch, setDebouncedSearch] = useState("");
 
-			return keys
-				? FOODS.filter((f) => keys.includes(f.category_key))
-				: FOODS;
-		}
-
-		return [...FOODS.filter((f) => f.category_key === subCategory)].sort(
-			(a, b) => a.id - b.id,
-		);
-	}, [topCategory, subCategory]);
+	const handleDebouncedChange = useCallback(
+		(value: string) => setDebouncedSearch(value),
+		[],
+	);
 
 	return (
-		<div className="food-cards">
-			{visibleFoods.map((food) => (
-				<Card key={food.id} food={food} />
-			))}
-		</div>
+		<>
+			<SearchInput
+				onDebouncedChange={handleDebouncedChange}
+				resetKey={`${topCategory ?? ""}/${subCategory ?? ""}`}
+			/>
+			<FoodList
+				search={debouncedSearch}
+				subCategory={subCategory}
+				topCategory={topCategory}
+			/>
+		</>
 	);
 };
