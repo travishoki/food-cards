@@ -1,0 +1,20 @@
+.card-view-toggle {
+	align-items: center;
+	cursor: pointer;
+	display: inline-flex;
+	gap: 0.5rem;
+	justify-content: center;
+	margin: 0.5rem auto 0;
+	user-select: none;
+	width: 100%;
+}
+
+.card-view-toggle__input {
+	cursor: pointer;
+}
+
+.card-view-toggle__label {
+	color: $color-text;
+	font-size: 0.95rem;
+	font-weight: 600;
+}

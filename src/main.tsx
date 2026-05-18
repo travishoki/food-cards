@@ -4,15 +4,16 @@ import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import { CategoryMenu } from "./CategoryMenu/CategoryMenu";
 import { FoodPage } from "./FoodPage/FoodPage";
 import { FoodsPage } from "./FoodsPage/FoodsPage";
+import { CardViewProvider } from "./context/CardViewContext";
 import "./index.scss";
 
 function App() {
 	return (
-		<>
+		<CardViewProvider>
 			<h1 id="top">Food Cards</h1>
 			<CategoryMenu />
 			<Outlet />
-		</>
+		</CardViewProvider>
 	);
 }
 
