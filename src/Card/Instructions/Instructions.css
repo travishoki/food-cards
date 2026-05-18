@@ -1,10 +1,10 @@
 .instructions {
-    margin: 0;
-    padding: 0;
+    border-top: 2px solid #000000;
     color: #000000;
     font-weight: 600;
+    margin: 0;
+    padding: 0;
     text-align: left;
-    border-top: 2px solid #000000;
 }
 
 .instructions ol {

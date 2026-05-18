@@ -9,20 +9,20 @@ export const Menu = () => {
     const topMenu = useMemo(() => topMenuItems(), [])
 
     return (
-        <nav className="category-menu" aria-label="Food categories">
+        <nav aria-label="Food categories" className="category-menu">
             <button
-                type="button"
                 className={`category-menu__link ${!topCategory ? "is-active" : ""}`}
                 onClick={() => navigate("/")}
+                type="button"
             >
                 All
             </button>
             {topMenu.map((cat) => (
                 <button
-                    key={cat.key}
-                    type="button"
                     className={`category-menu__link ${topCategory === cat.key ? "is-active" : ""}`}
+                    key={cat.key}
                     onClick={() => navigate(`/${cat.key}`)}
+                    type="button"
                 >
                     {cat.label}
                 </button>

@@ -1,26 +1,26 @@
 .category-menu {
+  border-bottom: 1px solid #80808059;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 0.5rem 0.75rem;
-  padding: 0.75rem 1rem 1.25rem;
+  justify-content: center;
   margin: 0 auto;
   max-width: 960px;
-  border-bottom: 1px solid #80808059;
+  padding: 0.75rem 1rem 1.25rem;
 }
 
 .category-menu__link {
-  display: inline-block;
-  padding: 0.45rem 0.9rem;
-  border-radius: 999px;
-  font-size: 0.95rem;
-  font-weight: 600;
-  font-family: inherit;
-  cursor: pointer;
-  text-decoration: none;
-  color: inherit;
   background: #353535;
   border: 1px solid #4e4e4e;
+  border-radius: 999px;
+  color: inherit;
+  cursor: pointer;
+  display: inline-block;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.45rem 0.9rem;
+  text-decoration: none;
   transition: background 0.15s ease, border-color 0.15s ease;
 }
 

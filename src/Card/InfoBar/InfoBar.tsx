@@ -23,10 +23,10 @@ export const InfoBar = ({cardRatio, text}: InfoBarProps) => {
             }}
           >{text}</p>
           <img
+              alt="Info Bar"
+              height={height}
               src="/card-accents/info-bar.png"
               width={width}
-              height={height}
-              alt="Info Bar"
           />
       </div>
     </div>

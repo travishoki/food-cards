@@ -1,7 +1,7 @@
 .card {
-  position: relative;
-  padding: 0;
   display: inline-block;
-  vertical-align: top;
   margin: 1rem;
+  padding: 0;
+  position: relative;
+  vertical-align: top;
 }

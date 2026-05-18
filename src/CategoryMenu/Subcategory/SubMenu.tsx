@@ -10,20 +10,20 @@ export const SubMenu = () => {
     if (subMenu.length <= 1) return null
 
     return (
-        <nav className="category-menu" aria-label="Food subcategories">
+        <nav aria-label="Food subcategories" className="category-menu">
             <button
-                type="button"
                 className={`category-menu__link ${!subCategory ? "is-active" : ""}`}
                 onClick={() => navigate(`/${topCategory}`)}
+                type="button"
             >
                 All
             </button>
             {subMenu.map((cat) => (
                 <button
-                    key={cat.key}
-                    type="button"
                     className={`category-menu__link ${subCategory === cat.key ? "is-active" : ""}`}
+                    key={cat.key}
                     onClick={() => navigate(`/${topCategory}/${cat.key}`)}
+                    type="button"
                 >
                     {cat.label}
                 </button>

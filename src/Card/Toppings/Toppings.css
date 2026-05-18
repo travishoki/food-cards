@@ -5,10 +5,10 @@
 }
 
 .toppings__label {
+    color: black;
     display: block;
     font-weight: 700;
     text-align: left;
-    color: black;
 }
 
 .toppings ul {
@@ -17,7 +17,7 @@
 }
 
 .toppings li {
-    text-align: left;
     color: black;
     font-weight: 600;
+    text-align: left;
 }

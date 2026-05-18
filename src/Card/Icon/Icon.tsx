@@ -16,15 +16,15 @@ export const Icon = ({cardRatio, categoryKey}: IconProps) => {
 
     return (
         <img
+            alt=""
             className="iconImg"
+            height={height}
             src={`/icons/${categoryKey}.png`}
             style={{
                 right: `${right}px`,
                 top: `${top}px`,
             }}
             width={width}
-            height={height}
-            alt=""
       />
     )
 }

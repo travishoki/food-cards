@@ -5,10 +5,10 @@
 }
 
 .ingredients__label {
+    color: black;
     display: block;
     font-weight: 700;
     text-align: left;
-    color: black;
 }
 
 .ingredients ul {
@@ -17,7 +17,7 @@
 }
 
 .ingredients li {
-    text-align: left;
     color: black;
     font-weight: 600;
+    text-align: left;
 }

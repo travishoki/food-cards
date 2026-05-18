@@ -15,6 +15,6 @@ export const BackButton = () => {
     }
 
     return (
-        <button type="button" className="category-menu__link" onClick={onClick}>Back</button>
+        <button className="category-menu__link" onClick={onClick} type="button">Back</button>
     )
 }

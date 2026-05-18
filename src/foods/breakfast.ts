@@ -3,9 +3,8 @@ import type { Food } from "../types"
 
 export const BREAKFAST_FOODS: Food[] = [
   {
-    id: 13,
-    name: "Crepes",
     category_key: CATEGORIES.breakfast,
+    id: 13,
     image_url: "/graphics/main/breakfast/crepes.jpg",
     ingredients: [
       "1 cup milk",
@@ -14,6 +13,7 @@ export const BREAKFAST_FOODS: Food[] = [
       "2 ½ teaspoons vegetable oil, divided",
       "1 pinch salt",
     ],
+    name: "Crepes",
     toppings: [
       "Strawberry",
       "Blue Berries",
@@ -25,9 +25,8 @@ export const BREAKFAST_FOODS: Food[] = [
     ],
   },
   {
-    id: 15,
-    name: "French Toast",
     category_key: CATEGORIES.breakfast,
+    id: 15,
     image_url: "/graphics/main/breakfast/french-toast.jpg",
     ingredients: [
       "1 egg",
@@ -41,28 +40,29 @@ export const BREAKFAST_FOODS: Food[] = [
       "Dip bread slices in egg mixture, turning to coat evenly on both sides.",
       "Cook bread slices on a lightly greased nonstick griddle or skillet on medium heat until cooked through and browned on both sides.",
       "Serve with butter, sprinkled with confectioners' sugar, or topped with fresh fruit. Also great with Easy Spiced Syrup (recipe follows), if desired.",
-    ]
+    ],
+    name: "French Toast",
   },
   {
+    category_key: CATEGORIES.breakfast,
     id: 16,
-    name: "Pancakes",
-    category_key: CATEGORIES.breakfast,
     image_url: "/graphics/main/breakfast/pancakes.jpg",
+    name: "Pancakes",
   },
   {
+    category_key: CATEGORIES.breakfast,
     id: 17,
-    name: "Puffy Oven Pancakes",
-    category_key: CATEGORIES.breakfast,
     image_url: "/graphics/main/breakfast/puffy-oven-pancakes.jpg",
+    name: "Puffy Oven Pancakes",
   },
   {
-    id: 18,
-    name: "Swedish Pancakes",
     category_key: CATEGORIES.breakfast,
+    id: 18,
     image_url: "/graphics/main/breakfast/swedish-pancakes.jpg",
     ingredients: [
       "flour"
     ],
+    name: "Swedish Pancakes",
     toppings: [
       "Strawberry",
       "Blue Berries",
@@ -75,15 +75,15 @@ export const BREAKFAST_FOODS: Food[] = [
 
   },
   {
-    id: 19,
-    name: "Waffles",
     category_key: CATEGORIES.breakfast,
+    id: 19,
     image_url: "/graphics/main/breakfast/waffles.jpg",
+    name: "Waffles",
   },
   {
-    id: 97,
-    name: "Eggo Waffles",
     category_key: CATEGORIES.breakfast,
+    id: 97,
     image_url: "/graphics/main/breakfast/eggo-waffles.jpg",
+    name: "Eggo Waffles",
   },
 ]

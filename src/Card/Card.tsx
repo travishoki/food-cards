@@ -43,22 +43,22 @@ export default function Card({ food }: CardProps) {
   return (
     <div
       className="card"
+      onClick={handleClick}
       style={{
+        cursor: isDetailView ? "default" : "pointer",
         height: `${cardH}px`,
         width: `${cardW}px`,
-        cursor: isDetailView ? "default" : "pointer",
       }}
-      onClick={handleClick}
     >
       <Title cardRatio={cardRatio} name={food.name} />
       <Icon cardRatio={cardRatio} categoryKey={food.category_key}/>
       <Graphic cardRatio={cardRatio} cardW={cardW} name={food.name} src={food.image_url} />
 
       <div style={{
-          position: "absolute",
-          top: `${CARD_INFO_TOP * cardRatio}px`,
           left: `${getSidePadding(cardRatio)}px`,
+          position: "absolute",
           right: `${getSidePadding(cardRatio)}px`,
+          top: `${CARD_INFO_TOP * cardRatio}px`,
       }}>
           {food.info && (
               <InfoBar cardRatio={cardRatio} text={food.info} />
@@ -85,7 +85,7 @@ export default function Card({ food }: CardProps) {
 
 
           {food.cookTime && (
-              <CookTime cardRatio={cardRatio} time={food.cookTime.time} instructions={food.cookTime.instructions} />
+              <CookTime cardRatio={cardRatio} instructions={food.cookTime.instructions} time={food.cookTime.time} />
           )}
       </div>
       <Background cardH={cardH} cardW={cardW} categoryKey={food.category_key} />

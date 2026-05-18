@@ -3,18 +3,18 @@ import type { Food } from "../types"
 
 export const ENTREE_FOODS: Food[] = [
   {
-    id: 14,
-    name: "Square Pizza",
     category_key: CATEGORIES.entree,
+    cookTime: { instructions: "Cook in oven", time: "10–12m" },
+    id: 14,
     image_url: "/graphics/main/entree/square-pizza.jpg",
     info: "Preheat oven to 450°",
     instructions: "Unwrap pizza. Put parchment on a cooking sheet. Add pepperonis.",
-    cookTime: { time: "10–12m", instructions: "Cook in oven"}
+    name: "Square Pizza",
   },
   {
-    id: 20,
-    name: "French Bread Pizza",
     category_key: CATEGORIES.entree,
+    id: 20,
     image_url: "/graphics/main/entree/french-bread-pizza.jpg",
+    name: "French Bread Pizza",
   },
 ]

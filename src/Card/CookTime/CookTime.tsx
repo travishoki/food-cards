@@ -20,7 +20,7 @@ export const CookTime = ({ cardRatio, time, instructions }: CookTimeProps) => {
 
     return (
         <div className="cook-time" style={{ height: `${height}px` }}>
-            <img src="/stamps/clock.png" width={clockSize} height={clockSize} alt="" />
+            <img alt="" height={clockSize} src="/stamps/clock.png" width={clockSize} />
             <span className="cook-time__instructions" style={{ fontSize: `${fontSizeInstructions}px` }}>{instructions}</span>
             <span className="cook-time__time" style={{ fontSize: `${fontSizeTime}px` }}>{time}</span>
         </div>

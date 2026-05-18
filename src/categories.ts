@@ -24,11 +24,11 @@ export const CATEGORIES = {
     dairy: 'dairy',
     dessert: 'dessert',
     drinks: 'drinks',
+    entree: 'entree',
     fruit: 'fruit',
     grains: 'grains',
     protein: 'protein',
     sides: 'sides',
-    entree: 'entree',
     vegetables: 'vegetables',
 }
 
@@ -96,10 +96,10 @@ export const CATEGORY_DATA: Record<string, { label: string }> = {
     [CATEGORIES.dairy]: DAIRY_CATEGORY_DATA,
     [CATEGORIES.dessert]: DESSERT_CATEGORY_DATA,
     [CATEGORIES.drinks]: DRINKS_CATEGORY_DATA,
+    [CATEGORIES.entree]: ENTREE_CATEGORY_DATA,
     [CATEGORIES.fruit]: FRUIT_CATEGORY_DATA,
     [CATEGORIES.grains]: GRAINS_CATEGORY_DATA,
     [CATEGORIES.protein]: PROTEIN_CATEGORY_DATA,
     [CATEGORIES.sides]: SIDES_CATEGORY_DATA,
-    [CATEGORIES.entree]: ENTREE_CATEGORY_DATA,
     [CATEGORIES.vegetables]: VEGETABLES_CATEGORY_DATA,
 }

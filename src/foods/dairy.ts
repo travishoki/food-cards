@@ -3,15 +3,15 @@ import type { Food } from "../types"
 
 export const DAIRY_FOODS: Food[] = [
   {
-    id: 11,
-    name: "Grated Cheese",
     category_key: CATEGORIES.dairy,
+    id: 11,
     image_url: "/graphics/snack/dairy/grated-cheese.jpg",
+    name: "Grated Cheese",
   },
   {
-    id: 31,
-    name: "Gogurt",
     category_key: CATEGORIES.dairy,
+    id: 31,
     image_url: "/graphics/snack/dairy/gogurt.jpg",
+    name: "Gogurt",
   },
 ]

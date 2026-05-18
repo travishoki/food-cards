@@ -17,16 +17,16 @@ function App() {
 
 const router = createBrowserRouter([
     {
-        path: "/",
-        element: <App />,
         children: [
-            { index: true, element: <FoodsPage /> },
-            { path: "food/:foodName", element: <FoodPage /> },
-            { path: ":topCategory", element: <FoodsPage /> },
-            { path: ":topCategory/food/:foodName", element: <FoodPage /> },
-            { path: ":topCategory/:subCategory", element: <FoodsPage /> },
-            { path: ":topCategory/:subCategory/food/:foodName", element: <FoodPage /> },
+            { element: <FoodsPage />, index: true },
+            { element: <FoodPage />, path: "food/:foodName" },
+            { element: <FoodsPage />, path: ":topCategory" },
+            { element: <FoodPage />, path: ":topCategory/food/:foodName" },
+            { element: <FoodsPage />, path: ":topCategory/:subCategory" },
+            { element: <FoodPage />, path: ":topCategory/:subCategory/food/:foodName" },
         ],
+        element: <App />,
+        path: "/",
     },
 ])
 

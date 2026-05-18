@@ -19,16 +19,16 @@ export const Graphic = ({cardRatio, cardW, name, src}: GraphicProps) => {
 
     return (
         <img
+            alt={name}
             className="graphicImg"
-            src={src}
+            height={height}
             onError={(e) => { e.currentTarget.src = "/missing/missing.jpg" }}
+            src={src}
             style={{
                 left: `${left}px`,
                 top: `${top}px`
             }}
             width={width}
-            height={height}
-            alt={name}
       />
     )
 }
