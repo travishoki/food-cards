@@ -1,7 +1,7 @@
 import { useNavigate, useParams } from "react-router-dom";
 
 import { Background } from "./Background/Background";
-import { CARD_INFO_TOP } from "./Card.const";
+import { CARD_INFO_TOP, GRAPHIC_HEIGHT } from "./Card.const";
 import { getCardHeight, getCardRatio, getSidePadding } from "./Card.helpers";
 import { CookTime } from "./CookTime/CookTime";
 import { Graphic } from "./Graphic/Graphic";
@@ -33,8 +33,8 @@ export default function Card({ food }: CardProps) {
 	}>();
 	const isDetailView = !!foodName;
 	const cardW = isDetailView ? CARD_WIDTH_DETAIL : CARD_WIDTH_LIST;
-	const cardH = getCardHeight(cardW);
 	const cardRatio = getCardRatio(cardW);
+	const cardH = showFull ? getCardHeight(cardW) : GRAPHIC_HEIGHT * cardRatio;
 
 	const handleClick = isDetailView
 		? undefined
