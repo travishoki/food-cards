@@ -8,5 +8,6 @@ export const VEGETABLES_FOODS: Food[] = [
 		id: 9,
 		image_url: "/graphics/snack/vegetables/carrots.jpg",
 		name: "Carrots",
+		slug: "carrots",
 	},
 ];

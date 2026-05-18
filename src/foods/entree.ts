@@ -12,11 +12,13 @@ export const ENTREE_FOODS: Food[] = [
 		instructions:
 			"Unwrap pizza. Put parchment on a cooking sheet. Add pepperonis.",
 		name: "Square Pizza",
+		slug: "square-pizza",
 	},
 	{
 		category_key: CATEGORIES.entree,
 		id: 20,
 		image_url: "/graphics/main/entree/french-bread-pizza.jpg",
 		name: "French Bread Pizza",
+		slug: "french-bread-pizza",
 	},
 ];

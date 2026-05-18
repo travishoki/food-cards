@@ -15,6 +15,7 @@ export const BREAKFAST_FOODS: Food[] = [
 			"1 pinch salt",
 		],
 		name: "Crepes",
+		slug: "crepes",
 		toppings: [
 			"Strawberry",
 			"Blue Berries",
@@ -43,18 +44,21 @@ export const BREAKFAST_FOODS: Food[] = [
 			"Serve with butter, sprinkled with confectioners' sugar, or topped with fresh fruit. Also great with Easy Spiced Syrup (recipe follows), if desired.",
 		],
 		name: "French Toast",
+		slug: "french-toast",
 	},
 	{
 		category_key: CATEGORIES.breakfast,
 		id: 16,
 		image_url: "/graphics/main/breakfast/pancakes.jpg",
 		name: "Pancakes",
+		slug: "pancakes",
 	},
 	{
 		category_key: CATEGORIES.breakfast,
 		id: 17,
 		image_url: "/graphics/main/breakfast/puffy-oven-pancakes.jpg",
 		name: "Puffy Oven Pancakes",
+		slug: "puffy-oven-pancakes",
 	},
 	{
 		category_key: CATEGORIES.breakfast,
@@ -62,6 +66,7 @@ export const BREAKFAST_FOODS: Food[] = [
 		image_url: "/graphics/main/breakfast/swedish-pancakes.jpg",
 		ingredients: ["flour"],
 		name: "Swedish Pancakes",
+		slug: "swedish-pancakes",
 		toppings: [
 			"Strawberry",
 			"Blue Berries",
@@ -77,11 +82,13 @@ export const BREAKFAST_FOODS: Food[] = [
 		id: 19,
 		image_url: "/graphics/main/breakfast/waffles.jpg",
 		name: "Fresh Waffles",
+		slug: "fresh-waffles",
 	},
 	{
 		category_key: CATEGORIES.breakfast,
 		id: 97,
 		image_url: "/graphics/main/breakfast/eggo-waffles.jpg",
 		name: "Eggo Waffles",
+		slug: "eggo-waffles",
 	},
 ];

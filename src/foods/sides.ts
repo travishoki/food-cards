@@ -14,6 +14,7 @@ export const SIDES_FOODS: Food[] = [
 			"Add milk & flakes: Stir in the cold milk, then gently add the potato flakes.",
 		],
 		name: "Mashed Potatoes",
+		slug: "mashed-potatoes",
 	},
 	{
 		category_key: CATEGORIES.sides,
@@ -26,42 +27,49 @@ export const SIDES_FOODS: Food[] = [
 		info: "Preheat oven to 425°",
 		instructions: "Put parchment on a cooking sheet.",
 		name: "Texas Toast",
+		slug: "texas-toast",
 	},
 	{
 		category_key: CATEGORIES.sides,
 		id: 21,
 		image_url: "/graphics/sides/sides/bacon.jpg",
 		name: "Bacon",
+		slug: "bacon",
 	},
 	{
 		category_key: CATEGORIES.sides,
 		id: 22,
 		image_url: "/graphics/sides/sides/breadsticks.jpg",
 		name: "Breadsticks",
+		slug: "breadsticks",
 	},
 	{
 		category_key: CATEGORIES.sides,
 		id: 23,
 		image_url: "/graphics/sides/sides/cheese-sticks-pizza.jpg",
 		name: "Cheese Sticks (Pizza)",
+		slug: "cheese-sticks-pizza",
 	},
 	{
 		category_key: CATEGORIES.sides,
 		id: 24,
 		image_url: "/graphics/sides/sides/corn-doggies.jpg",
 		name: "Corn Doggies",
+		slug: "corn-doggies",
 	},
 	{
 		category_key: CATEGORIES.sides,
 		id: 25,
 		image_url: "/graphics/sides/sides/crinkle-cut-fries.jpg",
 		name: "Crinkle Cut Fries",
+		slug: "crinkle-cut-fries",
 	},
 	{
 		category_key: CATEGORIES.sides,
 		id: 26,
 		image_url: "/graphics/sides/sides/french-fries.jpg",
 		name: "French Fries",
+		slug: "french-fries",
 	},
 	{
 		category_key: CATEGORIES.sides,
@@ -72,6 +80,7 @@ export const SIDES_FOODS: Food[] = [
 			"Flip over and toast again to make it extra crunchy.",
 		],
 		name: "Hashbrown",
+		slug: "hashbrown",
 	},
 	{
 		category_key: CATEGORIES.sides,
@@ -85,6 +94,7 @@ export const SIDES_FOODS: Food[] = [
 			"Remove from Heat: Take the pan off the heat just before the eggs are fully set and they still look a bit shiny or wet. The residual heat will finish cooking them.",
 		],
 		name: "Scrambled Eggs",
+		slug: "scrambled-eggs",
 	},
 	{
 		category_key: CATEGORIES.sides,
@@ -92,11 +102,13 @@ export const SIDES_FOODS: Food[] = [
 		image_url: "/graphics/sides/sides/steak-fries.jpg",
 		instructions: "Extra yummy with Red Robbin seasoning.",
 		name: "Steak Fries",
+		slug: "steak-fries",
 	},
 	{
 		category_key: CATEGORIES.sides,
 		id: 30,
 		image_url: "/graphics/sides/sides/tater-tots.jpg",
 		name: "Tater Tots",
+		slug: "tater-tots",
 	},
 ];

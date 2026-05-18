@@ -3,7 +3,6 @@ import { useNavigate, useParams } from "react-router-dom";
 import { Background } from "./Background/Background";
 import { CARD_INFO_TOP } from "./Card.const";
 import { getCardHeight, getCardRatio, getSidePadding } from "./Card.helpers";
-import { toFoodSlug } from "../helpers";
 import { CookTime } from "./CookTime/CookTime";
 import { Graphic } from "./Graphic/Graphic";
 import { Icon } from "./Icon/Icon";
@@ -38,13 +37,14 @@ export default function Card({ food }: CardProps) {
 	const handleClick = isDetailView
 		? undefined
 		: () => {
-				const slug = toFoodSlug(food.name);
 				if (topCategory && subCategory) {
-					navigate(`/${topCategory}/${subCategory}/food/${slug}`);
+					navigate(
+						`/${topCategory}/${subCategory}/food/${food.slug}`,
+					);
 				} else if (topCategory) {
-					navigate(`/${topCategory}/food/${slug}`);
+					navigate(`/${topCategory}/food/${food.slug}`);
 				} else {
-					navigate(`/food/${slug}`);
+					navigate(`/food/${food.slug}`);
 				}
 			};
 

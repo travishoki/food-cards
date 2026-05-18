@@ -1,58 +1,31 @@
-import { toFoodSlug, fromFoodSlug, foodBySlug } from "./helpers";
-
-describe("toFoodSlug", () => {
-	it("lowercases the name", () => {
-		expect(toFoodSlug("Donut")).toBe("donut");
-	});
-
-	it("replaces spaces with hyphens", () => {
-		expect(toFoodSlug("Andes Mints")).toBe("andes-mints");
-	});
-
-	it("converts & to and", () => {
-		expect(toFoodSlug("Sugar & Salt")).toBe("sugar-and-salt");
-	});
-
-	it("removes other special characters", () => {
-		expect(toFoodSlug("Sugar, Salt")).toBe("sugar-salt");
-	});
-});
-
-describe("fromFoodSlug", () => {
-	it("converts hyphens back to spaces", () => {
-		expect(fromFoodSlug("texas-toast")).toBe("Texas Toast");
-	});
-
-	it("converts 'and' back to &", () => {
-		expect(fromFoodSlug("sugar-and-salt")).toBe("Sugar & Salt");
-	});
-
-	it("capitalizes each word", () => {
-		expect(fromFoodSlug("andes-mints")).toBe("Andes Mints");
-	});
-});
+import { foodBySlug } from "./helpers";
 
 describe("foodBySlug", () => {
 	const foods = [
-		{ name: "Donut" },
-		{ name: "Andes Mints" },
-		{ name: "Chocolate Milk" },
-		{ name: "Sugar & Salt" },
+		{ name: "Donut", slug: "donut" },
+		{ name: "Andes Mints", slug: "andes-mints" },
+		{ name: "Chocolate Milk", slug: "chocolate-milk" },
+		{ name: "Sugar & Salt", slug: "sugar-and-salt" },
 	];
 
 	it("finds a food by its slug", () => {
-		expect(foodBySlug(foods, "donut")).toEqual({ name: "Donut" });
+		expect(foodBySlug(foods, "donut")).toEqual({
+			name: "Donut",
+			slug: "donut",
+		});
 	});
 
-	it("finds a food with a multi-word name", () => {
+	it("finds a food with a multi-word slug", () => {
 		expect(foodBySlug(foods, "andes-mints")).toEqual({
 			name: "Andes Mints",
+			slug: "andes-mints",
 		});
 	});
 
 	it("finds a food whose name contains &", () => {
 		expect(foodBySlug(foods, "sugar-and-salt")).toEqual({
 			name: "Sugar & Salt",
+			slug: "sugar-and-salt",
 		});
 	});
 
