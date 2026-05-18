@@ -75,6 +75,8 @@ export const DRINKS_FOODS: Food[] = [
 		category_key: CATEGORIES.drinks,
 		id: 93,
 		image_url: "/graphics/drinks/drinks/root-beer.jpg",
+		instructions:
+			"Great Grandpa Grovers favorite drinks! It will fix all that ails you!",
 		name: "Root Beer",
 		slug: "root-beer",
 	},
