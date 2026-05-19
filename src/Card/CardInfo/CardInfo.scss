@@ -1,5 +1,7 @@
 .card-info {
+	bottom: 0;
 	left: var(--padding-left);
+	overflow: hidden;
 	position: absolute;
 	right: var(--padding-left);
 	top: var(--card-info-top);
