@@ -1,5 +1,5 @@
 // Background
-export const BACKGROUND_WIDTH = 750;
+export const BACKGROUND_WIDTH = 750; // The cqw sizing is in reference to this
 export const BACKGROUND_HEIGHT = 1050;
 
 // Card
