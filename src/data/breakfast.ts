@@ -61,6 +61,13 @@ export const BREAKFAST_FOODS: Food[] = [
 		id: 17,
 		image_url: "/graphics/main/breakfast/puffy-oven-pancakes.jpg",
 		info: "Preheat oven to 450°",
+		ingredients: [
+			"6 eggs",
+			"1 cup milk",
+			"1 cup flour",
+			"1⁄4 teaspoon salt",
+			"6 tablespoons butter",
+		],
 		instructions: [
 			"In blender or bowl, blend together eggs, milk, flour, and salt.",
 			"Melt butter in 9x13 pan in oven.",
