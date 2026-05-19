@@ -1,16 +1,18 @@
+import { useCard } from "../CardContext";
+
 type BackgroundProps = {
-	cardH: number;
-	cardW: number;
 	categoryKey: string;
 };
 
-export const Background = ({ cardH, cardW, categoryKey }: BackgroundProps) => {
+export const Background = ({ categoryKey }: BackgroundProps) => {
+	const { cardHeight, cardWidth } = useCard();
+
 	return (
 		<img
 			alt=""
-			height={cardH}
+			height={cardHeight}
 			src={`/backgrounds/${categoryKey}.png`}
-			width={cardW}
+			width={cardWidth}
 		/>
 	);
 };

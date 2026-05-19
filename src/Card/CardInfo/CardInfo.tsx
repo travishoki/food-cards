@@ -1,6 +1,6 @@
 import { CARD_INFO_TOP } from "../Card.const";
 import { getSidePadding } from "../Card.helpers";
-import { useCardRatio } from "../CardRatioContext";
+import { useCardRatio } from "../CardContext";
 import { CookTime } from "../CookTime/CookTime";
 import { InfoBar } from "../InfoBar/InfoBar";
 import { Ingredients } from "../Ingredients/Ingredients";

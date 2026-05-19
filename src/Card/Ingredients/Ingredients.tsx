@@ -1,5 +1,5 @@
 import { CARD_INFO_PADDING_BOTTOM, INGREDIENTS_FONT_SIZE } from "../Card.const";
-import { useCardRatio } from "../CardRatioContext";
+import { useCardRatio } from "../CardContext";
 import "./Ingredients.scss";
 
 type IngredientsProps = {

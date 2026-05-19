@@ -5,7 +5,7 @@ import {
 	INFO_BAR_TEXT_TOP_PADDING,
 	INFO_BAR_WIDTH,
 } from "../Card.const";
-import { useCardRatio } from "../CardRatioContext";
+import { useCardRatio } from "../CardContext";
 import "./InfoBar.scss";
 
 type InfoBarProps = {

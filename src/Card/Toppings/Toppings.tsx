@@ -1,5 +1,5 @@
 import { CARD_INFO_PADDING_BOTTOM, TOPPINGS_FONT_SIZE } from "../Card.const";
-import { useCardRatio } from "../CardRatioContext";
+import { useCardRatio } from "../CardContext";
 import "./Toppings.scss";
 
 type ToppingsProps = {
