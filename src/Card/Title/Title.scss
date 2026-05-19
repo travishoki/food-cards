@@ -1,7 +1,10 @@
 .card-title {
 	color: $color-card-text;
+	font-size: var(--title-font-size);
 	font-weight: bold;
+	left: var(--padding-left);
 	margin: 0;
 	position: absolute;
+	top: var(--title-top);
 	z-index: 2;
 }

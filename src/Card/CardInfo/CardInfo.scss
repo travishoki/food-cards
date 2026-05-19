@@ -1,0 +1,11 @@
+.card-info {
+	left: var(--padding-left);
+	position: absolute;
+	right: var(--padding-left);
+	top: var(--card-info-top);
+	z-index: 2;
+}
+
+.card-info__row {
+	display: flex;
+}

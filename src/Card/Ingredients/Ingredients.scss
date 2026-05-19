@@ -1,7 +1,9 @@
 .ingredients {
 	border-top: $card-section-border;
+	font-size: var(--ingredients-font-size);
 	margin: 0;
 	padding: 0;
+	padding-bottom: var(--card-info-padding-bottom);
 
 	&__label {
 		color: $color-card-text;

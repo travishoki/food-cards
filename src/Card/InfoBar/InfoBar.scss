@@ -1,18 +1,27 @@
 .info-bar {
+	padding-bottom: var(--card-info-padding-bottom);
 	width: 100%;
 	z-index: 1;
+
+	img {
+		height: var(--info-bar-height);
+		width: var(--info-bar-width);
+	}
 
 	p {
 		color: $color-card-text;
 		font-weight: bold;
 		left: 2px;
 		margin: 0;
-		padding: 0;
+		padding: var(--info-bar-text-top-padding) var(--info-bar-text-left-padding);
 		position: absolute;
 		top: 2px;
 	}
 }
 
 .info-bar-inner {
+	font-size: var(--info-bar-font-size);
+	height: var(--info-bar-height);
 	position: relative;
+	width: var(--info-bar-width);
 }

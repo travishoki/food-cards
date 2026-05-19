@@ -1,4 +1,17 @@
 .graphicImg {
+	height: var(--graphic-height);
+	left: 50%;
 	position: absolute;
+	top: var(--graphic-top);
+	transform: translateX(-50%);
+	width: var(--graphic-width);
 	z-index: 1;
+
+	&--full {
+		height: auto;
+		left: 0;
+		top: 0;
+		transform: none;
+		width: 100%;
+	}
 }

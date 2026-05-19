@@ -1,9 +1,11 @@
 .instructions {
 	border-top: $card-section-border;
 	color: $color-card-text;
+	font-size: var(--instructions-font-size);
 	font-weight: 600;
 	margin: 0;
 	padding: 0;
+	padding-bottom: var(--card-info-padding-bottom);
 	text-align: left;
 
 	ol {
