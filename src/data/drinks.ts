@@ -5,6 +5,7 @@ import type { Food } from "../types";
 export const DRINKS_FOODS: Food[] = [
 	{
 		category_key: CATEGORIES.drinks,
+		difficulty: 1,
 		id: 4,
 		image_url: "/graphics/drinks/drinks/milk.jpg",
 		name: "Milk",
@@ -12,6 +13,7 @@ export const DRINKS_FOODS: Food[] = [
 	},
 	{
 		category_key: CATEGORIES.drinks,
+		difficulty: 1,
 		id: 8,
 		image_url: "/graphics/drinks/drinks/chocolate-milk.jpg",
 		name: "Chocolate Milk",
@@ -19,6 +21,7 @@ export const DRINKS_FOODS: Food[] = [
 	},
 	{
 		category_key: CATEGORIES.drinks,
+		difficulty: 1,
 		id: 86,
 		image_url: "/graphics/drinks/drinks/frazzle.jpg",
 		instructions: "Worth the trip to a gas station.",
@@ -27,6 +30,7 @@ export const DRINKS_FOODS: Food[] = [
 	},
 	{
 		category_key: CATEGORIES.drinks,
+		difficulty: 1,
 		id: 87,
 		image_url: "/graphics/drinks/drinks/gatorade.jpg",
 		instructions:
@@ -36,6 +40,7 @@ export const DRINKS_FOODS: Food[] = [
 	},
 	{
 		category_key: CATEGORIES.drinks,
+		difficulty: 1,
 		id: 88,
 		image_url: "/graphics/drinks/drinks/hot-chocolate.jpg",
 		name: "Hot Chocolate",
@@ -43,6 +48,7 @@ export const DRINKS_FOODS: Food[] = [
 	},
 	{
 		category_key: CATEGORIES.drinks,
+		difficulty: 1,
 		id: 89,
 		image_url: "/graphics/drinks/drinks/kool-aid.jpg",
 		name: "Kool-Aid",
@@ -50,6 +56,7 @@ export const DRINKS_FOODS: Food[] = [
 	},
 	{
 		category_key: CATEGORIES.drinks,
+		difficulty: 1,
 		id: 90,
 		image_url: "/graphics/drinks/drinks/lemonade.jpg",
 		name: "Lemonade",
@@ -57,6 +64,7 @@ export const DRINKS_FOODS: Food[] = [
 	},
 	{
 		category_key: CATEGORIES.drinks,
+		difficulty: 1,
 		id: 91,
 		image_url: "/graphics/drinks/drinks/orange-julius.jpg",
 		name: "Orange Julius",
@@ -64,6 +72,7 @@ export const DRINKS_FOODS: Food[] = [
 	},
 	{
 		category_key: CATEGORIES.drinks,
+		difficulty: 1,
 		id: 92,
 		image_url: "/graphics/drinks/drinks/powerade.jpg",
 		instructions:
@@ -73,6 +82,7 @@ export const DRINKS_FOODS: Food[] = [
 	},
 	{
 		category_key: CATEGORIES.drinks,
+		difficulty: 1,
 		id: 93,
 		image_url: "/graphics/drinks/drinks/root-beer.jpg",
 		instructions:
@@ -82,6 +92,7 @@ export const DRINKS_FOODS: Food[] = [
 	},
 	{
 		category_key: CATEGORIES.drinks,
+		difficulty: 1,
 		id: 94,
 		image_url: "/graphics/drinks/drinks/slurpee.jpg",
 		instructions: "Worth the trip to a gas station.",
@@ -90,6 +101,7 @@ export const DRINKS_FOODS: Food[] = [
 	},
 	{
 		category_key: CATEGORIES.drinks,
+		difficulty: 1,
 		id: 95,
 		image_url: "/graphics/drinks/drinks/sprite.jpg",
 		name: "Sprite",
@@ -97,6 +109,7 @@ export const DRINKS_FOODS: Food[] = [
 	},
 	{
 		category_key: CATEGORIES.drinks,
+		difficulty: 1,
 		id: 96,
 		image_url: "/graphics/drinks/drinks/sunny-d.jpg",
 		name: "Sunny D",

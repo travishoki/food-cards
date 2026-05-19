@@ -4,6 +4,8 @@ import { useParams } from "react-router-dom";
 
 import { BackToTop } from "./BackToTop/BackToTop";
 import { FoodList } from "./FoodList/FoodList";
+import { Difficulty } from "./Toolbar/DifficultyFilter";
+import { SortDirection } from "./Toolbar/SortPanel";
 import { Toolbar } from "./Toolbar/Toolbar";
 
 export const FoodsPage = () => {
@@ -14,6 +16,8 @@ export const FoodsPage = () => {
 
 	const [debouncedSearch, setDebouncedSearch] = useState("");
 	const [clearCount, setClearCount] = useState(0);
+	const [sort, setSort] = useState<SortDirection>("asc");
+	const [difficulty, setDifficulty] = useState<Difficulty | null>(null);
 
 	const handleDebouncedChange = useCallback(
 		(value: string) => setDebouncedSearch(value),
@@ -28,14 +32,22 @@ export const FoodsPage = () => {
 	return (
 		<>
 			<Toolbar
-				hasActiveFilter={!!topCategory || !!subCategory}
+				difficulty={difficulty}
+				hasActiveFilter={
+					!!topCategory || !!subCategory || difficulty !== null
+				}
 				hasActiveSearch={!!debouncedSearch.trim()}
 				onDebouncedSearchChange={handleDebouncedChange}
+				onDifficultyChange={setDifficulty}
+				onSortChange={setSort}
 				searchResetKey={String(clearCount)}
+				sort={sort}
 			/>
 			<FoodList
+				difficulty={difficulty}
 				onClearSearch={handleClearSearch}
 				search={debouncedSearch}
+				sort={sort}
 				subCategory={subCategory}
 				topCategory={topCategory}
 			/>

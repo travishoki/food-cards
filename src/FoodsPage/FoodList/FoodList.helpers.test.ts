@@ -3,10 +3,34 @@ import { FOODS } from "../../data";
 
 jest.mock("../../data", () => ({
 	FOODS: [
-		{ category_key: "fruit", id: 1, image_url: "", name: "Apple" },
-		{ category_key: "fruit", id: 2, image_url: "", name: "Banana" },
-		{ category_key: "vegetables", id: 3, image_url: "", name: "Carrot" },
-		{ category_key: "dessert", id: 4, image_url: "", name: "Donut" },
+		{
+			category_key: "fruit",
+			difficulty: 1,
+			id: 1,
+			image_url: "",
+			name: "Apple",
+		},
+		{
+			category_key: "fruit",
+			difficulty: 2,
+			id: 2,
+			image_url: "",
+			name: "Banana",
+		},
+		{
+			category_key: "vegetables",
+			difficulty: 1,
+			id: 3,
+			image_url: "",
+			name: "Carrot",
+		},
+		{
+			category_key: "dessert",
+			difficulty: 3,
+			id: 4,
+			image_url: "",
+			name: "Donut",
+		},
 		{ category_key: "breakfast", id: 5, image_url: "", name: "Eggs" },
 	],
 }));
@@ -97,6 +121,85 @@ describe("getVisibleFoods", () => {
 			expect(
 				getVisibleFoods({ search: "ban", subCategory: "fruit" }),
 			).toEqual([BANANA]);
+		});
+	});
+
+	describe("sort", () => {
+		it("defaults to ascending alphabetical order", () => {
+			expect(getVisibleFoods({ search: "" }).map((f) => f.name)).toEqual([
+				"Apple",
+				"Banana",
+				"Carrot",
+				"Donut",
+				"Eggs",
+			]);
+		});
+
+		it("sorts descending by name when sort is 'desc'", () => {
+			expect(
+				getVisibleFoods({ search: "", sort: "desc" }).map(
+					(f) => f.name,
+				),
+			).toEqual(["Eggs", "Donut", "Carrot", "Banana", "Apple"]);
+		});
+
+		it("applies sort after filtering", () => {
+			expect(
+				getVisibleFoods({
+					search: "",
+					sort: "desc",
+					topCategory: "snack",
+				}).map((f) => f.name),
+			).toEqual(["Carrot", "Banana", "Apple"]);
+		});
+
+		it("applies sort after search", () => {
+			expect(
+				getVisibleFoods({ search: "a", sort: "desc" }).map(
+					(f) => f.name,
+				),
+			).toEqual(["Carrot", "Banana", "Apple"]);
+		});
+	});
+
+	describe("difficulty filtering", () => {
+		it("filters to foods matching difficulty 1", () => {
+			expect(
+				getVisibleFoods({ difficulty: 1, search: "" }).map(
+					(f) => f.name,
+				),
+			).toEqual(["Apple", "Carrot"]);
+		});
+
+		it("filters to foods matching difficulty 2", () => {
+			expect(
+				getVisibleFoods({ difficulty: 2, search: "" }).map(
+					(f) => f.name,
+				),
+			).toEqual(["Banana"]);
+		});
+
+		it("excludes foods without a difficulty value", () => {
+			const names = getVisibleFoods({ difficulty: 1, search: "" }).map(
+				(f) => f.name,
+			);
+			expect(names).not.toContain("Eggs");
+		});
+
+		it("combines with topCategory", () => {
+			expect(
+				getVisibleFoods({
+					difficulty: 1,
+					search: "",
+					topCategory: "snack",
+				}).map((f) => f.name),
+			).toEqual(["Apple", "Carrot"]);
+		});
+
+		it("null difficulty applies no filter", () => {
+			expect(
+				getVisibleFoods({ difficulty: null, search: "" }),
+			).toHaveLength(5);
 		});
 	});
 });

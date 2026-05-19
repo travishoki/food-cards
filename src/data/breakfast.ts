@@ -5,6 +5,7 @@ import type { Food } from "../types";
 export const BREAKFAST_FOODS: Food[] = [
 	{
 		category_key: CATEGORIES.breakfast,
+		difficulty: 3,
 		id: 13,
 		image_url: "/graphics/main/breakfast/crepes.jpg",
 		ingredients: [
@@ -29,6 +30,7 @@ export const BREAKFAST_FOODS: Food[] = [
 	},
 	{
 		category_key: CATEGORIES.breakfast,
+		difficulty: 3,
 		id: 15,
 		image_url: "/graphics/main/breakfast/french-toast.jpg",
 		ingredients: [
@@ -39,10 +41,10 @@ export const BREAKFAST_FOODS: Food[] = [
 			"4 slices hearty sandwich bread",
 		],
 		instructions: [
-			"To make this Easy French Toast Recipe: Whisk egg, vanilla, and cinnamon in a shallow dish. Stir in milk.",
+			"Whisk egg, vanilla, and cinnamon in a shallow dish. Stir in milk.",
 			"Dip bread slices in egg mixture, turning to coat evenly on both sides.",
 			"Cook bread slices on a lightly greased nonstick griddle or skillet on medium heat until cooked through and browned on both sides.",
-			"Serve with butter, sprinkled with confectioners' sugar, or topped with fresh fruit. Also great with Easy Spiced Syrup (recipe follows), if desired.",
+			"Serve with butter, sprinkled with powdered sugar and syrup. You can top with fresh fruit",
 		],
 		name: "French Toast",
 		recipe_link:
@@ -51,6 +53,7 @@ export const BREAKFAST_FOODS: Food[] = [
 	},
 	{
 		category_key: CATEGORIES.breakfast,
+		difficulty: 3,
 		id: 16,
 		image_url: "/graphics/main/breakfast/pancakes.jpg",
 		name: "Pancakes",
@@ -58,6 +61,7 @@ export const BREAKFAST_FOODS: Food[] = [
 	},
 	{
 		category_key: CATEGORIES.breakfast,
+		difficulty: 3,
 		id: 17,
 		image_url: "/graphics/main/breakfast/puffy-oven-pancakes.jpg",
 		info: "Preheat oven to 450°",
@@ -85,6 +89,7 @@ export const BREAKFAST_FOODS: Food[] = [
 	},
 	{
 		category_key: CATEGORIES.breakfast,
+		difficulty: 3,
 		id: 18,
 		image_url: "/graphics/main/breakfast/swedish-pancakes.jpg",
 		ingredients: ["flour"],
@@ -102,6 +107,7 @@ export const BREAKFAST_FOODS: Food[] = [
 	},
 	{
 		category_key: CATEGORIES.breakfast,
+		difficulty: 3,
 		id: 19,
 		image_url: "/graphics/main/breakfast/waffles.jpg",
 		name: "Fresh Waffles",
@@ -109,8 +115,10 @@ export const BREAKFAST_FOODS: Food[] = [
 	},
 	{
 		category_key: CATEGORIES.breakfast,
+		difficulty: 1,
 		id: 97,
 		image_url: "/graphics/main/breakfast/eggo-waffles.jpg",
+		instructions: ["Cook in the toaster", "Spread butter", "Add syrup"],
 		name: "Eggo Waffles",
 		slug: "eggo-waffles",
 	},

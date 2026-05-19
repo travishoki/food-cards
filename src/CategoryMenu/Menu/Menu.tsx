@@ -12,6 +12,7 @@ export const Menu = () => {
 
 	return (
 		<nav aria-label="Food categories" className="category-menu">
+			<span className="category-menu__label">Category:</span>
 			<button
 				className={`category-menu__link ${!topCategory ? "is-active" : ""}`}
 				onClick={() => navigate("/")}

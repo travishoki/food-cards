@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
 
+import { Difficulty, DifficultyFilter } from "./DifficultyFilter";
 import { FilterButton } from "./FilterButton";
 import { SearchButton } from "./SearchButton";
 import { SettingsButton } from "./SettingsButton";
+import { SortButton } from "./SortButton";
+import { SortDirection, SortPanel } from "./SortPanel";
 import { CardViewToggle } from "../../CardViewToggle/CardViewToggle";
 import { CategoryMenu } from "../../CategoryMenu/CategoryMenu";
 import { CloseIcon } from "../../icons/CloseIcon";
@@ -10,20 +13,28 @@ import { SearchInput } from "../SearchInput/SearchInput";
 
 import "./Toolbar.scss";
 
-type Panel = "filter" | "search" | "settings";
+type Panel = "filter" | "search" | "settings" | "sort";
 
 type ToolbarProps = {
+	difficulty: Difficulty | null;
 	hasActiveFilter: boolean;
 	hasActiveSearch: boolean;
 	onDebouncedSearchChange: (value: string) => void;
+	onDifficultyChange: (value: Difficulty | null) => void;
+	onSortChange: (dir: SortDirection) => void;
 	searchResetKey?: string;
+	sort: SortDirection;
 };
 
 export const Toolbar = ({
+	difficulty,
 	hasActiveFilter,
 	hasActiveSearch,
 	onDebouncedSearchChange,
+	onDifficultyChange,
+	onSortChange,
 	searchResetKey,
+	sort,
 }: ToolbarProps) => {
 	const [openPanel, setOpenPanel] = useState<Panel | null>(null);
 
@@ -57,6 +68,11 @@ export const Toolbar = ({
 					isOpen={openPanel === "search"}
 					onToggle={() => toggle("search")}
 				/>
+				<SortButton
+					hasActiveSort={sort === "desc"}
+					isOpen={openPanel === "sort"}
+					onToggle={() => toggle("sort")}
+				/>
 				<SettingsButton
 					isOpen={openPanel === "settings"}
 					onToggle={() => toggle("settings")}
@@ -72,13 +88,24 @@ export const Toolbar = ({
 					>
 						<CloseIcon />
 					</button>
-					{openPanel === "filter" && <CategoryMenu />}
+					{openPanel === "filter" && (
+						<>
+							<CategoryMenu />
+							<DifficultyFilter
+								onChange={onDifficultyChange}
+								value={difficulty}
+							/>
+						</>
+					)}
 					{openPanel === "search" && (
 						<SearchInput
 							onClose={close}
 							onDebouncedChange={onDebouncedSearchChange}
 							resetKey={searchResetKey}
 						/>
+					)}
+					{openPanel === "sort" && (
+						<SortPanel onChange={onSortChange} value={sort} />
 					)}
 					{openPanel === "settings" && <CardViewToggle />}
 				</div>

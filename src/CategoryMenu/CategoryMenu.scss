@@ -30,6 +30,15 @@
 	}
 }
 
+.category-menu__label {
+	align-items: center;
+	color: $color-text;
+	display: inline-flex;
+	font-size: 0.95rem;
+	font-weight: 600;
+	margin-right: 0.25rem;
+}
+
 .category-menu {
 	display: flex;
 	flex-wrap: wrap;

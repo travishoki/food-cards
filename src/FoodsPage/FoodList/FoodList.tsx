@@ -8,28 +8,41 @@ import {
 	PAGE_SIDE_PADDING,
 } from "../../Card/Card.const";
 import { NoResults } from "../NoResults/NoResults";
+import { Difficulty } from "../Toolbar/DifficultyFilter";
+import { SortDirection } from "../Toolbar/SortPanel";
 
 import "./FoodList.scss";
 
 type FoodListProps = {
+	difficulty: Difficulty | null;
 	onClearSearch: () => void;
 	search: string;
+	sort: SortDirection;
 	subCategory?: string;
 	topCategory?: string;
 };
 
 export const FoodList = ({
+	difficulty,
 	onClearSearch,
 	search,
+	sort,
 	subCategory,
 	topCategory,
 }: FoodListProps) => {
 	const visibleFoods = useMemo(
-		() => getVisibleFoods({ search, subCategory, topCategory }),
-		[topCategory, subCategory, search],
+		() =>
+			getVisibleFoods({
+				difficulty,
+				search,
+				sort,
+				subCategory,
+				topCategory,
+			}),
+		[topCategory, subCategory, search, sort, difficulty],
 	);
 
-	if (visibleFoods.length === 0 && search.trim()) {
+	if (visibleFoods.length === 0 && (search.trim() || difficulty !== null)) {
 		return (
 			<NoResults
 				onClearSearch={onClearSearch}

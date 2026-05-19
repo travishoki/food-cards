@@ -19,6 +19,7 @@ export const SubMenu = () => {
 
 	return (
 		<nav aria-label="Food subcategories" className="category-menu">
+			<span className="category-menu__label">Subcategory:</span>
 			<button
 				className={`category-menu__link ${!subCategory ? "is-active" : ""}`}
 				onClick={() => navigate(`/${topCategory}`)}

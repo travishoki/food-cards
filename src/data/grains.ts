@@ -5,6 +5,7 @@ import type { Food } from "../types";
 export const GRAINS_FOODS: Food[] = [
 	{
 		category_key: CATEGORIES.grains,
+		difficulty: 1,
 		id: 12,
 		image_url: "/graphics/snack/grains/banana-bars.jpg",
 		name: "Banana Bars",
@@ -12,6 +13,7 @@ export const GRAINS_FOODS: Food[] = [
 	},
 	{
 		category_key: CATEGORIES.grains,
+		difficulty: 1,
 		id: 47,
 		image_url: "/graphics/snack/grains/banana-bread.jpg",
 		name: "Banana Bread",
@@ -19,6 +21,7 @@ export const GRAINS_FOODS: Food[] = [
 	},
 	{
 		category_key: CATEGORIES.grains,
+		difficulty: 1,
 		id: 48,
 		image_url: "/graphics/snack/grains/blue-berry-muffin.jpg",
 		name: "Blue Berry Muffin",
@@ -26,6 +29,7 @@ export const GRAINS_FOODS: Food[] = [
 	},
 	{
 		category_key: CATEGORIES.grains,
+		difficulty: 1,
 		id: 49,
 		image_url: "/graphics/snack/grains/cheetos.jpg",
 		name: "Cheetos",
@@ -33,6 +37,7 @@ export const GRAINS_FOODS: Food[] = [
 	},
 	{
 		category_key: CATEGORIES.grains,
+		difficulty: 1,
 		id: 50,
 		image_url: "/graphics/snack/grains/chocolate-muffin.jpg",
 		name: "Chocolate Muffin",
@@ -40,6 +45,7 @@ export const GRAINS_FOODS: Food[] = [
 	},
 	{
 		category_key: CATEGORIES.grains,
+		difficulty: 1,
 		id: 51,
 		image_url: "/graphics/snack/grains/cinnamon-toast.jpg",
 		instructions: [
@@ -52,6 +58,7 @@ export const GRAINS_FOODS: Food[] = [
 	},
 	{
 		category_key: CATEGORIES.grains,
+		difficulty: 1,
 		id: 52,
 		image_url: "/graphics/snack/grains/doritos.jpg",
 		name: "Doritos",
@@ -59,6 +66,7 @@ export const GRAINS_FOODS: Food[] = [
 	},
 	{
 		category_key: CATEGORIES.grains,
+		difficulty: 1,
 		id: 53,
 		image_url: "/graphics/snack/grains/graham-crackers.jpg",
 		name: "Graham Crackers",
@@ -66,6 +74,7 @@ export const GRAINS_FOODS: Food[] = [
 	},
 	{
 		category_key: CATEGORIES.grains,
+		difficulty: 1,
 		id: 54,
 		image_url: "/graphics/snack/grains/granola-bar.jpg",
 		name: "Granola Bar",
@@ -73,6 +82,7 @@ export const GRAINS_FOODS: Food[] = [
 	},
 	{
 		category_key: CATEGORIES.grains,
+		difficulty: 1,
 		id: 55,
 		image_url: "/graphics/snack/grains/japanese-cheesecake.jpg",
 		name: "Japanese Cheesecake",
@@ -80,6 +90,7 @@ export const GRAINS_FOODS: Food[] = [
 	},
 	{
 		category_key: CATEGORIES.grains,
+		difficulty: 1,
 		id: 56,
 		image_url: "/graphics/snack/grains/jello.jpg",
 		instructions: "Whipcream on top is a nice touch!",
@@ -88,6 +99,7 @@ export const GRAINS_FOODS: Food[] = [
 	},
 	{
 		category_key: CATEGORIES.grains,
+		difficulty: 1,
 		id: 57,
 		image_url: "/graphics/snack/grains/lays-classic-chips.jpg",
 		name: "Lays Classic Chips",
@@ -95,6 +107,7 @@ export const GRAINS_FOODS: Food[] = [
 	},
 	{
 		category_key: CATEGORIES.grains,
+		difficulty: 1,
 		id: 58,
 		image_url: "/graphics/snack/grains/otter-pop.jpg",
 		instructions: "Keeps you hydrated on a hot day.",
@@ -103,6 +116,7 @@ export const GRAINS_FOODS: Food[] = [
 	},
 	{
 		category_key: CATEGORIES.grains,
+		difficulty: 1,
 		id: 59,
 		image_url: "/graphics/snack/grains/popcorn.jpg",
 		instructions: 'Press the "poporn" button on the microwave.',
@@ -111,6 +125,7 @@ export const GRAINS_FOODS: Food[] = [
 	},
 	{
 		category_key: CATEGORIES.grains,
+		difficulty: 1,
 		id: 60,
 		image_url: "/graphics/snack/grains/popsicle.jpg",
 		instructions: "Keeps you hydrated on a hot day.",
@@ -119,6 +134,7 @@ export const GRAINS_FOODS: Food[] = [
 	},
 	{
 		category_key: CATEGORIES.grains,
+		difficulty: 1,
 		id: 61,
 		image_url: "/graphics/snack/grains/pretzels-crunchy.jpg",
 		name: "Pretzels (Crunchy)",
@@ -126,6 +142,7 @@ export const GRAINS_FOODS: Food[] = [
 	},
 	{
 		category_key: CATEGORIES.grains,
+		difficulty: 1,
 		id: 62,
 		image_url: "/graphics/snack/grains/rolls.jpg",
 		name: "Rolls",
@@ -133,6 +150,7 @@ export const GRAINS_FOODS: Food[] = [
 	},
 	{
 		category_key: CATEGORIES.grains,
+		difficulty: 1,
 		id: 63,
 		image_url: "/graphics/snack/grains/soft-pretzels.jpg",
 		name: "Soft Pretzels",
@@ -140,6 +158,7 @@ export const GRAINS_FOODS: Food[] = [
 	},
 	{
 		category_key: CATEGORIES.grains,
+		difficulty: 1,
 		id: 64,
 		image_url: "/graphics/snack/grains/tortilla-chips.jpg",
 		name: "Tortilla Chips",

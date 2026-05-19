@@ -1,15 +1,21 @@
 import { FOODS } from "../../data";
 import { TOP_CATEGORY_SUBCATEGORIES } from "../../data/categories";
 import { Food } from "../../types";
+import { Difficulty } from "../Toolbar/DifficultyFilter";
+import { SortDirection } from "../Toolbar/SortPanel";
 
 type GetVisibleFoodsArgs = {
+	difficulty?: Difficulty | null;
 	search: string;
+	sort?: SortDirection;
 	subCategory?: string;
 	topCategory?: string;
 };
 
 export const getVisibleFoods = ({
+	difficulty = null,
 	search,
+	sort = "asc",
 	subCategory,
 	topCategory,
 }: GetVisibleFoodsArgs): Food[] => {
@@ -23,14 +29,20 @@ export const getVisibleFoods = ({
 
 		if (keys) result = result.filter((f) => keys.includes(f.category_key));
 	} else if (subCategory) {
-		result = [...result.filter((f) => f.category_key === subCategory)].sort(
-			(a, b) => a.id - b.id,
-		);
+		result = result.filter((f) => f.category_key === subCategory);
+	}
+
+	if (difficulty !== null) {
+		result = result.filter((f) => f.difficulty === difficulty);
 	}
 
 	const q = search.trim().toLowerCase();
 
 	if (q) result = result.filter((f) => f.name.toLowerCase().includes(q));
 
-	return result;
+	return [...result].sort((a, b) => {
+		const cmp = a.name.localeCompare(b.name);
+
+		return sort === "asc" ? cmp : -cmp;
+	});
 };
