@@ -9,4 +9,45 @@
 	&.is-clickable {
 		cursor: pointer;
 	}
+
+	&--titles {
+		background: $color-surface;
+		border: 1px solid $color-border;
+		border-radius: $radius-sm;
+
+		.card-title {
+			color: $color-text;
+		}
+	}
+}
+
+// Category background colors used in titles-only mode.
+$category-bg: (
+	"breakfast": #fbbf24,
+	"candy": #f9a8d4,
+	"dairy": #93c5fd,
+	"dessert": #be185d,
+	"drinks": #2563eb,
+	"entree": #166534,
+	"fruit": #a855f7,
+	"grains": #92400e,
+	"protein": #ec4899,
+	"sides": #16a34a,
+	"vegetables": #fb923c,
+);
+
+// Categories whose bg is light enough to need dark title text.
+$category-light-bg: ("breakfast", "candy", "dairy");
+
+@each $key, $color in $category-bg {
+	.card--titles[data-category="#{$key}"] {
+		background: $color;
+		border-color: $color;
+	}
+}
+
+@each $key in $category-light-bg {
+	.card--titles[data-category="#{$key}"] .card-title {
+		color: $color-card-text;
+	}
 }

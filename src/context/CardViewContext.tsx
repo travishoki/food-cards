@@ -1,8 +1,10 @@
 import { createContext, ReactNode, useContext, useState } from "react";
 
+export type ViewMode = "full" | "image" | "titles";
+
 type CardViewContextValue = {
-	showFull: boolean;
-	toggle: () => void;
+	setViewMode: (value: ViewMode) => void;
+	viewMode: ViewMode;
 };
 
 const CardViewContext = createContext<CardViewContextValue | undefined>(
@@ -10,12 +12,10 @@ const CardViewContext = createContext<CardViewContextValue | undefined>(
 );
 
 export const CardViewProvider = ({ children }: { children: ReactNode }) => {
-	const [showFull, setShowFull] = useState(true);
+	const [viewMode, setViewMode] = useState<ViewMode>("full");
 
 	return (
-		<CardViewContext.Provider
-			value={{ showFull, toggle: () => setShowFull((v) => !v) }}
-		>
+		<CardViewContext.Provider value={{ setViewMode, viewMode }}>
 			{children}
 		</CardViewContext.Provider>
 	);

@@ -1,25 +1,30 @@
-import { useCardView } from "../context/CardViewContext";
+import { useCardView, ViewMode } from "../context/CardViewContext";
 
 import "./CardViewToggle.scss";
 
+const OPTIONS: { label: string; value: ViewMode }[] = [
+	{ label: "Full Card", value: "full" },
+	{ label: "Image Only", value: "image" },
+	{ label: "Titles Only", value: "titles" },
+];
+
 export const CardViewToggle = () => {
-	const { showFull, toggle } = useCardView();
+	const { setViewMode, viewMode } = useCardView();
 
 	return (
 		<div className="card-view-toggle">
-			<input
-				checked={showFull}
-				className="card-view-toggle__input"
-				id="card-view-toggle"
-				onChange={toggle}
-				type="checkbox"
-			/>
-			<label
-				className="card-view-toggle__label"
-				htmlFor="card-view-toggle"
-			>
-				{showFull ? "Full card" : "Image only"}
-			</label>
+			<span className="card-view-toggle__label">View:</span>
+			{OPTIONS.map((opt) => (
+				<button
+					key={opt.value}
+					aria-pressed={viewMode === opt.value}
+					className={`card-view-toggle__option ${viewMode === opt.value ? "is-active" : ""}`}
+					onClick={() => setViewMode(opt.value)}
+					type="button"
+				>
+					{opt.label}
+				</button>
+			))}
 		</div>
 	);
 };

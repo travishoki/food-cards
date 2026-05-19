@@ -29,6 +29,7 @@ export const ICON_PADDING = 2;
 // Title
 export const TITLE_TOP = 28;
 export const TITLE_FONT_SIZE = 48;
+export const TITLES_ONLY_HEIGHT = 130;
 
 // Card Info Section
 export const CARD_INFO_TOP = Math.round(BACKGROUND_HEIGHT * 0.52);

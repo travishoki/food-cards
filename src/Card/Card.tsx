@@ -30,6 +30,7 @@ import {
 	RECIPE_QR_SIZE,
 	TITLE_FONT_SIZE,
 	TITLE_TOP,
+	TITLES_ONLY_HEIGHT,
 	TOPPINGS_FONT_SIZE,
 } from "./Card.const";
 import {
@@ -87,7 +88,7 @@ const designVars: CSSProperties = {
 
 export default function Card({ food }: CardProps) {
 	const navigate = useNavigate();
-	const { showFull } = useCardView();
+	const { viewMode } = useCardView();
 	const { foodName, subCategory, topCategory } = useParams<{
 		foodName?: string;
 		subCategory?: string;
@@ -95,13 +96,17 @@ export default function Card({ food }: CardProps) {
 	}>();
 	const viewportWidth = useViewportWidth();
 	const isDetailView = !!foodName;
-	const showAll = showFull || isDetailView;
+	const effectiveMode = isDetailView ? "full" : viewMode;
 	const cardWidth = isDetailView
 		? getDetailCardWidth(viewportWidth)
 		: getListCardWidth(viewportWidth);
-	const cardHeight = showAll
-		? getCardHeight(cardWidth)
-		: cardWidth * (GRAPHIC_HEIGHT / GRAPHIC_WIDTH);
+	const cardHeight = (() => {
+		if (effectiveMode === "full") return getCardHeight(cardWidth);
+		if (effectiveMode === "image")
+			return cardWidth * (GRAPHIC_HEIGHT / GRAPHIC_WIDTH);
+
+		return cardWidth * (TITLES_ONLY_HEIGHT / BACKGROUND_WIDTH);
+	})();
 
 	const handleClick = isDetailView
 		? undefined
@@ -119,7 +124,8 @@ export default function Card({ food }: CardProps) {
 
 	return (
 		<div
-			className={`card ${isDetailView ? "" : "is-clickable"}`}
+			className={`card card--${effectiveMode} ${isDetailView ? "" : "is-clickable"}`}
+			data-category={food.category_key}
 			onClick={handleClick}
 			style={{
 				...designVars,
@@ -127,18 +133,22 @@ export default function Card({ food }: CardProps) {
 				width: `${cardWidth}px`,
 			}}
 		>
-			<Graphic
-				fullWidth={!showAll}
-				name={food.name}
-				src={food.image_url}
-			/>
-			{showAll && (
+			{effectiveMode !== "titles" && (
+				<Graphic
+					fullWidth={effectiveMode === "image"}
+					name={food.name}
+					src={food.image_url}
+				/>
+			)}
+			{effectiveMode === "full" && (
 				<>
-					<Title name={food.name} />
 					<Icon categoryKey={food.category_key} />
 					<CardInfo food={food} />
 					<Background categoryKey={food.category_key} />
 				</>
+			)}
+			{(effectiveMode === "full" || effectiveMode === "titles") && (
+				<Title name={food.name} />
 			)}
 		</div>
 	);
