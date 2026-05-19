@@ -7,7 +7,12 @@ type CookTimeProps = {
 
 export const CookTime = ({ instructions, time }: CookTimeProps) => (
 	<div className="cook-time">
-		<img alt="" className="cook-time__clock" src="/stamps/clock.png" />
+		<img
+			alt=""
+			className="cook-time__clock"
+			loading="lazy"
+			src="/stamps/clock.png"
+		/>
 		<span className="cook-time__instructions">{instructions}</span>
 		<span className="cook-time__time">{time}</span>
 	</div>

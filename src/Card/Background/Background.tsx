@@ -5,5 +5,10 @@ type BackgroundProps = {
 };
 
 export const Background = ({ categoryKey }: BackgroundProps) => (
-	<img alt="" className="cardBg" src={`/backgrounds/${categoryKey}.png`} />
+	<img
+		alt=""
+		className="cardBg"
+		loading="lazy"
+		src={`/backgrounds/${categoryKey}.png`}
+	/>
 );
