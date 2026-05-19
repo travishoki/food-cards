@@ -2,9 +2,8 @@ import { useCallback, useState } from "react";
 
 import { useParams } from "react-router-dom";
 
-import { CardViewToggle } from "../CardViewToggle/CardViewToggle";
 import { FoodList } from "./FoodList/FoodList";
-import { SearchInput } from "./SearchInput/SearchInput";
+import { Toolbar } from "./Toolbar/Toolbar";
 
 export const FoodsPage = () => {
 	const { subCategory, topCategory } = useParams<{
@@ -27,11 +26,10 @@ export const FoodsPage = () => {
 
 	return (
 		<>
-			<SearchInput
-				onDebouncedChange={handleDebouncedChange}
-				resetKey={String(clearCount)}
+			<Toolbar
+				onDebouncedSearchChange={handleDebouncedChange}
+				searchResetKey={String(clearCount)}
 			/>
-			<CardViewToggle />
 			<FoodList
 				onClearSearch={handleClearSearch}
 				search={debouncedSearch}

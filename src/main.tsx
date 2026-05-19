@@ -1,7 +1,6 @@
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 
-import { CategoryMenu } from "./CategoryMenu/CategoryMenu";
 import { FoodPage } from "./FoodPage/FoodPage";
 import { FoodsPage } from "./FoodsPage/FoodsPage";
 import { CardViewProvider } from "./context/CardViewContext";
@@ -11,7 +10,6 @@ function App() {
 	return (
 		<CardViewProvider>
 			<h1 id="top">Food Cards</h1>
-			<CategoryMenu />
 			<Outlet />
 		</CardViewProvider>
 	);

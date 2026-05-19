@@ -1,3 +1,9 @@
+.search-panel {
+	margin: 0.75rem auto 0;
+	max-width: 480px;
+	padding: 0 1rem;
+}
+
 .food-search__label {
 	clip: rect(0 0 0 0);
 	clip-path: inset(50%);
@@ -13,12 +19,9 @@
 	border: 1px solid $color-surface;
 	border-radius: $radius-sm;
 	color: $color-text-white;
-	display: block;
 	font-size: 1rem;
-	margin: 1rem auto 0;
-	max-width: 400px;
 	padding: 0.5rem 0.75rem;
-	width: 90%;
+	width: 100%;
 
 	&::placeholder {
 		color: $color-text-muted;
