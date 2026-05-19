@@ -30,12 +30,18 @@ export const SearchInput = ({
 	}, [resetKey, onDebouncedChange]);
 
 	return (
-		<input
-			className="food-search"
-			onChange={(e) => setValue(e.target.value)}
-			placeholder="Search foods…"
-			type="search"
-			value={value}
-		/>
+		<>
+			<label className="food-search__label" htmlFor="food-search">
+				Search foods
+			</label>
+			<input
+				className="food-search"
+				id="food-search"
+				onChange={(e) => setValue(e.target.value)}
+				placeholder="Search foods…"
+				type="search"
+				value={value}
+			/>
+		</>
 	);
 };
