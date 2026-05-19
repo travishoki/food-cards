@@ -1,12 +1,13 @@
 import { CARD_INFO_PADDING_BOTTOM, INGREDIENTS_FONT_SIZE } from "../Card.const";
+import { useCardRatio } from "../CardRatioContext";
 import "./Ingredients.scss";
 
 type IngredientsProps = {
-	cardRatio: number;
 	items: string[];
 };
 
-export const Ingredients = ({ cardRatio, items }: IngredientsProps) => {
+export const Ingredients = ({ items }: IngredientsProps) => {
+	const cardRatio = useCardRatio();
 	const fontSize = INGREDIENTS_FONT_SIZE * cardRatio;
 	const paddingBottom = CARD_INFO_PADDING_BOTTOM * cardRatio;
 

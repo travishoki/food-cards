@@ -1,15 +1,16 @@
 import { GRAPHIC_HEIGHT, GRAPHIC_TOP, GRAPHIC_WIDTH } from "../Card.const";
 import { getCenteredLeft } from "../Card.helpers";
+import { useCardRatio } from "../CardRatioContext";
 import "./Graphic.scss";
 
 type GraphicProps = {
-	cardRatio: number;
 	cardW: number;
 	name: string;
 	src: string;
 };
 
-export const Graphic = ({ cardRatio, cardW, name, src }: GraphicProps) => {
+export const Graphic = ({ cardW, name, src }: GraphicProps) => {
+	const cardRatio = useCardRatio();
 	const width = GRAPHIC_WIDTH * cardRatio;
 	const height = GRAPHIC_HEIGHT * cardRatio;
 

@@ -4,15 +4,16 @@ import {
 	COOK_TIME_FONT_SIZE_TIME,
 	COOK_TIME_HEIGHT,
 } from "../Card.const";
+import { useCardRatio } from "../CardRatioContext";
 import "./CookTime.scss";
 
 type CookTimeProps = {
-	cardRatio: number;
 	instructions: string;
 	time: string;
 };
 
-export const CookTime = ({ cardRatio, instructions, time }: CookTimeProps) => {
+export const CookTime = ({ instructions, time }: CookTimeProps) => {
+	const cardRatio = useCardRatio();
 	const height = COOK_TIME_HEIGHT * cardRatio;
 	const clockSize = COOK_TIME_CLOCK_SIZE * cardRatio;
 	const fontSizeTime = COOK_TIME_FONT_SIZE_TIME * cardRatio;

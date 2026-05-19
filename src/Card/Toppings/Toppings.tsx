@@ -1,12 +1,13 @@
 import { CARD_INFO_PADDING_BOTTOM, TOPPINGS_FONT_SIZE } from "../Card.const";
+import { useCardRatio } from "../CardRatioContext";
 import "./Toppings.scss";
 
 type ToppingsProps = {
-	cardRatio: number;
 	items: string[];
 };
 
-export const Toppings = ({ cardRatio, items }: ToppingsProps) => {
+export const Toppings = ({ items }: ToppingsProps) => {
+	const cardRatio = useCardRatio();
 	const fontSize = TOPPINGS_FONT_SIZE * cardRatio;
 	const paddingBottom = CARD_INFO_PADDING_BOTTOM * cardRatio;
 

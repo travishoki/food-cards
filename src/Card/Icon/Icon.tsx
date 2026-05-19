@@ -1,13 +1,14 @@
 import { ICON_PADDING, ICON_SIZE, ICON_TOP } from "../Card.const";
 import { getSidePadding } from "../Card.helpers";
+import { useCardRatio } from "../CardRatioContext";
 import "./Icon.scss";
 
 type IconProps = {
-	cardRatio: number;
 	categoryKey: string;
 };
 
-export const Icon = ({ cardRatio, categoryKey }: IconProps) => {
+export const Icon = ({ categoryKey }: IconProps) => {
+	const cardRatio = useCardRatio();
 	const width = ICON_SIZE * cardRatio;
 	const height = width;
 	const padding = ICON_PADDING * cardRatio;

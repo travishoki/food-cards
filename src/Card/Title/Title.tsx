@@ -1,13 +1,14 @@
 import { TITLE_FONT_SIZE, TITLE_TOP } from "../Card.const";
 import { getSidePadding } from "../Card.helpers";
+import { useCardRatio } from "../CardRatioContext";
 import "./Title.scss";
 
 type TitleProps = {
-	cardRatio: number;
 	name: string;
 };
 
-export const Title = ({ cardRatio, name }: TitleProps) => {
+export const Title = ({ name }: TitleProps) => {
+	const cardRatio = useCardRatio();
 	const top = TITLE_TOP * cardRatio;
 	const left = getSidePadding(cardRatio);
 	const fontSize = TITLE_FONT_SIZE * cardRatio;

@@ -5,14 +5,15 @@ import {
 	INFO_BAR_TEXT_TOP_PADDING,
 	INFO_BAR_WIDTH,
 } from "../Card.const";
+import { useCardRatio } from "../CardRatioContext";
 import "./InfoBar.scss";
 
 type InfoBarProps = {
-	cardRatio: number;
 	text: string;
 };
 
-export const InfoBar = ({ cardRatio, text }: InfoBarProps) => {
+export const InfoBar = ({ text }: InfoBarProps) => {
+	const cardRatio = useCardRatio();
 	const width = INFO_BAR_WIDTH * cardRatio;
 	const height = INFO_BAR_HEIGHT * cardRatio;
 	const textPaddingLeft = INFO_BAR_TEXT_LEFT_PADDING * cardRatio;
