@@ -16,38 +16,32 @@
 		border-radius: $radius-sm;
 
 		.card-title {
-			color: $color-text;
+			color: $color-card-text;
 		}
 	}
 }
 
-// Category background colors used in titles-only mode.
-$category-bg: (
-	"breakfast": #fbbf24,
-	"candy": #f9a8d4,
-	"dairy": #93c5fd,
-	"dessert": #be185d,
-	"drinks": #2563eb,
-	"entree": #166534,
-	"fruit": #a855f7,
-	"grains": #92400e,
-	"protein": #ec4899,
-	"sides": #16a34a,
-	"vegetables": #fb923c,
+// Category background images used in titles-only mode.
+$category-keys: (
+	"breakfast",
+	"candy",
+	"dairy",
+	"dessert",
+	"drinks",
+	"entree",
+	"fruit",
+	"grains",
+	"protein",
+	"sides",
+	"vegetables"
 );
 
-// Categories whose bg is light enough to need dark title text.
-$category-light-bg: ("breakfast", "candy", "dairy");
-
-@each $key, $color in $category-bg {
+@each $key in $category-keys {
 	.card--titles[data-category="#{$key}"] {
-		background: $color;
-		border-color: $color;
-	}
-}
-
-@each $key in $category-light-bg {
-	.card--titles[data-category="#{$key}"] .card-title {
-		color: $color-card-text;
+		background-image: url("/background-titles/#{$key}.png");
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		border-color: transparent;
 	}
 }
