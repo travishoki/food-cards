@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 import { CardViewToggle } from "../../CardViewToggle/CardViewToggle";
 import { CategoryMenu } from "../../CategoryMenu/CategoryMenu";
+import { CloseIcon } from "../../icons/CloseIcon";
 import { FilterIcon } from "../../icons/FilterIcon";
 import { GearIcon } from "../../icons/GearIcon";
 import { SearchIcon } from "../../icons/SearchIcon";
@@ -80,15 +81,27 @@ export const Toolbar = ({
 					<GearIcon />
 				</button>
 			</div>
-			{openPanel === "filter" && <CategoryMenu />}
-			{openPanel === "search" && (
-				<SearchInput
-					onClose={close}
-					onDebouncedChange={onDebouncedSearchChange}
-					resetKey={searchResetKey}
-				/>
+			{openPanel && (
+				<div className="toolbar__tray">
+					<button
+						aria-label="Close"
+						className="toolbar__close"
+						onClick={close}
+						type="button"
+					>
+						<CloseIcon />
+					</button>
+					{openPanel === "filter" && <CategoryMenu />}
+					{openPanel === "search" && (
+						<SearchInput
+							onClose={close}
+							onDebouncedChange={onDebouncedSearchChange}
+							resetKey={searchResetKey}
+						/>
+					)}
+					{openPanel === "settings" && <CardViewToggle />}
+				</div>
 			)}
-			{openPanel === "settings" && <CardViewToggle />}
 		</div>
 	);
 };
