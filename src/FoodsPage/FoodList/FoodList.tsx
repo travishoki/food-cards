@@ -15,6 +15,7 @@ import "./FoodList.scss";
 
 type FoodListProps = {
 	difficulty: Difficulty | null;
+	onClearDifficulty: () => void;
 	onClearSearch: () => void;
 	search: string;
 	sort: SortDirection;
@@ -24,6 +25,7 @@ type FoodListProps = {
 
 export const FoodList = ({
 	difficulty,
+	onClearDifficulty,
 	onClearSearch,
 	search,
 	sort,
@@ -45,6 +47,8 @@ export const FoodList = ({
 	if (visibleFoods.length === 0 && (search.trim() || difficulty !== null)) {
 		return (
 			<NoResults
+				hasDifficulty={difficulty !== null}
+				onClearDifficulty={onClearDifficulty}
 				onClearSearch={onClearSearch}
 				subCategory={subCategory}
 				topCategory={topCategory}

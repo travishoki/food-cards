@@ -45,6 +45,7 @@ export const FoodsPage = () => {
 			/>
 			<FoodList
 				difficulty={difficulty}
+				onClearDifficulty={() => setDifficulty(null)}
 				onClearSearch={handleClearSearch}
 				search={debouncedSearch}
 				sort={sort}

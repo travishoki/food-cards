@@ -5,12 +5,16 @@ import { CATEGORY_DATA, TOP_CATEGORY_DATA } from "../../data/categories";
 import "./NoResults.scss";
 
 type NoResultsProps = {
+	hasDifficulty: boolean;
+	onClearDifficulty: () => void;
 	onClearSearch: () => void;
 	subCategory?: string;
 	topCategory?: string;
 };
 
 export const NoResults = ({
+	hasDifficulty,
+	onClearDifficulty,
 	onClearSearch,
 	subCategory,
 	topCategory,
@@ -29,17 +33,9 @@ export const NoResults = ({
 		<div className="no-results">
 			<p className="no-results__message">No foods match your search.</p>
 			<div className="no-results__actions">
-				<button
-					className="no-results__button"
-					onClick={onClearSearch}
-					type="button"
-				>
-					Clear search
-				</button>
-
 				{subCategory && topCategory && (
 					<Link className="no-results__button" to={`/${topCategory}`}>
-						Show all {topLabel ?? topCategory}
+						Show All &ldquo;{topLabel ?? topCategory}&rdquo;
 					</Link>
 				)}
 
@@ -53,6 +49,24 @@ export const NoResults = ({
 					<Link className="no-results__button" to="/">
 						Clear Category
 					</Link>
+				)}
+
+				<button
+					className="no-results__button"
+					onClick={onClearSearch}
+					type="button"
+				>
+					Clear Search
+				</button>
+
+				{hasDifficulty && (
+					<button
+						className="no-results__button"
+						onClick={onClearDifficulty}
+						type="button"
+					>
+						Clear Difficulty
+					</button>
 				)}
 			</div>
 		</div>
