@@ -7,6 +7,7 @@ export type Food = {
 	ingredients?: string[];
 	instructions?: string | string[];
 	name: string;
+	recipe_link?: string;
 	slug: string;
 	toppings?: string[];
 };

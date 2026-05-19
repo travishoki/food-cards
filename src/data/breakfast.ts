@@ -15,6 +15,7 @@ export const BREAKFAST_FOODS: Food[] = [
 			"1 pinch salt",
 		],
 		name: "Crepes",
+		recipe_link: "http://allrecipes.com/recipe/27188/crepes/",
 		slug: "crepes",
 		toppings: [
 			"Strawberry",
@@ -44,6 +45,8 @@ export const BREAKFAST_FOODS: Food[] = [
 			"Serve with butter, sprinkled with confectioners' sugar, or topped with fresh fruit. Also great with Easy Spiced Syrup (recipe follows), if desired.",
 		],
 		name: "French Toast",
+		recipe_link:
+			"https://www.mccormick.com/recipes/breakfast-brunch/quick-and-easy-french-toast",
 		slug: "french-toast",
 	},
 	{
@@ -57,7 +60,20 @@ export const BREAKFAST_FOODS: Food[] = [
 		category_key: CATEGORIES.breakfast,
 		id: 17,
 		image_url: "/graphics/main/breakfast/puffy-oven-pancakes.jpg",
+		info: "Preheat oven to 450°",
+		instructions: [
+			"In blender or bowl, blend together eggs, milk, flour, and salt.",
+			"Melt butter in 9x13 pan in oven.",
+			"Remove pan from oven.",
+			"Pour in batter.",
+			"Return to oven and bake (without peeking) for 18 minutes.",
+			"Pancake should be very high and puffy.",
+			"Remove from oven and cut into 6 large squares.",
+			"Serve immediately.",
+		],
 		name: "Puffy Oven Pancakes",
+		recipe_link:
+			"http://www.geniuskitchen.com/recipe/puffy-oven-pancake-or-hootin-annies-40772",
 		slug: "puffy-oven-pancakes",
 	},
 	{

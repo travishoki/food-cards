@@ -5,6 +5,7 @@ import { CookTime } from "../CookTime/CookTime";
 import { InfoBar } from "../InfoBar/InfoBar";
 import { Ingredients } from "../Ingredients/Ingredients";
 import { Instructions } from "../Instructions/Instructions";
+import { RecipeQR } from "../RecipeQR/RecipeQR";
 import { Toppings } from "../Toppings/Toppings";
 
 import type { Food } from "../../types";
@@ -50,6 +51,8 @@ export const CardInfo = ({ food }: CardInfoProps) => {
 					time={food.cookTime.time}
 				/>
 			)}
+
+			{food.recipe_link && <RecipeQR url={food.recipe_link} />}
 		</div>
 	);
 };

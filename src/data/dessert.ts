@@ -117,4 +117,14 @@ export const DESSERT_FOODS: Food[] = [
 		name: "Peanut Butter Bars",
 		slug: "peanut-butter-bars",
 	},
+	{
+		category_key: CATEGORIES.dessert,
+		id: 98,
+		image_url:
+			"http://thesquishymonster.com/2017/05/butter-mochi-cake.html",
+		name: "Mochi Cake",
+		recipe_link:
+			"http://thesquishymonster.com/2017/05/butter-mochi-cake.html",
+		slug: "mocki-cake",
+	},
 ];

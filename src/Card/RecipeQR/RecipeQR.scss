@@ -1,0 +1,13 @@
+.recipe-qr {
+	align-items: center;
+	color: $color-card-text;
+	display: flex;
+	flex-direction: column;
+	gap: 0.25rem;
+	text-decoration: none;
+}
+
+.recipe-qr__label {
+	color: $color-card-text;
+	font-weight: 600;
+}

@@ -49,6 +49,10 @@ export const COOK_TIME_CLOCK_SIZE = 52;
 export const COOK_TIME_FONT_SIZE_TIME = 42;
 export const COOK_TIME_FONT_SIZE_INSTRUCTIONS = 22;
 
+// Recipe QR
+export const RECIPE_QR_SIZE = 130;
+export const RECIPE_QR_LABEL_FONT_SIZE = 20;
+
 // Info Bar
 export const INFO_BAR_TOP = 550;
 export const INFO_BAR_WIDTH = 651;
