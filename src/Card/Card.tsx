@@ -4,6 +4,7 @@ import { Background } from "./Background/Background";
 import { GRAPHIC_HEIGHT } from "./Card.const";
 import { getCardHeight, getCardRatio } from "./Card.helpers";
 import { CardInfo } from "./CardInfo/CardInfo";
+import { CardRatioProvider } from "./CardRatioContext";
 import { Graphic } from "./Graphic/Graphic";
 import { Icon } from "./Icon/Icon";
 import { Title } from "./Title/Title";
@@ -48,36 +49,30 @@ export default function Card({ food }: CardProps) {
 			};
 
 	return (
-		<div
-			className="card"
-			onClick={handleClick}
-			style={{
-				cursor: isDetailView ? "default" : "pointer",
-				height: `${cardH}px`,
-				width: `${cardW}px`,
-			}}
-		>
-			<Graphic
-				cardRatio={cardRatio}
-				cardW={cardW}
-				name={food.name}
-				src={food.image_url}
-			/>
-			{showAll && (
-				<>
-					<Title cardRatio={cardRatio} name={food.name} />
-					<Icon
-						cardRatio={cardRatio}
-						categoryKey={food.category_key}
-					/>
-					<CardInfo cardRatio={cardRatio} food={food} />
-					<Background
-						cardH={cardH}
-						cardW={cardW}
-						categoryKey={food.category_key}
-					/>
-				</>
-			)}
-		</div>
+		<CardRatioProvider value={cardRatio}>
+			<div
+				className="card"
+				onClick={handleClick}
+				style={{
+					cursor: isDetailView ? "default" : "pointer",
+					height: `${cardH}px`,
+					width: `${cardW}px`,
+				}}
+			>
+				<Graphic cardW={cardW} name={food.name} src={food.image_url} />
+				{showAll && (
+					<>
+						<Title name={food.name} />
+						<Icon categoryKey={food.category_key} />
+						<CardInfo food={food} />
+						<Background
+							cardH={cardH}
+							cardW={cardW}
+							categoryKey={food.category_key}
+						/>
+					</>
+				)}
+			</div>
+		</CardRatioProvider>
 	);
 }
