@@ -2,6 +2,7 @@ import { useCallback, useState } from "react";
 
 import { useParams } from "react-router-dom";
 
+import { BackToTop } from "./BackToTop/BackToTop";
 import { FoodList } from "./FoodList/FoodList";
 import { Toolbar } from "./Toolbar/Toolbar";
 
@@ -36,6 +37,7 @@ export const FoodsPage = () => {
 				subCategory={subCategory}
 				topCategory={topCategory}
 			/>
+			<BackToTop />
 		</>
 	);
 };
