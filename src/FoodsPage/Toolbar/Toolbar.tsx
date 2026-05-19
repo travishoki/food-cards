@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 
+import { FilterButton } from "./FilterButton";
+import { SearchButton } from "./SearchButton";
+import { SettingsButton } from "./SettingsButton";
 import { CardViewToggle } from "../../CardViewToggle/CardViewToggle";
 import { CategoryMenu } from "../../CategoryMenu/CategoryMenu";
 import { CloseIcon } from "../../icons/CloseIcon";
-import { FilterIcon } from "../../icons/FilterIcon";
-import { GearIcon } from "../../icons/GearIcon";
-import { SearchIcon } from "../../icons/SearchIcon";
 import { SearchInput } from "../SearchInput/SearchInput";
 
 import "./Toolbar.scss";
@@ -47,39 +47,20 @@ export const Toolbar = ({
 	return (
 		<div className="toolbar">
 			<div className="toolbar__row">
-				<button
-					aria-expanded={openPanel === "filter"}
-					aria-label="Filter foods by category"
-					className="toolbar__button"
-					onClick={() => toggle("filter")}
-					type="button"
-				>
-					<FilterIcon />
-					{hasActiveFilter && (
-						<span aria-hidden className="toolbar__badge" />
-					)}
-				</button>
-				<button
-					aria-expanded={openPanel === "search"}
-					aria-label="Search foods"
-					className="toolbar__button"
-					onClick={() => toggle("search")}
-					type="button"
-				>
-					<SearchIcon />
-					{hasActiveSearch && (
-						<span aria-hidden className="toolbar__badge" />
-					)}
-				</button>
-				<button
-					aria-expanded={openPanel === "settings"}
-					aria-label="View settings"
-					className="toolbar__button"
-					onClick={() => toggle("settings")}
-					type="button"
-				>
-					<GearIcon />
-				</button>
+				<FilterButton
+					hasActiveFilter={hasActiveFilter}
+					isOpen={openPanel === "filter"}
+					onToggle={() => toggle("filter")}
+				/>
+				<SearchButton
+					hasActiveSearch={hasActiveSearch}
+					isOpen={openPanel === "search"}
+					onToggle={() => toggle("search")}
+				/>
+				<SettingsButton
+					isOpen={openPanel === "settings"}
+					onToggle={() => toggle("settings")}
+				/>
 			</div>
 			{openPanel && (
 				<div className="toolbar__tray">

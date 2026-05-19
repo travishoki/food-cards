@@ -53,7 +53,8 @@
 	animation: toolbar-tray-down 0.2s ease-out;
 	background: $color-tray;
 	border-bottom: 1px solid $color-divider;
-	padding: 0.75rem 3rem 1.25rem;
+	border-top: 1px solid $color-divider;
+	padding: 0.75rem 3rem;
 	position: relative;
 }
 
