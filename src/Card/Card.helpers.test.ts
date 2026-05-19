@@ -1,12 +1,14 @@
 import {
 	BACKGROUND_HEIGHT,
 	BACKGROUND_WIDTH,
+	CARD_SIDE_PADDING,
 	PADDING_LEFT,
 } from "./Card.const";
 import {
 	getCardHeight,
 	getCardRatio,
 	getCenteredLeft,
+	getListCardWidth,
 	getSidePadding,
 } from "./Card.helpers";
 
@@ -78,5 +80,59 @@ describe("getSidePadding", () => {
 
 	it("scales with the ratio", () => {
 		expect(getSidePadding(0.5)).toBe(PADDING_LEFT * 0.5);
+	});
+});
+
+describe("getListCardWidth", () => {
+	const sp = CARD_SIDE_PADDING;
+
+	describe("1 column (viewport < 400px)", () => {
+		it("subtracts two side paddings at 360", () => {
+			expect(getListCardWidth(360)).toBe(360 - 2 * sp);
+		});
+
+		it("works at boundary just under 400", () => {
+			expect(getListCardWidth(399)).toBe(399 - 2 * sp);
+		});
+
+		it("returns negative for tiny viewports (no clamp)", () => {
+			expect(getListCardWidth(10)).toBe(10 - 2 * sp);
+		});
+	});
+
+	describe("2 columns (400 ≤ viewport < 701)", () => {
+		it("splits into two at 400", () => {
+			expect(getListCardWidth(400)).toBe(Math.floor((400 - 3 * sp) / 2));
+		});
+
+		it("splits at the upper boundary 700", () => {
+			expect(getListCardWidth(700)).toBe(Math.floor((700 - 3 * sp) / 2));
+		});
+
+		it("floors fractional results", () => {
+			expect(getListCardWidth(501)).toBe(Math.floor((501 - 3 * sp) / 2));
+		});
+	});
+
+	describe("3 columns (701 ≤ viewport < 901)", () => {
+		it("splits into three at 701", () => {
+			expect(getListCardWidth(701)).toBe(Math.floor((701 - 4 * sp) / 3));
+		});
+
+		it("splits at the upper boundary 900", () => {
+			expect(getListCardWidth(900)).toBe(Math.floor((900 - 4 * sp) / 3));
+		});
+	});
+
+	describe("4 columns (viewport ≥ 901)", () => {
+		it("splits into four at 901", () => {
+			expect(getListCardWidth(901)).toBe(Math.floor((901 - 5 * sp) / 4));
+		});
+
+		it("splits at large viewports", () => {
+			expect(getListCardWidth(1920)).toBe(
+				Math.floor((1920 - 5 * sp) / 4),
+			);
+		});
 	});
 });

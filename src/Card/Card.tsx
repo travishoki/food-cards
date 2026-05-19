@@ -1,14 +1,15 @@
 import { useNavigate, useParams } from "react-router-dom";
 
 import { Background } from "./Background/Background";
-import { GRAPHIC_HEIGHT } from "./Card.const";
-import { getCardHeight, getCardRatio } from "./Card.helpers";
+import { CARD_WIDTH_DETAIL, GRAPHIC_HEIGHT } from "./Card.const";
+import { getCardHeight, getCardRatio, getListCardWidth } from "./Card.helpers";
 import { CardProvider } from "./CardContext";
 import { CardInfo } from "./CardInfo/CardInfo";
 import { Graphic } from "./Graphic/Graphic";
 import { Icon } from "./Icon/Icon";
 import { Title } from "./Title/Title";
 import { useCardView } from "../context/CardViewContext";
+import { useViewportWidth } from "../hooks/useViewportWidth";
 
 import type { Food } from "../types";
 import "./Card.scss";
@@ -16,9 +17,6 @@ import "./Card.scss";
 type CardProps = {
 	food: Food;
 };
-
-const CARD_WIDTH_DETAIL = 500;
-const CARD_WIDTH_LIST = 300;
 
 export default function Card({ food }: CardProps) {
 	const navigate = useNavigate();
@@ -28,9 +26,12 @@ export default function Card({ food }: CardProps) {
 		subCategory?: string;
 		topCategory?: string;
 	}>();
+	const viewportWidth = useViewportWidth();
 	const isDetailView = !!foodName;
 	const showAll = showFull || isDetailView;
-	const cardWidth = isDetailView ? CARD_WIDTH_DETAIL : CARD_WIDTH_LIST;
+	const cardWidth = isDetailView
+		? CARD_WIDTH_DETAIL
+		: getListCardWidth(viewportWidth);
 	const cardRatio = getCardRatio(cardWidth);
 	const cardHeight = showAll
 		? getCardHeight(cardWidth)

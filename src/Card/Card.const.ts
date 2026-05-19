@@ -5,6 +5,13 @@ export const BACKGROUND_HEIGHT = 1050;
 // Card
 export const PADDING_LEFT = 52;
 
+// List layout
+export const CARD_SIDE_PADDING = 20;
+export const CARD_BREAKPOINT_2_COL = 400;
+export const CARD_BREAKPOINT_3_COL = 701;
+export const CARD_BREAKPOINT_4_COL = 901;
+export const CARD_WIDTH_DETAIL = 500;
+
 // Graphic
 export const GRAPHIC_WIDTH = 613;
 export const GRAPHIC_HEIGHT = 406;
