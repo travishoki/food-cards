@@ -4,6 +4,7 @@ import {
 	CARD_BREAKPOINT_2_COL,
 	CARD_BREAKPOINT_3_COL,
 	CARD_BREAKPOINT_4_COL,
+	CARD_MAX_VIEWPORT,
 	CARD_SIDE_PADDING,
 	PADDING_LEFT,
 } from "./Card.const";
@@ -30,14 +31,15 @@ export const getSidePadding = (cardRatio: number) => {
 };
 
 export const getListCardWidth = (viewportWidth: number) => {
-	if (viewportWidth < CARD_BREAKPOINT_2_COL)
-		return viewportWidth - 2 * CARD_SIDE_PADDING;
+	const vw = Math.min(viewportWidth, CARD_MAX_VIEWPORT);
 
-	if (viewportWidth < CARD_BREAKPOINT_3_COL)
-		return Math.floor((viewportWidth - 3 * CARD_SIDE_PADDING) / 2);
+	if (vw < CARD_BREAKPOINT_2_COL) return vw - 2 * CARD_SIDE_PADDING;
 
-	if (viewportWidth < CARD_BREAKPOINT_4_COL)
-		return Math.floor((viewportWidth - 4 * CARD_SIDE_PADDING) / 3);
+	if (vw < CARD_BREAKPOINT_3_COL)
+		return Math.floor((vw - 3 * CARD_SIDE_PADDING) / 2);
 
-	return Math.floor((viewportWidth - 5 * CARD_SIDE_PADDING) / 4);
+	if (vw < CARD_BREAKPOINT_4_COL)
+		return Math.floor((vw - 4 * CARD_SIDE_PADDING) / 3);
+
+	return Math.floor((vw - 5 * CARD_SIDE_PADDING) / 4);
 };

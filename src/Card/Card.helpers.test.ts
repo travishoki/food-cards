@@ -129,10 +129,18 @@ describe("getListCardWidth", () => {
 			expect(getListCardWidth(901)).toBe(Math.floor((901 - 5 * sp) / 4));
 		});
 
-		it("splits at large viewports", () => {
-			expect(getListCardWidth(1920)).toBe(
-				Math.floor((1920 - 5 * sp) / 4),
+		it("splits at the cap (1400)", () => {
+			expect(getListCardWidth(1400)).toBe(
+				Math.floor((1400 - 5 * sp) / 4),
 			);
+		});
+
+		it("clamps viewports above 1400 to the 1400 width", () => {
+			expect(getListCardWidth(1920)).toBe(getListCardWidth(1400));
+		});
+
+		it("clamps very large viewports (2560)", () => {
+			expect(getListCardWidth(2560)).toBe(getListCardWidth(1400));
 		});
 	});
 });
