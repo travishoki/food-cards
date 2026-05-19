@@ -28,6 +28,8 @@ export const FoodsPage = () => {
 	return (
 		<>
 			<Toolbar
+				hasActiveFilter={!!topCategory || !!subCategory}
+				hasActiveSearch={!!debouncedSearch.trim()}
 				onDebouncedSearchChange={handleDebouncedChange}
 				searchResetKey={String(clearCount)}
 			/>

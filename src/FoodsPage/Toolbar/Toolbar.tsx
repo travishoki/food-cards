@@ -12,11 +12,15 @@ import "./Toolbar.scss";
 type Panel = "filter" | "search" | "settings";
 
 type ToolbarProps = {
+	hasActiveFilter: boolean;
+	hasActiveSearch: boolean;
 	onDebouncedSearchChange: (value: string) => void;
 	searchResetKey?: string;
 };
 
 export const Toolbar = ({
+	hasActiveFilter,
+	hasActiveSearch,
 	onDebouncedSearchChange,
 	searchResetKey,
 }: ToolbarProps) => {
@@ -50,6 +54,9 @@ export const Toolbar = ({
 					type="button"
 				>
 					<FilterIcon />
+					{hasActiveFilter && (
+						<span aria-hidden className="toolbar__badge" />
+					)}
 				</button>
 				<button
 					aria-expanded={openPanel === "search"}
@@ -59,6 +66,9 @@ export const Toolbar = ({
 					type="button"
 				>
 					<SearchIcon />
+					{hasActiveSearch && (
+						<span aria-hidden className="toolbar__badge" />
+					)}
 				</button>
 				<button
 					aria-expanded={openPanel === "settings"}
