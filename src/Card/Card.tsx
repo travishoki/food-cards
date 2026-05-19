@@ -1,8 +1,13 @@
 import { useNavigate, useParams } from "react-router-dom";
 
 import { Background } from "./Background/Background";
-import { CARD_WIDTH_DETAIL, GRAPHIC_HEIGHT } from "./Card.const";
-import { getCardHeight, getCardRatio, getListCardWidth } from "./Card.helpers";
+import { GRAPHIC_HEIGHT } from "./Card.const";
+import {
+	getCardHeight,
+	getCardRatio,
+	getDetailCardWidth,
+	getListCardWidth,
+} from "./Card.helpers";
 import { CardProvider } from "./CardContext";
 import { CardInfo } from "./CardInfo/CardInfo";
 import { Graphic } from "./Graphic/Graphic";
@@ -30,7 +35,7 @@ export default function Card({ food }: CardProps) {
 	const isDetailView = !!foodName;
 	const showAll = showFull || isDetailView;
 	const cardWidth = isDetailView
-		? CARD_WIDTH_DETAIL
+		? getDetailCardWidth(viewportWidth)
 		: getListCardWidth(viewportWidth);
 	const cardRatio = getCardRatio(cardWidth);
 	const cardHeight = showAll
@@ -54,10 +59,9 @@ export default function Card({ food }: CardProps) {
 	return (
 		<CardProvider value={{ cardHeight, cardRatio, cardWidth }}>
 			<div
-				className="card"
+				className={`card ${isDetailView ? "" : "is-clickable"}`}
 				onClick={handleClick}
 				style={{
-					cursor: isDetailView ? "default" : "pointer",
 					height: `${cardHeight}px`,
 					width: `${cardWidth}px`,
 				}}

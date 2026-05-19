@@ -4,6 +4,7 @@ import {
 	CARD_BREAKPOINT_2_COL,
 	CARD_BREAKPOINT_3_COL,
 	CARD_BREAKPOINT_4_COL,
+	CARD_DETAIL_MAX_WIDTH,
 	CARD_MAX_VIEWPORT,
 	CARD_SIDE_PADDING,
 	PADDING_LEFT,
@@ -29,6 +30,9 @@ export const getSidePadding = (cardRatio: number) => {
 
 	return left;
 };
+
+export const getDetailCardWidth = (viewportWidth: number) =>
+	Math.min(viewportWidth - 2 * CARD_SIDE_PADDING, CARD_DETAIL_MAX_WIDTH);
 
 export const getListCardWidth = (viewportWidth: number) => {
 	const vw = Math.min(viewportWidth, CARD_MAX_VIEWPORT);

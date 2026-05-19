@@ -7,6 +7,8 @@ import { Food } from "../types";
 import { BackButton } from "./BackButton";
 import { MissingFood } from "./MissingFood";
 
+import "./FoodPage.scss";
+
 export const FoodPage = () => {
 	const { foodName } = useParams<{ foodName: string }>();
 	const food = foodBySlug(FOODS, foodName ?? "") as Food;
@@ -14,7 +16,7 @@ export const FoodPage = () => {
 	if (!food) return <MissingFood />;
 
 	return (
-		<div className="food-cards">
+		<div className="food-detail">
 			<BackButton />
 			<Card food={food} />
 		</div>

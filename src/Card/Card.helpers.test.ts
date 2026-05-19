@@ -1,6 +1,7 @@
 import {
 	BACKGROUND_HEIGHT,
 	BACKGROUND_WIDTH,
+	CARD_DETAIL_MAX_WIDTH,
 	CARD_SIDE_PADDING,
 	PADDING_LEFT,
 } from "./Card.const";
@@ -8,6 +9,7 @@ import {
 	getCardHeight,
 	getCardRatio,
 	getCenteredLeft,
+	getDetailCardWidth,
 	getListCardWidth,
 	getSidePadding,
 } from "./Card.helpers";
@@ -80,6 +82,28 @@ describe("getSidePadding", () => {
 
 	it("scales with the ratio", () => {
 		expect(getSidePadding(0.5)).toBe(PADDING_LEFT * 0.5);
+	});
+});
+
+describe("getDetailCardWidth", () => {
+	const sp = CARD_SIDE_PADDING;
+
+	it("subtracts the side padding at narrow viewports", () => {
+		expect(getDetailCardWidth(360)).toBe(360 - 2 * sp);
+	});
+
+	it("caps at CARD_DETAIL_MAX_WIDTH at wide viewports", () => {
+		expect(getDetailCardWidth(1200)).toBe(CARD_DETAIL_MAX_WIDTH);
+	});
+
+	it("returns CARD_DETAIL_MAX_WIDTH right at the threshold", () => {
+		const threshold = CARD_DETAIL_MAX_WIDTH + 2 * sp;
+		expect(getDetailCardWidth(threshold)).toBe(CARD_DETAIL_MAX_WIDTH);
+	});
+
+	it("returns viewport - 2*padding just below the threshold", () => {
+		const threshold = CARD_DETAIL_MAX_WIDTH + 2 * sp;
+		expect(getDetailCardWidth(threshold - 1)).toBe(threshold - 1 - 2 * sp);
 	});
 });
 

@@ -1,5 +1,10 @@
 .card {
+	cursor: default;
 	display: inline-block;
 	position: relative;
 	vertical-align: top;
+
+	&.is-clickable {
+		cursor: pointer;
+	}
 }

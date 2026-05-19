@@ -5,6 +5,8 @@ import Card from "../../Card/Card";
 import { CARD_SIDE_PADDING } from "../../Card/Card.const";
 import { NoResults } from "../NoResults/NoResults";
 
+import "./FoodList.scss";
+
 type FoodListProps = {
 	onClearSearch: () => void;
 	search: string;

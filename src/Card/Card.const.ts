@@ -11,7 +11,7 @@ export const CARD_BREAKPOINT_2_COL = 400;
 export const CARD_BREAKPOINT_3_COL = 701;
 export const CARD_BREAKPOINT_4_COL = 901;
 export const CARD_MAX_VIEWPORT = 1400;
-export const CARD_WIDTH_DETAIL = 500;
+export const CARD_DETAIL_MAX_WIDTH = 600;
 
 // Graphic
 export const GRAPHIC_WIDTH = 613;
