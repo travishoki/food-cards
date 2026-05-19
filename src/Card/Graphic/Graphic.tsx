@@ -4,17 +4,20 @@ import { useCard } from "../CardContext";
 import "./Graphic.scss";
 
 type GraphicProps = {
+	fullWidth?: boolean;
 	name: string;
 	src: string;
 };
 
-export const Graphic = ({ name, src }: GraphicProps) => {
+export const Graphic = ({ fullWidth, name, src }: GraphicProps) => {
 	const { cardRatio, cardWidth } = useCard();
-	const width = GRAPHIC_WIDTH * cardRatio;
-	const height = GRAPHIC_HEIGHT * cardRatio;
 
-	const left = getCenteredLeft(width, cardWidth);
-	const top = GRAPHIC_TOP * cardRatio;
+	const width = fullWidth ? cardWidth : GRAPHIC_WIDTH * cardRatio;
+	const height = fullWidth
+		? cardWidth * (GRAPHIC_HEIGHT / GRAPHIC_WIDTH)
+		: GRAPHIC_HEIGHT * cardRatio;
+	const left = fullWidth ? 0 : getCenteredLeft(width, cardWidth);
+	const top = fullWidth ? 0 : GRAPHIC_TOP * cardRatio;
 
 	return (
 		<img

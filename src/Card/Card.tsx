@@ -1,7 +1,7 @@
 import { useNavigate, useParams } from "react-router-dom";
 
 import { Background } from "./Background/Background";
-import { GRAPHIC_HEIGHT } from "./Card.const";
+import { GRAPHIC_HEIGHT, GRAPHIC_WIDTH } from "./Card.const";
 import {
 	getCardHeight,
 	getCardRatio,
@@ -40,7 +40,7 @@ export default function Card({ food }: CardProps) {
 	const cardRatio = getCardRatio(cardWidth);
 	const cardHeight = showAll
 		? getCardHeight(cardWidth)
-		: GRAPHIC_HEIGHT * cardRatio;
+		: cardWidth * (GRAPHIC_HEIGHT / GRAPHIC_WIDTH);
 
 	const handleClick = isDetailView
 		? undefined
@@ -66,7 +66,11 @@ export default function Card({ food }: CardProps) {
 					width: `${cardWidth}px`,
 				}}
 			>
-				<Graphic name={food.name} src={food.image_url} />
+				<Graphic
+					fullWidth={!showAll}
+					name={food.name}
+					src={food.image_url}
+				/>
 				{showAll && (
 					<>
 						<Title name={food.name} />
