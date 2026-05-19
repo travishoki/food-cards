@@ -2,8 +2,9 @@ import {
 	BACKGROUND_HEIGHT,
 	BACKGROUND_WIDTH,
 	CARD_DETAIL_MAX_WIDTH,
-	CARD_SIDE_PADDING,
+	CARD_GUTTER,
 	PADDING_LEFT,
+	PAGE_SIDE_PADDING,
 } from "./Card.const";
 import {
 	getCardHeight,
@@ -86,7 +87,7 @@ describe("getSidePadding", () => {
 });
 
 describe("getDetailCardWidth", () => {
-	const sp = CARD_SIDE_PADDING;
+	const sp = PAGE_SIDE_PADDING;
 
 	it("subtracts the side padding at narrow viewports", () => {
 		expect(getDetailCardWidth(360)).toBe(360 - 2 * sp);
@@ -108,54 +109,67 @@ describe("getDetailCardWidth", () => {
 });
 
 describe("getListCardWidth", () => {
-	const sp = CARD_SIDE_PADDING;
+	const outer = 2 * PAGE_SIDE_PADDING;
+	const g = CARD_GUTTER;
 
 	describe("1 column (viewport < 400px)", () => {
 		it("subtracts two side paddings at 360", () => {
-			expect(getListCardWidth(360)).toBe(360 - 2 * sp);
+			expect(getListCardWidth(360)).toBe(360 - outer);
 		});
 
 		it("works at boundary just under 400", () => {
-			expect(getListCardWidth(399)).toBe(399 - 2 * sp);
+			expect(getListCardWidth(399)).toBe(399 - outer);
 		});
 
 		it("returns negative for tiny viewports (no clamp)", () => {
-			expect(getListCardWidth(10)).toBe(10 - 2 * sp);
+			expect(getListCardWidth(10)).toBe(10 - outer);
 		});
 	});
 
 	describe("2 columns (400 ≤ viewport < 701)", () => {
 		it("splits into two at 400", () => {
-			expect(getListCardWidth(400)).toBe(Math.floor((400 - 3 * sp) / 2));
+			expect(getListCardWidth(400)).toBe(
+				Math.floor((400 - outer - g) / 2),
+			);
 		});
 
 		it("splits at the upper boundary 700", () => {
-			expect(getListCardWidth(700)).toBe(Math.floor((700 - 3 * sp) / 2));
+			expect(getListCardWidth(700)).toBe(
+				Math.floor((700 - outer - g) / 2),
+			);
 		});
 
 		it("floors fractional results", () => {
-			expect(getListCardWidth(501)).toBe(Math.floor((501 - 3 * sp) / 2));
+			expect(getListCardWidth(501)).toBe(
+				Math.floor((501 - outer - g) / 2),
+			);
 		});
 	});
 
 	describe("3 columns (701 ≤ viewport < 901)", () => {
 		it("splits into three at 701", () => {
-			expect(getListCardWidth(701)).toBe(Math.floor((701 - 4 * sp) / 3));
+			expect(getListCardWidth(701)).toBe(
+				Math.floor((701 - outer - 2 * g) / 3),
+			);
 		});
 
 		it("splits at the upper boundary 900", () => {
-			expect(getListCardWidth(900)).toBe(Math.floor((900 - 4 * sp) / 3));
+			expect(getListCardWidth(900)).toBe(
+				Math.floor((900 - outer - 2 * g) / 3),
+			);
 		});
 	});
 
 	describe("4 columns (viewport ≥ 901)", () => {
 		it("splits into four at 901", () => {
-			expect(getListCardWidth(901)).toBe(Math.floor((901 - 5 * sp) / 4));
+			expect(getListCardWidth(901)).toBe(
+				Math.floor((901 - outer - 3 * g) / 4),
+			);
 		});
 
 		it("splits at the cap (1400)", () => {
 			expect(getListCardWidth(1400)).toBe(
-				Math.floor((1400 - 5 * sp) / 4),
+				Math.floor((1400 - outer - 3 * g) / 4),
 			);
 		});
 

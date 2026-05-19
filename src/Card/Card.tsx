@@ -5,6 +5,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { Background } from "./Background/Background";
 import {
 	BACKGROUND_WIDTH,
+	CARD_BOTTOM_PADDING,
 	CARD_INFO_PADDING_BOTTOM,
 	CARD_INFO_TOP,
 	COOK_TIME_CLOCK_SIZE,
@@ -54,6 +55,7 @@ type CardProps = {
 const dcqw = (px: number) => `${(px / BACKGROUND_WIDTH) * 100}cqw`;
 
 const designVars: CSSProperties = {
+	"--card-bottom-padding": dcqw(CARD_BOTTOM_PADDING),
 	"--card-info-padding-bottom": dcqw(CARD_INFO_PADDING_BOTTOM),
 	"--card-info-top": dcqw(CARD_INFO_TOP),
 	"--cook-time-clock-size": dcqw(COOK_TIME_CLOCK_SIZE),

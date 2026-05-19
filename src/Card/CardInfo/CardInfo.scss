@@ -1,5 +1,5 @@
 .card-info {
-	bottom: 0;
+	bottom: var(--card-bottom-padding);
 	left: var(--padding-left);
 	overflow: hidden;
 	position: absolute;

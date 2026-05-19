@@ -2,7 +2,7 @@ import { useMemo } from "react";
 
 import { getVisibleFoods } from "./FoodList.helpers";
 import Card from "../../Card/Card";
-import { CARD_SIDE_PADDING } from "../../Card/Card.const";
+import { CARD_GUTTER, PAGE_SIDE_PADDING } from "../../Card/Card.const";
 import { NoResults } from "../NoResults/NoResults";
 
 import "./FoodList.scss";
@@ -39,8 +39,8 @@ export const FoodList = ({
 		<div
 			className="food-cards"
 			style={{
-				gap: `${CARD_SIDE_PADDING}px`,
-				padding: `${CARD_SIDE_PADDING}px`,
+				gap: `${CARD_GUTTER}px`,
+				padding: `${PAGE_SIDE_PADDING}px`,
 			}}
 		>
 			{visibleFoods.map((food) => (

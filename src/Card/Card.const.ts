@@ -2,16 +2,19 @@
 export const BACKGROUND_WIDTH = 750; // The cqw sizing is in reference to this
 export const BACKGROUND_HEIGHT = 1050;
 
+export const PAGE_SIDE_PADDING = 20;
+
 // Card
 export const PADDING_LEFT = 52;
 
-// List layout
-export const CARD_SIDE_PADDING = 20;
+// Card layout
+export const CARD_BOTTOM_PADDING = 22;
 export const CARD_BREAKPOINT_2_COL = 400;
 export const CARD_BREAKPOINT_3_COL = 701;
 export const CARD_BREAKPOINT_4_COL = 901;
 export const CARD_MAX_VIEWPORT = 1400;
 export const CARD_DETAIL_MAX_WIDTH = 600;
+export const CARD_GUTTER = 20;
 
 // Graphic
 export const GRAPHIC_WIDTH = 613;
