@@ -7,6 +7,14 @@
 	margin: 0 auto;
 	max-width: 960px;
 	padding: 0.75rem 1rem 1.25rem;
+
+	@media (max-width: $breakpoint-sm) {
+		-webkit-overflow-scrolling: touch;
+		flex-wrap: nowrap;
+		justify-content: flex-start;
+		overflow-x: auto;
+		scrollbar-width: thin;
+	}
 }
 
 .category-menu__link {
@@ -24,6 +32,7 @@
 	transition:
 		background 0.15s ease,
 		border-color 0.15s ease;
+	white-space: nowrap;
 
 	&:hover {
 		background: $color-surface-hover;
@@ -33,5 +42,9 @@
 	&.is-active {
 		background: $color-active-bg;
 		border-color: $color-active-border;
+	}
+
+	@media (max-width: $breakpoint-sm) {
+		flex-shrink: 0;
 	}
 }
