@@ -9,7 +9,7 @@ export const BREAKFAST_FOODS: Food[] = [
 		image_url: "/graphics/main/breakfast/crepes.jpg",
 		ingredients: [
 			"1 cup milk",
-			"⅔ cup all-purpose flour",
+			"⅔ cup purpose flour",
 			"2 large eggs",
 			"2 ½ teaspoons vegetable oil, divided",
 			"1 pinch salt",
@@ -34,8 +34,8 @@ export const BREAKFAST_FOODS: Food[] = [
 		ingredients: [
 			"1 egg",
 			"1 tsp All Natural Pure Vanilla Extract",
-			"1/2 tsp Ground Cinnamon",
-			"1/4 cup milk",
+			"½ tsp Ground Cinnamon",
+			"¼ cup milk",
 			"4 slices hearty sandwich bread",
 		],
 		instructions: [
@@ -65,7 +65,7 @@ export const BREAKFAST_FOODS: Food[] = [
 			"6 eggs",
 			"1 cup milk",
 			"1 cup flour",
-			"1⁄4 teaspoon salt",
+			"¼ teaspoon salt",
 			"6 tablespoons butter",
 		],
 		instructions: [
