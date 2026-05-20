@@ -4,7 +4,6 @@ import type { Food } from "../types";
 
 export const CANDY_FOODS: Food[] = [
 	{
-		category_key: CATEGORIES.candy,
 		difficulty: 1,
 		id: 10,
 		image_url: "/graphics/sweets/candy/andes-mints.jpg",
@@ -12,7 +11,6 @@ export const CANDY_FOODS: Food[] = [
 		slug: "andes-mints",
 	},
 	{
-		category_key: CATEGORIES.candy,
 		difficulty: 1,
 		id: 67,
 		image_url: "/graphics/sweets/candy/dubai-chocolate.jpg",
@@ -20,7 +18,6 @@ export const CANDY_FOODS: Food[] = [
 		slug: "dubai-chocolate",
 	},
 	{
-		category_key: CATEGORIES.candy,
 		difficulty: 1,
 		id: 68,
 		image_url: "/graphics/sweets/candy/kitkat.jpg",
@@ -28,7 +25,6 @@ export const CANDY_FOODS: Food[] = [
 		slug: "kitkat",
 	},
 	{
-		category_key: CATEGORIES.candy,
 		difficulty: 1,
 		id: 69,
 		image_url: "/graphics/sweets/candy/milk-chocolate.jpg",
@@ -36,7 +32,6 @@ export const CANDY_FOODS: Food[] = [
 		slug: "milk-chocolate",
 	},
 	{
-		category_key: CATEGORIES.candy,
 		difficulty: 1,
 		id: 70,
 		image_url: "/graphics/sweets/candy/nutella.jpg",
@@ -44,11 +39,10 @@ export const CANDY_FOODS: Food[] = [
 		slug: "nutella",
 	},
 	{
-		category_key: CATEGORIES.candy,
 		difficulty: 1,
 		id: 71,
 		image_url: "/graphics/sweets/candy/twizzlers.jpg",
 		name: "Twizzlers",
 		slug: "twizzlers",
 	},
-];
+].map((f) => ({ ...f, category_key: CATEGORIES.candy })) as Food[];

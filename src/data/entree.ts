@@ -4,7 +4,6 @@ import type { Food } from "../types";
 
 export const ENTREE_FOODS: Food[] = [
 	{
-		category_key: CATEGORIES.entree,
 		cookTime: { instructions: "Cook in oven", time: "10–12m" },
 		difficulty: 1,
 		id: 14,
@@ -16,11 +15,10 @@ export const ENTREE_FOODS: Food[] = [
 		slug: "square-pizza",
 	},
 	{
-		category_key: CATEGORIES.entree,
 		difficulty: 1,
 		id: 20,
 		image_url: "/graphics/main/entree/french-bread-pizza.jpg",
 		name: "French Bread Pizza",
 		slug: "french-bread-pizza",
 	},
-];
+].map((f) => ({ ...f, category_key: CATEGORIES.entree })) as Food[];

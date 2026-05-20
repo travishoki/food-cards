@@ -4,7 +4,6 @@ import type { Food } from "../types";
 
 export const DRINKS_FOODS: Food[] = [
 	{
-		category_key: CATEGORIES.drinks,
 		difficulty: 1,
 		id: 4,
 		image_url: "/graphics/drinks/drinks/milk.jpg",
@@ -12,7 +11,6 @@ export const DRINKS_FOODS: Food[] = [
 		slug: "milk",
 	},
 	{
-		category_key: CATEGORIES.drinks,
 		difficulty: 1,
 		id: 8,
 		image_url: "/graphics/drinks/drinks/chocolate-milk.jpg",
@@ -20,7 +18,6 @@ export const DRINKS_FOODS: Food[] = [
 		slug: "chocolate-milk",
 	},
 	{
-		category_key: CATEGORIES.drinks,
 		difficulty: 1,
 		id: 86,
 		image_url: "/graphics/drinks/drinks/frazzle.jpg",
@@ -29,7 +26,6 @@ export const DRINKS_FOODS: Food[] = [
 		slug: "frazzle",
 	},
 	{
-		category_key: CATEGORIES.drinks,
 		difficulty: 1,
 		id: 87,
 		image_url: "/graphics/drinks/drinks/gatorade.jpg",
@@ -39,7 +35,6 @@ export const DRINKS_FOODS: Food[] = [
 		slug: "gatorade",
 	},
 	{
-		category_key: CATEGORIES.drinks,
 		difficulty: 1,
 		id: 88,
 		image_url: "/graphics/drinks/drinks/hot-chocolate.jpg",
@@ -47,7 +42,6 @@ export const DRINKS_FOODS: Food[] = [
 		slug: "hot-chocolate",
 	},
 	{
-		category_key: CATEGORIES.drinks,
 		difficulty: 1,
 		id: 89,
 		image_url: "/graphics/drinks/drinks/kool-aid.jpg",
@@ -55,7 +49,6 @@ export const DRINKS_FOODS: Food[] = [
 		slug: "kool-aid",
 	},
 	{
-		category_key: CATEGORIES.drinks,
 		difficulty: 1,
 		id: 90,
 		image_url: "/graphics/drinks/drinks/lemonade.jpg",
@@ -63,7 +56,6 @@ export const DRINKS_FOODS: Food[] = [
 		slug: "lemonade",
 	},
 	{
-		category_key: CATEGORIES.drinks,
 		difficulty: 1,
 		id: 91,
 		image_url: "/graphics/drinks/drinks/orange-julius.jpg",
@@ -71,7 +63,6 @@ export const DRINKS_FOODS: Food[] = [
 		slug: "orange-julius",
 	},
 	{
-		category_key: CATEGORIES.drinks,
 		difficulty: 1,
 		id: 92,
 		image_url: "/graphics/drinks/drinks/powerade.jpg",
@@ -81,7 +72,6 @@ export const DRINKS_FOODS: Food[] = [
 		slug: "powerade",
 	},
 	{
-		category_key: CATEGORIES.drinks,
 		difficulty: 1,
 		id: 93,
 		image_url: "/graphics/drinks/drinks/root-beer.jpg",
@@ -91,7 +81,6 @@ export const DRINKS_FOODS: Food[] = [
 		slug: "root-beer",
 	},
 	{
-		category_key: CATEGORIES.drinks,
 		difficulty: 1,
 		id: 94,
 		image_url: "/graphics/drinks/drinks/slurpee.jpg",
@@ -100,7 +89,6 @@ export const DRINKS_FOODS: Food[] = [
 		slug: "slurpee",
 	},
 	{
-		category_key: CATEGORIES.drinks,
 		difficulty: 1,
 		id: 95,
 		image_url: "/graphics/drinks/drinks/sprite.jpg",
@@ -108,11 +96,10 @@ export const DRINKS_FOODS: Food[] = [
 		slug: "sprite",
 	},
 	{
-		category_key: CATEGORIES.drinks,
 		difficulty: 1,
 		id: 96,
 		image_url: "/graphics/drinks/drinks/sunny-d.jpg",
 		name: "Sunny D",
 		slug: "sunny-d",
 	},
-];
+].map((f) => ({ ...f, category_key: CATEGORIES.drinks })) as Food[];

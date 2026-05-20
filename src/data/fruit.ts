@@ -4,7 +4,6 @@ import type { Food } from "../types";
 
 export const FRUIT_FOODS: Food[] = [
 	{
-		category_key: CATEGORIES.fruit,
 		difficulty: 1,
 		id: 6,
 		image_url: "/graphics/snack/fruit/grapes.jpg",
@@ -13,7 +12,6 @@ export const FRUIT_FOODS: Food[] = [
 		slug: "grapes",
 	},
 	{
-		category_key: CATEGORIES.fruit,
 		difficulty: 1,
 		id: 32,
 		image_url: "/graphics/snack/fruit/apple-chips-fresh.jpg",
@@ -21,7 +19,6 @@ export const FRUIT_FOODS: Food[] = [
 		slug: "apple-chips-fresh",
 	},
 	{
-		category_key: CATEGORIES.fruit,
 		difficulty: 1,
 		id: 33,
 		image_url: "/graphics/snack/fruit/bananas.jpg",
@@ -29,7 +26,6 @@ export const FRUIT_FOODS: Food[] = [
 		slug: "bananas",
 	},
 	{
-		category_key: CATEGORIES.fruit,
 		difficulty: 1,
 		id: 34,
 		image_url: "/graphics/snack/fruit/blackberries.jpg",
@@ -38,7 +34,6 @@ export const FRUIT_FOODS: Food[] = [
 		slug: "blackberries",
 	},
 	{
-		category_key: CATEGORIES.fruit,
 		difficulty: 1,
 		id: 35,
 		image_url: "/graphics/snack/fruit/blue-berries.jpg",
@@ -46,7 +41,6 @@ export const FRUIT_FOODS: Food[] = [
 		slug: "blue-berries",
 	},
 	{
-		category_key: CATEGORIES.fruit,
 		difficulty: 1,
 		id: 36,
 		image_url: "/graphics/snack/fruit/cherries.jpg",
@@ -55,7 +49,6 @@ export const FRUIT_FOODS: Food[] = [
 		slug: "cherries",
 	},
 	{
-		category_key: CATEGORIES.fruit,
 		difficulty: 1,
 		id: 37,
 		image_url: "/graphics/snack/fruit/dragon-fruit.jpg",
@@ -63,7 +56,6 @@ export const FRUIT_FOODS: Food[] = [
 		slug: "dragon-fruit",
 	},
 	{
-		category_key: CATEGORIES.fruit,
 		difficulty: 1,
 		id: 38,
 		image_url: "/graphics/snack/fruit/dried-bananas.jpg",
@@ -72,7 +64,6 @@ export const FRUIT_FOODS: Food[] = [
 		slug: "dried-bananas",
 	},
 	{
-		category_key: CATEGORIES.fruit,
 		difficulty: 1,
 		id: 39,
 		image_url: "/graphics/snack/fruit/dried-mangos.jpg",
@@ -80,7 +71,6 @@ export const FRUIT_FOODS: Food[] = [
 		slug: "dried-mangos",
 	},
 	{
-		category_key: CATEGORIES.fruit,
 		difficulty: 1,
 		id: 40,
 		image_url: "/graphics/snack/fruit/kiwi.jpg",
@@ -88,7 +78,6 @@ export const FRUIT_FOODS: Food[] = [
 		slug: "kiwi",
 	},
 	{
-		category_key: CATEGORIES.fruit,
 		difficulty: 1,
 		id: 41,
 		image_url: "/graphics/snack/fruit/mandarin-oranges.jpg",
@@ -96,7 +85,6 @@ export const FRUIT_FOODS: Food[] = [
 		slug: "mandarin-oranges",
 	},
 	{
-		category_key: CATEGORIES.fruit,
 		difficulty: 1,
 		id: 42,
 		image_url: "/graphics/snack/fruit/pineapple.jpg",
@@ -104,7 +92,6 @@ export const FRUIT_FOODS: Food[] = [
 		slug: "pineapple",
 	},
 	{
-		category_key: CATEGORIES.fruit,
 		difficulty: 1,
 		id: 43,
 		image_url: "/graphics/snack/fruit/raspberry.jpg",
@@ -113,7 +100,6 @@ export const FRUIT_FOODS: Food[] = [
 		slug: "raspberry",
 	},
 	{
-		category_key: CATEGORIES.fruit,
 		difficulty: 1,
 		id: 44,
 		image_url: "/graphics/snack/fruit/sliced-apples.jpg",
@@ -121,7 +107,6 @@ export const FRUIT_FOODS: Food[] = [
 		slug: "sliced-apples",
 	},
 	{
-		category_key: CATEGORIES.fruit,
 		difficulty: 1,
 		id: 45,
 		image_url: "/graphics/snack/fruit/strawberries.jpg",
@@ -130,11 +115,10 @@ export const FRUIT_FOODS: Food[] = [
 		slug: "strawberries",
 	},
 	{
-		category_key: CATEGORIES.fruit,
 		difficulty: 1,
 		id: 46,
 		image_url: "/graphics/snack/fruit/watermelon.jpg",
 		name: "Watermelon",
 		slug: "watermelon",
 	},
-];
+].map((f) => ({ ...f, category_key: CATEGORIES.fruit })) as Food[];

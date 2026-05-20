@@ -4,7 +4,6 @@ import type { Food } from "../types";
 
 export const GRAINS_FOODS: Food[] = [
 	{
-		category_key: CATEGORIES.grains,
 		difficulty: 1,
 		id: 12,
 		image_url: "/graphics/snack/grains/banana-bars.jpg",
@@ -12,7 +11,6 @@ export const GRAINS_FOODS: Food[] = [
 		slug: "banana-bars",
 	},
 	{
-		category_key: CATEGORIES.grains,
 		difficulty: 1,
 		id: 47,
 		image_url: "/graphics/snack/grains/banana-bread.jpg",
@@ -20,7 +18,6 @@ export const GRAINS_FOODS: Food[] = [
 		slug: "banana-bread",
 	},
 	{
-		category_key: CATEGORIES.grains,
 		difficulty: 1,
 		id: 48,
 		image_url: "/graphics/snack/grains/blue-berry-muffin.jpg",
@@ -28,7 +25,6 @@ export const GRAINS_FOODS: Food[] = [
 		slug: "blue-berry-muffin",
 	},
 	{
-		category_key: CATEGORIES.grains,
 		difficulty: 1,
 		id: 49,
 		image_url: "/graphics/snack/grains/cheetos.jpg",
@@ -36,7 +32,6 @@ export const GRAINS_FOODS: Food[] = [
 		slug: "cheetos",
 	},
 	{
-		category_key: CATEGORIES.grains,
 		difficulty: 1,
 		id: 50,
 		image_url: "/graphics/snack/grains/chocolate-muffin.jpg",
@@ -44,7 +39,6 @@ export const GRAINS_FOODS: Food[] = [
 		slug: "chocolate-muffin",
 	},
 	{
-		category_key: CATEGORIES.grains,
 		difficulty: 1,
 		id: 51,
 		image_url: "/graphics/snack/grains/cinnamon-toast.jpg",
@@ -57,7 +51,6 @@ export const GRAINS_FOODS: Food[] = [
 		slug: "cinnamon-toast",
 	},
 	{
-		category_key: CATEGORIES.grains,
 		difficulty: 1,
 		id: 52,
 		image_url: "/graphics/snack/grains/doritos.jpg",
@@ -65,7 +58,6 @@ export const GRAINS_FOODS: Food[] = [
 		slug: "doritos",
 	},
 	{
-		category_key: CATEGORIES.grains,
 		difficulty: 1,
 		id: 53,
 		image_url: "/graphics/snack/grains/graham-crackers.jpg",
@@ -73,7 +65,6 @@ export const GRAINS_FOODS: Food[] = [
 		slug: "graham-crackers",
 	},
 	{
-		category_key: CATEGORIES.grains,
 		difficulty: 1,
 		id: 54,
 		image_url: "/graphics/snack/grains/granola-bar.jpg",
@@ -81,7 +72,6 @@ export const GRAINS_FOODS: Food[] = [
 		slug: "granola-bar",
 	},
 	{
-		category_key: CATEGORIES.grains,
 		difficulty: 1,
 		id: 55,
 		image_url: "/graphics/snack/grains/japanese-cheesecake.jpg",
@@ -89,7 +79,6 @@ export const GRAINS_FOODS: Food[] = [
 		slug: "japanese-cheesecake",
 	},
 	{
-		category_key: CATEGORIES.grains,
 		difficulty: 1,
 		id: 56,
 		image_url: "/graphics/snack/grains/jello.jpg",
@@ -98,7 +87,6 @@ export const GRAINS_FOODS: Food[] = [
 		slug: "jello",
 	},
 	{
-		category_key: CATEGORIES.grains,
 		difficulty: 1,
 		id: 57,
 		image_url: "/graphics/snack/grains/lays-classic-chips.jpg",
@@ -106,7 +94,6 @@ export const GRAINS_FOODS: Food[] = [
 		slug: "lays-classic-chips",
 	},
 	{
-		category_key: CATEGORIES.grains,
 		difficulty: 1,
 		id: 58,
 		image_url: "/graphics/snack/grains/otter-pop.jpg",
@@ -115,7 +102,6 @@ export const GRAINS_FOODS: Food[] = [
 		slug: "otter-pop",
 	},
 	{
-		category_key: CATEGORIES.grains,
 		difficulty: 1,
 		id: 59,
 		image_url: "/graphics/snack/grains/popcorn.jpg",
@@ -124,7 +110,6 @@ export const GRAINS_FOODS: Food[] = [
 		slug: "popcorn",
 	},
 	{
-		category_key: CATEGORIES.grains,
 		difficulty: 1,
 		id: 60,
 		image_url: "/graphics/snack/grains/popsicle.jpg",
@@ -133,7 +118,6 @@ export const GRAINS_FOODS: Food[] = [
 		slug: "popsicle",
 	},
 	{
-		category_key: CATEGORIES.grains,
 		difficulty: 1,
 		id: 61,
 		image_url: "/graphics/snack/grains/pretzels-crunchy.jpg",
@@ -141,7 +125,6 @@ export const GRAINS_FOODS: Food[] = [
 		slug: "pretzels-crunchy",
 	},
 	{
-		category_key: CATEGORIES.grains,
 		difficulty: 1,
 		id: 62,
 		image_url: "/graphics/snack/grains/rolls.jpg",
@@ -149,7 +132,6 @@ export const GRAINS_FOODS: Food[] = [
 		slug: "rolls",
 	},
 	{
-		category_key: CATEGORIES.grains,
 		difficulty: 1,
 		id: 63,
 		image_url: "/graphics/snack/grains/soft-pretzels.jpg",
@@ -157,11 +139,10 @@ export const GRAINS_FOODS: Food[] = [
 		slug: "soft-pretzels",
 	},
 	{
-		category_key: CATEGORIES.grains,
 		difficulty: 1,
 		id: 64,
 		image_url: "/graphics/snack/grains/tortilla-chips.jpg",
 		name: "Tortilla Chips",
 		slug: "tortilla-chips",
 	},
-];
+].map((f) => ({ ...f, category_key: CATEGORIES.grains })) as Food[];

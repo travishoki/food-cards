@@ -4,7 +4,6 @@ import type { Food } from "../types";
 
 export const DESSERT_FOODS: Food[] = [
 	{
-		category_key: CATEGORIES.dessert,
 		difficulty: 1,
 		id: 1,
 		image_url: "/graphics/sweets/dessert/glazed-donut.jpg",
@@ -12,7 +11,6 @@ export const DESSERT_FOODS: Food[] = [
 		slug: "donut",
 	},
 	{
-		category_key: CATEGORIES.dessert,
 		difficulty: 1,
 		id: 72,
 		image_url: "/graphics/sweets/dessert/apple-pie.jpg",
@@ -20,7 +18,6 @@ export const DESSERT_FOODS: Food[] = [
 		slug: "apple-pie",
 	},
 	{
-		category_key: CATEGORIES.dessert,
 		difficulty: 1,
 		id: 73,
 		image_url: "/graphics/sweets/dessert/brownies.jpg",
@@ -28,7 +25,6 @@ export const DESSERT_FOODS: Food[] = [
 		slug: "brownies",
 	},
 	{
-		category_key: CATEGORIES.dessert,
 		difficulty: 1,
 		id: 74,
 		image_url: "/graphics/sweets/dessert/chocolate-pie.jpg",
@@ -36,7 +32,6 @@ export const DESSERT_FOODS: Food[] = [
 		slug: "chocolate-pie",
 	},
 	{
-		category_key: CATEGORIES.dessert,
 		difficulty: 1,
 		id: 75,
 		image_url: "/graphics/sweets/dessert/cinnamon-roll.jpg",
@@ -44,7 +39,6 @@ export const DESSERT_FOODS: Food[] = [
 		slug: "cinnamon-roll",
 	},
 	{
-		category_key: CATEGORIES.dessert,
 		difficulty: 1,
 		id: 76,
 		image_url: "/graphics/sweets/dessert/cookie.jpg",
@@ -52,7 +46,6 @@ export const DESSERT_FOODS: Food[] = [
 		slug: "cookie",
 	},
 	{
-		category_key: CATEGORIES.dessert,
 		difficulty: 1,
 		id: 77,
 		image_url: "/graphics/sweets/dessert/cookie-dough.jpg",
@@ -60,7 +53,6 @@ export const DESSERT_FOODS: Food[] = [
 		slug: "cookie-dough",
 	},
 	{
-		category_key: CATEGORIES.dessert,
 		difficulty: 1,
 		id: 78,
 		image_url: "/graphics/sweets/dessert/cookie-dough-pizza.jpg",
@@ -68,7 +60,6 @@ export const DESSERT_FOODS: Food[] = [
 		slug: "cookie-dough-pizza",
 	},
 	{
-		category_key: CATEGORIES.dessert,
 		difficulty: 1,
 		id: 79,
 		image_url: "/graphics/sweets/dessert/cupcake.jpg",
@@ -76,7 +67,6 @@ export const DESSERT_FOODS: Food[] = [
 		slug: "cupcake",
 	},
 	{
-		category_key: CATEGORIES.dessert,
 		difficulty: 1,
 		id: 80,
 		image_url: "/graphics/sweets/dessert/frosty.jpg",
@@ -84,7 +74,6 @@ export const DESSERT_FOODS: Food[] = [
 		slug: "frosty",
 	},
 	{
-		category_key: CATEGORIES.dessert,
 		difficulty: 1,
 		id: 81,
 		image_url: "/graphics/sweets/dessert/fruit-pizza.jpg",
@@ -101,7 +90,6 @@ export const DESSERT_FOODS: Food[] = [
 		],
 	},
 	{
-		category_key: CATEGORIES.dessert,
 		difficulty: 1,
 		id: 82,
 		image_url: "/graphics/sweets/dessert/ice-cream.jpg",
@@ -109,7 +97,6 @@ export const DESSERT_FOODS: Food[] = [
 		slug: "ice-cream",
 	},
 	{
-		category_key: CATEGORIES.dessert,
 		difficulty: 1,
 		id: 83,
 		image_url: "/graphics/sweets/dessert/mint-brownies.jpg",
@@ -117,7 +104,6 @@ export const DESSERT_FOODS: Food[] = [
 		slug: "mint-brownies",
 	},
 	{
-		category_key: CATEGORIES.dessert,
 		difficulty: 1,
 		id: 84,
 		image_url: "/graphics/sweets/dessert/peach-cobbler.jpg",
@@ -125,7 +111,6 @@ export const DESSERT_FOODS: Food[] = [
 		slug: "peach-cobbler",
 	},
 	{
-		category_key: CATEGORIES.dessert,
 		difficulty: 1,
 		id: 85,
 		image_url: "/graphics/sweets/dessert/peanut-butter-bars.jpg",
@@ -133,7 +118,6 @@ export const DESSERT_FOODS: Food[] = [
 		slug: "peanut-butter-bars",
 	},
 	{
-		category_key: CATEGORIES.dessert,
 		difficulty: 1,
 		id: 98,
 		image_url:
@@ -141,4 +125,4 @@ export const DESSERT_FOODS: Food[] = [
 		name: "Mochi Cake",
 		slug: "mocki-cake",
 	},
-];
+].map((f) => ({ ...f, category_key: CATEGORIES.dessert })) as Food[];

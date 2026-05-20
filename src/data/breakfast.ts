@@ -4,7 +4,6 @@ import type { Food } from "../types";
 
 export const BREAKFAST_FOODS: Food[] = [
 	{
-		category_key: CATEGORIES.breakfast,
 		difficulty: 4,
 		id: 13,
 		image_url: "/graphics/main/breakfast/crepes.jpg",
@@ -29,7 +28,6 @@ export const BREAKFAST_FOODS: Food[] = [
 		],
 	},
 	{
-		category_key: CATEGORIES.breakfast,
 		difficulty: 4,
 		id: 15,
 		image_url: "/graphics/main/breakfast/french-toast.jpg",
@@ -52,7 +50,6 @@ export const BREAKFAST_FOODS: Food[] = [
 		slug: "french-toast",
 	},
 	{
-		category_key: CATEGORIES.breakfast,
 		difficulty: 4,
 		id: 16,
 		image_url: "/graphics/main/breakfast/pancakes.jpg",
@@ -60,7 +57,6 @@ export const BREAKFAST_FOODS: Food[] = [
 		slug: "pancakes",
 	},
 	{
-		category_key: CATEGORIES.breakfast,
 		difficulty: 4,
 		id: 17,
 		image_url: "/graphics/main/breakfast/puffy-oven-pancakes.jpg",
@@ -88,7 +84,6 @@ export const BREAKFAST_FOODS: Food[] = [
 		slug: "puffy-oven-pancakes",
 	},
 	{
-		category_key: CATEGORIES.breakfast,
 		difficulty: 5,
 		id: 18,
 		image_url: "/graphics/main/breakfast/swedish-pancakes.jpg",
@@ -106,7 +101,6 @@ export const BREAKFAST_FOODS: Food[] = [
 		],
 	},
 	{
-		category_key: CATEGORIES.breakfast,
 		difficulty: 4,
 		id: 19,
 		image_url: "/graphics/main/breakfast/waffles.jpg",
@@ -114,7 +108,6 @@ export const BREAKFAST_FOODS: Food[] = [
 		slug: "fresh-waffles",
 	},
 	{
-		category_key: CATEGORIES.breakfast,
 		difficulty: 1,
 		id: 97,
 		image_url: "/graphics/main/breakfast/eggo-waffles.jpg",
@@ -122,4 +115,4 @@ export const BREAKFAST_FOODS: Food[] = [
 		name: "Eggo Waffles",
 		slug: "eggo-waffles",
 	},
-];
+].map((f) => ({ ...f, category_key: CATEGORIES.breakfast })) as Food[];

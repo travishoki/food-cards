@@ -4,7 +4,6 @@ import type { Food } from "../types";
 
 export const DAIRY_FOODS: Food[] = [
 	{
-		category_key: CATEGORIES.dairy,
 		difficulty: 1,
 		id: 11,
 		image_url: "/graphics/snack/dairy/grated-cheese.jpg",
@@ -12,11 +11,10 @@ export const DAIRY_FOODS: Food[] = [
 		slug: "grated-cheese",
 	},
 	{
-		category_key: CATEGORIES.dairy,
 		difficulty: 1,
 		id: 31,
 		image_url: "/graphics/snack/dairy/gogurt.jpg",
 		name: "Gogurt",
 		slug: "gogurt",
 	},
-];
+].map((f) => ({ ...f, category_key: CATEGORIES.dairy })) as Food[];

@@ -4,7 +4,6 @@ import type { Food } from "../types";
 
 export const SIDES_FOODS: Food[] = [
 	{
-		category_key: CATEGORIES.sides,
 		difficulty: 3,
 		id: 5,
 		image_url: "/graphics/sides/sides/mashed-potatoes.jpg",
@@ -18,7 +17,6 @@ export const SIDES_FOODS: Food[] = [
 		slug: "mashed-potatoes",
 	},
 	{
-		category_key: CATEGORIES.sides,
 		cookTime: {
 			instructions: "Cook in oven",
 			time: "8m",
@@ -32,7 +30,6 @@ export const SIDES_FOODS: Food[] = [
 		slug: "texas-toast",
 	},
 	{
-		category_key: CATEGORIES.sides,
 		difficulty: 3,
 		id: 21,
 		image_url: "/graphics/sides/sides/bacon.jpg",
@@ -40,7 +37,6 @@ export const SIDES_FOODS: Food[] = [
 		slug: "bacon",
 	},
 	{
-		category_key: CATEGORIES.sides,
 		difficulty: 2,
 		id: 22,
 		image_url: "/graphics/sides/sides/breadsticks.jpg",
@@ -48,7 +44,6 @@ export const SIDES_FOODS: Food[] = [
 		slug: "breadsticks",
 	},
 	{
-		category_key: CATEGORIES.sides,
 		difficulty: 2,
 		id: 23,
 		image_url: "/graphics/sides/sides/cheese-sticks-pizza.jpg",
@@ -56,7 +51,6 @@ export const SIDES_FOODS: Food[] = [
 		slug: "cheese-sticks-pizza",
 	},
 	{
-		category_key: CATEGORIES.sides,
 		difficulty: 2,
 		id: 24,
 		image_url: "/graphics/sides/sides/corn-doggies.jpg",
@@ -64,7 +58,6 @@ export const SIDES_FOODS: Food[] = [
 		slug: "corn-doggies",
 	},
 	{
-		category_key: CATEGORIES.sides,
 		difficulty: 3,
 		id: 25,
 		image_url: "/graphics/sides/sides/crinkle-cut-fries.jpg",
@@ -72,7 +65,6 @@ export const SIDES_FOODS: Food[] = [
 		slug: "crinkle-cut-fries",
 	},
 	{
-		category_key: CATEGORIES.sides,
 		difficulty: 3,
 		id: 26,
 		image_url: "/graphics/sides/sides/french-fries.jpg",
@@ -80,7 +72,6 @@ export const SIDES_FOODS: Food[] = [
 		slug: "french-fries",
 	},
 	{
-		category_key: CATEGORIES.sides,
 		difficulty: 2,
 		id: 27,
 		image_url: "/graphics/sides/sides/hashbrown.jpg",
@@ -92,7 +83,6 @@ export const SIDES_FOODS: Food[] = [
 		slug: "hashbrown",
 	},
 	{
-		category_key: CATEGORIES.sides,
 		difficulty: 3,
 		id: 28,
 		image_url: "/graphics/sides/sides/scrambled-eggs.jpg",
@@ -107,7 +97,6 @@ export const SIDES_FOODS: Food[] = [
 		slug: "scrambled-eggs",
 	},
 	{
-		category_key: CATEGORIES.sides,
 		difficulty: 2,
 		id: 29,
 		image_url: "/graphics/sides/sides/steak-fries.jpg",
@@ -116,11 +105,10 @@ export const SIDES_FOODS: Food[] = [
 		slug: "steak-fries",
 	},
 	{
-		category_key: CATEGORIES.sides,
 		difficulty: 2,
 		id: 30,
 		image_url: "/graphics/sides/sides/tater-tots.jpg",
 		name: "Tater Tots",
 		slug: "tater-tots",
 	},
-];
+].map((f) => ({ ...f, category_key: CATEGORIES.sides })) as Food[];
