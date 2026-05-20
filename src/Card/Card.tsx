@@ -28,6 +28,7 @@ import {
 	INGREDIENTS_FONT_SIZE,
 	INSTRUCTIONS_FONT_SIZE,
 	PADDING_LEFT,
+	PRERELEASE_FONT_SIZE,
 	RECIPE_QR_LABEL_FONT_SIZE,
 	RECIPE_QR_SIZE,
 	TITLE_FONT_SIZE,
@@ -44,6 +45,7 @@ import { CardInfo } from "./CardInfo/CardInfo";
 import { DifficultyIcon } from "./DifficultyIcon/DifficultyIcon";
 import { Graphic } from "./Graphic/Graphic";
 import { Icon } from "./Icon/Icon";
+import { PrereleaseLabel } from "./PrereleaseLabel/PrereleaseLabel";
 import { Title } from "./Title/Title";
 import { useCardView } from "../context/CardViewContext";
 import { useViewportWidth } from "../hooks/useViewportWidth";
@@ -84,6 +86,7 @@ const designVars: CSSProperties = {
 	"--ingredients-font-size": dcqw(INGREDIENTS_FONT_SIZE),
 	"--instructions-font-size": dcqw(INSTRUCTIONS_FONT_SIZE),
 	"--padding-left": dcqw(PADDING_LEFT),
+	"--prerelease-font-size": dcqw(PRERELEASE_FONT_SIZE),
 	"--recipe-qr-label-font-size": dcqw(RECIPE_QR_LABEL_FONT_SIZE),
 	"--recipe-qr-size": dcqw(RECIPE_QR_SIZE),
 	"--title-font-size": dcqw(TITLE_FONT_SIZE),
@@ -150,6 +153,7 @@ export default function Card({ food }: CardProps) {
 					<Icon categoryKey={food.category_key} />
 					<CardInfo food={food} />
 					<DifficultyIcon difficulty={food.difficulty} />
+					{food.prerelease && <PrereleaseLabel />}
 					<Background categoryKey={food.category_key} />
 				</>
 			)}

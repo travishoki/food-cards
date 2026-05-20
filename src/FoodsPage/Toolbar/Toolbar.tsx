@@ -7,6 +7,7 @@ import { SettingsButton } from "./SettingsButton";
 import { SortButton } from "./SortButton";
 import { SortDirection, SortPanel } from "./SortPanel";
 import { CardViewToggle } from "../../CardViewToggle/CardViewToggle";
+import { PrereleaseToggle } from "../../CardViewToggle/PrereleaseToggle";
 import { CategoryMenu } from "../../CategoryMenu/CategoryMenu";
 import { CloseIcon } from "../../icons/CloseIcon";
 import { SearchInput } from "../SearchInput/SearchInput";
@@ -107,7 +108,12 @@ export const Toolbar = ({
 					{openPanel === "sort" && (
 						<SortPanel onChange={onSortChange} value={sort} />
 					)}
-					{openPanel === "settings" && <CardViewToggle />}
+					{openPanel === "settings" && (
+						<>
+							<CardViewToggle />
+							<PrereleaseToggle />
+						</>
+					)}
 				</div>
 			)}
 		</div>

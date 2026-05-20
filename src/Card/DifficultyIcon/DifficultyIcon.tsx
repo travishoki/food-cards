@@ -13,7 +13,7 @@ const STAR =
 
 const PATHS: Record<Food["difficulty"], string> = {
 	1: CIRCLE,
-	2: DIAMOND,
+	2: CIRCLE,
 	3: DIAMOND,
 	4: DIAMOND,
 	5: STAR,

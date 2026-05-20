@@ -8,6 +8,7 @@ export type Food = {
 	ingredients?: string[];
 	instructions?: string | string[];
 	name: string;
+	prerelease?: boolean;
 	recipe_link?: string;
 	slug: string;
 	toppings?: string[];

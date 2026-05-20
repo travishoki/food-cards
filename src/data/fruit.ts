@@ -68,6 +68,7 @@ export const FRUIT_FOODS: Food[] = [
 		id: 38,
 		image_url: "/graphics/snack/fruit/dried-bananas.jpg",
 		name: "Dried Bananas",
+		prerelease: true,
 		slug: "dried-bananas",
 	},
 	{

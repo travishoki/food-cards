@@ -7,6 +7,7 @@ import {
 	CARD_MAX_VIEWPORT,
 	PAGE_SIDE_PADDING,
 } from "../../Card/Card.const";
+import { useCardView } from "../../context/CardViewContext";
 import { NoResults } from "../NoResults/NoResults";
 import { Difficulty } from "../Toolbar/DifficultyFilter";
 import { SortDirection } from "../Toolbar/SortPanel";
@@ -32,16 +33,19 @@ export const FoodList = ({
 	subCategory,
 	topCategory,
 }: FoodListProps) => {
+	const { showPrerelease } = useCardView();
+
 	const visibleFoods = useMemo(
 		() =>
 			getVisibleFoods({
 				difficulty,
 				search,
+				showPrerelease,
 				sort,
 				subCategory,
 				topCategory,
 			}),
-		[topCategory, subCategory, search, sort, difficulty],
+		[topCategory, subCategory, search, sort, difficulty, showPrerelease],
 	);
 
 	if (visibleFoods.length === 0 && (search.trim() || difficulty !== null)) {

@@ -1,0 +1,57 @@
+.prerelease-toggle {
+	align-items: center;
+	display: flex;
+	gap: 0.5rem;
+	justify-content: center;
+	padding: 0.5rem 0;
+}
+
+.prerelease-toggle__input {
+	appearance: none;
+	background: $color-surface;
+	border: 1px solid $color-border;
+	border-radius: $radius-sm;
+	cursor: pointer;
+	display: inline-block;
+	height: 1.25rem;
+	margin: 0;
+	position: relative;
+	transition:
+		background 0.15s ease,
+		border-color 0.15s ease;
+	width: 1.25rem;
+
+	&:hover {
+		background: $color-surface-hover;
+		border-color: $color-border-hover;
+	}
+
+	&:focus-visible {
+		outline: 2px solid $color-active-border;
+		outline-offset: 2px;
+	}
+
+	&:checked {
+		background: $color-active-bg;
+		border-color: $color-active-border;
+	}
+
+	&:checked::after {
+		border: solid $color-text-white;
+		border-width: 0 2px 2px 0;
+		content: "";
+		height: 0.6rem;
+		left: 50%;
+		position: absolute;
+		top: 45%;
+		transform: translate(-50%, -50%) rotate(45deg);
+		width: 0.35rem;
+	}
+}
+
+.prerelease-toggle__label {
+	color: $color-text;
+	cursor: pointer;
+	font-size: 0.95rem;
+	font-weight: 600;
+}
