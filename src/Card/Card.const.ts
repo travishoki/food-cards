@@ -32,7 +32,7 @@ export const TITLE_FONT_SIZE = 48;
 export const TITLES_ONLY_HEIGHT = 130;
 
 // Prerelease label
-export const PRERELEASE_FONT_SIZE = 32;
+export const PRERELEASE_FONT_SIZE = 42;
 
 // Difficulty icon
 export const DIFFICULTY_ICON_SIZE = 36;
