@@ -1,9 +1,14 @@
 import { toFoodSlug } from "../helpers";
 import { Food } from "../types";
 import { TOP_CATEGORY_SUBCATEGORIES } from "./categories";
+import { LOCATIONS } from "./locations.const";
 
-export type FoodInput = Omit<Food, "category_key" | "image_url" | "slug"> & {
+export type FoodInput = Omit<
+	Food,
+	"category_key" | "image_url" | "locations" | "slug"
+> & {
 	image_url?: string;
+	locations?: Food["locations"];
 	slug?: string;
 };
 
@@ -26,6 +31,7 @@ export const buildFood =
 			...food,
 			category_key,
 			image_url,
+			locations: food.locations || [LOCATIONS.home],
 			slug,
 		};
 	};

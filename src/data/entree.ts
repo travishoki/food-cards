@@ -1,6 +1,5 @@
 import { CATEGORIES } from "./categories";
 import { buildFood, FoodInput } from "./foods.helpers";
-import { LOCATIONS } from "./locations.const";
 
 export const ENTREE_FOODS = (
 	[
@@ -10,12 +9,10 @@ export const ENTREE_FOODS = (
 			info: "Preheat oven to 450°",
 			instructions:
 				"Unwrap pizza. Put parchment on a cooking sheet. Add pepperonis.",
-			locations: [LOCATIONS.home],
 			name: "Square Pizza",
 		},
 		{
 			difficulty: 1,
-			locations: [LOCATIONS.home],
 			name: "French Bread Pizza",
 		},
 	] as FoodInput[]

@@ -1,6 +1,5 @@
 import { CATEGORIES } from "./categories";
 import { buildFood, FoodInput } from "./foods.helpers";
-import { LOCATIONS } from "./locations.const";
 
 export const BREAKFAST_FOODS = (
 	[
@@ -13,7 +12,6 @@ export const BREAKFAST_FOODS = (
 				"2 ½ teaspoons vegetable oil, divided",
 				"1 pinch salt",
 			],
-			locations: [LOCATIONS.home],
 			name: "Crepes",
 			recipe_link: "http://allrecipes.com/recipe/27188/crepes/",
 			toppings: [
@@ -41,14 +39,12 @@ export const BREAKFAST_FOODS = (
 				"Cook bread slices on a lightly greased nonstick griddle or skillet on medium heat until cooked through and browned on both sides.",
 				"Serve with butter, sprinkled with powdered sugar and syrup. You can top with fresh fruit",
 			],
-			locations: [LOCATIONS.home],
 			name: "French Toast",
 			recipe_link:
 				"https://www.mccormick.com/recipes/breakfast-brunch/quick-and-easy-french-toast",
 		},
 		{
 			difficulty: 4,
-			locations: [LOCATIONS.home],
 			name: "Pancakes",
 		},
 		{
@@ -71,7 +67,6 @@ export const BREAKFAST_FOODS = (
 				"Remove from oven and cut into 6 large squares.",
 				"Serve immediately.",
 			],
-			locations: [LOCATIONS.home],
 			name: "Puffy Oven Pancakes",
 			recipe_link:
 				"http://www.geniuskitchen.com/recipe/puffy-oven-pancake-or-hootin-annies-40772",
@@ -79,7 +74,6 @@ export const BREAKFAST_FOODS = (
 		{
 			difficulty: 5,
 			ingredients: ["flour"],
-			locations: [LOCATIONS.home],
 			name: "Swedish Pancakes",
 			toppings: [
 				"Strawberry",
@@ -93,13 +87,11 @@ export const BREAKFAST_FOODS = (
 		},
 		{
 			difficulty: 4,
-			locations: [LOCATIONS.home],
 			name: "Fresh Waffles",
 		},
 		{
 			difficulty: 1,
 			instructions: ["Cook in the toaster", "Spread butter", "Add syrup"],
-			locations: [LOCATIONS.home],
 			name: "Eggo Waffles",
 		},
 	] as FoodInput[]

@@ -6,12 +6,10 @@ export const DRINKS_FOODS = (
 	[
 		{
 			difficulty: 1,
-			locations: [LOCATIONS.home],
 			name: "Milk",
 		},
 		{
 			difficulty: 1,
-			locations: [LOCATIONS.home],
 			name: "Chocolate Milk",
 		},
 		{
@@ -24,41 +22,34 @@ export const DRINKS_FOODS = (
 			difficulty: 1,
 			instructions:
 				"Important to get electrolites when excercising and paying hard.",
-			locations: [LOCATIONS.home],
 			name: "Gatorade",
 		},
 		{
 			difficulty: 1,
-			locations: [LOCATIONS.home],
 			name: "Hot Chocolate",
 		},
 		{
 			difficulty: 1,
-			locations: [LOCATIONS.home],
 			name: "Kool-Aid",
 		},
 		{
 			difficulty: 1,
-			locations: [LOCATIONS.home],
 			name: "Lemonade",
 		},
 		{
 			difficulty: 1,
-			locations: [LOCATIONS.home],
 			name: "Orange Julius",
 		},
 		{
 			difficulty: 1,
 			instructions:
 				"Important to get electrolites when excercising and paying hard.",
-			locations: [LOCATIONS.home],
 			name: "Powerade",
 		},
 		{
 			difficulty: 1,
 			instructions:
 				"Great Grandpa Grovers favorite drinks! It will fix all that ails you!",
-			locations: [LOCATIONS.home],
 			name: "Root Beer",
 		},
 		{
@@ -69,12 +60,10 @@ export const DRINKS_FOODS = (
 		},
 		{
 			difficulty: 1,
-			locations: [LOCATIONS.home],
 			name: "Sprite",
 		},
 		{
 			difficulty: 1,
-			locations: [LOCATIONS.home],
 			name: "Sunny D",
 		},
 	] as FoodInput[]
