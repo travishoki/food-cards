@@ -83,6 +83,7 @@ export const BREAKFAST_FOODS: Food[] = [
 		difficulty: 5,
 		image_url: "/graphics/main/breakfast/swedish-pancakes.jpg",
 		ingredients: ["flour"],
+		location: "home",
 		name: "Swedish Pancakes",
 		slug: "swedish-pancakes",
 		toppings: [

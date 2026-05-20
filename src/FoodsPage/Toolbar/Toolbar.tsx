@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 import { Difficulty, DifficultyFilter } from "./DifficultyFilter";
 import { FilterButton } from "./FilterButton";
+import { Location, LocationFilter } from "./LocationFilter";
 import { SearchButton } from "./SearchButton";
 import { SettingsButton } from "./SettingsButton";
 import { SortButton } from "./SortButton";
@@ -20,8 +21,10 @@ type ToolbarProps = {
 	difficulty: Difficulty | null;
 	hasActiveFilter: boolean;
 	hasActiveSearch: boolean;
+	location: Location | null;
 	onDebouncedSearchChange: (value: string) => void;
 	onDifficultyChange: (value: Difficulty | null) => void;
+	onLocationChange: (value: Location | null) => void;
 	onSortChange: (dir: SortDirection) => void;
 	searchResetKey?: string;
 	sort: SortDirection;
@@ -31,8 +34,10 @@ export const Toolbar = ({
 	difficulty,
 	hasActiveFilter,
 	hasActiveSearch,
+	location,
 	onDebouncedSearchChange,
 	onDifficultyChange,
+	onLocationChange,
 	onSortChange,
 	searchResetKey,
 	sort,
@@ -95,6 +100,10 @@ export const Toolbar = ({
 							<DifficultyFilter
 								onChange={onDifficultyChange}
 								value={difficulty}
+							/>
+							<LocationFilter
+								onChange={onLocationChange}
+								value={location}
 							/>
 						</>
 					)}

@@ -4,7 +4,9 @@ import "./NoResults.scss";
 
 type NoResultsProps = {
 	hasDifficulty: boolean;
+	hasLocation: boolean;
 	onClearDifficulty: () => void;
+	onClearLocation: () => void;
 	onClearSearch: () => void;
 	subCategory?: string;
 	topCategory?: string;
@@ -12,7 +14,9 @@ type NoResultsProps = {
 
 export const NoResults = ({
 	hasDifficulty,
+	hasLocation,
 	onClearDifficulty,
+	onClearLocation,
 	onClearSearch,
 	subCategory,
 	topCategory,
@@ -40,6 +44,16 @@ export const NoResults = ({
 					type="button"
 				>
 					Clear Difficulty
+				</button>
+			)}
+
+			{hasLocation && (
+				<button
+					className="no-results__button"
+					onClick={onClearLocation}
+					type="button"
+				>
+					Clear Location
 				</button>
 			)}
 		</div>

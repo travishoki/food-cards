@@ -10,13 +10,16 @@ import {
 import { useCardView } from "../../context/CardViewContext";
 import { NoResults } from "../NoResults/NoResults";
 import { Difficulty } from "../Toolbar/DifficultyFilter";
+import { Location } from "../Toolbar/LocationFilter";
 import { SortDirection } from "../Toolbar/SortPanel";
 
 import "./FoodList.scss";
 
 type FoodListProps = {
 	difficulty: Difficulty | null;
+	location: Location | null;
 	onClearDifficulty: () => void;
+	onClearLocation: () => void;
 	onClearSearch: () => void;
 	search: string;
 	sort: SortDirection;
@@ -26,7 +29,9 @@ type FoodListProps = {
 
 export const FoodList = ({
 	difficulty,
+	location,
 	onClearDifficulty,
+	onClearLocation,
 	onClearSearch,
 	search,
 	sort,
@@ -39,20 +44,34 @@ export const FoodList = ({
 		() =>
 			getVisibleFoods({
 				difficulty,
+				location,
 				prereleaseMode,
 				search,
 				sort,
 				subCategory,
 				topCategory,
 			}),
-		[topCategory, subCategory, search, sort, difficulty, prereleaseMode],
+		[
+			topCategory,
+			subCategory,
+			search,
+			sort,
+			difficulty,
+			location,
+			prereleaseMode,
+		],
 	);
 
-	if (visibleFoods.length === 0 && (search.trim() || difficulty !== null)) {
+	if (
+		visibleFoods.length === 0 &&
+		(search.trim() || difficulty !== null || location !== null)
+	) {
 		return (
 			<NoResults
 				hasDifficulty={difficulty !== null}
+				hasLocation={location !== null}
 				onClearDifficulty={onClearDifficulty}
+				onClearLocation={onClearLocation}
 				onClearSearch={onClearSearch}
 				subCategory={subCategory}
 				topCategory={topCategory}
@@ -70,7 +89,7 @@ export const FoodList = ({
 			}}
 		>
 			{visibleFoods.map((food) => (
-				<Card key={food.id} food={food} />
+				<Card key={food.slug} food={food} />
 			))}
 		</div>
 	);

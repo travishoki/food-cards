@@ -3,10 +3,12 @@ import { FOODS } from "../../data";
 import { TOP_CATEGORY_SUBCATEGORIES } from "../../data/categories";
 import { Food } from "../../types";
 import { Difficulty } from "../Toolbar/DifficultyFilter";
+import { Location } from "../Toolbar/LocationFilter";
 import { SortDirection } from "../Toolbar/SortPanel";
 
 type GetVisibleFoodsArgs = {
 	difficulty?: Difficulty | null;
+	location?: Location | null;
 	prereleaseMode?: PrereleaseMode;
 	search: string;
 	sort?: SortDirection;
@@ -16,6 +18,7 @@ type GetVisibleFoodsArgs = {
 
 export const getVisibleFoods = ({
 	difficulty = null,
+	location = null,
 	prereleaseMode = "hide",
 	search,
 	sort = "asc",
@@ -41,6 +44,10 @@ export const getVisibleFoods = ({
 
 	if (difficulty !== null) {
 		result = result.filter((f) => f.difficulty === difficulty);
+	}
+
+	if (location !== null) {
+		result = result.filter((f) => f.location === location);
 	}
 
 	const q = search.trim().toLowerCase();
