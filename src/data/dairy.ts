@@ -6,13 +6,11 @@ export const DAIRY_FOODS = (
 	[
 		{
 			difficulty: 1,
-			image_url: "/graphics/snack/dairy/grated-cheese.jpg",
 			locations: [LOCATIONS.home],
 			name: "Grated Cheese",
 		},
 		{
 			difficulty: 1,
-			image_url: "/graphics/snack/dairy/gogurt.jpg",
 			locations: [LOCATIONS.home],
 			name: "Gogurt",
 		},

@@ -6,7 +6,6 @@ export const BREAKFAST_FOODS = (
 	[
 		{
 			difficulty: 4,
-			image_url: "/graphics/main/breakfast/crepes.jpg",
 			ingredients: [
 				"1 cup milk",
 				"⅔ cup purpose flour",
@@ -29,7 +28,6 @@ export const BREAKFAST_FOODS = (
 		},
 		{
 			difficulty: 4,
-			image_url: "/graphics/main/breakfast/french-toast.jpg",
 			ingredients: [
 				"1 egg",
 				"1 tsp All Natural Pure Vanilla Extract",
@@ -50,13 +48,11 @@ export const BREAKFAST_FOODS = (
 		},
 		{
 			difficulty: 4,
-			image_url: "/graphics/main/breakfast/pancakes.jpg",
 			locations: [LOCATIONS.home],
 			name: "Pancakes",
 		},
 		{
 			difficulty: 4,
-			image_url: "/graphics/main/breakfast/puffy-oven-pancakes.jpg",
 			info: "Preheat oven to 450°",
 			ingredients: [
 				"6 eggs",
@@ -82,7 +78,6 @@ export const BREAKFAST_FOODS = (
 		},
 		{
 			difficulty: 5,
-			image_url: "/graphics/main/breakfast/swedish-pancakes.jpg",
 			ingredients: ["flour"],
 			locations: [LOCATIONS.home],
 			name: "Swedish Pancakes",
@@ -98,13 +93,11 @@ export const BREAKFAST_FOODS = (
 		},
 		{
 			difficulty: 4,
-			image_url: "/graphics/main/breakfast/waffles.jpg",
 			locations: [LOCATIONS.home],
 			name: "Fresh Waffles",
 		},
 		{
 			difficulty: 1,
-			image_url: "/graphics/main/breakfast/eggo-waffles.jpg",
 			instructions: ["Cook in the toaster", "Spread butter", "Add syrup"],
 			locations: [LOCATIONS.home],
 			name: "Eggo Waffles",

@@ -7,7 +7,6 @@ export const ENTREE_FOODS = (
 		{
 			cookTime: { instructions: "Cook in oven", time: "10–12m" },
 			difficulty: 1,
-			image_url: "/graphics/main/entree/square-pizza.jpg",
 			info: "Preheat oven to 450°",
 			instructions:
 				"Unwrap pizza. Put parchment on a cooking sheet. Add pepperonis.",
@@ -16,7 +15,6 @@ export const ENTREE_FOODS = (
 		},
 		{
 			difficulty: 1,
-			image_url: "/graphics/main/entree/french-bread-pizza.jpg",
 			locations: [LOCATIONS.home],
 			name: "French Bread Pizza",
 		},

@@ -6,7 +6,6 @@ export const VEGETABLES_FOODS = (
 	[
 		{
 			difficulty: 1,
-			image_url: "/graphics/snack/vegetables/carrots.jpg",
 			locations: [LOCATIONS.home],
 			name: "Carrots",
 		},

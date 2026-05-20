@@ -6,7 +6,6 @@ export const SIDES_FOODS = (
 	[
 		{
 			difficulty: 3,
-			image_url: "/graphics/sides/sides/mashed-potatoes.jpg",
 			ingredients: ["Water", "Milk", "Butter", "Potato flakes"],
 			instructions: [
 				"Boil liquid: In a saucepan, bring the water, butter, and salt to a boil.",
@@ -22,7 +21,6 @@ export const SIDES_FOODS = (
 				time: "8m",
 			},
 			difficulty: 3,
-			image_url: "/graphics/sides/sides/texas-toast.jpg",
 			info: "Preheat oven to 425°",
 			instructions: "Put parchment on a cooking sheet.",
 			locations: [LOCATIONS.home],
@@ -30,43 +28,36 @@ export const SIDES_FOODS = (
 		},
 		{
 			difficulty: 3,
-			image_url: "/graphics/sides/sides/bacon.jpg",
 			locations: [LOCATIONS.home],
 			name: "Bacon",
 		},
 		{
 			difficulty: 2,
-			image_url: "/graphics/sides/sides/breadsticks.jpg",
 			locations: [LOCATIONS["fast-food"]],
 			name: "Breadsticks",
 		},
 		{
 			difficulty: 2,
-			image_url: "/graphics/sides/sides/cheese-sticks-pizza.jpg",
 			locations: [LOCATIONS.home],
 			name: "Cheese Sticks (Pizza)",
 		},
 		{
 			difficulty: 2,
-			image_url: "/graphics/sides/sides/corn-doggies.jpg",
 			locations: [LOCATIONS.home],
 			name: "Corn Doggies",
 		},
 		{
 			difficulty: 3,
-			image_url: "/graphics/sides/sides/crinkle-cut-fries.jpg",
 			locations: [LOCATIONS.home],
 			name: "Crinkle Cut Fries",
 		},
 		{
 			difficulty: 3,
-			image_url: "/graphics/sides/sides/french-fries.jpg",
 			locations: [LOCATIONS.home],
 			name: "French Fries",
 		},
 		{
 			difficulty: 2,
-			image_url: "/graphics/sides/sides/hashbrown.jpg",
 			instructions: [
 				"Toast in the toaster.",
 				"Flip over and toast again to make it extra crunchy.",
@@ -76,7 +67,6 @@ export const SIDES_FOODS = (
 		},
 		{
 			difficulty: 3,
-			image_url: "/graphics/sides/sides/scrambled-eggs.jpg",
 			instructions: [
 				"Prep the Eggs: Crack the eggs into a bowl. Add a pinch of salt and your milk or water, if using. Whisk until completely blended with no distinct streaks of egg white.",
 				"Heat the Pan: Place a nonstick skillet over medium-low heat. Add the butter and let it melt and foam, but do not let it brown.",
@@ -89,14 +79,12 @@ export const SIDES_FOODS = (
 		},
 		{
 			difficulty: 2,
-			image_url: "/graphics/sides/sides/steak-fries.jpg",
 			instructions: "Extra yummy with Red Robbin seasoning.",
 			locations: [LOCATIONS.home],
 			name: "Steak Fries",
 		},
 		{
 			difficulty: 2,
-			image_url: "/graphics/sides/sides/tater-tots.jpg",
 			locations: [LOCATIONS.home],
 			name: "Tater Tots",
 		},
