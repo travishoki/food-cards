@@ -5,7 +5,7 @@ import type { Food } from "../types";
 export const DESSERT_FOODS: Food[] = [
 	{
 		category_key: CATEGORIES.dessert,
-		difficulty: 1,
+		difficulty: 0,
 		id: 1,
 		image_url: "/graphics/sweets/dessert/glazed-donut.jpg",
 		name: "Donut",
@@ -13,7 +13,7 @@ export const DESSERT_FOODS: Food[] = [
 	},
 	{
 		category_key: CATEGORIES.dessert,
-		difficulty: 1,
+		difficulty: 0,
 		id: 72,
 		image_url: "/graphics/sweets/dessert/apple-pie.jpg",
 		name: "Apple Pie",
@@ -21,7 +21,7 @@ export const DESSERT_FOODS: Food[] = [
 	},
 	{
 		category_key: CATEGORIES.dessert,
-		difficulty: 1,
+		difficulty: 0,
 		id: 73,
 		image_url: "/graphics/sweets/dessert/brownies.jpg",
 		name: "Brownies",
@@ -29,7 +29,7 @@ export const DESSERT_FOODS: Food[] = [
 	},
 	{
 		category_key: CATEGORIES.dessert,
-		difficulty: 1,
+		difficulty: 0,
 		id: 74,
 		image_url: "/graphics/sweets/dessert/chocolate-pie.jpg",
 		name: "Chocolate Pie",
@@ -37,7 +37,7 @@ export const DESSERT_FOODS: Food[] = [
 	},
 	{
 		category_key: CATEGORIES.dessert,
-		difficulty: 1,
+		difficulty: 0,
 		id: 75,
 		image_url: "/graphics/sweets/dessert/cinnamon-roll.jpg",
 		name: "Cinnamon Roll",
@@ -45,7 +45,7 @@ export const DESSERT_FOODS: Food[] = [
 	},
 	{
 		category_key: CATEGORIES.dessert,
-		difficulty: 1,
+		difficulty: 0,
 		id: 76,
 		image_url: "/graphics/sweets/dessert/cookie.jpg",
 		name: "Cookie",
@@ -53,7 +53,7 @@ export const DESSERT_FOODS: Food[] = [
 	},
 	{
 		category_key: CATEGORIES.dessert,
-		difficulty: 1,
+		difficulty: 0,
 		id: 77,
 		image_url: "/graphics/sweets/dessert/cookie-dough.jpg",
 		name: "Cookie Dough",
@@ -61,7 +61,7 @@ export const DESSERT_FOODS: Food[] = [
 	},
 	{
 		category_key: CATEGORIES.dessert,
-		difficulty: 1,
+		difficulty: 0,
 		id: 78,
 		image_url: "/graphics/sweets/dessert/cookie-dough-pizza.jpg",
 		name: "Cookie Dough Pizza",
@@ -69,7 +69,7 @@ export const DESSERT_FOODS: Food[] = [
 	},
 	{
 		category_key: CATEGORIES.dessert,
-		difficulty: 1,
+		difficulty: 0,
 		id: 79,
 		image_url: "/graphics/sweets/dessert/cupcake.jpg",
 		name: "Cupcake",
@@ -77,7 +77,7 @@ export const DESSERT_FOODS: Food[] = [
 	},
 	{
 		category_key: CATEGORIES.dessert,
-		difficulty: 1,
+		difficulty: 0,
 		id: 80,
 		image_url: "/graphics/sweets/dessert/frosty.jpg",
 		name: "Frosty",
@@ -85,7 +85,7 @@ export const DESSERT_FOODS: Food[] = [
 	},
 	{
 		category_key: CATEGORIES.dessert,
-		difficulty: 1,
+		difficulty: 0,
 		id: 81,
 		image_url: "/graphics/sweets/dessert/fruit-pizza.jpg",
 		name: "Fruit Pizza",
@@ -102,7 +102,7 @@ export const DESSERT_FOODS: Food[] = [
 	},
 	{
 		category_key: CATEGORIES.dessert,
-		difficulty: 1,
+		difficulty: 0,
 		id: 82,
 		image_url: "/graphics/sweets/dessert/ice-cream.jpg",
 		name: "Ice Cream",
@@ -110,7 +110,7 @@ export const DESSERT_FOODS: Food[] = [
 	},
 	{
 		category_key: CATEGORIES.dessert,
-		difficulty: 1,
+		difficulty: 0,
 		id: 83,
 		image_url: "/graphics/sweets/dessert/mint-brownies.jpg",
 		name: "Mint Brownies",
@@ -118,7 +118,7 @@ export const DESSERT_FOODS: Food[] = [
 	},
 	{
 		category_key: CATEGORIES.dessert,
-		difficulty: 1,
+		difficulty: 0,
 		id: 84,
 		image_url: "/graphics/sweets/dessert/peach-cobbler.jpg",
 		name: "Peach Cobbler",
@@ -126,7 +126,7 @@ export const DESSERT_FOODS: Food[] = [
 	},
 	{
 		category_key: CATEGORIES.dessert,
-		difficulty: 1,
+		difficulty: 0,
 		id: 85,
 		image_url: "/graphics/sweets/dessert/peanut-butter-bars.jpg",
 		name: "Peanut Butter Bars",
@@ -134,7 +134,7 @@ export const DESSERT_FOODS: Food[] = [
 	},
 	{
 		category_key: CATEGORIES.dessert,
-		difficulty: 1,
+		difficulty: 0,
 		id: 98,
 		image_url:
 			"http://thesquishymonster.com/2017/05/butter-mochi-cake.html",

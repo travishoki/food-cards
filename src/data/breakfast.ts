@@ -115,7 +115,7 @@ export const BREAKFAST_FOODS: Food[] = [
 	},
 	{
 		category_key: CATEGORIES.breakfast,
-		difficulty: 1,
+		difficulty: 0,
 		id: 97,
 		image_url: "/graphics/main/breakfast/eggo-waffles.jpg",
 		instructions: ["Cook in the toaster", "Spread butter", "Add syrup"],

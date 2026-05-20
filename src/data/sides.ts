@@ -5,7 +5,7 @@ import type { Food } from "../types";
 export const SIDES_FOODS: Food[] = [
 	{
 		category_key: CATEGORIES.sides,
-		difficulty: 1,
+		difficulty: 2,
 		id: 5,
 		image_url: "/graphics/sides/sides/mashed-potatoes.jpg",
 		ingredients: ["Water", "Milk", "Butter", "Potato flakes"],
@@ -23,7 +23,7 @@ export const SIDES_FOODS: Food[] = [
 			instructions: "Cook in oven",
 			time: "8m",
 		},
-		difficulty: 1,
+		difficulty: 2,
 		id: 2,
 		image_url: "/graphics/sides/sides/texas-toast.jpg",
 		info: "Preheat oven to 425°",
@@ -33,7 +33,7 @@ export const SIDES_FOODS: Food[] = [
 	},
 	{
 		category_key: CATEGORIES.sides,
-		difficulty: 1,
+		difficulty: 2,
 		id: 21,
 		image_url: "/graphics/sides/sides/bacon.jpg",
 		name: "Bacon",
@@ -65,7 +65,7 @@ export const SIDES_FOODS: Food[] = [
 	},
 	{
 		category_key: CATEGORIES.sides,
-		difficulty: 1,
+		difficulty: 2,
 		id: 25,
 		image_url: "/graphics/sides/sides/crinkle-cut-fries.jpg",
 		name: "Crinkle Cut Fries",
@@ -73,7 +73,7 @@ export const SIDES_FOODS: Food[] = [
 	},
 	{
 		category_key: CATEGORIES.sides,
-		difficulty: 1,
+		difficulty: 2,
 		id: 26,
 		image_url: "/graphics/sides/sides/french-fries.jpg",
 		name: "French Fries",
@@ -93,7 +93,7 @@ export const SIDES_FOODS: Food[] = [
 	},
 	{
 		category_key: CATEGORIES.sides,
-		difficulty: 1,
+		difficulty: 2,
 		id: 28,
 		image_url: "/graphics/sides/sides/scrambled-eggs.jpg",
 		instructions: [

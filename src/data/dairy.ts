@@ -5,7 +5,7 @@ import type { Food } from "../types";
 export const DAIRY_FOODS: Food[] = [
 	{
 		category_key: CATEGORIES.dairy,
-		difficulty: 1,
+		difficulty: 0,
 		id: 11,
 		image_url: "/graphics/snack/dairy/grated-cheese.jpg",
 		name: "Grated Cheese",
@@ -13,7 +13,7 @@ export const DAIRY_FOODS: Food[] = [
 	},
 	{
 		category_key: CATEGORIES.dairy,
-		difficulty: 1,
+		difficulty: 0,
 		id: 31,
 		image_url: "/graphics/snack/dairy/gogurt.jpg",
 		name: "Gogurt",
