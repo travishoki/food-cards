@@ -6,7 +6,7 @@ export const VEGETABLES_FOODS: Food[] = [
 	{
 		difficulty: 1,
 		image_url: "/graphics/snack/vegetables/carrots.jpg",
-		location: "home",
+		locations: ["home"],
 		name: "Carrots",
 		slug: "carrots",
 	},

@@ -47,7 +47,7 @@ export const getVisibleFoods = ({
 	}
 
 	if (location !== null) {
-		result = result.filter((f) => f.location === location);
+		result = result.filter((f) => f.locations.includes(location));
 	}
 
 	const q = search.trim().toLowerCase();

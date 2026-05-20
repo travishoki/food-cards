@@ -6,7 +6,7 @@ export type Food = {
 	info?: string;
 	ingredients?: string[];
 	instructions?: string | string[];
-	location?: "home" | "fast-food" | "restaurant";
+	locations: ("home" | "fast-food" | "restaurant")[];
 	name: string;
 	prerelease?: boolean;
 	recipe_link?: string;

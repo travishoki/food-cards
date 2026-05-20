@@ -13,7 +13,7 @@ export const BREAKFAST_FOODS: Food[] = [
 			"2 ½ teaspoons vegetable oil, divided",
 			"1 pinch salt",
 		],
-		location: "home",
+		locations: ["home"],
 		name: "Crepes",
 		recipe_link: "http://allrecipes.com/recipe/27188/crepes/",
 		slug: "crepes",
@@ -43,7 +43,7 @@ export const BREAKFAST_FOODS: Food[] = [
 			"Cook bread slices on a lightly greased nonstick griddle or skillet on medium heat until cooked through and browned on both sides.",
 			"Serve with butter, sprinkled with powdered sugar and syrup. You can top with fresh fruit",
 		],
-		location: "home",
+		locations: ["home"],
 		name: "French Toast",
 		recipe_link:
 			"https://www.mccormick.com/recipes/breakfast-brunch/quick-and-easy-french-toast",
@@ -52,7 +52,7 @@ export const BREAKFAST_FOODS: Food[] = [
 	{
 		difficulty: 4,
 		image_url: "/graphics/main/breakfast/pancakes.jpg",
-		location: "home",
+		locations: ["home"],
 		name: "Pancakes",
 		slug: "pancakes",
 	},
@@ -77,7 +77,7 @@ export const BREAKFAST_FOODS: Food[] = [
 			"Remove from oven and cut into 6 large squares.",
 			"Serve immediately.",
 		],
-		location: "home",
+		locations: ["home"],
 		name: "Puffy Oven Pancakes",
 		recipe_link:
 			"http://www.geniuskitchen.com/recipe/puffy-oven-pancake-or-hootin-annies-40772",
@@ -87,7 +87,7 @@ export const BREAKFAST_FOODS: Food[] = [
 		difficulty: 5,
 		image_url: "/graphics/main/breakfast/swedish-pancakes.jpg",
 		ingredients: ["flour"],
-		location: "home",
+		locations: ["home"],
 		name: "Swedish Pancakes",
 		slug: "swedish-pancakes",
 		toppings: [
@@ -103,7 +103,7 @@ export const BREAKFAST_FOODS: Food[] = [
 	{
 		difficulty: 4,
 		image_url: "/graphics/main/breakfast/waffles.jpg",
-		location: "home",
+		locations: ["home"],
 		name: "Fresh Waffles",
 		slug: "fresh-waffles",
 	},
@@ -111,7 +111,7 @@ export const BREAKFAST_FOODS: Food[] = [
 		difficulty: 1,
 		image_url: "/graphics/main/breakfast/eggo-waffles.jpg",
 		instructions: ["Cook in the toaster", "Spread butter", "Add syrup"],
-		location: "home",
+		locations: ["home"],
 		name: "Eggo Waffles",
 		slug: "eggo-waffles",
 	},

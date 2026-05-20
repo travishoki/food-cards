@@ -6,14 +6,14 @@ export const DAIRY_FOODS: Food[] = [
 	{
 		difficulty: 1,
 		image_url: "/graphics/snack/dairy/grated-cheese.jpg",
-		location: "home",
+		locations: ["home"],
 		name: "Grated Cheese",
 		slug: "grated-cheese",
 	},
 	{
 		difficulty: 1,
 		image_url: "/graphics/snack/dairy/gogurt.jpg",
-		location: "home",
+		locations: ["home"],
 		name: "Gogurt",
 		slug: "gogurt",
 	},
