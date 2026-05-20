@@ -1,25 +1,30 @@
-import { useCardView } from "../context/CardViewContext";
+import { PrereleaseMode, useCardView } from "../context/CardViewContext";
 
-import "./PrereleaseToggle.scss";
+import "./CardViewToggle.scss";
+
+const OPTIONS: { label: string; value: PrereleaseMode }[] = [
+	{ label: "Show", value: "show" },
+	{ label: "Hide", value: "hide" },
+	{ label: "Only", value: "only" },
+];
 
 export const PrereleaseToggle = () => {
-	const { setShowPrerelease, showPrerelease } = useCardView();
+	const { prereleaseMode, setPrereleaseMode } = useCardView();
 
 	return (
-		<div className="prerelease-toggle">
-			<label
-				className="prerelease-toggle__label"
-				htmlFor="prerelease-toggle"
-			>
-				Prerelease:
-			</label>
-			<input
-				checked={showPrerelease}
-				className="prerelease-toggle__input"
-				id="prerelease-toggle"
-				onChange={(e) => setShowPrerelease(e.target.checked)}
-				type="checkbox"
-			/>
+		<div className="card-view-toggle">
+			<span className="card-view-toggle__label">Prerelease:</span>
+			{OPTIONS.map((opt) => (
+				<button
+					key={opt.value}
+					aria-pressed={prereleaseMode === opt.value}
+					className={`card-view-toggle__option ${prereleaseMode === opt.value ? "is-active" : ""}`}
+					onClick={() => setPrereleaseMode(opt.value)}
+					type="button"
+				>
+					{opt.label}
+				</button>
+			))}
 		</div>
 	);
 };

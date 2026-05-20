@@ -8,7 +8,7 @@ type SettingsButtonProps = {
 };
 
 export const SettingsButton = ({ isOpen, onToggle }: SettingsButtonProps) => {
-	const { showPrerelease, viewMode } = useCardView();
+	const { prereleaseMode, viewMode } = useCardView();
 
 	return (
 		<button
@@ -19,7 +19,7 @@ export const SettingsButton = ({ isOpen, onToggle }: SettingsButtonProps) => {
 			type="button"
 		>
 			<GearIcon />
-			{(viewMode !== "full" || showPrerelease) && <Badge />}
+			{(viewMode !== "full" || prereleaseMode !== "hide") && <Badge />}
 		</button>
 	);
 };

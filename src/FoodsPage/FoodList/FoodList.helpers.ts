@@ -1,3 +1,4 @@
+import { PrereleaseMode } from "../../context/CardViewContext";
 import { FOODS } from "../../data";
 import { TOP_CATEGORY_SUBCATEGORIES } from "../../data/categories";
 import { Food } from "../../types";
@@ -6,8 +7,8 @@ import { SortDirection } from "../Toolbar/SortPanel";
 
 type GetVisibleFoodsArgs = {
 	difficulty?: Difficulty | null;
+	prereleaseMode?: PrereleaseMode;
 	search: string;
-	showPrerelease?: boolean;
 	sort?: SortDirection;
 	subCategory?: string;
 	topCategory?: string;
@@ -15,15 +16,17 @@ type GetVisibleFoodsArgs = {
 
 export const getVisibleFoods = ({
 	difficulty = null,
+	prereleaseMode = "hide",
 	search,
-	showPrerelease = false,
 	sort = "asc",
 	subCategory,
 	topCategory,
 }: GetVisibleFoodsArgs): Food[] => {
 	let result = FOODS;
 
-	if (!showPrerelease) result = result.filter((f) => !f.prerelease);
+	if (prereleaseMode === "hide") result = result.filter((f) => !f.prerelease);
+	else if (prereleaseMode === "only")
+		result = result.filter((f) => f.prerelease);
 
 	if (topCategory && !subCategory) {
 		const keys =

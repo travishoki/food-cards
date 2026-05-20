@@ -33,19 +33,19 @@ export const FoodList = ({
 	subCategory,
 	topCategory,
 }: FoodListProps) => {
-	const { showPrerelease } = useCardView();
+	const { prereleaseMode } = useCardView();
 
 	const visibleFoods = useMemo(
 		() =>
 			getVisibleFoods({
 				difficulty,
+				prereleaseMode,
 				search,
-				showPrerelease,
 				sort,
 				subCategory,
 				topCategory,
 			}),
-		[topCategory, subCategory, search, sort, difficulty, showPrerelease],
+		[topCategory, subCategory, search, sort, difficulty, prereleaseMode],
 	);
 
 	if (visibleFoods.length === 0 && (search.trim() || difficulty !== null)) {

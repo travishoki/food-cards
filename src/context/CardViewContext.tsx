@@ -1,11 +1,12 @@
 import { createContext, ReactNode, useContext, useState } from "react";
 
 export type ViewMode = "full" | "image" | "titles";
+export type PrereleaseMode = "show" | "hide" | "only";
 
 type CardViewContextValue = {
-	setShowPrerelease: (value: boolean) => void;
+	prereleaseMode: PrereleaseMode;
+	setPrereleaseMode: (value: PrereleaseMode) => void;
 	setViewMode: (value: ViewMode) => void;
-	showPrerelease: boolean;
 	viewMode: ViewMode;
 };
 
@@ -15,14 +16,15 @@ const CardViewContext = createContext<CardViewContextValue | undefined>(
 
 export const CardViewProvider = ({ children }: { children: ReactNode }) => {
 	const [viewMode, setViewMode] = useState<ViewMode>("full");
-	const [showPrerelease, setShowPrerelease] = useState(false);
+	const [prereleaseMode, setPrereleaseMode] =
+		useState<PrereleaseMode>("hide");
 
 	return (
 		<CardViewContext.Provider
 			value={{
-				setShowPrerelease,
+				prereleaseMode,
+				setPrereleaseMode,
 				setViewMode,
-				showPrerelease,
 				viewMode,
 			}}
 		>
