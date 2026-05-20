@@ -13,6 +13,7 @@ export const BREAKFAST_FOODS: Food[] = [
 			"2 ½ teaspoons vegetable oil, divided",
 			"1 pinch salt",
 		],
+		location: "home",
 		name: "Crepes",
 		recipe_link: "http://allrecipes.com/recipe/27188/crepes/",
 		slug: "crepes",
@@ -42,6 +43,7 @@ export const BREAKFAST_FOODS: Food[] = [
 			"Cook bread slices on a lightly greased nonstick griddle or skillet on medium heat until cooked through and browned on both sides.",
 			"Serve with butter, sprinkled with powdered sugar and syrup. You can top with fresh fruit",
 		],
+		location: "home",
 		name: "French Toast",
 		recipe_link:
 			"https://www.mccormick.com/recipes/breakfast-brunch/quick-and-easy-french-toast",
@@ -50,6 +52,7 @@ export const BREAKFAST_FOODS: Food[] = [
 	{
 		difficulty: 4,
 		image_url: "/graphics/main/breakfast/pancakes.jpg",
+		location: "home",
 		name: "Pancakes",
 		slug: "pancakes",
 	},
@@ -74,6 +77,7 @@ export const BREAKFAST_FOODS: Food[] = [
 			"Remove from oven and cut into 6 large squares.",
 			"Serve immediately.",
 		],
+		location: "home",
 		name: "Puffy Oven Pancakes",
 		recipe_link:
 			"http://www.geniuskitchen.com/recipe/puffy-oven-pancake-or-hootin-annies-40772",
@@ -99,6 +103,7 @@ export const BREAKFAST_FOODS: Food[] = [
 	{
 		difficulty: 4,
 		image_url: "/graphics/main/breakfast/waffles.jpg",
+		location: "home",
 		name: "Fresh Waffles",
 		slug: "fresh-waffles",
 	},

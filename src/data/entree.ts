@@ -10,12 +10,14 @@ export const ENTREE_FOODS: Food[] = [
 		info: "Preheat oven to 450°",
 		instructions:
 			"Unwrap pizza. Put parchment on a cooking sheet. Add pepperonis.",
+		location: "home",
 		name: "Square Pizza",
 		slug: "square-pizza",
 	},
 	{
 		difficulty: 1,
 		image_url: "/graphics/main/entree/french-bread-pizza.jpg",
+		location: "home",
 		name: "French Bread Pizza",
 		slug: "french-bread-pizza",
 	},
