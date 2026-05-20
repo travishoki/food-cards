@@ -1,17 +1,29 @@
+import {
+	LOCATION_DATA,
+	LOCATION_ORDER,
+	Location,
+} from "../../data/locations.const";
+
 import "./DifficultyFilter.scss";
 
-export type Location = "home" | "fast-food" | "restaurant";
+export type { Location };
 
 type LocationFilterProps = {
 	onChange: (value: Location | null) => void;
 	value: Location | null;
 };
 
-const OPTIONS: { label: string; value: Location | null }[] = [
+type Option = {
+	label: string;
+	value: Location | null;
+};
+
+const OPTIONS: Option[] = [
 	{ label: "All", value: null },
-	{ label: "Home", value: "home" },
-	{ label: "Fast Food", value: "fast-food" },
-	{ label: "Restaurant", value: "restaurant" },
+	...LOCATION_ORDER.map((loc) => ({
+		label: LOCATION_DATA[loc].label,
+		value: loc,
+	})),
 ];
 
 export const LocationFilter = ({ onChange, value }: LocationFilterProps) => (

@@ -1,3 +1,5 @@
+import type { Location } from "./data/locations.const";
+
 export type Food = {
 	category_key: string;
 	cookTime?: { instructions: string; time: string };
@@ -6,7 +8,7 @@ export type Food = {
 	info?: string;
 	ingredients?: string[];
 	instructions?: string | string[];
-	locations: ("home" | "fast-food" | "restaurant")[];
+	locations: Location[];
 	name: string;
 	prerelease?: boolean;
 	recipe_link?: string;
