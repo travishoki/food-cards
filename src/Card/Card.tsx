@@ -12,6 +12,8 @@ import {
 	COOK_TIME_FONT_SIZE_INSTRUCTIONS,
 	COOK_TIME_FONT_SIZE_TIME,
 	COOK_TIME_HEIGHT,
+	DIFFICULTY_ICON_BOTTOM,
+	DIFFICULTY_ICON_SIZE,
 	GRAPHIC_HEIGHT,
 	GRAPHIC_TOP,
 	GRAPHIC_WIDTH,
@@ -39,6 +41,7 @@ import {
 	getListCardWidth,
 } from "./Card.helpers";
 import { CardInfo } from "./CardInfo/CardInfo";
+import { DifficultyIcon } from "./DifficultyIcon/DifficultyIcon";
 import { Graphic } from "./Graphic/Graphic";
 import { Icon } from "./Icon/Icon";
 import { Title } from "./Title/Title";
@@ -65,6 +68,8 @@ const designVars: CSSProperties = {
 	),
 	"--cook-time-font-size-time": dcqw(COOK_TIME_FONT_SIZE_TIME),
 	"--cook-time-height": dcqw(COOK_TIME_HEIGHT),
+	"--difficulty-icon-bottom": dcqw(DIFFICULTY_ICON_BOTTOM),
+	"--difficulty-icon-size": dcqw(DIFFICULTY_ICON_SIZE),
 	"--graphic-height": dcqw(GRAPHIC_HEIGHT),
 	"--graphic-top": dcqw(GRAPHIC_TOP),
 	"--graphic-width": dcqw(GRAPHIC_WIDTH),
@@ -144,6 +149,7 @@ export default function Card({ food }: CardProps) {
 				<>
 					<Icon categoryKey={food.category_key} />
 					<CardInfo food={food} />
+					<DifficultyIcon difficulty={food.difficulty} />
 					<Background categoryKey={food.category_key} />
 				</>
 			)}

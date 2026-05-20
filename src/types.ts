@@ -1,7 +1,7 @@
 export type Food = {
 	category_key: string;
 	cookTime?: { instructions: string; time: string };
-	difficulty: 0 | 1 | 2 | 3;
+	difficulty: 1 | 2 | 3 | 4 | 5;
 	id: number;
 	image_url: string;
 	info?: string;

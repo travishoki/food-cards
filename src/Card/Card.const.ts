@@ -31,6 +31,10 @@ export const TITLE_TOP = 28;
 export const TITLE_FONT_SIZE = 48;
 export const TITLES_ONLY_HEIGHT = 130;
 
+// Difficulty icon
+export const DIFFICULTY_ICON_SIZE = 36;
+export const DIFFICULTY_ICON_BOTTOM = 50;
+
 // Card Info Section
 export const CARD_INFO_TOP = Math.round(BACKGROUND_HEIGHT * 0.52);
 export const CARD_INFO_PADDING_BOTTOM = 10;

@@ -5,7 +5,7 @@ import type { Food } from "../types";
 export const CANDY_FOODS: Food[] = [
 	{
 		category_key: CATEGORIES.candy,
-		difficulty: 0,
+		difficulty: 1,
 		id: 10,
 		image_url: "/graphics/sweets/candy/andes-mints.jpg",
 		name: "Andes Mints",
@@ -13,7 +13,7 @@ export const CANDY_FOODS: Food[] = [
 	},
 	{
 		category_key: CATEGORIES.candy,
-		difficulty: 0,
+		difficulty: 1,
 		id: 67,
 		image_url: "/graphics/sweets/candy/dubai-chocolate.jpg",
 		name: "Dubai Chocolate",
@@ -21,7 +21,7 @@ export const CANDY_FOODS: Food[] = [
 	},
 	{
 		category_key: CATEGORIES.candy,
-		difficulty: 0,
+		difficulty: 1,
 		id: 68,
 		image_url: "/graphics/sweets/candy/kitkat.jpg",
 		name: "KitKat",
@@ -29,7 +29,7 @@ export const CANDY_FOODS: Food[] = [
 	},
 	{
 		category_key: CATEGORIES.candy,
-		difficulty: 0,
+		difficulty: 1,
 		id: 69,
 		image_url: "/graphics/sweets/candy/milk-chocolate.jpg",
 		name: "Milk Chocolate",
@@ -37,7 +37,7 @@ export const CANDY_FOODS: Food[] = [
 	},
 	{
 		category_key: CATEGORIES.candy,
-		difficulty: 0,
+		difficulty: 1,
 		id: 70,
 		image_url: "/graphics/sweets/candy/nutella.jpg",
 		name: "Nutella",
@@ -45,7 +45,7 @@ export const CANDY_FOODS: Food[] = [
 	},
 	{
 		category_key: CATEGORIES.candy,
-		difficulty: 0,
+		difficulty: 1,
 		id: 71,
 		image_url: "/graphics/sweets/candy/twizzlers.jpg",
 		name: "Twizzlers",

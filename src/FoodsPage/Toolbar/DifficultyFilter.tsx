@@ -1,13 +1,13 @@
 import "./DifficultyFilter.scss";
 
-export type Difficulty = 0 | 1 | 2 | 3;
+export type Difficulty = 1 | 2 | 3 | 4 | 5;
 
 type DifficultyFilterProps = {
 	onChange: (value: Difficulty | null) => void;
 	value: Difficulty | null;
 };
 
-const OPTIONS: Difficulty[] = [0, 1, 2, 3];
+const OPTIONS: Difficulty[] = [1, 2, 3, 4, 5];
 
 export const DifficultyFilter = ({
 	onChange,

@@ -5,7 +5,7 @@ import type { Food } from "../types";
 export const BREAKFAST_FOODS: Food[] = [
 	{
 		category_key: CATEGORIES.breakfast,
-		difficulty: 3,
+		difficulty: 4,
 		id: 13,
 		image_url: "/graphics/main/breakfast/crepes.jpg",
 		ingredients: [
@@ -30,7 +30,7 @@ export const BREAKFAST_FOODS: Food[] = [
 	},
 	{
 		category_key: CATEGORIES.breakfast,
-		difficulty: 3,
+		difficulty: 4,
 		id: 15,
 		image_url: "/graphics/main/breakfast/french-toast.jpg",
 		ingredients: [
@@ -53,7 +53,7 @@ export const BREAKFAST_FOODS: Food[] = [
 	},
 	{
 		category_key: CATEGORIES.breakfast,
-		difficulty: 3,
+		difficulty: 4,
 		id: 16,
 		image_url: "/graphics/main/breakfast/pancakes.jpg",
 		name: "Pancakes",
@@ -61,7 +61,7 @@ export const BREAKFAST_FOODS: Food[] = [
 	},
 	{
 		category_key: CATEGORIES.breakfast,
-		difficulty: 3,
+		difficulty: 4,
 		id: 17,
 		image_url: "/graphics/main/breakfast/puffy-oven-pancakes.jpg",
 		info: "Preheat oven to 450°",
@@ -89,7 +89,7 @@ export const BREAKFAST_FOODS: Food[] = [
 	},
 	{
 		category_key: CATEGORIES.breakfast,
-		difficulty: 3,
+		difficulty: 5,
 		id: 18,
 		image_url: "/graphics/main/breakfast/swedish-pancakes.jpg",
 		ingredients: ["flour"],
@@ -107,7 +107,7 @@ export const BREAKFAST_FOODS: Food[] = [
 	},
 	{
 		category_key: CATEGORIES.breakfast,
-		difficulty: 3,
+		difficulty: 4,
 		id: 19,
 		image_url: "/graphics/main/breakfast/waffles.jpg",
 		name: "Fresh Waffles",
@@ -115,7 +115,7 @@ export const BREAKFAST_FOODS: Food[] = [
 	},
 	{
 		category_key: CATEGORIES.breakfast,
-		difficulty: 0,
+		difficulty: 1,
 		id: 97,
 		image_url: "/graphics/main/breakfast/eggo-waffles.jpg",
 		instructions: ["Cook in the toaster", "Spread butter", "Add syrup"],
