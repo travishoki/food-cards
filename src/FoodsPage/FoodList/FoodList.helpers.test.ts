@@ -6,32 +6,28 @@ jest.mock("../../data", () => ({
 		{
 			category_key: "fruit",
 			difficulty: 1,
-			id: 1,
 			image_url: "",
 			name: "Apple",
 		},
 		{
 			category_key: "fruit",
 			difficulty: 2,
-			id: 2,
 			image_url: "",
 			name: "Banana",
 		},
 		{
 			category_key: "vegetables",
 			difficulty: 1,
-			id: 3,
 			image_url: "",
 			name: "Carrot",
 		},
 		{
 			category_key: "dessert",
 			difficulty: 3,
-			id: 4,
 			image_url: "",
 			name: "Donut",
 		},
-		{ category_key: "breakfast", id: 5, image_url: "", name: "Eggs" },
+		{ category_key: "breakfast", image_url: "", name: "Eggs" },
 	],
 }));
 

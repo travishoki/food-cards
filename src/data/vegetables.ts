@@ -5,7 +5,6 @@ import type { Food } from "../types";
 export const VEGETABLES_FOODS: Food[] = [
 	{
 		difficulty: 1,
-		id: 9,
 		image_url: "/graphics/snack/vegetables/carrots.jpg",
 		name: "Carrots",
 		slug: "carrots",

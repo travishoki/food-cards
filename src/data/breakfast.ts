@@ -5,7 +5,6 @@ import type { Food } from "../types";
 export const BREAKFAST_FOODS: Food[] = [
 	{
 		difficulty: 4,
-		id: 13,
 		image_url: "/graphics/main/breakfast/crepes.jpg",
 		ingredients: [
 			"1 cup milk",
@@ -29,7 +28,6 @@ export const BREAKFAST_FOODS: Food[] = [
 	},
 	{
 		difficulty: 4,
-		id: 15,
 		image_url: "/graphics/main/breakfast/french-toast.jpg",
 		ingredients: [
 			"1 egg",
@@ -51,14 +49,12 @@ export const BREAKFAST_FOODS: Food[] = [
 	},
 	{
 		difficulty: 4,
-		id: 16,
 		image_url: "/graphics/main/breakfast/pancakes.jpg",
 		name: "Pancakes",
 		slug: "pancakes",
 	},
 	{
 		difficulty: 4,
-		id: 17,
 		image_url: "/graphics/main/breakfast/puffy-oven-pancakes.jpg",
 		info: "Preheat oven to 450°",
 		ingredients: [
@@ -85,7 +81,6 @@ export const BREAKFAST_FOODS: Food[] = [
 	},
 	{
 		difficulty: 5,
-		id: 18,
 		image_url: "/graphics/main/breakfast/swedish-pancakes.jpg",
 		ingredients: ["flour"],
 		name: "Swedish Pancakes",
@@ -102,16 +97,15 @@ export const BREAKFAST_FOODS: Food[] = [
 	},
 	{
 		difficulty: 4,
-		id: 19,
 		image_url: "/graphics/main/breakfast/waffles.jpg",
 		name: "Fresh Waffles",
 		slug: "fresh-waffles",
 	},
 	{
 		difficulty: 1,
-		id: 97,
 		image_url: "/graphics/main/breakfast/eggo-waffles.jpg",
 		instructions: ["Cook in the toaster", "Spread butter", "Add syrup"],
+		location: "home",
 		name: "Eggo Waffles",
 		slug: "eggo-waffles",
 	},

@@ -5,7 +5,6 @@ import type { Food } from "../types";
 export const SIDES_FOODS: Food[] = [
 	{
 		difficulty: 3,
-		id: 5,
 		image_url: "/graphics/sides/sides/mashed-potatoes.jpg",
 		ingredients: ["Water", "Milk", "Butter", "Potato flakes"],
 		instructions: [
@@ -22,7 +21,6 @@ export const SIDES_FOODS: Food[] = [
 			time: "8m",
 		},
 		difficulty: 3,
-		id: 2,
 		image_url: "/graphics/sides/sides/texas-toast.jpg",
 		info: "Preheat oven to 425°",
 		instructions: "Put parchment on a cooking sheet.",
@@ -31,49 +29,42 @@ export const SIDES_FOODS: Food[] = [
 	},
 	{
 		difficulty: 3,
-		id: 21,
 		image_url: "/graphics/sides/sides/bacon.jpg",
 		name: "Bacon",
 		slug: "bacon",
 	},
 	{
 		difficulty: 2,
-		id: 22,
 		image_url: "/graphics/sides/sides/breadsticks.jpg",
 		name: "Breadsticks",
 		slug: "breadsticks",
 	},
 	{
 		difficulty: 2,
-		id: 23,
 		image_url: "/graphics/sides/sides/cheese-sticks-pizza.jpg",
 		name: "Cheese Sticks (Pizza)",
 		slug: "cheese-sticks-pizza",
 	},
 	{
 		difficulty: 2,
-		id: 24,
 		image_url: "/graphics/sides/sides/corn-doggies.jpg",
 		name: "Corn Doggies",
 		slug: "corn-doggies",
 	},
 	{
 		difficulty: 3,
-		id: 25,
 		image_url: "/graphics/sides/sides/crinkle-cut-fries.jpg",
 		name: "Crinkle Cut Fries",
 		slug: "crinkle-cut-fries",
 	},
 	{
 		difficulty: 3,
-		id: 26,
 		image_url: "/graphics/sides/sides/french-fries.jpg",
 		name: "French Fries",
 		slug: "french-fries",
 	},
 	{
 		difficulty: 2,
-		id: 27,
 		image_url: "/graphics/sides/sides/hashbrown.jpg",
 		instructions: [
 			"Toast in the toaster.",
@@ -84,7 +75,6 @@ export const SIDES_FOODS: Food[] = [
 	},
 	{
 		difficulty: 3,
-		id: 28,
 		image_url: "/graphics/sides/sides/scrambled-eggs.jpg",
 		instructions: [
 			"Prep the Eggs: Crack the eggs into a bowl. Add a pinch of salt and your milk or water, if using. Whisk until completely blended with no distinct streaks of egg white.",
@@ -98,7 +88,6 @@ export const SIDES_FOODS: Food[] = [
 	},
 	{
 		difficulty: 2,
-		id: 29,
 		image_url: "/graphics/sides/sides/steak-fries.jpg",
 		instructions: "Extra yummy with Red Robbin seasoning.",
 		name: "Steak Fries",
@@ -106,7 +95,6 @@ export const SIDES_FOODS: Food[] = [
 	},
 	{
 		difficulty: 2,
-		id: 30,
 		image_url: "/graphics/sides/sides/tater-tots.jpg",
 		name: "Tater Tots",
 		slug: "tater-tots",
