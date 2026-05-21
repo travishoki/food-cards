@@ -5,8 +5,9 @@ import { LOCATIONS } from "./locations.const";
 
 export type FoodInput = Omit<
 	Food,
-	"category_key" | "image_url" | "locations" | "slug"
+	"category_key" | "difficulty" | "image_url" | "locations" | "slug"
 > & {
+	difficulty?: Food["difficulty"];
 	image_url?: string;
 	locations?: Food["locations"];
 	slug?: string;
@@ -30,6 +31,7 @@ export const buildFood =
 		return {
 			...food,
 			category_key,
+			difficulty: food.difficulty ?? 1,
 			image_url,
 			locations: food.locations || [LOCATIONS.home],
 			slug,

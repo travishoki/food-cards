@@ -2,6 +2,7 @@ import { useCallback, useState } from "react";
 
 import { useParams } from "react-router-dom";
 
+import { LOCATIONS } from "../data/locations.const";
 import { BackToTop } from "./BackToTop/BackToTop";
 import { FoodList } from "./FoodList/FoodList";
 import { Difficulty } from "./Toolbar/DifficultyFilter";
@@ -19,7 +20,7 @@ export const FoodsPage = () => {
 	const [clearCount, setClearCount] = useState(0);
 	const [sort, setSort] = useState<SortDirection>("asc");
 	const [difficulty, setDifficulty] = useState<Difficulty | null>(null);
-	const [location, setLocation] = useState<Location | null>(null);
+	const [location, setLocation] = useState<Location | null>(LOCATIONS.home);
 
 	const handleDebouncedChange = useCallback(
 		(value: string) => setDebouncedSearch(value),
@@ -39,7 +40,7 @@ export const FoodsPage = () => {
 					!!topCategory ||
 					!!subCategory ||
 					difficulty !== null ||
-					location !== null
+					location !== LOCATIONS.home
 				}
 				hasActiveSearch={!!debouncedSearch.trim()}
 				location={location}

@@ -90,7 +90,6 @@ export const BREAKFAST_FOODS = (
 			name: "Fresh Waffles",
 		},
 		{
-			difficulty: 1,
 			instructions: ["Cook in the toaster", "Spread butter", "Add syrup"],
 			name: "Eggo Waffles",
 		},
