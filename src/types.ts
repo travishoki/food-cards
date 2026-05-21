@@ -1,4 +1,4 @@
-import type { Location } from "./data/locations.const";
+import type { Location } from "./const/locations.const";
 
 export type Food = {
 	category_key: string;
