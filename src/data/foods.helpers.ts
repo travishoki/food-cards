@@ -3,7 +3,7 @@ import { Food } from "../types";
 import { TOP_CATEGORY_SUBCATEGORIES } from "./categories";
 import { LOCATIONS } from "./locations.const";
 
-export type FoodInput = Omit<
+type FoodInputObject = Omit<
 	Food,
 	"category_key" | "difficulty" | "image_url" | "locations" | "slug"
 > & {
@@ -12,6 +12,8 @@ export type FoodInput = Omit<
 	locations?: Food["locations"];
 	slug?: string;
 };
+
+export type FoodInput = string | FoodInputObject;
 
 // Build a reverse map from subcategory key → top category key.
 const TOP_OF_SUB: Record<string, string> = Object.fromEntries(
@@ -22,7 +24,9 @@ const TOP_OF_SUB: Record<string, string> = Object.fromEntries(
 
 export const buildFood =
 	(category_key: string) =>
-	(food: FoodInput): Food => {
+	(input: FoodInput): Food => {
+		const food: FoodInputObject =
+			typeof input === "string" ? { name: input } : input;
 		const slug = food.slug || toFoodSlug(food.name);
 		const top = TOP_OF_SUB[category_key];
 		const image_url =

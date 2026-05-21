@@ -45,12 +45,8 @@ export const SIDES_FOODS = (
 			difficulty: 2,
 			name: "Corn Doggies",
 		},
-		{
-			name: "Crinkle Cut Fries",
-		},
-		{
-			name: "French Fries",
-		},
+		"Crinkle Cut Fries",
+		"French Fries",
 		{
 			locations: LOCATIONS["fast-food"],
 			name: "Curly Fries",

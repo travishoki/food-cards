@@ -8,11 +8,7 @@ export const PROTEIN_FOODS = (
 				"Just a spoon fool of Peanut Butter can be a good snack.",
 			name: "Peanut Butter",
 		},
-		{
-			name: "Pepperoni",
-		},
-		{
-			name: "Protein Bar",
-		},
+		"Pepperoni",
+		"Protein Bar",
 	] as FoodInput[]
 ).map(buildFood(CATEGORIES.protein));

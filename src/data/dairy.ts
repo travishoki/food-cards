@@ -3,12 +3,8 @@ import { buildFood, FoodInput } from "./foods.helpers";
 
 export const DAIRY_FOODS = (
 	[
-		{
-			name: "Grated Cheese",
-		},
-		{
-			name: "Gogurt",
-		},
+		"Grated Cheese",
+		"Gogurt",
 		{
 			name: "String Cheese",
 			prerelease: true,

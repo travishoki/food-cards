@@ -3,9 +3,7 @@ import { buildFood, FoodInput } from "./foods.helpers";
 
 export const VEGETABLES_FOODS = (
 	[
-		{
-			name: "Carrots",
-		},
+		"Carrots",
 		{
 			name: "Corn on the Cobb",
 			prerelease: true,

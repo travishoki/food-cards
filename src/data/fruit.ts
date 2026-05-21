@@ -11,56 +11,36 @@ export const FRUIT_FOODS = (
 			],
 			name: "Grapes",
 		},
-		{
-			name: "Apple Chips (Fresh)",
-		},
-		{
-			name: "Bananas",
-		},
+		"Apple Chips (Fresh)",
+		"Bananas",
 		{
 			instructions: "Make sure to rinse them off in the sink.",
 			name: "Blackberries",
 		},
-		{
-			name: "Blue Berries",
-		},
+		"Blue Berries",
 		{
 			instructions: "Make sure to rinse them off in the sink.",
 			name: "Cherries",
 		},
-		{
-			name: "Dragon Fruit",
-		},
+		"Dragon Fruit",
 		{
 			name: "Dried Bananas",
 			prerelease: true,
 		},
-		{
-			name: "Dried Mangos",
-		},
-		{
-			name: "Kiwi",
-		},
-		{
-			name: "Mandarin Oranges",
-		},
-		{
-			name: "Pineapple",
-		},
+		"Dried Mangos",
+		"Kiwi",
+		"Mandarin Oranges",
+		"Pineapple",
 		{
 			instructions: "Make sure to rinse them off in the sink.",
 			name: "Raspberry",
 		},
-		{
-			name: "Sliced Apples",
-		},
+		"Sliced Apples",
 		{
 			instructions: "Make sure to rinse them off in the sink.",
 			name: "Strawberries",
 		},
-		{
-			name: "Watermelon",
-		},
+		"Watermelon",
 		{
 			name: "Apple Sauce",
 			prerelease: true,
@@ -74,14 +54,8 @@ export const FRUIT_FOODS = (
 				"Eat over the sink or a plate. Peaches can be really juicy.",
 			name: "Fresh Peach",
 		},
-		{
-			name: "Canned Peaches",
-		},
-		{
-			name: "Fresh Pear",
-		},
-		{
-			name: "Canned Pears",
-		},
+		"Canned Peaches",
+		"Fresh Pear",
+		"Canned Pears",
 	] as FoodInput[]
 ).map(buildFood(CATEGORIES.fruit));

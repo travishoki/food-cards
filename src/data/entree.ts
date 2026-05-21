@@ -10,15 +10,9 @@ export const ENTREE_FOODS = (
 				"Unwrap pizza. Put parchment on a cooking sheet. Add pepperonis.",
 			name: "Square Pizza",
 		},
-		{
-			name: "French Bread Pizza",
-		},
-		{
-			name: "Tortilla Pizza",
-		},
-		{
-			name: "Bread Pizza",
-		},
+		"French Bread Pizza",
+		"Tortilla Pizza",
+		"Bread Pizza",
 		{
 			name: "Pigs in a Blanket",
 			prerelease: true,

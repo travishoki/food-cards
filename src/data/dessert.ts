@@ -4,34 +4,18 @@ import { LOCATIONS } from "./locations.const";
 
 export const DESSERT_FOODS = (
 	[
-		{
-			name: "Donut",
-		},
-		{
-			name: "Apple Pie",
-		},
-		{
-			name: "Brownies",
-		},
-		{
-			name: "Chocolate Pie",
-		},
-		{
-			name: "Cinnamon Roll",
-		},
-		{
-			name: "Cookie",
-		},
-		{
-			name: "Cookie Dough",
-		},
+		"Donut",
+		"Apple Pie",
+		"Brownies",
+		"Chocolate Pie",
+		"Cinnamon Roll",
+		"Cookie",
+		"Cookie Dough",
 		{
 			locations: [LOCATIONS.restaurant],
 			name: "Cookie Dough Pizza",
 		},
-		{
-			name: "Cupcake",
-		},
+		"Cupcake",
 		{
 			locations: [LOCATIONS["fast-food"]],
 			name: "Frosty",
@@ -48,19 +32,13 @@ export const DESSERT_FOODS = (
 				"Strawberries",
 			],
 		},
-		{
-			name: "Ice Cream",
-		},
-		{
-			name: "Mint Brownies",
-		},
+		"Ice Cream",
+		"Mint Brownies",
 		{
 			difficulty: 5,
 			name: "Peach Cobbler",
 		},
-		{
-			name: "Peanut Butter Bars",
-		},
+		"Peanut Butter Bars",
 		{
 			difficulty: 4,
 			name: "Mochi Cake",

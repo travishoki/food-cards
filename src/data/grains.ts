@@ -3,27 +3,13 @@ import { buildFood, FoodInput } from "./foods.helpers";
 
 export const GRAINS_FOODS = (
 	[
-		{
-			name: "Banana Bars",
-		},
-		{
-			name: "Banana Bread",
-		},
-		{
-			name: "Blue Berry Muffin (Costco)",
-		},
-		{
-			name: "Blue Berry Muffin (Fresh)",
-		},
-		{
-			name: "Poppy Seed Muffin",
-		},
-		{
-			name: "Cheetos",
-		},
-		{
-			name: "Chocolate Muffin",
-		},
+		"Banana Bars",
+		"Banana Bread",
+		"Blue Berry Muffin (Costco)",
+		"Blue Berry Muffin (Fresh)",
+		"Poppy Seed Muffin",
+		"Cheetos",
+		"Chocolate Muffin",
 		{
 			instructions: [
 				"Toast: Toast your bread to your desired darkness.",
@@ -32,44 +18,24 @@ export const GRAINS_FOODS = (
 			],
 			name: "Cinnamon Toast",
 		},
-		{
-			name: "Doritos",
-		},
-		{
-			name: "Graham Crackers",
-		},
-		{
-			name: "Granola Bar",
-		},
-		{
-			name: "Japanese Cheesecake",
-		},
-		{
-			name: "Lays Classic Chips",
-		},
+		"Doritos",
+		"Graham Crackers",
+		"Granola Bar",
+		"Japanese Cheesecake",
+		"Lays Classic Chips",
 		{
 			instructions: 'Press the "poporn" button on the microwave.',
 			name: "Popcorn",
 		},
-		{
-			name: "Pretzels (Crunchy)",
-		},
-		{
-			name: "Rolls",
-		},
-		{
-			name: "Soft Pretzels",
-		},
-		{
-			name: "Tortilla Chips",
-		},
+		"Pretzels (Crunchy)",
+		"Rolls",
+		"Soft Pretzels",
+		"Tortilla Chips",
 		{
 			name: "Cheese Nips",
 			prerelease: true,
 		},
-		{
-			name: "Cookie Crisp Cereal",
-		},
+		"Cookie Crisp Cereal",
 		{
 			name: "Fruit Loops",
 			prerelease: true,

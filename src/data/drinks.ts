@@ -4,12 +4,8 @@ import { LOCATIONS } from "./locations.const";
 
 export const DRINKS_FOODS = (
 	[
-		{
-			name: "Milk",
-		},
-		{
-			name: "Chocolate Milk",
-		},
+		"Milk",
+		"Chocolate Milk",
 		{
 			instructions: "Worth the trip to a gas station.",
 			locations: [LOCATIONS["fast-food"]],
@@ -20,18 +16,10 @@ export const DRINKS_FOODS = (
 				"Important to get electrolites when excercising and paying hard.",
 			name: "Gatorade",
 		},
-		{
-			name: "Hot Chocolate",
-		},
-		{
-			name: "Kool-Aid",
-		},
-		{
-			name: "Lemonade",
-		},
-		{
-			name: "Orange Julius",
-		},
+		"Hot Chocolate",
+		"Kool-Aid",
+		"Lemonade",
+		"Orange Julius",
 		{
 			instructions:
 				"Important to get electrolites when excercising and paying hard.",
@@ -47,14 +35,8 @@ export const DRINKS_FOODS = (
 			locations: [LOCATIONS["fast-food"]],
 			name: "Slurpee",
 		},
-		{
-			name: "Sprite",
-		},
-		{
-			name: "Sunny D",
-		},
-		{
-			name: "Horchata",
-		},
+		"Sprite",
+		"Sunny D",
+		"Horchata",
 	] as FoodInput[]
 ).map(buildFood(CATEGORIES.drinks));
