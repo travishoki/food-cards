@@ -23,11 +23,9 @@ type ToolbarProps = {
 	hasActiveFilter: boolean;
 	hasActiveSearch: boolean;
 	location: Location | null;
-	onDebouncedSearchChange: (value: string) => void;
 	onDifficultyChange: (value: Difficulty | null) => void;
 	onLocationChange: (value: Location | null) => void;
 	onSortChange: (dir: SortDirection) => void;
-	searchResetKey?: string;
 	sort: SortDirection;
 };
 
@@ -36,11 +34,9 @@ export const Toolbar = ({
 	hasActiveFilter,
 	hasActiveSearch,
 	location,
-	onDebouncedSearchChange,
 	onDifficultyChange,
 	onLocationChange,
 	onSortChange,
-	searchResetKey,
 	sort,
 }: ToolbarProps) => {
 	const [openPanel, setOpenPanel] = useState<Panel | null>(null);
@@ -112,11 +108,7 @@ export const Toolbar = ({
 							</>
 						)}
 						{openPanel === "search" && (
-							<SearchInput
-								onClose={close}
-								onDebouncedChange={onDebouncedSearchChange}
-								resetKey={searchResetKey}
-							/>
+							<SearchInput onClose={close} />
 						)}
 						{openPanel === "sort" && (
 							<SortPanel onChange={onSortChange} value={sort} />

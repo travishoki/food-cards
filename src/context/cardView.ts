@@ -5,6 +5,7 @@ export type PrereleaseMode = "show" | "hide" | "only";
 
 type CardViewContextValue = {
 	prereleaseMode: PrereleaseMode;
+	resetAll: () => void;
 	setPrereleaseMode: (value: PrereleaseMode) => void;
 	setViewMode: (value: ViewMode) => void;
 	viewMode: ViewMode;

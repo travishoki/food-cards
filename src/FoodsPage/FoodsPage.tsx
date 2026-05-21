@@ -1,14 +1,9 @@
-import { useCallback, useState } from "react";
-
 import { useParams } from "react-router-dom";
 
+import { useFoodFilters } from "../context/foodFilters";
 import { LOCATIONS } from "../data/locations.const";
-import { isEatingOut } from "../data/locations.helpers";
 import { BackToTop } from "./BackToTop/BackToTop";
 import { FoodList } from "./FoodList/FoodList";
-import { Difficulty } from "./Toolbar/DifficultyFilter";
-import { Location } from "./Toolbar/LocationFilter";
-import { SortDirection } from "./Toolbar/SortPanel";
 import { Toolbar } from "./Toolbar/Toolbar";
 
 export const FoodsPage = () => {
@@ -17,29 +12,16 @@ export const FoodsPage = () => {
 		topCategory?: string;
 	}>();
 
-	const [debouncedSearch, setDebouncedSearch] = useState("");
-	const [clearCount, setClearCount] = useState(0);
-	const [sort, setSort] = useState<SortDirection>("asc");
-	const [difficulty, setDifficulty] = useState<Difficulty | null>(null);
-	const [location, setLocation] = useState<Location | null>(LOCATIONS.home);
-
-	const handleDebouncedChange = useCallback(
-		(value: string) => setDebouncedSearch(value),
-		[],
-	);
-
-	const handleClearSearch = useCallback(
-		() => setClearCount((c) => c + 1),
-		[],
-	);
-
-	const handleLocationChange = useCallback((value: Location | null) => {
-		setLocation(value);
-
-		if (isEatingOut(value)) {
-			setDifficulty(null);
-		}
-	}, []);
+	const {
+		difficulty,
+		location,
+		search,
+		setDifficulty,
+		setLocation,
+		setSearch,
+		setSort,
+		sort,
+	} = useFoodFilters();
 
 	return (
 		<>
@@ -51,13 +33,11 @@ export const FoodsPage = () => {
 					difficulty !== null ||
 					location !== LOCATIONS.home
 				}
-				hasActiveSearch={!!debouncedSearch.trim()}
+				hasActiveSearch={!!search.trim()}
 				location={location}
-				onDebouncedSearchChange={handleDebouncedChange}
 				onDifficultyChange={setDifficulty}
-				onLocationChange={handleLocationChange}
+				onLocationChange={setLocation}
 				onSortChange={setSort}
-				searchResetKey={String(clearCount)}
 				sort={sort}
 			/>
 			<FoodList
@@ -65,8 +45,8 @@ export const FoodsPage = () => {
 				location={location}
 				onClearDifficulty={() => setDifficulty(null)}
 				onClearLocation={() => setLocation(null)}
-				onClearSearch={handleClearSearch}
-				search={debouncedSearch}
+				onClearSearch={() => setSearch("")}
+				search={search}
 				sort={sort}
 				subCategory={subCategory}
 				topCategory={topCategory}

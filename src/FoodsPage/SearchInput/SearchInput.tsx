@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 
 import { FilterSection } from "../../FilterSection/FilterSection";
+import { useFoodFilters } from "../../context/foodFilters";
 
 import "./SearchInput.scss";
 
@@ -8,31 +9,18 @@ const SEARCH_DEBOUNCE_MS = 250;
 
 type SearchInputProps = {
 	onClose: () => void;
-	onDebouncedChange: (value: string) => void;
-	resetKey?: string;
 };
 
-export const SearchInput = ({
-	onClose,
-	onDebouncedChange,
-	resetKey,
-}: SearchInputProps) => {
+export const SearchInput = ({ onClose }: SearchInputProps) => {
+	const { setSearch } = useFoodFilters();
 	const [value, setValue] = useState("");
 	const inputRef = useRef<HTMLInputElement>(null);
 
 	useEffect(() => {
-		const id = setTimeout(
-			() => onDebouncedChange(value),
-			SEARCH_DEBOUNCE_MS,
-		);
+		const id = setTimeout(() => setSearch(value), SEARCH_DEBOUNCE_MS);
 
 		return () => clearTimeout(id);
-	}, [value, onDebouncedChange]);
-
-	useEffect(() => {
-		setValue("");
-		onDebouncedChange("");
-	}, [resetKey, onDebouncedChange]);
+	}, [value, setSearch]);
 
 	useEffect(() => {
 		inputRef.current?.focus();
