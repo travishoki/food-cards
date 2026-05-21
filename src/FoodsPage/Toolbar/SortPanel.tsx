@@ -1,3 +1,5 @@
+import { FilterSection } from "../../FilterSection/FilterSection";
+
 import "./SortPanel.scss";
 
 export type SortDirection = "asc" | "desc";
@@ -7,13 +9,16 @@ type SortPanelProps = {
 	value: SortDirection;
 };
 
-const OPTIONS: { dir: SortDirection; label: string }[] = [
+const OPTIONS: {
+	dir: SortDirection;
+	label: string;
+}[] = [
 	{ dir: "asc", label: "A → Z" },
 	{ dir: "desc", label: "Z → A" },
 ];
 
 export const SortPanel = ({ onChange, value }: SortPanelProps) => (
-	<div className="sort-panel">
+	<FilterSection label="Sort:">
 		{OPTIONS.map((opt) => (
 			<button
 				key={opt.dir}
@@ -25,5 +30,5 @@ export const SortPanel = ({ onChange, value }: SortPanelProps) => (
 				{opt.label}
 			</button>
 		))}
-	</div>
+	</FilterSection>
 );

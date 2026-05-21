@@ -1,27 +1,12 @@
-.search-panel {
-	margin: 0.75rem auto 0;
-	max-width: 480px;
-	padding: 0 1rem;
-}
-
-.food-search__label {
-	clip: rect(0 0 0 0);
-	clip-path: inset(50%);
-	height: 1px;
-	overflow: hidden;
-	position: absolute;
-	white-space: nowrap;
-	width: 1px;
-}
-
 .food-search {
 	background: $color-surface;
 	border: 1px solid $color-surface;
 	border-radius: $radius-sm;
 	color: $color-text-white;
+	flex: 1;
 	font-size: 1rem;
+	min-width: 0;
 	padding: 0.5rem 0.75rem;
-	width: 100%;
 
 	&::placeholder {
 		color: $color-text-muted;

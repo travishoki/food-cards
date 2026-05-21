@@ -2,6 +2,7 @@ import { useMemo } from "react";
 
 import { useNavigate, useParams } from "react-router-dom";
 
+import { FilterSection } from "../../FilterSection/FilterSection";
 import { topMenuItems } from "../CategoryMenu.helpers";
 
 export const Menu = () => {
@@ -11,8 +12,7 @@ export const Menu = () => {
 	const topMenu = useMemo(() => topMenuItems(), []);
 
 	return (
-		<nav aria-label="Food categories" className="category-menu">
-			<span className="category-menu__label">Category:</span>
+		<FilterSection ariaLabel="Food categories" label="Category:">
 			<button
 				className={`category-menu__link ${!topCategory ? "is-active" : ""}`}
 				onClick={() => navigate("/")}
@@ -30,6 +30,6 @@ export const Menu = () => {
 					{cat.label}
 				</button>
 			))}
-		</nav>
+		</FilterSection>
 	);
 };

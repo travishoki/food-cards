@@ -1,3 +1,4 @@
+import { FilterSection } from "../../FilterSection/FilterSection";
 import {
 	LOCATION_DATA,
 	LOCATION_ORDER,
@@ -27,8 +28,7 @@ const OPTIONS: Option[] = [
 ];
 
 export const LocationFilter = ({ onChange, value }: LocationFilterProps) => (
-	<div className="difficulty-filter">
-		<span className="difficulty-filter__label">Location:</span>
+	<FilterSection label="Location:">
 		{OPTIONS.map((opt) => (
 			<button
 				key={opt.label}
@@ -40,5 +40,5 @@ export const LocationFilter = ({ onChange, value }: LocationFilterProps) => (
 				{opt.label}
 			</button>
 		))}
-	</div>
+	</FilterSection>
 );

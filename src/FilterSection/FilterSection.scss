@@ -1,0 +1,25 @@
+.filter-section {
+	align-items: flex-start;
+	display: flex;
+	flex-direction: column;
+	gap: 0.25rem;
+	margin: 0 auto;
+	max-width: 960px;
+	padding: 0.5rem 0;
+	width: 100%;
+}
+
+.filter-section__label {
+	color: $color-text;
+	font-size: 0.95rem;
+	font-weight: 600;
+}
+
+.filter-section__row {
+	-webkit-overflow-scrolling: touch;
+	display: flex;
+	gap: 0.5rem;
+	overflow-x: auto;
+	scrollbar-width: thin;
+	width: 100%;
+}

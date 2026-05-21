@@ -1,8 +1,12 @@
+import { FilterSection } from "../FilterSection/FilterSection";
 import { PrereleaseMode, useCardView } from "../context/CardViewContext";
 
 import "./CardViewToggle.scss";
 
-const OPTIONS: { label: string; value: PrereleaseMode }[] = [
+const OPTIONS: {
+	label: string;
+	value: PrereleaseMode;
+}[] = [
 	{ label: "Show", value: "show" },
 	{ label: "Hide", value: "hide" },
 	{ label: "Only", value: "only" },
@@ -12,8 +16,7 @@ export const PrereleaseToggle = () => {
 	const { prereleaseMode, setPrereleaseMode } = useCardView();
 
 	return (
-		<div className="card-view-toggle">
-			<span className="card-view-toggle__label">Prerelease:</span>
+		<FilterSection label="Prerelease:">
 			{OPTIONS.map((opt) => (
 				<button
 					key={opt.value}
@@ -25,6 +28,6 @@ export const PrereleaseToggle = () => {
 					{opt.label}
 				</button>
 			))}
-		</div>
+		</FilterSection>
 	);
 };

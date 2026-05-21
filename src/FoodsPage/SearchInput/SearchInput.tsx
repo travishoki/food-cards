@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 
+import { FilterSection } from "../../FilterSection/FilterSection";
+
 import "./SearchInput.scss";
 
 const SEARCH_DEBOUNCE_MS = 250;
@@ -47,10 +49,7 @@ export const SearchInput = ({
 	}, [onClose]);
 
 	return (
-		<div className="search-panel">
-			<label className="food-search__label" htmlFor="food-search">
-				Search foods
-			</label>
+		<FilterSection label="Search:" labelFor="food-search">
 			<input
 				className="food-search"
 				id="food-search"
@@ -60,6 +59,6 @@ export const SearchInput = ({
 				type="search"
 				value={value}
 			/>
-		</div>
+		</FilterSection>
 	);
 };

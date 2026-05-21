@@ -1,3 +1,5 @@
+import { FilterSection } from "../../FilterSection/FilterSection";
+
 import "./DifficultyFilter.scss";
 
 export type Difficulty = 1 | 2 | 3 | 4 | 5;
@@ -13,8 +15,7 @@ export const DifficultyFilter = ({
 	onChange,
 	value,
 }: DifficultyFilterProps) => (
-	<div className="difficulty-filter">
-		<span className="difficulty-filter__label">Difficulty:</span>
+	<FilterSection label="Difficulty:">
 		<button
 			aria-pressed={value === null}
 			className={`difficulty-filter__option difficulty-filter__option--all ${value === null ? "is-active" : ""}`}
@@ -34,5 +35,5 @@ export const DifficultyFilter = ({
 				{d}
 			</button>
 		))}
-	</div>
+	</FilterSection>
 );
