@@ -1,5 +1,5 @@
 import { FilterSection } from "../FilterSection/FilterSection";
-import { useCardView, ViewMode } from "../context/CardViewContext";
+import { useCardView, ViewMode } from "../context/cardView";
 
 import "./CardViewToggle.scss";
 

@@ -1,5 +1,5 @@
 import { Badge } from "./Badge";
-import { useCardView } from "../../context/CardViewContext";
+import { useCardView } from "../../context/cardView";
 import { GearIcon } from "../../icons/GearIcon";
 
 type SettingsButtonProps = {

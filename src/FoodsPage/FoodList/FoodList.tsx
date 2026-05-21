@@ -7,7 +7,7 @@ import {
 	CARD_MAX_VIEWPORT,
 	PAGE_SIDE_PADDING,
 } from "../../Card/Card.const";
-import { useCardView } from "../../context/CardViewContext";
+import { useCardView } from "../../context/cardView";
 import { NoResults } from "../NoResults/NoResults";
 import { Difficulty } from "../Toolbar/DifficultyFilter";
 import { Location } from "../Toolbar/LocationFilter";

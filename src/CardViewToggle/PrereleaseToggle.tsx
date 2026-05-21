@@ -1,5 +1,5 @@
 import { FilterSection } from "../FilterSection/FilterSection";
-import { PrereleaseMode, useCardView } from "../context/CardViewContext";
+import { PrereleaseMode, useCardView } from "../context/cardView";
 
 import "./CardViewToggle.scss";
 

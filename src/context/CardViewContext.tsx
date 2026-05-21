@@ -1,18 +1,6 @@
-import { createContext, ReactNode, useContext, useState } from "react";
+import { ReactNode, useState } from "react";
 
-export type ViewMode = "full" | "image" | "titles";
-export type PrereleaseMode = "show" | "hide" | "only";
-
-type CardViewContextValue = {
-	prereleaseMode: PrereleaseMode;
-	setPrereleaseMode: (value: PrereleaseMode) => void;
-	setViewMode: (value: ViewMode) => void;
-	viewMode: ViewMode;
-};
-
-const CardViewContext = createContext<CardViewContextValue | undefined>(
-	undefined,
-);
+import { CardViewContext, PrereleaseMode, ViewMode } from "./cardView";
 
 export const CardViewProvider = ({ children }: { children: ReactNode }) => {
 	const [viewMode, setViewMode] = useState<ViewMode>("full");
@@ -31,13 +19,4 @@ export const CardViewProvider = ({ children }: { children: ReactNode }) => {
 			{children}
 		</CardViewContext.Provider>
 	);
-};
-
-export const useCardView = () => {
-	const ctx = useContext(CardViewContext);
-
-	if (!ctx)
-		throw new Error("useCardView must be used within CardViewProvider");
-
-	return ctx;
 };

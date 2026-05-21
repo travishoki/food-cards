@@ -1,19 +1,10 @@
 import { createRoot } from "react-dom/client";
-import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
+import { App } from "./App";
 import { FoodPage } from "./FoodPage/FoodPage";
 import { FoodsPage } from "./FoodsPage/FoodsPage";
-import { CardViewProvider } from "./context/CardViewContext";
 import "./index.scss";
-
-function App() {
-	return (
-		<CardViewProvider>
-			<h1 id="top">Food Cards</h1>
-			<Outlet />
-		</CardViewProvider>
-	);
-}
 
 const router = createBrowserRouter([
 	{

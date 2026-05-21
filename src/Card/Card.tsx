@@ -49,7 +49,7 @@ import { Graphic } from "./Graphic/Graphic";
 import { Icon } from "./Icon/Icon";
 import { PrereleaseLabel } from "./PrereleaseLabel/PrereleaseLabel";
 import { Title } from "./Title/Title";
-import { useCardView } from "../context/CardViewContext";
+import { useCardView } from "../context/cardView";
 import { useViewportWidth } from "../hooks/useViewportWidth";
 
 import type { Food } from "../types";
