@@ -112,21 +112,13 @@ describe("getListCardWidth", () => {
 	const outer = 2 * PAGE_SIDE_PADDING;
 	const g = CARD_GUTTER;
 
-	describe("1 column (viewport < 400px)", () => {
-		it("subtracts two side paddings at 360", () => {
-			expect(getListCardWidth(360)).toBe(360 - outer);
+	describe("2 columns (viewport < 701)", () => {
+		it("splits into two at narrow viewports (360)", () => {
+			expect(getListCardWidth(360)).toBe(
+				Math.floor((360 - outer - g) / 2),
+			);
 		});
 
-		it("works at boundary just under 400", () => {
-			expect(getListCardWidth(399)).toBe(399 - outer);
-		});
-
-		it("returns negative for tiny viewports (no clamp)", () => {
-			expect(getListCardWidth(10)).toBe(10 - outer);
-		});
-	});
-
-	describe("2 columns (400 ≤ viewport < 701)", () => {
 		it("splits into two at 400", () => {
 			expect(getListCardWidth(400)).toBe(
 				Math.floor((400 - outer - g) / 2),

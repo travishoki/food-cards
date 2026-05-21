@@ -1,7 +1,6 @@
 import {
 	BACKGROUND_HEIGHT,
 	BACKGROUND_WIDTH,
-	CARD_BREAKPOINT_2_COL,
 	CARD_BREAKPOINT_3_COL,
 	CARD_BREAKPOINT_4_COL,
 	CARD_DETAIL_MAX_WIDTH,
@@ -38,8 +37,6 @@ export const getDetailCardWidth = (viewportWidth: number) =>
 export const getListCardWidth = (viewportWidth: number) => {
 	const vw = Math.min(viewportWidth, CARD_MAX_VIEWPORT);
 	const outer = 2 * PAGE_SIDE_PADDING;
-
-	if (vw < CARD_BREAKPOINT_2_COL) return vw - outer;
 
 	if (vw < CARD_BREAKPOINT_3_COL)
 		return Math.floor((vw - outer - CARD_GUTTER) / 2);

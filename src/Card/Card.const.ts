@@ -9,7 +9,6 @@ export const PADDING_LEFT = 52;
 
 // Card layout
 export const CARD_BOTTOM_PADDING = 22;
-export const CARD_BREAKPOINT_2_COL = 400;
 export const CARD_BREAKPOINT_3_COL = 701;
 export const CARD_BREAKPOINT_4_COL = 901;
 export const CARD_MAX_VIEWPORT = 1400;
