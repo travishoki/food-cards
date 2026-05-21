@@ -3,6 +3,7 @@ import { useCallback, useState } from "react";
 import { useParams } from "react-router-dom";
 
 import { LOCATIONS } from "../data/locations.const";
+import { isEatingOut } from "../data/locations.helpers";
 import { BackToTop } from "./BackToTop/BackToTop";
 import { FoodList } from "./FoodList/FoodList";
 import { Difficulty } from "./Toolbar/DifficultyFilter";
@@ -32,6 +33,17 @@ export const FoodsPage = () => {
 		[],
 	);
 
+	const handleLocationChange = useCallback((value: Location | null) => {
+		setLocation(value);
+
+		const eatingOut =
+			value === LOCATIONS["fast-food"] || value === LOCATIONS.restaurant;
+
+		if (eatingOut) {
+			setDifficulty(null);
+		}
+	}, []);
+
 	return (
 		<>
 			<Toolbar
@@ -46,7 +58,7 @@ export const FoodsPage = () => {
 				location={location}
 				onDebouncedSearchChange={handleDebouncedChange}
 				onDifficultyChange={setDifficulty}
-				onLocationChange={setLocation}
+				onLocationChange={handleLocationChange}
 				onSortChange={setSort}
 				searchResetKey={String(clearCount)}
 				sort={sort}
