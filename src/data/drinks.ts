@@ -53,5 +53,8 @@ export const DRINKS_FOODS = (
 		{
 			name: "Sunny D",
 		},
+		{
+			name: "Horchata",
+		},
 	] as FoodInput[]
 ).map(buildFood(CATEGORIES.drinks));

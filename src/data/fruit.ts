@@ -69,5 +69,19 @@ export const FRUIT_FOODS = (
 			name: "Fruit Leathers",
 			prerelease: true,
 		},
+		{
+			instructions:
+				"Eat over the sink or a plate. Peaches can be really juicy.",
+			name: "Fresh Peach",
+		},
+		{
+			name: "Canned Peaches",
+		},
+		{
+			name: "Fresh Pear",
+		},
+		{
+			name: "Canned Pears",
+		},
 	] as FoodInput[]
 ).map(buildFood(CATEGORIES.fruit));
