@@ -5,6 +5,7 @@ import { LOCATIONS } from "./locations.const";
 export const BREAKFAST_FOODS = (
 	[
 		{
+			name: "Crepes",
 			difficulty: 4,
 			ingredients: [
 				"1 cup milk",
@@ -13,7 +14,6 @@ export const BREAKFAST_FOODS = (
 				"2 ½ teaspoons vegetable oil, divided",
 				"1 pinch salt",
 			],
-			name: "Crepes",
 			recipe_link: "http://allrecipes.com/recipe/27188/crepes/",
 			toppings: [
 				"Strawberry",
@@ -26,6 +26,7 @@ export const BREAKFAST_FOODS = (
 			],
 		},
 		{
+			name: "French Toast",
 			difficulty: 4,
 			ingredients: [
 				"1 egg",
@@ -40,19 +41,19 @@ export const BREAKFAST_FOODS = (
 				"Cook bread slices on a lightly greased nonstick griddle or skillet on medium heat until cooked through and browned on both sides.",
 				"Serve with butter, sprinkled with powdered sugar and syrup. You can top with fresh fruit",
 			],
-			name: "French Toast",
 			recipe_link:
 				"https://www.mccormick.com/recipes/breakfast-brunch/quick-and-easy-french-toast",
 		},
 		{
-			locations: LOCATIONS["fast-food"],
 			name: "French Toast Sticks",
+			locations: LOCATIONS["fast-food"],
 		},
 		{
-			difficulty: 4,
 			name: "Pancakes",
+			difficulty: 4,
 		},
 		{
+			name: "Puffy Oven Pancakes",
 			difficulty: 4,
 			info: "Preheat oven to 450°",
 			ingredients: [
@@ -72,14 +73,13 @@ export const BREAKFAST_FOODS = (
 				"Remove from oven and cut into 6 large squares.",
 				"Serve immediately.",
 			],
-			name: "Puffy Oven Pancakes",
 			recipe_link:
 				"http://www.geniuskitchen.com/recipe/puffy-oven-pancake-or-hootin-annies-40772",
 		},
 		{
+			name: "Swedish Pancakes",
 			difficulty: 5,
 			ingredients: ["flour"],
-			name: "Swedish Pancakes",
 			toppings: [
 				"Strawberry",
 				"Blue Berries",
@@ -91,12 +91,12 @@ export const BREAKFAST_FOODS = (
 			],
 		},
 		{
-			difficulty: 4,
 			name: "Fresh Waffles",
+			difficulty: 4,
 		},
 		{
-			instructions: ["Cook in the toaster", "Spread butter", "Add syrup"],
 			name: "Eggo Waffles",
+			instructions: ["Cook in the toaster", "Spread butter", "Add syrup"],
 		},
 	] as FoodInput[]
 ).map(buildFood(CATEGORIES.breakfast));

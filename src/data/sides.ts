@@ -5,6 +5,7 @@ import { LOCATIONS } from "./locations.const";
 export const SIDES_FOODS = (
 	[
 		{
+			name: "Mashed Potatoes",
 			difficulty: 3,
 			ingredients: ["Water", "Milk", "Butter", "Potato flakes"],
 			instructions: [
@@ -12,9 +13,9 @@ export const SIDES_FOODS = (
 				"Remove heat: Take the saucepan off the heat source.",
 				"Add milk & flakes: Stir in the cold milk, then gently add the potato flakes.",
 			],
-			name: "Mashed Potatoes",
 		},
 		{
+			name: "Texas Toast",
 			cookTime: {
 				instructions: "Cook in oven",
 				time: "8m",
@@ -22,44 +23,44 @@ export const SIDES_FOODS = (
 			difficulty: 3,
 			info: "Preheat oven to 425°",
 			instructions: "Put parchment on a cooking sheet.",
-			name: "Texas Toast",
 		},
 		{
-			difficulty: 3,
 			name: "Bacon",
+			difficulty: 3,
 		},
 		{
-			locations: [LOCATIONS["fast-food"]],
 			name: "Breadsticks Little Ceasars",
+			locations: [LOCATIONS["fast-food"]],
 			prerelease: true,
 		},
 		{
-			locations: [LOCATIONS.restaurant],
 			name: "Breadsticks Olive Garden",
+			locations: [LOCATIONS.restaurant],
 		},
 		{
-			difficulty: 2,
 			name: "Cheese Sticks (Pizza)",
+			difficulty: 2,
 		},
 		{
-			difficulty: 2,
 			name: "Corn Doggies",
+			difficulty: 2,
 		},
 		"Crinkle Cut Fries",
 		"French Fries",
 		{
-			locations: LOCATIONS["fast-food"],
 			name: "Curly Fries",
+			locations: LOCATIONS["fast-food"],
 		},
 		{
+			name: "Hashbrown",
 			difficulty: 2,
 			instructions: [
 				"Toast in the toaster.",
 				"Flip over and toast again to make it extra crunchy.",
 			],
-			name: "Hashbrown",
 		},
 		{
+			name: "Scrambled Eggs",
 			difficulty: 3,
 			instructions: [
 				"Prep the Eggs: Crack the eggs into a bowl. Add a pinch of salt and your milk or water, if using. Whisk until completely blended with no distinct streaks of egg white.",
@@ -68,16 +69,15 @@ export const SIDES_FOODS = (
 				"Fold and Scramble: Continue pulling and folding the eggs slowly across the bottom of the pan to form large, soft curds.",
 				"Remove from Heat: Take the pan off the heat just before the eggs are fully set and they still look a bit shiny or wet. The residual heat will finish cooking them.",
 			],
-			name: "Scrambled Eggs",
 		},
 		{
+			name: "Steak Fries",
 			difficulty: 2,
 			instructions: "Extra yummy with Red Robbin seasoning.",
-			name: "Steak Fries",
 		},
 		{
-			difficulty: 2,
 			name: "Tater Tots",
+			difficulty: 2,
 		},
 	] as FoodInput[]
 ).map(buildFood(CATEGORIES.sides));

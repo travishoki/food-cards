@@ -11,12 +11,12 @@ export const GRAINS_FOODS = (
 		"Cheetos",
 		"Chocolate Muffin",
 		{
+			name: "Cinnamon Toast",
 			instructions: [
 				"Toast: Toast your bread to your desired darkness.",
 				"Butter: Immediately spread softened butter onto the hot toast.",
 				"Mix & Sprinkle: Sprinkle cinnamon-sugar over the buttered toast.",
 			],
-			name: "Cinnamon Toast",
 		},
 		"Doritos",
 		"Graham Crackers",
@@ -24,8 +24,8 @@ export const GRAINS_FOODS = (
 		"Japanese Cheesecake",
 		"Lays Classic Chips",
 		{
-			instructions: 'Press the "poporn" button on the microwave.',
 			name: "Popcorn",
+			instructions: 'Press the "poporn" button on the microwave.',
 		},
 		"Pretzels (Crunchy)",
 		"Rolls",

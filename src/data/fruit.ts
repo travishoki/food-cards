@@ -4,23 +4,23 @@ import { buildFood, FoodInput } from "./foods.helpers";
 export const FRUIT_FOODS = (
 	[
 		{
+			name: "Grapes",
 			instructions: [
 				"Pull the grapes off the vine.",
 				"Wash grapes in the sink.",
 				"Put the grapes in a bowl.",
 			],
-			name: "Grapes",
 		},
 		"Apple Chips (Fresh)",
 		"Bananas",
 		{
-			instructions: "Make sure to rinse them off in the sink.",
 			name: "Blackberries",
+			instructions: "Make sure to rinse them off in the sink.",
 		},
 		"Blue Berries",
 		{
-			instructions: "Make sure to rinse them off in the sink.",
 			name: "Cherries",
+			instructions: "Make sure to rinse them off in the sink.",
 		},
 		"Dragon Fruit",
 		{
@@ -32,13 +32,13 @@ export const FRUIT_FOODS = (
 		"Mandarin Oranges",
 		"Pineapple",
 		{
-			instructions: "Make sure to rinse them off in the sink.",
 			name: "Raspberry",
+			instructions: "Make sure to rinse them off in the sink.",
 		},
 		"Sliced Apples",
 		{
-			instructions: "Make sure to rinse them off in the sink.",
 			name: "Strawberries",
+			instructions: "Make sure to rinse them off in the sink.",
 		},
 		"Watermelon",
 		{
@@ -50,9 +50,9 @@ export const FRUIT_FOODS = (
 			prerelease: true,
 		},
 		{
+			name: "Fresh Peach",
 			instructions:
 				"Eat over the sink or a plate. Peaches can be really juicy.",
-			name: "Fresh Peach",
 		},
 		"Canned Peaches",
 		"Fresh Pear",

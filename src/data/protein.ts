@@ -4,9 +4,9 @@ import { buildFood, FoodInput } from "./foods.helpers";
 export const PROTEIN_FOODS = (
 	[
 		{
+			name: "Peanut Butter",
 			instructions:
 				"Just a spoon fool of Peanut Butter can be a good snack.",
-			name: "Peanut Butter",
 		},
 		"Pepperoni",
 		"Protein Bar",

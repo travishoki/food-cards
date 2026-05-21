@@ -12,13 +12,13 @@ export const DESSERT_FOODS = (
 		"Cookie",
 		"Cookie Dough",
 		{
-			locations: [LOCATIONS.restaurant],
 			name: "Cookie Dough Pizza",
+			locations: [LOCATIONS.restaurant],
 		},
 		"Cupcake",
 		{
-			locations: [LOCATIONS["fast-food"]],
 			name: "Frosty",
+			locations: [LOCATIONS["fast-food"]],
 		},
 		{
 			name: "Fruit Pizza",
@@ -35,13 +35,13 @@ export const DESSERT_FOODS = (
 		"Ice Cream",
 		"Mint Brownies",
 		{
-			difficulty: 5,
 			name: "Peach Cobbler",
+			difficulty: 5,
 		},
 		"Peanut Butter Bars",
 		{
-			difficulty: 4,
 			name: "Mochi Cake",
+			difficulty: 4,
 		},
 		{
 			name: "Chocolate Pudding",
@@ -52,24 +52,24 @@ export const DESSERT_FOODS = (
 			prerelease: true,
 		},
 		{
-			instructions: "Whipcream on top is a nice touch!",
 			name: "Jello",
+			instructions: "Whipcream on top is a nice touch!",
 		},
 		{
-			instructions: "Keeps you hydrated on a hot day.",
 			name: "Otter Pop",
-		},
-		{
 			instructions: "Keeps you hydrated on a hot day.",
+		},
+		{
 			name: "Popsicle",
+			instructions: "Keeps you hydrated on a hot day.",
 		},
 		{
-			locations: LOCATIONS["fast-food"],
 			name: "Churro",
+			locations: LOCATIONS["fast-food"],
 		},
 		{
-			difficulty: 3,
 			name: "Smores",
+			difficulty: 3,
 		},
 	] as FoodInput[]
 ).map(buildFood(CATEGORIES.dessert));

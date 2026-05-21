@@ -19,6 +19,7 @@ module.exports = {
         "@typescript-eslint",
         "import",
         "no-only-tests",
+        "perfectionist",
         "promise",
         "react-refresh",
         "sort-destructure-keys",
@@ -54,7 +55,7 @@ module.exports = {
             { avoidEscape: true, allowTemplateLiterals: true },
         ],
         "semi": [2, "always"],
-        "sort-destructure-keys/sort-destructure-keys": 2,
+        "sort-destructure-keys/sort-destructure-keys": "error",
         "sort-keys": "error",
         "yoda": "error",
 
@@ -154,4 +155,21 @@ module.exports = {
     settings: {
         react: { version: "detect" },
     },
+    overrides: [
+        {
+            files: ["src/data/**/*.ts", "src/data/**/*.tsx"],
+            rules: {
+                "sort-keys": "off",
+                "perfectionist/sort-objects": [
+                    "error",
+                    {
+                        type: "alphabetical",
+                        order: "asc",
+                        groups: ["name", "unknown"],
+                        "custom-groups": { name: "name" },
+                    },
+                ],
+            },
+        },
+    ],
 };
