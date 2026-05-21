@@ -6,5 +6,9 @@ export const VEGETABLES_FOODS = (
 		{
 			name: "Carrots",
 		},
+		{
+			name: "Corn on the Cobb",
+			prerelease: true,
+		},
 	] as FoodInput[]
 ).map(buildFood(CATEGORIES.vegetables));

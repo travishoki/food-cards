@@ -55,13 +55,43 @@ export const DESSERT_FOODS = (
 			name: "Mint Brownies",
 		},
 		{
+			difficulty: 5,
 			name: "Peach Cobbler",
 		},
 		{
 			name: "Peanut Butter Bars",
 		},
 		{
+			difficulty: 4,
 			name: "Mochi Cake",
+		},
+		{
+			name: "Chocolate Pudding",
+			prerelease: true,
+		},
+		{
+			name: "Corn Bread",
+			prerelease: true,
+		},
+		{
+			instructions: "Whipcream on top is a nice touch!",
+			name: "Jello",
+		},
+		{
+			instructions: "Keeps you hydrated on a hot day.",
+			name: "Otter Pop",
+		},
+		{
+			instructions: "Keeps you hydrated on a hot day.",
+			name: "Popsicle",
+		},
+		{
+			locations: LOCATIONS["fast-food"],
+			name: "Churro",
+		},
+		{
+			difficulty: 3,
+			name: "Smores",
 		},
 	] as FoodInput[]
 ).map(buildFood(CATEGORIES.dessert));

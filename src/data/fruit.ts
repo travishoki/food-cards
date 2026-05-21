@@ -61,5 +61,13 @@ export const FRUIT_FOODS = (
 		{
 			name: "Watermelon",
 		},
+		{
+			name: "Apple Sauce",
+			prerelease: true,
+		},
+		{
+			name: "Fruit Leathers",
+			prerelease: true,
+		},
 	] as FoodInput[]
 ).map(buildFood(CATEGORIES.fruit));

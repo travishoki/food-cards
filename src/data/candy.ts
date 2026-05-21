@@ -21,5 +21,9 @@ export const CANDY_FOODS = (
 		{
 			name: "Twizzlers",
 		},
+		{
+			name: "Twix",
+			prerelease: true,
+		},
 	] as FoodInput[]
 ).map(buildFood(CATEGORIES.candy));

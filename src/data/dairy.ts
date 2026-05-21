@@ -9,5 +9,13 @@ export const DAIRY_FOODS = (
 		{
 			name: "Gogurt",
 		},
+		{
+			name: "String Cheese",
+			prerelease: true,
+		},
+		{
+			name: "Baby Bell Cheese",
+			prerelease: true,
+		},
 	] as FoodInput[]
 ).map(buildFood(CATEGORIES.dairy));

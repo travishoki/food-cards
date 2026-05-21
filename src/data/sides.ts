@@ -29,9 +29,12 @@ export const SIDES_FOODS = (
 			name: "Bacon",
 		},
 		{
-			difficulty: 2,
 			locations: [LOCATIONS["fast-food"]],
-			name: "Breadsticks",
+			name: "Breadsticks Little Ceasars",
+		},
+		{
+			locations: [LOCATIONS.restaurant],
+			name: "Breadsticks Olive Garden",
 		},
 		{
 			difficulty: 2,
@@ -42,12 +45,14 @@ export const SIDES_FOODS = (
 			name: "Corn Doggies",
 		},
 		{
-			difficulty: 3,
 			name: "Crinkle Cut Fries",
 		},
 		{
-			difficulty: 3,
 			name: "French Fries",
+		},
+		{
+			locations: LOCATIONS["fast-food"],
+			name: "Curly Fries",
 		},
 		{
 			difficulty: 2,

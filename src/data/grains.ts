@@ -10,7 +10,13 @@ export const GRAINS_FOODS = (
 			name: "Banana Bread",
 		},
 		{
-			name: "Blue Berry Muffin",
+			name: "Blue Berry Muffin (Costco)",
+		},
+		{
+			name: "Blue Berry Muffin (Fresh)",
+		},
+		{
+			name: "Poppy Seed Muffin",
 		},
 		{
 			name: "Cheetos",
@@ -39,23 +45,11 @@ export const GRAINS_FOODS = (
 			name: "Japanese Cheesecake",
 		},
 		{
-			instructions: "Whipcream on top is a nice touch!",
-			name: "Jello",
-		},
-		{
 			name: "Lays Classic Chips",
-		},
-		{
-			instructions: "Keeps you hydrated on a hot day.",
-			name: "Otter Pop",
 		},
 		{
 			instructions: 'Press the "poporn" button on the microwave.',
 			name: "Popcorn",
-		},
-		{
-			instructions: "Keeps you hydrated on a hot day.",
-			name: "Popsicle",
 		},
 		{
 			name: "Pretzels (Crunchy)",
@@ -68,6 +62,17 @@ export const GRAINS_FOODS = (
 		},
 		{
 			name: "Tortilla Chips",
+		},
+		{
+			name: "Cheese Nips",
+			prerelease: true,
+		},
+		{
+			name: "Cookie Crisp Cereal",
+		},
+		{
+			name: "Fruit Loops",
+			prerelease: true,
 		},
 	] as FoodInput[]
 ).map(buildFood(CATEGORIES.grains));

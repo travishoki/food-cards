@@ -13,5 +13,15 @@ export const ENTREE_FOODS = (
 		{
 			name: "French Bread Pizza",
 		},
+		{
+			name: "Tortilla Pizza",
+		},
+		{
+			name: "Bread Pizza",
+		},
+		{
+			name: "Pigs in a Blanket",
+			prerelease: true,
+		},
 	] as FoodInput[]
 ).map(buildFood(CATEGORIES.entree));

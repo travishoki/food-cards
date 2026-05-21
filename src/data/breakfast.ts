@@ -1,5 +1,6 @@
 import { CATEGORIES } from "./categories";
 import { buildFood, FoodInput } from "./foods.helpers";
+import { LOCATIONS } from "./locations.const";
 
 export const BREAKFAST_FOODS = (
 	[
@@ -42,6 +43,10 @@ export const BREAKFAST_FOODS = (
 			name: "French Toast",
 			recipe_link:
 				"https://www.mccormick.com/recipes/breakfast-brunch/quick-and-easy-french-toast",
+		},
+		{
+			locations: LOCATIONS["fast-food"],
+			name: "French Toast Sticks",
 		},
 		{
 			difficulty: 4,
