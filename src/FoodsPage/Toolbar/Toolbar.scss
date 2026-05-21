@@ -58,6 +58,12 @@
 	position: relative;
 }
 
+.tray-contents {
+	margin: 0 auto;
+	max-width: 600px;
+	width: 100%;
+}
+
 .toolbar__close {
 	align-items: center;
 	background: transparent;

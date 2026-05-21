@@ -94,35 +94,37 @@ export const Toolbar = ({
 					>
 						<CloseIcon />
 					</button>
-					{openPanel === "filter" && (
-						<>
-							<CategoryMenu />
-							<DifficultyFilter
-								onChange={onDifficultyChange}
-								value={difficulty}
+					<div className="tray-contents">
+						{openPanel === "filter" && (
+							<>
+								<CategoryMenu />
+								<DifficultyFilter
+									onChange={onDifficultyChange}
+									value={difficulty}
+								/>
+								<LocationFilter
+									onChange={onLocationChange}
+									value={location}
+								/>
+							</>
+						)}
+						{openPanel === "search" && (
+							<SearchInput
+								onClose={close}
+								onDebouncedChange={onDebouncedSearchChange}
+								resetKey={searchResetKey}
 							/>
-							<LocationFilter
-								onChange={onLocationChange}
-								value={location}
-							/>
-						</>
-					)}
-					{openPanel === "search" && (
-						<SearchInput
-							onClose={close}
-							onDebouncedChange={onDebouncedSearchChange}
-							resetKey={searchResetKey}
-						/>
-					)}
-					{openPanel === "sort" && (
-						<SortPanel onChange={onSortChange} value={sort} />
-					)}
-					{openPanel === "settings" && (
-						<>
-							<CardViewToggle />
-							<PrereleaseToggle />
-						</>
-					)}
+						)}
+						{openPanel === "sort" && (
+							<SortPanel onChange={onSortChange} value={sort} />
+						)}
+						{openPanel === "settings" && (
+							<>
+								<CardViewToggle />
+								<PrereleaseToggle />
+							</>
+						)}
+					</div>
 				</div>
 			)}
 		</div>
