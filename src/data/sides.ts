@@ -31,6 +31,7 @@ export const SIDES_FOODS = (
 		{
 			locations: [LOCATIONS["fast-food"]],
 			name: "Breadsticks Little Ceasars",
+			prerelease: true,
 		},
 		{
 			locations: [LOCATIONS.restaurant],
