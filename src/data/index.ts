@@ -1,14 +1,14 @@
-import { BREAKFAST_FOODS } from "./breakfast";
-import { DAIRY_FOODS } from "./dairy";
-import { DRINKS_FOODS } from "./drinks";
-import { ENTREE_FOODS } from "./entree";
-import { FRUIT_FOODS } from "./fruit";
-import { GRAINS_FOODS } from "./grains";
-import { PROTEIN_FOODS } from "./protein";
-import { SIDES_FOODS } from "./sides";
+import { DRINKS_FOODS } from "./drinks/drinks";
+import { BREAKFAST_FOODS } from "./main/breakfast";
+import { ENTREE_FOODS } from "./main/entree";
+import { SIDES_FOODS } from "./sides/sides";
+import { DAIRY_FOODS } from "./snack/dairy";
+import { FRUIT_FOODS } from "./snack/fruit";
+import { GRAINS_FOODS } from "./snack/grains";
+import { PROTEIN_FOODS } from "./snack/protein";
+import { VEGETABLES_FOODS } from "./snack/vegetables";
 import { CANDY_FOODS } from "./sweets/candy";
 import { DESSERT_FOODS } from "./sweets/dessert";
-import { VEGETABLES_FOODS } from "./vegetables";
 
 export const FOODS = [
 	...BREAKFAST_FOODS,
