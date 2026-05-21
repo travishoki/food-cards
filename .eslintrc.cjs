@@ -157,7 +157,7 @@ module.exports = {
     },
     overrides: [
         {
-            files: ["src/data/**/*.ts", "src/data/**/*.tsx"],
+            files: ["src/data/**/*.ts"],
             rules: {
                 "sort-keys": "off",
                 "perfectionist/sort-objects": [
