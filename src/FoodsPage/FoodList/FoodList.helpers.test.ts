@@ -27,7 +27,12 @@ jest.mock("../../data", () => ({
 			image_url: "",
 			name: "Donut",
 		},
-		{ category_key: "breakfast", image_url: "", name: "Eggs" },
+		{
+			category_key: "breakfast",
+			difficulty: 4,
+			image_url: "",
+			name: "Eggs",
+		},
 	],
 }));
 
@@ -155,6 +160,24 @@ describe("getVisibleFoods", () => {
 					(f) => f.name,
 				),
 			).toEqual(["Carrot", "Banana", "Apple"]);
+		});
+
+		it("sorts ascending by difficulty when sort is 'difficulty-asc'", () => {
+			// Difficulties: Apple=1, Banana=2, Carrot=1, Donut=3, Eggs=4
+			expect(
+				getVisibleFoods({ search: "", sort: "difficulty-asc" }).map(
+					(f) => f.name,
+				),
+			).toEqual(["Apple", "Carrot", "Banana", "Donut", "Eggs"]);
+		});
+
+		it("breaks difficulty ties alphabetically", () => {
+			// Apple and Carrot both have difficulty 1 → alpha order.
+			const names = getVisibleFoods({
+				search: "",
+				sort: "difficulty-asc",
+			}).map((f) => f.name);
+			expect(names.slice(0, 2)).toEqual(["Apple", "Carrot"]);
 		});
 	});
 

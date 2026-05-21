@@ -2,7 +2,7 @@ import { FilterSection } from "../../FilterSection/FilterSection";
 
 import "./SortPanel.scss";
 
-export type SortDirection = "asc" | "desc";
+export type SortDirection = "asc" | "desc" | "difficulty-asc";
 
 type SortPanelProps = {
 	onChange: (dir: SortDirection) => void;
@@ -15,6 +15,7 @@ const OPTIONS: {
 }[] = [
 	{ dir: "asc", label: "A → Z" },
 	{ dir: "desc", label: "Z → A" },
+	{ dir: "difficulty-asc", label: "Easy → Hard" },
 ];
 
 export const SortPanel = ({ onChange, value }: SortPanelProps) => (

@@ -55,6 +55,12 @@ export const getVisibleFoods = ({
 	if (q) result = result.filter((f) => f.name.toLowerCase().includes(q));
 
 	return [...result].sort((a, b) => {
+		if (sort === "difficulty-asc") {
+			const cmp = a.difficulty - b.difficulty;
+
+			return cmp !== 0 ? cmp : a.name.localeCompare(b.name);
+		}
+
 		const cmp = a.name.localeCompare(b.name);
 
 		return sort === "asc" ? cmp : -cmp;
