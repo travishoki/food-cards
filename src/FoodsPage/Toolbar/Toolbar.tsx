@@ -10,6 +10,7 @@ import { SortDirection, SortPanel } from "./SortPanel";
 import { CardViewToggle } from "../../CardViewToggle/CardViewToggle";
 import { PrereleaseToggle } from "../../CardViewToggle/PrereleaseToggle";
 import { CategoryMenu } from "../../CategoryMenu/CategoryMenu";
+import { isEatingOut } from "../../data/locations.helpers";
 import { CloseIcon } from "../../icons/CloseIcon";
 import { SearchInput } from "../SearchInput/SearchInput";
 
@@ -97,15 +98,17 @@ export const Toolbar = ({
 					<div className="tray-contents">
 						{openPanel === "filter" && (
 							<>
-								<CategoryMenu />
-								<DifficultyFilter
-									onChange={onDifficultyChange}
-									value={difficulty}
-								/>
 								<LocationFilter
 									onChange={onLocationChange}
 									value={location}
 								/>
+								<CategoryMenu />
+								{!isEatingOut(location) && (
+									<DifficultyFilter
+										onChange={onDifficultyChange}
+										value={difficulty}
+									/>
+								)}
 							</>
 						)}
 						{openPanel === "search" && (

@@ -36,10 +36,7 @@ export const FoodsPage = () => {
 	const handleLocationChange = useCallback((value: Location | null) => {
 		setLocation(value);
 
-		const eatingOut =
-			value === LOCATIONS["fast-food"] || value === LOCATIONS.restaurant;
-
-		if (eatingOut) {
+		if (isEatingOut(value)) {
 			setDifficulty(null);
 		}
 	}, []);
