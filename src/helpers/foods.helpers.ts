@@ -1,7 +1,7 @@
+import { LOCATIONS } from "../const/locations.const";
+import { TOP_CATEGORY_SUBCATEGORIES } from "../data/categories";
 import { toFoodSlug } from "../helpers";
 import { Food } from "../types";
-import { TOP_CATEGORY_SUBCATEGORIES } from "./categories";
-import { LOCATIONS } from "./locations.const";
 
 type FoodInputObject = Omit<
 	Food,

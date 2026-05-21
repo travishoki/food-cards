@@ -3,7 +3,7 @@ import {
 	LOCATION_DATA,
 	LOCATION_ORDER,
 	Location,
-} from "../../data/locations.const";
+} from "../../const/locations.const";
 
 import "./DifficultyFilter.scss";
 

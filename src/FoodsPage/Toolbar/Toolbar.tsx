@@ -10,7 +10,7 @@ import { SortDirection, SortPanel } from "./SortPanel";
 import { CardViewToggle } from "../../CardViewToggle/CardViewToggle";
 import { PrereleaseToggle } from "../../CardViewToggle/PrereleaseToggle";
 import { CategoryMenu } from "../../CategoryMenu/CategoryMenu";
-import { isEatingOut } from "../../data/locations.helpers";
+import { isEatingOut } from "../../helpers/locations.helpers";
 import { CloseIcon } from "../../icons/CloseIcon";
 import { SearchInput } from "../SearchInput/SearchInput";
 

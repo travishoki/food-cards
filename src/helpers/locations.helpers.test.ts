@@ -1,5 +1,5 @@
-import { LOCATIONS } from "./locations.const";
 import { isEatingOut } from "./locations.helpers";
+import { LOCATIONS } from "../const/locations.const";
 
 describe("isEatingOut", () => {
 	it("returns true for fast-food", () => {

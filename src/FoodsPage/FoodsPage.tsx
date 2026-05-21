@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 
+import { LOCATIONS } from "../const/locations.const";
 import { useFoodFilters } from "../context/foodFilters";
-import { LOCATIONS } from "../data/locations.const";
 import { BackToTop } from "./BackToTop/BackToTop";
 import { FoodList } from "./FoodList/FoodList";
 import { Toolbar } from "./Toolbar/Toolbar";

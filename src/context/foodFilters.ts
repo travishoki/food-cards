@@ -2,7 +2,7 @@ import { createContext, useContext } from "react";
 
 import { Difficulty } from "../FoodsPage/Toolbar/DifficultyFilter";
 import { SortDirection } from "../FoodsPage/Toolbar/SortPanel";
-import { Location } from "../data/locations.const";
+import { Location } from "../const/locations.const";
 
 type FoodFiltersContextValue = {
 	difficulty: Difficulty | null;

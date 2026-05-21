@@ -1,5 +1,5 @@
 import { CATEGORIES } from "./categories";
-import { buildFood, FoodInput } from "./foods.helpers";
+import { buildFood, FoodInput } from "../helpers/foods.helpers";
 
 export const PROTEIN_FOODS = (
 	[

@@ -3,8 +3,8 @@ import { ReactNode, useCallback, useState } from "react";
 import { FoodFiltersContext } from "./foodFilters";
 import { Difficulty } from "../FoodsPage/Toolbar/DifficultyFilter";
 import { SortDirection } from "../FoodsPage/Toolbar/SortPanel";
-import { LOCATIONS, Location } from "../data/locations.const";
-import { isEatingOut } from "../data/locations.helpers";
+import { LOCATIONS, Location } from "../const/locations.const";
+import { isEatingOut } from "../helpers/locations.helpers";
 
 export const FoodFiltersProvider = ({ children }: { children: ReactNode }) => {
 	const [search, setSearch] = useState("");
