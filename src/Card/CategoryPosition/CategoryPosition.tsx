@@ -1,4 +1,4 @@
-import { POSITIONS } from "../../data/positions";
+import { POSITIONS } from "../../const/positions";
 
 import "./CategoryPosition.scss";
 

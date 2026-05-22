@@ -1,4 +1,4 @@
-import { FOODS } from "./index";
+import { FOODS } from "../data/index";
 
 type Position = {
 	index: number;
