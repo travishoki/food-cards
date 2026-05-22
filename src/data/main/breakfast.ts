@@ -1,6 +1,6 @@
+import { CATEGORIES } from "../../const/categories";
 import { LOCATIONS } from "../../const/locations.const";
 import { buildFood, FoodInput } from "../../helpers/foods.helpers";
-import { CATEGORIES } from "../categories";
 
 export const BREAKFAST_FOODS = (
 	[

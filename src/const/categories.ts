@@ -74,7 +74,7 @@ export {
 	PROTEIN_CATEGORY_DATA,
 	SIDES_CATEGORY_DATA,
 	VEGETABLES_CATEGORY_DATA,
-} from "../const/categories.const";
+} from "./categories.const";
 
 import {
 	BREAKFAST_CATEGORY_DATA,
@@ -88,7 +88,7 @@ import {
 	PROTEIN_CATEGORY_DATA,
 	SIDES_CATEGORY_DATA,
 	VEGETABLES_CATEGORY_DATA,
-} from "../const/categories.const";
+} from "./categories.const";
 
 export const CATEGORY_DATA: Record<string, { label: string }> = {
 	[CATEGORIES.breakfast]: BREAKFAST_CATEGORY_DATA,

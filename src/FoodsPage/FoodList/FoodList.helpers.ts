@@ -1,6 +1,6 @@
+import { TOP_CATEGORY_SUBCATEGORIES } from "../../const/categories";
 import { PrereleaseMode } from "../../context/cardView";
 import { FOODS } from "../../data";
-import { TOP_CATEGORY_SUBCATEGORIES } from "../../data/categories";
 import { Food } from "../../types";
 import { Difficulty } from "../Toolbar/DifficultyFilter";
 import { Location } from "../Toolbar/LocationFilter";

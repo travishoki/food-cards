@@ -1,5 +1,5 @@
+import { TOP_CATEGORY_SUBCATEGORIES } from "../const/categories";
 import { LOCATIONS } from "../const/locations.const";
-import { TOP_CATEGORY_SUBCATEGORIES } from "../data/categories";
 import { toFoodSlug } from "../helpers";
 import { Food } from "../types";
 

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import { CATEGORY_DATA, TOP_CATEGORY_DATA } from "../../data/categories";
+import { CATEGORY_DATA, TOP_CATEGORY_DATA } from "../../const/categories";
 
 type CategoryClearLinkProps = {
 	subCategory?: string;

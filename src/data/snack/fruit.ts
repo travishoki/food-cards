@@ -1,5 +1,5 @@
+import { CATEGORIES } from "../../const/categories";
 import { buildFood, FoodInput } from "../../helpers/foods.helpers";
-import { CATEGORIES } from "../categories";
 
 export const FRUIT_FOODS = (
 	[
