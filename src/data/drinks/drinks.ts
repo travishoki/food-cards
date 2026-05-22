@@ -3,6 +3,10 @@ import { LOCATIONS } from "../../const/locations.const";
 import { buildFood, FoodInput } from "../../helpers/foods.helpers";
 
 const items = [
+	{
+		name: "Chick-fil-A Lemon Freeze",
+		locations: [LOCATIONS["fast-food"]],
+	},
 	"Chocolate Milk",
 	{
 		name: "Frazzle",
@@ -14,6 +18,7 @@ const items = [
 		instructions:
 			"Important to get electrolites when excercising and paying hard.",
 	},
+	"Hi-C Fruit Punch",
 	"Horchata",
 	"Hot Chocolate",
 	"Kool-Aid",
@@ -26,9 +31,13 @@ const items = [
 			"Important to get electrolites when excercising and paying hard.",
 	},
 	{
-		name: "Root Beer",
+		name: "Rootbeer",
 		instructions:
 			"Great Grandpa Grovers favorite drinks! It will fix all that ails you!",
+	},
+	{
+		name: "Rootbeer Freeze - Taco Amigo",
+		locations: [LOCATIONS["fast-food"]],
 	},
 	{
 		name: "Slurpee",

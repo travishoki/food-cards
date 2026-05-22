@@ -4,6 +4,8 @@ import { buildFood, FoodInput } from "../../helpers/foods.helpers";
 const items = [
 	"Andes Mints",
 	"Dubai Chocolate",
+	"Fruit Loll-ups",
+	"Fruit Snacks",
 	"KitKat",
 	"Milk Chocolate",
 	"Nutella",

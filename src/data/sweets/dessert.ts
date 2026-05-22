@@ -25,8 +25,13 @@ const items = [
 		name: "Corn Bread",
 		prerelease: true,
 	},
+	{
+		name: "Costa Vida Cinnamon Tortilla",
+		locations: [LOCATIONS.restaurant],
+	},
 	"Cupcake",
 	"Donut",
+	"Donut Holes",
 	{
 		name: "Frosty",
 		locations: [LOCATIONS["fast-food"]],
@@ -49,10 +54,13 @@ const items = [
 		instructions: "Whipcream on top is a nice touch!",
 	},
 	"Mint Brownies",
+	"Mochi",
 	{
 		name: "Mochi Cake",
 		difficulty: 4,
 	},
+	"Mochi Ice Cream",
+	"Orange Roll",
 	{
 		name: "Otter Pop",
 		instructions: "Keeps you hydrated on a hot day.",
@@ -66,9 +74,19 @@ const items = [
 		name: "Popsicle",
 		instructions: "Keeps you hydrated on a hot day.",
 	},
+	"Rice Crispy Treat",
+	"Rootbeer Float",
 	{
 		name: "Smores",
 		difficulty: 3,
+	},
+	{
+		name: "Sonic Cream Slush",
+		locations: [LOCATIONS["fast-food"]],
+	},
+	{
+		name: "Taco Bell Cinnamon Twists",
+		locations: [LOCATIONS["fast-food"]],
 	},
 ] as FoodInput[];
 

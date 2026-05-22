@@ -4,9 +4,14 @@ import { buildFood, FoodInput } from "../../helpers/foods.helpers";
 
 const items = [
 	{
+		name: "Aunty Anne's Pretzels",
+		locations: [LOCATIONS["fast-food"]],
+	},
+	{
 		name: "Bacon",
 		difficulty: 3,
 	},
+	"Bagel with Spread",
 	{
 		name: "Breadsticks Little Ceasars",
 		locations: [LOCATIONS["fast-food"]],
@@ -21,13 +26,30 @@ const items = [
 		difficulty: 2,
 	},
 	{
+		name: "Chick-fil-A Waffle Fries",
+		locations: [LOCATIONS["fast-food"]],
+	},
+	"Cinnamon Bites",
+	{
 		name: "Corn Doggies",
 		difficulty: 2,
+	},
+	{
+		name: "Cresaunts",
+		prerelease: true,
 	},
 	"Crinkle Cut Fries",
 	{
 		name: "Curly Fries",
 		locations: LOCATIONS["fast-food"],
+	},
+	{
+		name: "Dairy Queen Pretzels",
+		locations: [LOCATIONS["fast-food"]],
+	},
+	{
+		name: "Del Taco Crickle Cut Fries",
+		locations: [LOCATIONS["fast-food"]],
 	},
 	"French Fries",
 	{
@@ -38,6 +60,7 @@ const items = [
 			"Flip over and toast again to make it extra crunchy.",
 		],
 	},
+	"Hashbrowns (shredded)",
 	{
 		name: "Mashed Potatoes",
 		difficulty: 3,
@@ -48,6 +71,7 @@ const items = [
 			"Add milk & flakes: Stir in the cold milk, then gently add the potato flakes.",
 		],
 	},
+	"Pumpkin Bread",
 	{
 		name: "Scrambled Eggs",
 		difficulty: 3,
@@ -60,6 +84,11 @@ const items = [
 		],
 	},
 	{
+		name: "Sonia Pretzle Twists",
+		locations: [LOCATIONS["fast-food"]],
+	},
+	"Sour Dough Bread",
+	{
 		name: "Steak Fries",
 		difficulty: 2,
 		instructions: "Extra yummy with Red Robbin seasoning.",
@@ -67,6 +96,10 @@ const items = [
 	{
 		name: "Tater Tots",
 		difficulty: 2,
+	},
+	{
+		name: "Texas Road House Roll",
+		locations: [LOCATIONS.restaurant],
 	},
 	{
 		name: "Texas Toast",
