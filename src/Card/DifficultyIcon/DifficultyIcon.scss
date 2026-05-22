@@ -1,7 +1,7 @@
 .difficulty-icon {
 	bottom: var(--difficulty-icon-bottom);
 	height: var(--difficulty-icon-size);
-	right: var(--padding-left);
+	right: var(--card-inner-padding);
 	position: absolute;
 	width: var(--difficulty-icon-size);
 	z-index: 2;

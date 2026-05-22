@@ -38,68 +38,30 @@ export const CATEGORIES = {
 	vegetables: "vegetables",
 };
 
-export const DRINKS_CATEGORY_ORDER = [CATEGORIES.drinks];
-
-export const MAIN_CATEGORY_ORDER = [CATEGORIES.breakfast, CATEGORIES.entree];
-
-export const SIDES_CATEGORY_ORDER = [CATEGORIES.sides];
-
-export const SNACK_CATEGORY_ORDER = [
-	CATEGORIES.dairy,
-	CATEGORIES.fruit,
-	CATEGORIES.grains,
-	CATEGORIES.protein,
-	CATEGORIES.vegetables,
-];
-
-export const SWEETS_CATEGORY_ORDER = [CATEGORIES.candy, CATEGORIES.dessert];
-
 export const TOP_CATEGORY_SUBCATEGORIES: Record<TopCategoryKey, string[]> = {
-	drinks: DRINKS_CATEGORY_ORDER,
-	main: MAIN_CATEGORY_ORDER,
-	sides: SIDES_CATEGORY_ORDER,
-	snack: SNACK_CATEGORY_ORDER,
-	sweets: SWEETS_CATEGORY_ORDER,
+	drinks: [CATEGORIES.drinks],
+	main: [CATEGORIES.breakfast, CATEGORIES.entree],
+	sides: [CATEGORIES.sides],
+	snack: [
+		CATEGORIES.dairy,
+		CATEGORIES.fruit,
+		CATEGORIES.grains,
+		CATEGORIES.protein,
+		CATEGORIES.vegetables,
+	],
+	sweets: [CATEGORIES.candy, CATEGORIES.dessert],
 };
 
-export {
-	BREAKFAST_CATEGORY_DATA,
-	CANDY_CATEGORY_DATA,
-	DAIRY_CATEGORY_DATA,
-	DESSERT_CATEGORY_DATA,
-	DRINKS_CATEGORY_DATA,
-	ENTREE_CATEGORY_DATA,
-	FRUIT_CATEGORY_DATA,
-	GRAINS_CATEGORY_DATA,
-	PROTEIN_CATEGORY_DATA,
-	SIDES_CATEGORY_DATA,
-	VEGETABLES_CATEGORY_DATA,
-} from "./categories.const";
-
-import {
-	BREAKFAST_CATEGORY_DATA,
-	CANDY_CATEGORY_DATA,
-	DAIRY_CATEGORY_DATA,
-	DESSERT_CATEGORY_DATA,
-	DRINKS_CATEGORY_DATA,
-	ENTREE_CATEGORY_DATA,
-	FRUIT_CATEGORY_DATA,
-	GRAINS_CATEGORY_DATA,
-	PROTEIN_CATEGORY_DATA,
-	SIDES_CATEGORY_DATA,
-	VEGETABLES_CATEGORY_DATA,
-} from "./categories.const";
-
 export const CATEGORY_DATA: Record<string, { label: string }> = {
-	[CATEGORIES.breakfast]: BREAKFAST_CATEGORY_DATA,
-	[CATEGORIES.candy]: CANDY_CATEGORY_DATA,
-	[CATEGORIES.dairy]: DAIRY_CATEGORY_DATA,
-	[CATEGORIES.dessert]: DESSERT_CATEGORY_DATA,
-	[CATEGORIES.drinks]: DRINKS_CATEGORY_DATA,
-	[CATEGORIES.entree]: ENTREE_CATEGORY_DATA,
-	[CATEGORIES.fruit]: FRUIT_CATEGORY_DATA,
-	[CATEGORIES.grains]: GRAINS_CATEGORY_DATA,
-	[CATEGORIES.protein]: PROTEIN_CATEGORY_DATA,
-	[CATEGORIES.sides]: SIDES_CATEGORY_DATA,
-	[CATEGORIES.vegetables]: VEGETABLES_CATEGORY_DATA,
+	[CATEGORIES.breakfast]: { label: "Breakfast" },
+	[CATEGORIES.candy]: { label: "Candy" },
+	[CATEGORIES.dairy]: { label: "Dairy" },
+	[CATEGORIES.dessert]: { label: "Dessert" },
+	[CATEGORIES.drinks]: { label: "Drinks" },
+	[CATEGORIES.entree]: { label: "Lunch/Dinner" },
+	[CATEGORIES.fruit]: { label: "Fruit" },
+	[CATEGORIES.grains]: { label: "Grain/Bread" },
+	[CATEGORIES.protein]: { label: "Protein" },
+	[CATEGORIES.sides]: { label: "Sides" },
+	[CATEGORIES.vegetables]: { label: "Vegetables" },
 };

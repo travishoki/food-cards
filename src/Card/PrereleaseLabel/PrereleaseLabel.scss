@@ -5,7 +5,7 @@
 	font-weight: 900;
 	letter-spacing: 0.05em;
 	position: absolute;
-	right: calc(var(--padding-left) * 1.5);
+	right: calc(var(--card-inner-padding) * 1.5);
 	text-shadow:
 		0 2px 4px rgba(0, 0, 0, 0.8),
 		0 0 2px rgba(0, 0, 0, 0.9);

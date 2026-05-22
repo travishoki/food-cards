@@ -6,30 +6,11 @@ import {
 	CARD_DETAIL_MAX_WIDTH,
 	CARD_GUTTER,
 	CARD_MAX_VIEWPORT,
-	PADDING_LEFT,
 	PAGE_SIDE_PADDING,
 } from "./Card.const";
 
-export const getCardRatio = (cardW: number) => {
-	return cardW / BACKGROUND_WIDTH;
-};
-
-export const getCardHeight = (cardW: number) => {
-	const wRatio = getCardRatio(cardW);
-	const height = BACKGROUND_HEIGHT * wRatio;
-
-	return height;
-};
-
-export const getCenteredLeft = (itemWidth: number, fullWidth: number) => {
-	return (fullWidth - itemWidth) / 2;
-};
-
-export const getSidePadding = (cardRatio: number) => {
-	const left = PADDING_LEFT * cardRatio;
-
-	return left;
-};
+export const getCardHeight = (cardW: number) =>
+	cardW * (BACKGROUND_HEIGHT / BACKGROUND_WIDTH);
 
 export const getDetailCardWidth = (viewportWidth: number) =>
 	Math.min(viewportWidth - 2 * PAGE_SIDE_PADDING, CARD_DETAIL_MAX_WIDTH);

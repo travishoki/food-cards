@@ -16,5 +16,3 @@ export type Food = {
 	slug: string;
 	toppings?: string[];
 };
-
-export type MenuSelection = "all" | string;

@@ -1,6 +1,6 @@
+import { toFoodSlug } from "./slug.helpers";
 import { TOP_CATEGORY_SUBCATEGORIES } from "../const/categories";
 import { LOCATIONS } from "../const/locations.const";
-import { toFoodSlug } from "../helpers";
 import { Food } from "../types";
 
 type FoodInputObject = Omit<

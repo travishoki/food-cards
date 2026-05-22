@@ -1,9 +1,9 @@
 .card-info {
 	bottom: var(--card-bottom-padding);
-	left: var(--padding-left);
+	left: var(--card-inner-padding);
 	overflow: hidden;
 	position: absolute;
-	right: var(--padding-left);
+	right: var(--card-inner-padding);
 	top: var(--card-info-top);
 	z-index: 2;
 }

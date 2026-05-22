@@ -1,4 +1,4 @@
-import { foodBySlug } from "./helpers";
+import { foodBySlug } from "./slug.helpers";
 
 describe("foodBySlug", () => {
 	const foods = [

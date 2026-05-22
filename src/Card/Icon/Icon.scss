@@ -1,7 +1,7 @@
 .iconImg {
 	height: var(--icon-size);
 	position: absolute;
-	right: calc(var(--padding-left) + var(--icon-padding));
+	right: calc(var(--card-inner-padding) + var(--icon-padding));
 	top: var(--icon-top);
 	width: var(--icon-size);
 	z-index: 2;
