@@ -7,11 +7,11 @@ const items = [
 	"KitKat",
 	"Milk Chocolate",
 	"Nutella",
-	"Twizzlers",
 	{
 		name: "Twix",
 		prerelease: true,
 	},
+	"Twizzlers",
 ] as FoodInput[];
 
 export const CANDY_FOODS = items.map(buildFood(CATEGORIES.candy, items.length));

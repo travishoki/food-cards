@@ -25,6 +25,10 @@ const items = [
 		],
 	},
 	{
+		name: "Eggo Waffles",
+		instructions: ["Cook in the toaster", "Spread butter", "Add syrup"],
+	},
+	{
 		name: "French Toast",
 		difficulty: 4,
 		ingredients: [
@@ -46,6 +50,10 @@ const items = [
 	{
 		name: "French Toast Sticks",
 		locations: LOCATIONS["fast-food"],
+	},
+	{
+		name: "Fresh Waffles",
+		difficulty: 4,
 	},
 	{
 		name: "Pancakes",
@@ -88,14 +96,6 @@ const items = [
 			"Whipped Cream",
 			"Powdered Sugar",
 		],
-	},
-	{
-		name: "Fresh Waffles",
-		difficulty: 4,
-	},
-	{
-		name: "Eggo Waffles",
-		instructions: ["Cook in the toaster", "Spread butter", "Add syrup"],
 	},
 ] as FoodInput[];
 

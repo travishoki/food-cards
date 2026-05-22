@@ -3,10 +3,17 @@ import { LOCATIONS } from "../../const/locations.const";
 import { buildFood, FoodInput } from "../../helpers/foods.helpers";
 
 const items = [
-	"Donut",
 	"Apple Pie",
 	"Brownies",
 	"Chocolate Pie",
+	{
+		name: "Chocolate Pudding",
+		prerelease: true,
+	},
+	{
+		name: "Churro",
+		locations: LOCATIONS["fast-food"],
+	},
 	"Cinnamon Roll",
 	"Cookie",
 	"Cookie Dough",
@@ -14,7 +21,12 @@ const items = [
 		name: "Cookie Dough Pizza",
 		locations: [LOCATIONS.restaurant],
 	},
+	{
+		name: "Corn Bread",
+		prerelease: true,
+	},
 	"Cupcake",
+	"Donut",
 	{
 		name: "Frosty",
 		locations: [LOCATIONS["fast-food"]],
@@ -32,39 +44,27 @@ const items = [
 		],
 	},
 	"Ice Cream",
-	"Mint Brownies",
-	{
-		name: "Peach Cobbler",
-		difficulty: 5,
-	},
-	"Peanut Butter Bars",
-	{
-		name: "Mochi Cake",
-		difficulty: 4,
-	},
-	{
-		name: "Chocolate Pudding",
-		prerelease: true,
-	},
-	{
-		name: "Corn Bread",
-		prerelease: true,
-	},
 	{
 		name: "Jello",
 		instructions: "Whipcream on top is a nice touch!",
+	},
+	"Mint Brownies",
+	{
+		name: "Mochi Cake",
+		difficulty: 4,
 	},
 	{
 		name: "Otter Pop",
 		instructions: "Keeps you hydrated on a hot day.",
 	},
 	{
+		name: "Peach Cobbler",
+		difficulty: 5,
+	},
+	"Peanut Butter Bars",
+	{
 		name: "Popsicle",
 		instructions: "Keeps you hydrated on a hot day.",
-	},
-	{
-		name: "Churro",
-		locations: LOCATIONS["fast-food"],
 	},
 	{
 		name: "Smores",

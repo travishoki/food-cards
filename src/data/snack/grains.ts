@@ -6,7 +6,10 @@ const items = [
 	"Banana Bread",
 	"Blue Berry Muffin (Costco)",
 	"Blue Berry Muffin (Fresh)",
-	"Poppy Seed Muffin",
+	{
+		name: "Cheese Nips",
+		prerelease: true,
+	},
 	"Cheetos",
 	"Chocolate Muffin",
 	{
@@ -17,7 +20,12 @@ const items = [
 			"Mix & Sprinkle: Sprinkle cinnamon-sugar over the buttered toast.",
 		],
 	},
+	"Cookie Crisp Cereal",
 	"Doritos",
+	{
+		name: "Fruit Loops",
+		prerelease: true,
+	},
 	"Graham Crackers",
 	"Granola Bar",
 	"Japanese Cheesecake",
@@ -26,19 +34,11 @@ const items = [
 		name: "Popcorn",
 		instructions: 'Press the "poporn" button on the microwave.',
 	},
+	"Poppy Seed Muffin",
 	"Pretzels (Crunchy)",
 	"Rolls",
 	"Soft Pretzels",
 	"Tortilla Chips",
-	{
-		name: "Cheese Nips",
-		prerelease: true,
-	},
-	"Cookie Crisp Cereal",
-	{
-		name: "Fruit Loops",
-		prerelease: true,
-	},
 ] as FoodInput[];
 
 export const GRAINS_FOODS = items.map(

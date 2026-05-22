@@ -3,7 +3,6 @@ import { LOCATIONS } from "../../const/locations.const";
 import { buildFood, FoodInput } from "../../helpers/foods.helpers";
 
 const items = [
-	"Milk",
 	"Chocolate Milk",
 	{
 		name: "Frazzle",
@@ -15,9 +14,11 @@ const items = [
 		instructions:
 			"Important to get electrolites when excercising and paying hard.",
 	},
+	"Horchata",
 	"Hot Chocolate",
 	"Kool-Aid",
 	"Lemonade",
+	"Milk",
 	"Orange Julius",
 	{
 		name: "Powerade",
@@ -36,7 +37,6 @@ const items = [
 	},
 	"Sprite",
 	"Sunny D",
-	"Horchata",
 ] as FoodInput[];
 
 export const DRINKS_FOODS = items.map(

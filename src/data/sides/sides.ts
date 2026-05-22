@@ -4,26 +4,6 @@ import { buildFood, FoodInput } from "../../helpers/foods.helpers";
 
 const items = [
 	{
-		name: "Mashed Potatoes",
-		difficulty: 3,
-		ingredients: ["Water", "Milk", "Butter", "Potato flakes"],
-		instructions: [
-			"Boil liquid: In a saucepan, bring the water, butter, and salt to a boil.",
-			"Remove heat: Take the saucepan off the heat source.",
-			"Add milk & flakes: Stir in the cold milk, then gently add the potato flakes.",
-		],
-	},
-	{
-		name: "Texas Toast",
-		cookTime: {
-			instructions: "Cook in oven",
-			time: "8m",
-		},
-		difficulty: 3,
-		info: "Preheat oven to 425°",
-		instructions: "Put parchment on a cooking sheet.",
-	},
-	{
 		name: "Bacon",
 		difficulty: 3,
 	},
@@ -45,17 +25,27 @@ const items = [
 		difficulty: 2,
 	},
 	"Crinkle Cut Fries",
-	"French Fries",
 	{
 		name: "Curly Fries",
 		locations: LOCATIONS["fast-food"],
 	},
+	"French Fries",
 	{
 		name: "Hashbrown",
 		difficulty: 2,
 		instructions: [
 			"Toast in the toaster.",
 			"Flip over and toast again to make it extra crunchy.",
+		],
+	},
+	{
+		name: "Mashed Potatoes",
+		difficulty: 3,
+		ingredients: ["Water", "Milk", "Butter", "Potato flakes"],
+		instructions: [
+			"Boil liquid: In a saucepan, bring the water, butter, and salt to a boil.",
+			"Remove heat: Take the saucepan off the heat source.",
+			"Add milk & flakes: Stir in the cold milk, then gently add the potato flakes.",
 		],
 	},
 	{
@@ -77,6 +67,16 @@ const items = [
 	{
 		name: "Tater Tots",
 		difficulty: 2,
+	},
+	{
+		name: "Texas Toast",
+		cookTime: {
+			instructions: "Cook in oven",
+			time: "8m",
+		},
+		difficulty: 3,
+		info: "Preheat oven to 425°",
+		instructions: "Put parchment on a cooking sheet.",
 	},
 ] as FoodInput[];
 

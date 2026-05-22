@@ -2,14 +2,14 @@ import { CATEGORIES } from "../../const/categories";
 import { buildFood, FoodInput } from "../../helpers/foods.helpers";
 
 const items = [
-	"Grated Cheese",
-	"Gogurt",
-	{
-		name: "String Cheese",
-		prerelease: true,
-	},
 	{
 		name: "Baby Bell Cheese",
+		prerelease: true,
+	},
+	"Gogurt",
+	"Grated Cheese",
+	{
+		name: "String Cheese",
 		prerelease: true,
 	},
 ] as FoodInput[];
