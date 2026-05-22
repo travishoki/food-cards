@@ -5,7 +5,12 @@ import { Food } from "../types";
 
 type FoodInputObject = Omit<
 	Food,
-	"category_key" | "difficulty" | "image_url" | "locations" | "slug"
+	| "category_key"
+	| "difficulty"
+	| "image_url"
+	| "locations"
+	| "position"
+	| "slug"
 > & {
 	difficulty?: Food["difficulty"];
 	image_url?: string;
@@ -23,8 +28,8 @@ const TOP_OF_SUB: Record<string, string> = Object.fromEntries(
 );
 
 export const buildFood =
-	(category_key: string) =>
-	(input: FoodInput): Food => {
+	(category_key: string, total: number) =>
+	(input: FoodInput, index: number): Food => {
 		const food: FoodInputObject =
 			typeof input === "string" ? { name: input } : input;
 		const slug = food.slug || toFoodSlug(food.name);
@@ -38,6 +43,7 @@ export const buildFood =
 			difficulty: food.difficulty ?? 1,
 			image_url,
 			locations: food.locations || [LOCATIONS.home],
+			position: { index, total },
 			slug,
 		};
 	};

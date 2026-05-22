@@ -155,7 +155,7 @@ export default function Card({ food }: CardProps) {
 				<>
 					<Icon categoryKey={food.category_key} />
 					<CardInfo food={food} />
-					<CategoryPosition slug={food.slug} />
+					<CategoryPosition position={food.position} />
 					<DifficultyIcon difficulty={food.difficulty} />
 					{food.prerelease && <PrereleaseLabel />}
 					<Background categoryKey={food.category_key} />

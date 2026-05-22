@@ -1,19 +1,11 @@
-import { POSITIONS } from "../../const/positions";
-
 import "./CategoryPosition.scss";
 
 type CategoryPositionProps = {
-	slug: string;
+	position: { index: number; total: number };
 };
 
-export const CategoryPosition = ({ slug }: CategoryPositionProps) => {
-	const pos = POSITIONS[slug];
-
-	if (!pos) return null;
-
-	return (
-		<span className="category-position">
-			{pos.index + 1}/{pos.total}
-		</span>
-	);
-};
+export const CategoryPosition = ({ position }: CategoryPositionProps) => (
+	<span className="category-position">
+		{position.index + 1}/{position.total}
+	</span>
+);
