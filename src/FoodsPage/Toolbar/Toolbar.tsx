@@ -8,6 +8,7 @@ import { SettingsButton } from "./SettingsButton";
 import { SortButton } from "./SortButton";
 import { SortDirection, SortPanel } from "./SortPanel";
 import { CardViewToggle } from "../../CardViewToggle/CardViewToggle";
+import { InStockToggle } from "../../CardViewToggle/InStockToggle";
 import { PrereleaseToggle } from "../../CardViewToggle/PrereleaseToggle";
 import { CategoryMenu } from "../../CategoryMenu/CategoryMenu";
 import { isEatingOut } from "../../helpers/locations.helpers";
@@ -117,6 +118,7 @@ export const Toolbar = ({
 							<>
 								<CardViewToggle />
 								<PrereleaseToggle />
+								<InStockToggle />
 							</>
 						)}
 					</div>

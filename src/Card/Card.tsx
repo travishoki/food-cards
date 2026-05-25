@@ -99,7 +99,7 @@ const designVars: CSSProperties = {
 
 export default function Card({ food }: CardProps) {
 	const navigate = useNavigate();
-	const { viewMode } = useCardView();
+	const { inStockMode, viewMode } = useCardView();
 	const { foodName, subCategory, topCategory } = useParams<{
 		foodName?: string;
 		subCategory?: string;
@@ -133,9 +133,14 @@ export default function Card({ food }: CardProps) {
 				}
 			};
 
+	let className = `card card--${effectiveMode}`;
+	if (!isDetailView) className += " is-clickable";
+	if (food.inStock === false && inStockMode !== "hide")
+		className += " is-out-of-stock";
+
 	return (
 		<div
-			className={`card card--${effectiveMode} ${isDetailView ? "" : "is-clickable"}`}
+			className={className}
 			data-category={food.category_key}
 			onClick={handleClick}
 			style={{

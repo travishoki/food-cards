@@ -38,12 +38,13 @@ export const FoodList = ({
 	subCategory,
 	topCategory,
 }: FoodListProps) => {
-	const { prereleaseMode } = useCardView();
+	const { inStockMode, prereleaseMode } = useCardView();
 
 	const visibleFoods = useMemo(
 		() =>
 			getVisibleFoods({
 				difficulty,
+				inStockMode,
 				location,
 				prereleaseMode,
 				search,
@@ -57,6 +58,7 @@ export const FoodList = ({
 			search,
 			sort,
 			difficulty,
+			inStockMode,
 			location,
 			prereleaseMode,
 		],

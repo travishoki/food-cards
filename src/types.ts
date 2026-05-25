@@ -5,6 +5,7 @@ export type Food = {
 	cookTime?: { instructions: string; time: string };
 	difficulty: 1 | 2 | 3 | 4 | 5;
 	image_url: string;
+	inStock?: boolean;
 	info?: string;
 	ingredients?: string[];
 	instructions?: string | string[];

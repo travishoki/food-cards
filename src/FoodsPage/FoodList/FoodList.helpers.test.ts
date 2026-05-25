@@ -7,12 +7,14 @@ jest.mock("../../data", () => ({
 			category_key: "fruit",
 			difficulty: 1,
 			image_url: "",
+			inStock: false,
 			name: "Apple",
 		},
 		{
 			category_key: "fruit",
 			difficulty: 2,
 			image_url: "",
+			inStock: true,
 			name: "Banana",
 		},
 		{
@@ -178,6 +180,132 @@ describe("getVisibleFoods", () => {
 				sort: "difficulty-asc",
 			}).map((f) => f.name);
 			expect(names.slice(0, 2)).toEqual(["Apple", "Carrot"]);
+		});
+	});
+
+	describe("inStockMode filtering", () => {
+		it("defaults to 'show', returning all foods regardless of inStock", () => {
+			expect(getVisibleFoods({ search: "" })).toHaveLength(5);
+		});
+
+		it("'show' includes items with inStock: false", () => {
+			const names = getVisibleFoods({
+				inStockMode: "show",
+				search: "",
+			}).map((f) => f.name);
+			expect(names).toContain("Apple");
+		});
+
+		it("'show' includes items with inStock: true", () => {
+			const names = getVisibleFoods({
+				inStockMode: "show",
+				search: "",
+			}).map((f) => f.name);
+			expect(names).toContain("Banana");
+		});
+
+		it("'show' includes items with no inStock property set", () => {
+			const names = getVisibleFoods({
+				inStockMode: "show",
+				search: "",
+			}).map((f) => f.name);
+			expect(names).toContain("Carrot");
+		});
+
+		it("'hide' excludes items with inStock: false", () => {
+			const names = getVisibleFoods({
+				inStockMode: "hide",
+				search: "",
+			}).map((f) => f.name);
+			expect(names).not.toContain("Apple");
+		});
+
+		it("'hide' keeps items with inStock: true", () => {
+			const names = getVisibleFoods({
+				inStockMode: "hide",
+				search: "",
+			}).map((f) => f.name);
+			expect(names).toContain("Banana");
+		});
+
+		it("'hide' keeps items with no inStock property set", () => {
+			const names = getVisibleFoods({
+				inStockMode: "hide",
+				search: "",
+			}).map((f) => f.name);
+			expect(names).toContain("Carrot");
+		});
+
+		it("'only' returns only items with inStock: false", () => {
+			expect(
+				getVisibleFoods({ inStockMode: "only", search: "" }).map(
+					(f) => f.name,
+				),
+			).toEqual(["Apple"]);
+		});
+
+		it("'only' excludes items with inStock: true", () => {
+			const names = getVisibleFoods({
+				inStockMode: "only",
+				search: "",
+			}).map((f) => f.name);
+			expect(names).not.toContain("Banana");
+		});
+
+		it("'only' excludes items with no inStock property set", () => {
+			const names = getVisibleFoods({
+				inStockMode: "only",
+				search: "",
+			}).map((f) => f.name);
+			expect(names).not.toContain("Carrot");
+		});
+
+		it("'hide' combines with search", () => {
+			// Apple (inStock: false) matches "a" but should be excluded
+			// Banana (inStock: true) matches "a" and should be kept
+			// Carrot matches "a" (no inStock set) and should be kept
+			expect(
+				getVisibleFoods({
+					inStockMode: "hide",
+					search: "a",
+				}).map((f) => f.name),
+			).toEqual(["Banana", "Carrot"]);
+		});
+
+		it("'only' combines with search", () => {
+			expect(
+				getVisibleFoods({
+					inStockMode: "only",
+					search: "app",
+				}).map((f) => f.name),
+			).toEqual(["Apple"]);
+		});
+
+		it("'only' returns empty when no out-of-stock items match the search", () => {
+			expect(
+				getVisibleFoods({ inStockMode: "only", search: "xyz" }),
+			).toEqual([]);
+		});
+
+		it("'hide' combines with subCategory", () => {
+			// Fruit has Apple (inStock: false) and Banana (inStock: true)
+			expect(
+				getVisibleFoods({
+					inStockMode: "hide",
+					search: "",
+					subCategory: "fruit",
+				}).map((f) => f.name),
+			).toEqual(["Banana"]);
+		});
+
+		it("'only' combines with subCategory", () => {
+			expect(
+				getVisibleFoods({
+					inStockMode: "only",
+					search: "",
+					subCategory: "fruit",
+				}).map((f) => f.name),
+			).toEqual(["Apple"]);
 		});
 	});
 

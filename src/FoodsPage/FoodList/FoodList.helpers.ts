@@ -1,5 +1,5 @@
 import { TOP_CATEGORY_SUBCATEGORIES } from "../../const/categories";
-import { PrereleaseMode } from "../../context/cardView";
+import { InStockMode, PrereleaseMode } from "../../context/cardView";
 import { FOODS } from "../../data";
 import { Food } from "../../types";
 import { Difficulty } from "../Toolbar/DifficultyFilter";
@@ -8,6 +8,7 @@ import { SortDirection } from "../Toolbar/SortPanel";
 
 type GetVisibleFoodsArgs = {
 	difficulty?: Difficulty | null;
+	inStockMode?: InStockMode;
 	location?: Location | null;
 	prereleaseMode?: PrereleaseMode;
 	search: string;
@@ -18,6 +19,7 @@ type GetVisibleFoodsArgs = {
 
 export const getVisibleFoods = ({
 	difficulty = null,
+	inStockMode = "show",
 	location = null,
 	prereleaseMode = "hide",
 	search,
@@ -30,6 +32,11 @@ export const getVisibleFoods = ({
 	if (prereleaseMode === "hide") result = result.filter((f) => !f.prerelease);
 	else if (prereleaseMode === "only")
 		result = result.filter((f) => f.prerelease);
+
+	if (inStockMode === "hide")
+		result = result.filter((f) => f.inStock !== false);
+	else if (inStockMode === "only")
+		result = result.filter((f) => f.inStock === false);
 
 	if (topCategory && !subCategory) {
 		const keys =
