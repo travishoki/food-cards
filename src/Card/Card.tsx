@@ -3,8 +3,10 @@ import { CSSProperties } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
 import { Background } from "./Background/Background";
+import { Brand } from "./Brand/Brand";
 import {
 	BACKGROUND_WIDTH,
+	BRAND_SIZE,
 	CARD_BOTTOM_PADDING,
 	CATEGORY_POSITION_FONT_SIZE,
 	CARD_INFO_PADDING_BOTTOM,
@@ -63,6 +65,7 @@ type CardProps = {
 const dcqw = (px: number) => `${(px / BACKGROUND_WIDTH) * 100}cqw`;
 
 const designVars: CSSProperties = {
+	"--brand-size": dcqw(BRAND_SIZE),
 	"--card-bottom-padding": dcqw(CARD_BOTTOM_PADDING),
 	"--card-info-padding-bottom": dcqw(CARD_INFO_PADDING_BOTTOM),
 	"--card-info-top": dcqw(CARD_INFO_TOP),
@@ -159,6 +162,7 @@ export default function Card({ food }: CardProps) {
 			{effectiveMode === "full" && (
 				<>
 					<Icon categoryKey={food.category_key} />
+					{food.brand && <Brand brand={food.brand} />}
 					<CardInfo food={food} />
 					<CategoryPosition position={food.position} />
 					<DifficultyIcon difficulty={food.difficulty} />

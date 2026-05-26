@@ -18,6 +18,9 @@ export const GRAPHIC_WIDTH = 613;
 export const GRAPHIC_HEIGHT = 406;
 export const GRAPHIC_TOP = 112;
 
+// Brand
+export const BRAND_SIZE = 130;
+
 // Icon
 export const ICON_SIZE = 45;
 export const ICON_TOP = 36;

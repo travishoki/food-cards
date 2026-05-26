@@ -1,10 +1,12 @@
+import { BRANDS } from "../../const/brands.const";
 import { CATEGORIES } from "../../const/categories";
 import { LOCATIONS } from "../../const/locations.const";
 import { buildFood, FoodInput } from "../../helpers/foods.helpers";
 
 const items = [
 	{
-		name: "Chick-fil-A Lemon Freeze",
+		name: "Lemon Freeze",
+		brand: BRANDS.CHICK_FIL_A,
 		locations: [LOCATIONS["fast-food"]],
 	},
 	"Chocolate Milk",
@@ -36,7 +38,8 @@ const items = [
 			"Great Grandpa Grovers favorite drinks! It will fix all that ails you!",
 	},
 	{
-		name: "Rootbeer Freeze - Taco Amigo",
+		name: "Rootbeer Freeze",
+		brand: BRANDS.TACO_AMIGO,
 		locations: [LOCATIONS["fast-food"]],
 	},
 	{

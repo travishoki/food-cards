@@ -1,3 +1,4 @@
+import { BRANDS } from "../../const/brands.const";
 import { CATEGORIES } from "../../const/categories";
 import { LOCATIONS } from "../../const/locations.const";
 import { buildFood, FoodInput } from "../../helpers/foods.helpers";
@@ -5,6 +6,7 @@ import { buildFood, FoodInput } from "../../helpers/foods.helpers";
 const items = [
 	{
 		name: "Aunty Anne's Pretzels",
+		brand: BRANDS.AUNTY_ANNES,
 		locations: [LOCATIONS["fast-food"]],
 	},
 	{
@@ -18,7 +20,8 @@ const items = [
 		prerelease: true,
 	},
 	{
-		name: "Breadsticks Olive Garden",
+		name: "Breadsticks",
+		brand: BRANDS.OLIVE_GARDEN,
 		locations: [LOCATIONS.restaurant],
 	},
 	{
@@ -26,7 +29,8 @@ const items = [
 		difficulty: 2,
 	},
 	{
-		name: "Chick-fil-A Waffle Fries",
+		name: "Waffle Fries",
+		brand: BRANDS.CHICK_FIL_A,
 		locations: [LOCATIONS["fast-food"]],
 	},
 	"Cinnamon Bites",
@@ -40,15 +44,18 @@ const items = [
 	},
 	"Crinkle Cut Fries",
 	{
-		name: "Curly Fries",
-		locations: LOCATIONS["fast-food"],
-	},
-	{
-		name: "Dairy Queen Pretzel Sticks",
+		name: "Crickle Cut Fries",
+		brand: BRANDS.DEL_TACO,
 		locations: [LOCATIONS["fast-food"]],
 	},
 	{
-		name: "Del Taco Crickle Cut Fries",
+		name: "Curly Fries",
+		brand: BRANDS.ARBYS,
+		locations: LOCATIONS["fast-food"],
+	},
+	{
+		name: "Pretzel Sticks",
+		brand: BRANDS.DAIRY_QUEEN,
 		locations: [LOCATIONS["fast-food"]],
 	},
 	"French Fries",
@@ -85,6 +92,7 @@ const items = [
 	},
 	{
 		name: "Sonic Pretzle Twists",
+		brand: BRANDS.SONIC,
 		locations: [LOCATIONS["fast-food"]],
 	},
 	"Sour Dough Bread",
@@ -98,7 +106,8 @@ const items = [
 		difficulty: 2,
 	},
 	{
-		name: "Texas Road House Roll",
+		name: "Rolls",
+		brand: BRANDS.TEXAS_ROADHOUSE,
 		locations: [LOCATIONS.restaurant],
 	},
 	{

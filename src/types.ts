@@ -1,6 +1,8 @@
+import type { Brand } from "./const/brands.const";
 import type { Location } from "./const/locations.const";
 
 export type Food = {
+	brand?: Brand;
 	category_key: string;
 	cookTime?: { instructions: string; time: string };
 	difficulty: 1 | 2 | 3 | 4 | 5;

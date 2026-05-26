@@ -1,3 +1,4 @@
+import { BRANDS } from "../../const/brands.const";
 import { CATEGORIES } from "../../const/categories";
 import { LOCATIONS } from "../../const/locations.const";
 import { buildFood, FoodInput } from "../../helpers/foods.helpers";
@@ -26,14 +27,16 @@ const items = [
 		prerelease: true,
 	},
 	{
-		name: "Costa Vida Cinnamon Tortilla",
-		locations: [LOCATIONS.restaurant],
+		name: "Cinnamon Tortilla",
+		brand: BRANDS.COSTA_VIDA,
+		locations: [LOCATIONS["fast-food"]],
 	},
 	"Cupcake",
 	"Donut",
 	"Donut Holes",
 	{
 		name: "Frosty",
+		brand: BRANDS.WENDYS,
 		locations: [LOCATIONS["fast-food"]],
 	},
 	{
@@ -82,10 +85,12 @@ const items = [
 	},
 	{
 		name: "Sonic Cream Slush",
+		brand: BRANDS.SONIC,
 		locations: [LOCATIONS["fast-food"]],
 	},
 	{
-		name: "Taco Bell Cinnamon Twists",
+		name: "Cinnamon Twists",
+		brand: BRANDS.TACO_BELL,
 		locations: [LOCATIONS["fast-food"]],
 	},
 ] as FoodInput[];

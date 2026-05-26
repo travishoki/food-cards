@@ -1,3 +1,4 @@
+import { BRANDS } from "../../const/brands.const";
 import { CATEGORIES } from "../../const/categories";
 import { LOCATIONS } from "../../const/locations.const";
 import { buildFood, FoodInput } from "../../helpers/foods.helpers";
@@ -15,6 +16,7 @@ const items = [
 	},
 	{
 		name: "Little Caesar's Pizza",
+		brand: BRANDS.LITTLE_CAESARS,
 		locations: [LOCATIONS["fast-food"]],
 	},
 	{
@@ -56,6 +58,7 @@ const items = [
 	"Tortilla Pizza",
 	{
 		name: "Waffle Love",
+		brand: BRANDS.WAFFLE_LOVE,
 		locations: [LOCATIONS.restaurant],
 	},
 ] as FoodInput[];

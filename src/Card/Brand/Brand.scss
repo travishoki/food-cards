@@ -1,0 +1,9 @@
+.brand-img {
+	height: var(--brand-size);
+	position: absolute;
+	right: var(--card-inner-padding);
+	top: 50%;
+	transform: translateY(-50%);
+	width: var(--brand-size);
+	z-index: 2;
+}
