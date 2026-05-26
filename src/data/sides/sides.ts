@@ -106,7 +106,7 @@ const items = [
 		difficulty: 2,
 	},
 	{
-		name: "Rolls",
+		name: "Texas Roadhouse Rolls",
 		brand: BRANDS.TEXAS_ROADHOUSE,
 		locations: [LOCATIONS.restaurant],
 	},
