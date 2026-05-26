@@ -9,7 +9,7 @@ import {
 	PAGE_SIDE_PADDING,
 } from "../../Card/Card.const";
 import { useCardView } from "../../context/cardView";
-import { useFoods } from "../../hooks/useFoods";
+import { useFoodsContext } from "../../context/foods";
 import { NoResults } from "../NoResults/NoResults";
 import { Difficulty } from "../Toolbar/DifficultyFilter";
 import { Location } from "../Toolbar/LocationFilter";
@@ -41,7 +41,7 @@ export const FoodList = ({
 	topCategory,
 }: FoodListProps) => {
 	const { inStockMode, prereleaseMode } = useCardView();
-	const { error, foodActivityDictionary, loading } = useFoods();
+	const { error, foodActivityDictionary, loading } = useFoodsContext();
 
 	const visibleFoods = useMemo(
 		() =>
@@ -97,7 +97,7 @@ export const FoodList = ({
 		<div className="food-cards" style={style}>
 			{visibleFoods.map((food) => {
 				const inStock =
-					foodActivityDictionary[food.slug]?.inStock ?? true;
+					foodActivityDictionary[food.slug ?? ""]?.inStock ?? true;
 
 				return <Card key={food.slug} food={food} inStock={inStock} />;
 			})}
