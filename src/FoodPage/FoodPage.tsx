@@ -12,17 +12,21 @@ import "./FoodPage.scss";
 
 export const FoodPage = () => {
 	const { foodName } = useParams<{ foodName: string }>();
-	const food = foodBySlug(FOODS, foodName ?? "") as Food;
 	const { foodActivityDictionary, loading } = useFoodsContext();
 
 	if (loading) return <FoodListLoader />;
+
+	const food = foodBySlug(FOODS, foodName ?? "");
+
 	if (!food) return <MissingFood />;
 
-	const inStock = foodActivityDictionary[foodName ?? ""]?.inStock ?? true;
+	const activity = foodActivityDictionary[foodName ?? ""];
+	const inStock = activity?.inStock ?? true;
+	const docId = activity?.docId;
 
 	return (
 		<div className="food-detail">
-			<FoodPageInfoBox inStock={inStock} />
+			<FoodPageInfoBox docId={docId} inStock={inStock} slug={food.slug} />
 			<Card food={food} inStock={inStock} />
 		</div>
 	);

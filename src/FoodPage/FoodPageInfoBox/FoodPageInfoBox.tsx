@@ -4,12 +4,18 @@ import { InStockToggle } from "./InStockToggle/InStockToggle";
 import "./FoodPageInfoBox.scss";
 
 type FoodPageInfoBoxProps = {
+	docId: string | undefined;
 	inStock: boolean;
+	slug: string;
 };
 
-export const FoodPageInfoBox = ({ inStock }: FoodPageInfoBoxProps) => (
+export const FoodPageInfoBox = ({
+	docId,
+	inStock,
+	slug,
+}: FoodPageInfoBoxProps) => (
 	<div className="food-page-info-box">
 		<BackButton />
-		<InStockToggle inStock={inStock} />
+		<InStockToggle docId={docId} inStock={inStock} slug={slug} />
 	</div>
 );
