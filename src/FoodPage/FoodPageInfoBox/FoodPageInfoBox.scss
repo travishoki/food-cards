@@ -1,0 +1,11 @@
+.food-page-info-box {
+	background: $color-surface;
+	border: 1px solid $color-border;
+	border-radius: $radius-sm;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	margin: 16px;
+	padding: 12px;
+	width: 140px;
+}

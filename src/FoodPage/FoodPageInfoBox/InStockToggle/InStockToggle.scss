@@ -1,0 +1,59 @@
+$toggle-height: 28px;
+$toggle-width: 52px;
+$knob-size: 20px;
+$knob-inset: ($toggle-height - $knob-size) * 0.5;
+$knob-travel: $toggle-width - $knob-size - ($knob-inset * 2);
+
+.food-page-in-stock-toggle {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.food-page-in-stock-toggle__label {
+	color: $color-text-muted;
+	font-size: 11px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.food-page-in-stock-toggle__track {
+	background: $color-tray;
+	border: 1px solid $color-border;
+	border-radius: $radius-pill;
+	cursor: pointer;
+	height: $toggle-height;
+	padding: 0;
+	position: relative;
+	transition:
+		background 0.2s ease,
+		border-color 0.2s ease;
+	width: $toggle-width;
+
+	&:hover {
+		border-color: $color-border-hover;
+	}
+
+	&[aria-checked="true"] {
+		background: $color-active-bg;
+		border-color: $color-active-border;
+	}
+}
+
+.food-page-in-stock-toggle__knob {
+	background: $color-surface;
+	border: 1px solid $color-border;
+	border-radius: $radius-pill;
+	display: block;
+	height: $knob-size;
+	left: $knob-inset;
+	position: absolute;
+	top: $knob-inset;
+	transition: transform 0.2s ease;
+	width: $knob-size;
+
+	.food-page-in-stock-toggle__track[aria-checked="true"] & {
+		transform: translateX($knob-travel);
+	}
+}

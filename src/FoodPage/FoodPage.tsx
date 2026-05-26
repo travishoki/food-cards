@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 
-import { BackButton } from "./BackButton";
+import { FoodPageInfoBox } from "./FoodPageInfoBox/FoodPageInfoBox";
 import { MissingFood } from "./MissingFood";
 import Card from "../Card/Card";
 import { FoodListLoader } from "../FoodsPage/FoodList/FoodListLoader/FoodListLoader";
@@ -22,7 +22,7 @@ export const FoodPage = () => {
 
 	return (
 		<div className="food-detail">
-			<BackButton />
+			<FoodPageInfoBox inStock={inStock} />
 			<Card food={food} inStock={inStock} />
 		</div>
 	);
