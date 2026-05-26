@@ -44,7 +44,7 @@ const items = [
 		locations: LOCATIONS["fast-food"],
 	},
 	{
-		name: "Dairy Queen Pretzels",
+		name: "Dairy Queen Pretzel Sticks",
 		locations: [LOCATIONS["fast-food"]],
 	},
 	{
@@ -84,7 +84,7 @@ const items = [
 		],
 	},
 	{
-		name: "Sonia Pretzle Twists",
+		name: "Sonic Pretzle Twists",
 		locations: [LOCATIONS["fast-food"]],
 	},
 	"Sour Dough Bread",

@@ -2,9 +2,12 @@ import { CATEGORIES } from "../../const/categories";
 import { buildFood, FoodInput } from "../../helpers/foods.helpers";
 
 const items = [
-	"Andes Mints",
+	{
+		name: "Andes Mints",
+		inStock: false,
+	},
 	"Dubai Chocolate",
-	"Fruit Loll-ups",
+	"Fruit Roll-Ups",
 	"Fruit Snacks",
 	"KitKat",
 	"Milk Chocolate",
