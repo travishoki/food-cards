@@ -59,6 +59,7 @@ import "./Card.scss";
 
 type CardProps = {
 	food: Food;
+	inStock: boolean;
 };
 
 // Convert design-space px (anchored to BACKGROUND_WIDTH) to a cqw string.
@@ -100,7 +101,7 @@ const designVars: CSSProperties = {
 	"--toppings-font-size": dcqw(TOPPINGS_FONT_SIZE),
 } as CSSProperties;
 
-export default function Card({ food }: CardProps) {
+export default function Card({ food, inStock }: CardProps) {
 	const navigate = useNavigate();
 	const { inStockMode, viewMode } = useCardView();
 	const { foodName, subCategory, topCategory } = useParams<{
@@ -138,7 +139,7 @@ export default function Card({ food }: CardProps) {
 
 	let className = `card card--${effectiveMode}`;
 	if (!isDetailView) className += " is-clickable";
-	if (food.inStock === false && inStockMode !== "hide")
+	if (inStock === false && inStockMode !== "hide")
 		className += " is-out-of-stock";
 
 	return (

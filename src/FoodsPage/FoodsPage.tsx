@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 
+import { ErrorBoundary } from "../ErrorBoundary/ErrorBoundary";
 import { LOCATIONS } from "../const/locations.const";
 import { useFoodFilters } from "../context/foodFilters";
 import { BackToTop } from "./BackToTop/BackToTop";
@@ -40,17 +41,19 @@ export const FoodsPage = () => {
 				onSortChange={setSort}
 				sort={sort}
 			/>
-			<FoodList
-				difficulty={difficulty}
-				location={location}
-				onClearDifficulty={() => setDifficulty(null)}
-				onClearLocation={() => setLocation(null)}
-				onClearSearch={() => setSearch("")}
-				search={search}
-				sort={sort}
-				subCategory={subCategory}
-				topCategory={topCategory}
-			/>
+			<ErrorBoundary>
+				<FoodList
+					difficulty={difficulty}
+					location={location}
+					onClearDifficulty={() => setDifficulty(null)}
+					onClearLocation={() => setLocation(null)}
+					onClearSearch={() => setSearch("")}
+					search={search}
+					sort={sort}
+					subCategory={subCategory}
+					topCategory={topCategory}
+				/>
+			</ErrorBoundary>
 			<BackToTop />
 		</>
 	);

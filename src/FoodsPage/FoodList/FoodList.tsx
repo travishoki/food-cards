@@ -1,6 +1,7 @@
 import { useMemo } from "react";
 
 import { getVisibleFoods } from "./FoodList.helpers";
+import { FoodListLoader } from "./FoodListLoader/FoodListLoader";
 import Card from "../../Card/Card";
 import {
 	CARD_GUTTER,
@@ -8,6 +9,7 @@ import {
 	PAGE_SIDE_PADDING,
 } from "../../Card/Card.const";
 import { useCardView } from "../../context/cardView";
+import { useFoods } from "../../hooks/useFoods";
 import { NoResults } from "../NoResults/NoResults";
 import { Difficulty } from "../Toolbar/DifficultyFilter";
 import { Location } from "../Toolbar/LocationFilter";
@@ -39,6 +41,7 @@ export const FoodList = ({
 	topCategory,
 }: FoodListProps) => {
 	const { inStockMode, prereleaseMode } = useCardView();
+	const { error, foodActivityDictionary, loading } = useFoods();
 
 	const visibleFoods = useMemo(
 		() =>
@@ -64,6 +67,9 @@ export const FoodList = ({
 		],
 	);
 
+	if (loading) return <FoodListLoader />;
+	if (error) throw new Error(error);
+
 	if (
 		visibleFoods.length === 0 &&
 		(search.trim() || difficulty !== null || location !== null)
@@ -81,18 +87,20 @@ export const FoodList = ({
 		);
 	}
 
+	const style = {
+		gap: `${CARD_GUTTER}px`,
+		maxWidth: `${CARD_MAX_VIEWPORT}px`,
+		padding: `${PAGE_SIDE_PADDING}px`,
+	};
+
 	return (
-		<div
-			className="food-cards"
-			style={{
-				gap: `${CARD_GUTTER}px`,
-				maxWidth: `${CARD_MAX_VIEWPORT}px`,
-				padding: `${PAGE_SIDE_PADDING}px`,
-			}}
-		>
-			{visibleFoods.map((food) => (
-				<Card key={food.slug} food={food} />
-			))}
+		<div className="food-cards" style={style}>
+			{visibleFoods.map((food) => {
+				const inStock =
+					foodActivityDictionary[food.slug]?.inStock ?? true;
+
+				return <Card key={food.slug} food={food} inStock={inStock} />;
+			})}
 		</div>
 	);
 };
