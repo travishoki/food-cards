@@ -27,10 +27,12 @@ const items = [
 	},
 	{
 		name: "Papa Johnson's Pizza",
+		brand: BRANDS.PAPA_JOHNS,
 		locations: LOCATIONS["fast-food"],
 	},
 	{
 		name: "Papa Murphy's Pizza",
+		brand: BRANDS.PAPA_MURPHYS,
 		locations: LOCATIONS["fast-food"],
 	},
 	"PB&J",
@@ -40,6 +42,7 @@ const items = [
 	},
 	{
 		name: "Pizza Hut",
+		brand: BRANDS.PIZZA_HUT,
 		locations: LOCATIONS["fast-food"],
 	},
 	{
