@@ -19,13 +19,10 @@ type Option = {
 	value: Location | null;
 };
 
-const OPTIONS: Option[] = [
-	{ label: "All", value: null },
-	...LOCATION_ORDER.map((loc) => ({
-		label: LOCATION_DATA[loc].label,
-		value: loc,
-	})),
-];
+const OPTIONS: Option[] = LOCATION_ORDER.map((loc) => ({
+	label: LOCATION_DATA[loc].label,
+	value: loc,
+}));
 
 export const LocationFilter = ({ onChange, value }: LocationFilterProps) => (
 	<FilterSection label="Location:">
