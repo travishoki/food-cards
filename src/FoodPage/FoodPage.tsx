@@ -7,6 +7,7 @@ import { FoodPageInfoBox } from "./FoodPageInfoBox/FoodPageInfoBox";
 import { MissingFood } from "./MissingFood";
 import Card from "../Card/Card";
 import { FoodListLoader } from "../FoodsPage/FoodList/FoodListLoader/FoodListLoader";
+import { LOCATIONS } from "../const/locations.const";
 import { useFoodsContext } from "../context/foods";
 import { FOODS } from "../data";
 import { foodBySlug } from "../helpers/slug.helpers";
@@ -34,13 +35,14 @@ export const FoodPage = () => {
 				<BackButton />
 			</div>
 			<div className="food-detail">
-				<FoodPageInfoBox
-					docId={docId}
-					inStock={inStock}
-					locations={food.locations}
-					onToggle={setInStock}
-					slug={food.slug}
-				/>
+				{[food.locations].flat().includes(LOCATIONS.home) && (
+					<FoodPageInfoBox
+						docId={docId}
+						inStock={inStock}
+						onToggle={setInStock}
+						slug={food.slug}
+					/>
+				)}
 				<Card food={food} inStock={inStock} />
 			</div>
 		</div>
