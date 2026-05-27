@@ -37,7 +37,7 @@ export const buildFood =
 			category_key,
 			difficulty: food.difficulty ?? 1,
 			image_url,
-			locations: food.locations || [LOCATIONS.home],
+			locations: food.locations || LOCATIONS.home,
 			slug,
 		};
 	};

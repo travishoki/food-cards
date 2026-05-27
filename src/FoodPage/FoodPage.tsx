@@ -35,7 +35,7 @@ export const FoodPage = () => {
 				<BackButton />
 			</div>
 			<div className="food-detail">
-				{[food.locations].flat().includes(LOCATIONS.home) && (
+				{food.locations === LOCATIONS.home && (
 					<FoodPageInfoBox
 						docId={docId}
 						inStock={inStock}
