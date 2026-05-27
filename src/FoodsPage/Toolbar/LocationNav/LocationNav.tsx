@@ -16,7 +16,7 @@ export const LocationNav = () => {
 	const navigate = useNavigate();
 
 	const handleClick = (loc: string) => {
-		setSubCategory(null);
+		if (urlTopCategory === TOP_CATEGORIES.sweets) setSubCategory(null);
 
 		const isHome = loc === LOCATIONS.home;
 		const categoryAllowedAtLoc =
