@@ -101,10 +101,9 @@ const designVars: CSSProperties = {
 export default function Card({ food, inStock }: CardProps) {
 	const navigate = useNavigate();
 	const { inStockMode, viewMode } = useCardView();
-	const { foodName, subCategory, topCategory } = useParams<{
+	const { foodName, location } = useParams<{
 		foodName?: string;
-		subCategory?: string;
-		topCategory?: string;
+		location?: string;
 	}>();
 	const viewportWidth = useViewportWidth();
 	const isDetailView = !!foodName;
@@ -123,14 +122,10 @@ export default function Card({ food, inStock }: CardProps) {
 	const handleClick = isDetailView
 		? undefined
 		: () => {
-				if (topCategory && subCategory) {
-					navigate(
-						`/${topCategory}/${subCategory}/food/${food.slug}`,
-					);
-				} else if (topCategory) {
-					navigate(`/${topCategory}/food/${food.slug}`);
+				if (location) {
+					navigate(`/${location}/food/${food.slug}`);
 				} else {
-					navigate(`/food/${food.slug}`);
+					navigate(`/home/food/${food.slug}`);
 				}
 			};
 

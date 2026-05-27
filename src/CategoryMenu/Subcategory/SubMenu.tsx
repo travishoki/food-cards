@@ -1,20 +1,15 @@
 import { useMemo } from "react";
 
-import { useNavigate, useParams } from "react-router-dom";
-
 import { FilterSection } from "../../FilterSection/FilterSection";
+import { useFoodFilters } from "../../context/foodFilters";
 import { subCategoriesForTop } from "../CategoryMenu.helpers";
 
 export const SubMenu = () => {
-	const { subCategory, topCategory } = useParams<{
-		subCategory?: string;
-		topCategory?: string;
-	}>();
+	const { setSubCategory, subCategory, topCategory } = useFoodFilters();
 	const subMenu = useMemo(
 		() => (topCategory ? subCategoriesForTop(topCategory) : []),
 		[topCategory],
 	);
-	const navigate = useNavigate();
 
 	if (subMenu.length <= 1) return null;
 
@@ -22,7 +17,7 @@ export const SubMenu = () => {
 		<FilterSection ariaLabel="Food subcategories" label="Subcategory:">
 			<button
 				className={`category-menu__link ${!subCategory ? "is-active" : ""}`}
-				onClick={() => navigate(`/${topCategory}`)}
+				onClick={() => setSubCategory(null)}
 				type="button"
 			>
 				All
@@ -31,7 +26,7 @@ export const SubMenu = () => {
 				<button
 					key={cat.key}
 					className={`category-menu__link ${subCategory === cat.key ? "is-active" : ""}`}
-					onClick={() => navigate(`/${topCategory}/${cat.key}`)}
+					onClick={() => setSubCategory(cat.key)}
 					type="button"
 				>
 					{cat.label}

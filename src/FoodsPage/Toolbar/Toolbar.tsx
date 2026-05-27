@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 import { Difficulty, DifficultyFilter } from "./DifficultyFilter";
 import { FilterButton } from "./FilterButton";
-import { Location, LocationFilter } from "./LocationFilter";
+import { LocationNav } from "./LocationNav/LocationNav";
 import { SearchButton } from "./SearchButton";
 import { SettingsButton } from "./SettingsButton";
 import { SortButton } from "./SortButton";
@@ -11,6 +11,7 @@ import { CardViewToggle } from "../../CardViewToggle/CardViewToggle";
 import { InStockToggle } from "../../CardViewToggle/InStockToggle";
 import { PrereleaseToggle } from "../../CardViewToggle/PrereleaseToggle";
 import { CategoryMenu } from "../../CategoryMenu/CategoryMenu";
+import { Location } from "../../const/locations.const";
 import { isEatingOut } from "../../helpers/locations.helpers";
 import { CloseIcon } from "../../icons/CloseIcon";
 import { SearchInput } from "../SearchInput/SearchInput";
@@ -25,7 +26,6 @@ type ToolbarProps = {
 	hasActiveSearch: boolean;
 	location: Location | null;
 	onDifficultyChange: (value: Difficulty | null) => void;
-	onLocationChange: (value: Location | null) => void;
 	onSortChange: (dir: SortDirection) => void;
 	sort: SortDirection;
 };
@@ -36,7 +36,6 @@ export const Toolbar = ({
 	hasActiveSearch,
 	location,
 	onDifficultyChange,
-	onLocationChange,
 	onSortChange,
 	sort,
 }: ToolbarProps) => {
@@ -95,10 +94,7 @@ export const Toolbar = ({
 					<div className="tray-contents">
 						{openPanel === "filter" && (
 							<>
-								<LocationFilter
-									onChange={onLocationChange}
-									value={location}
-								/>
+								<LocationNav />
 								<CategoryMenu />
 								{!isEatingOut(location) && (
 									<DifficultyFilter
