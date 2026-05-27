@@ -1,8 +1,21 @@
+.food-page__nav {
+	margin: 0 auto;
+	max-width: 860px;
+	padding: 8px 16px;
+	width: 100%;
+}
+
 .food-detail {
-	align-items: flex-start;
+	align-items: center;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column-reverse;
 	justify-content: center;
 	margin: 0 auto;
 	padding: 16px;
+
+	// CARD_DETAIL_MAX_WIDTH (600) + info box min-width (180) + info box margins (32) + container padding (32) = 844px
+	@media (min-width: 860px) {
+		align-items: flex-start;
+		flex-direction: row;
+	}
 }

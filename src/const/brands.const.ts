@@ -3,6 +3,7 @@ export const BRANDS = {
 	AUNTY_ANNES: "aunty-annes",
 	CHICK_FIL_A: "chick-fil-a",
 	COSTA_VIDA: "costa-vida",
+	COSTCO: "costco",
 	DAIRY_QUEEN: "dairy-queen",
 	DEL_TACO: "del-taco",
 	LITTLE_CAESARS: "little-caesars",

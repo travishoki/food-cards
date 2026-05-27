@@ -1,5 +1,7 @@
 import { useNavigate, useParams } from "react-router-dom";
 
+import "./BackButton.scss";
+
 export const BackButton = () => {
 	const navigate = useNavigate();
 	const { subCategory, topCategory } = useParams<{
@@ -18,7 +20,11 @@ export const BackButton = () => {
 	};
 
 	return (
-		<button className="category-menu__link" onClick={onClick} type="button">
+		<button
+			className="category-menu__link back-button"
+			onClick={onClick}
+			type="button"
+		>
 			Back
 		</button>
 	);

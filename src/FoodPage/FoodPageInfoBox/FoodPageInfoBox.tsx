@@ -1,6 +1,5 @@
-import { Location, LOCATIONS } from "../../const/locations.const";
-import { BackButton } from "../BackButton";
 import { InStockToggle } from "./InStockToggle/InStockToggle";
+import { Location, LOCATIONS } from "../../const/locations.const";
 
 import "./FoodPageInfoBox.scss";
 
@@ -23,7 +22,6 @@ export const FoodPageInfoBox = ({
 
 	return (
 		<div className="food-page-info-box">
-			<BackButton />
 			{isHome && (
 				<InStockToggle
 					docId={docId}

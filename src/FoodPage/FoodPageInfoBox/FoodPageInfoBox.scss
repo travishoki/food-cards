@@ -2,11 +2,17 @@
 	background: $color-surface;
 	border: 1px solid $color-border;
 	border-radius: $radius-sm;
+	box-sizing: border-box;
 	display: flex;
 	flex-direction: column;
 	gap: 16px;
 	margin: 16px;
 	min-height: 200px;
 	padding: 16px;
-	width: 180px;
+	width: calc(100% - 32px);
+
+	@media (min-width: 860px) {
+		min-width: 180px;
+		width: auto;
+	}
 }

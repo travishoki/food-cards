@@ -2,6 +2,7 @@ import { useState } from "react";
 
 import { useParams } from "react-router-dom";
 
+import { BackButton } from "./BackButton";
 import { FoodPageInfoBox } from "./FoodPageInfoBox/FoodPageInfoBox";
 import { MissingFood } from "./MissingFood";
 import Card from "../Card/Card";
@@ -28,15 +29,20 @@ export const FoodPage = () => {
 	const [inStock, setInStock] = useState(activity?.inStock ?? true);
 
 	return (
-		<div className="food-detail">
-			<FoodPageInfoBox
-				docId={docId}
-				inStock={inStock}
-				locations={food.locations}
-				onToggle={setInStock}
-				slug={food.slug}
-			/>
-			<Card food={food} inStock={inStock} />
+		<div className="food-page">
+			<div className="food-page__nav">
+				<BackButton />
+			</div>
+			<div className="food-detail">
+				<FoodPageInfoBox
+					docId={docId}
+					inStock={inStock}
+					locations={food.locations}
+					onToggle={setInStock}
+					slug={food.slug}
+				/>
+				<Card food={food} inStock={inStock} />
+			</div>
 		</div>
 	);
 };

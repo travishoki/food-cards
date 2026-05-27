@@ -1,10 +1,14 @@
+import { BRANDS } from "../../const/brands.const";
 import { CATEGORIES } from "../../const/categories";
 import { buildFood, FoodInput } from "../../helpers/foods.helpers";
 
 const items = [
 	"Banana Bars",
 	"Banana Bread",
-	"Blue Berry Muffin (Costco)",
+	{
+		name: "Blue Berry Muffin",
+		brand: BRANDS.COSTCO,
+	},
 	"Blue Berry Muffin (Fresh)",
 	{
 		name: "Cheese Nips",
