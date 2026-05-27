@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Dictionary, keyBy } from "lodash";
 
 import { getFoods } from "../api/foods.api";
+import { readFoodCache, writeFoodCache } from "../helpers/foodCache.helpers";
 
 import type { Food } from "../types";
 
@@ -15,17 +16,24 @@ type UseFoodsResult = {
 export const useFoods = (): UseFoodsResult => {
 	const [foodActivityDictionary, setfoodActivityDictionary] = useState<
 		Dictionary<Food>
-	>({});
-	const [loading, setLoading] = useState(true);
+	>(() => {
+		const cached = readFoodCache();
+
+		return cached ? keyBy(cached, "slug") : {};
+	});
+	const [loading, setLoading] = useState(() => readFoodCache() === null);
 	const [error, setError] = useState<string | null>(null);
 
 	useEffect(() => {
+		if (readFoodCache() !== null) return;
+
 		let cancelled = false;
 
 		getFoods()
 			.then((data) => {
-				const lookupLibrary = keyBy(data, "slug");
-				if (!cancelled) setfoodActivityDictionary(lookupLibrary);
+				if (cancelled) return;
+				writeFoodCache(data);
+				setfoodActivityDictionary(keyBy(data, "slug"));
 			})
 			.catch((err: unknown) => {
 				if (!cancelled)

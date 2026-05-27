@@ -66,7 +66,7 @@ export const InStockToggle = ({
 					message={`Mark "${fromFoodSlug(slug)}" as ${inStock ? "out of stock" : "in stock"}?`}
 					onCancel={handleCancel}
 					onConfirm={handleConfirm}
-					title="Update stock status"
+					title="Update Stock Status"
 				/>
 			)}
 		</>
