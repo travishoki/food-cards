@@ -1,7 +1,7 @@
 import { createContext, useContext } from "react";
 
 import { Difficulty } from "../FoodsPage/Toolbar/DifficultyFilter";
-import { SortDirection } from "../FoodsPage/Toolbar/SortPanel";
+import { SortDirection } from "../const/sortDirections.const";
 
 type FoodFiltersContextValue = {
 	difficulty: Difficulty | null;

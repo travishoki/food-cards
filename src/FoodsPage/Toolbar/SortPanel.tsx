@@ -1,15 +1,13 @@
 import { FilterSection } from "../../FilterSection/FilterSection";
+import {
+	SORT_DIRECTIONS,
+	SortDirection,
+} from "../../const/sortDirections.const";
 
 import "./SortPanel.scss";
 
-export const SORT_DIRECTIONS = {
-	asc: "asc",
-	desc: "desc",
-	difficultyAsc: "difficulty-asc",
-} as const;
-
-export type SortDirection =
-	(typeof SORT_DIRECTIONS)[keyof typeof SORT_DIRECTIONS];
+export type { SortDirection };
+export { SORT_DIRECTIONS };
 
 type SortPanelProps = {
 	onChange: (dir: SortDirection) => void;

@@ -6,12 +6,16 @@ import { LocationNav } from "./LocationNav/LocationNav";
 import { SearchButton } from "./SearchButton";
 import { SettingsButton } from "./SettingsButton";
 import { SortButton } from "./SortButton";
-import { SORT_DIRECTIONS, SortDirection, SortPanel } from "./SortPanel";
+import { SortPanel } from "./SortPanel";
 import { CardViewToggle } from "../../CardViewToggle/CardViewToggle";
 import { InStockToggle } from "../../CardViewToggle/InStockToggle";
 import { PrereleaseToggle } from "../../CardViewToggle/PrereleaseToggle";
 import { CategoryMenu } from "../../CategoryMenu/CategoryMenu";
 import { Location, LOCATIONS } from "../../const/locations.const";
+import {
+	SORT_DIRECTIONS,
+	SortDirection,
+} from "../../const/sortDirections.const";
 import { isEatingOut } from "../../helpers/locations.helpers";
 import { CloseIcon } from "../../icons/CloseIcon";
 import { SearchInput } from "../SearchInput/SearchInput";

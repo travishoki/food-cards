@@ -7,9 +7,9 @@ import {
 	LOCATION_ORDER,
 	LOCATIONS,
 } from "../../../const/locations.const";
+import { SORT_DIRECTIONS } from "../../../const/sortDirections.const";
 import { useFoodFilters } from "../../../context/foodFilters";
 import { useUrlParams } from "../../../hooks/useUrlParams";
-import { SORT_DIRECTIONS } from "../SortPanel";
 
 export const LocationNav = () => {
 	const { urlLocation, urlTopCategory } = useUrlParams();

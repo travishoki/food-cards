@@ -2,7 +2,7 @@ import { ReactNode, useCallback, useState } from "react";
 
 import { FoodFiltersContext } from "./foodFilters";
 import { Difficulty } from "../FoodsPage/Toolbar/DifficultyFilter";
-import { SORT_DIRECTIONS, SortDirection } from "../FoodsPage/Toolbar/SortPanel";
+import { SORT_DIRECTIONS, SortDirection } from "../const/sortDirections.const";
 
 export const FoodFiltersProvider = ({ children }: { children: ReactNode }) => {
 	const [search, setSearch] = useState("");
