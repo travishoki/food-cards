@@ -7,13 +7,13 @@ const items = [
 	{
 		name: "Lemon Freeze",
 		brand: BRANDS.CHICK_FIL_A,
-		locations: [LOCATIONS["fast-food"]],
+		locations: LOCATIONS["fast-food"],
 	},
 	"Chocolate Milk",
 	{
 		name: "Frazzle",
 		instructions: "Worth the trip to a gas station.",
-		locations: [LOCATIONS["fast-food"]],
+		locations: LOCATIONS["fast-food"],
 	},
 	{
 		name: "Gatorade",
@@ -31,7 +31,7 @@ const items = [
 	"Milk",
 	{
 		name: "Orange Julius",
-		locations: [LOCATIONS["fast-food"]],
+		locations: LOCATIONS["fast-food"],
 	},
 	{
 		name: "Powerade",
@@ -46,12 +46,12 @@ const items = [
 	{
 		name: "Rootbeer Freeze",
 		brand: BRANDS.TACO_AMIGO,
-		locations: [LOCATIONS["fast-food"]],
+		locations: LOCATIONS["fast-food"],
 	},
 	{
 		name: "Slurpee",
 		instructions: "Worth the trip to a gas station.",
-		locations: [LOCATIONS["fast-food"]],
+		locations: LOCATIONS["fast-food"],
 	},
 	"Sprite",
 	"Sunny D",

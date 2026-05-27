@@ -7,7 +7,7 @@ import "./FoodPageInfoBox.scss";
 type FoodPageInfoBoxProps = {
 	docId: string | undefined;
 	inStock: boolean;
-	locations: Location[];
+	locations: Location | Location[];
 	onToggle: (value: boolean) => void;
 	slug: string;
 };
@@ -19,7 +19,7 @@ export const FoodPageInfoBox = ({
 	onToggle,
 	slug,
 }: FoodPageInfoBoxProps) => {
-	const isHome = locations.includes(LOCATIONS.home);
+	const isHome = [locations].flat().includes(LOCATIONS.home);
 
 	return (
 		<div className="food-page-info-box">

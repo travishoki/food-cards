@@ -20,7 +20,7 @@ const items = [
 	"Cookie Dough",
 	{
 		name: "Cookie Dough Pizza",
-		locations: [LOCATIONS.restaurant],
+		locations: LOCATIONS.restaurant,
 	},
 	{
 		name: "Corn Bread",
@@ -29,7 +29,7 @@ const items = [
 	{
 		name: "Cinnamon Tortilla",
 		brand: BRANDS.COSTA_VIDA,
-		locations: [LOCATIONS["fast-food"]],
+		locations: LOCATIONS["fast-food"],
 	},
 	"Cupcake",
 	"Donut",
@@ -37,7 +37,7 @@ const items = [
 	{
 		name: "Frosty",
 		brand: BRANDS.WENDYS,
-		locations: [LOCATIONS["fast-food"]],
+		locations: LOCATIONS["fast-food"],
 	},
 	{
 		name: "Fruit Pizza",
@@ -86,12 +86,12 @@ const items = [
 	{
 		name: "Sonic Cream Slush",
 		brand: BRANDS.SONIC,
-		locations: [LOCATIONS["fast-food"]],
+		locations: LOCATIONS["fast-food"],
 	},
 	{
 		name: "Cinnamon Twists",
 		brand: BRANDS.TACO_BELL,
-		locations: [LOCATIONS["fast-food"]],
+		locations: LOCATIONS["fast-food"],
 	},
 ] as FoodInput[];
 

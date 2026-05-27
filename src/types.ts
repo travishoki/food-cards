@@ -12,7 +12,7 @@ export type Food = {
 	info?: string;
 	ingredients?: string[];
 	instructions?: string | string[];
-	locations: Location[];
+	locations: Location | Location[];
 	name: string;
 	position: { index: number; total: number };
 	prerelease?: boolean;

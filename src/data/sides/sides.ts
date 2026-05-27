@@ -7,7 +7,7 @@ const items = [
 	{
 		name: "Aunty Anne's Pretzels",
 		brand: BRANDS.AUNTY_ANNES,
-		locations: [LOCATIONS["fast-food"]],
+		locations: LOCATIONS["fast-food"],
 	},
 	{
 		name: "Bacon",
@@ -16,13 +16,13 @@ const items = [
 	"Bagel with Spread",
 	{
 		name: "Breadsticks Little Ceasars",
-		locations: [LOCATIONS["fast-food"]],
+		locations: LOCATIONS["fast-food"],
 		prerelease: true,
 	},
 	{
 		name: "Breadsticks",
 		brand: BRANDS.OLIVE_GARDEN,
-		locations: [LOCATIONS.restaurant],
+		locations: LOCATIONS.restaurant,
 	},
 	{
 		name: "Cheese Sticks (Pizza)",
@@ -31,7 +31,7 @@ const items = [
 	{
 		name: "Waffle Fries",
 		brand: BRANDS.CHICK_FIL_A,
-		locations: [LOCATIONS["fast-food"]],
+		locations: LOCATIONS["fast-food"],
 	},
 	"Cinnamon Bites",
 	{
@@ -46,7 +46,7 @@ const items = [
 	{
 		name: "Crickle Cut Fries",
 		brand: BRANDS.DEL_TACO,
-		locations: [LOCATIONS["fast-food"]],
+		locations: LOCATIONS["fast-food"],
 	},
 	{
 		name: "Curly Fries",
@@ -56,7 +56,7 @@ const items = [
 	{
 		name: "Pretzel Sticks",
 		brand: BRANDS.DAIRY_QUEEN,
-		locations: [LOCATIONS["fast-food"]],
+		locations: LOCATIONS["fast-food"],
 	},
 	"French Fries",
 	{
@@ -93,7 +93,7 @@ const items = [
 	{
 		name: "Sonic Pretzle Twists",
 		brand: BRANDS.SONIC,
-		locations: [LOCATIONS["fast-food"]],
+		locations: LOCATIONS["fast-food"],
 	},
 	"Sour Dough Bread",
 	{
@@ -108,7 +108,7 @@ const items = [
 	{
 		name: "Texas Roadhouse Rolls",
 		brand: BRANDS.TEXAS_ROADHOUSE,
-		locations: [LOCATIONS.restaurant],
+		locations: LOCATIONS.restaurant,
 	},
 	{
 		name: "Texas Toast",

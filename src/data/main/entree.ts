@@ -7,7 +7,7 @@ const items = [
 	"Bread Pizza",
 	{
 		name: "Dominos Pizza",
-		locations: [LOCATIONS.restaurant],
+		locations: LOCATIONS.restaurant,
 	},
 	"French Bread Pizza",
 	{
@@ -17,19 +17,19 @@ const items = [
 	{
 		name: "Little Caesar's Pizza",
 		brand: BRANDS.LITTLE_CAESARS,
-		locations: [LOCATIONS["fast-food"]],
+		locations: LOCATIONS["fast-food"],
 	},
 	{
 		name: "Marco's Pizza",
-		locations: [LOCATIONS.restaurant],
+		locations: LOCATIONS.restaurant,
 	},
 	{
 		name: "Papa Johnson's Pizza",
-		locations: [LOCATIONS.restaurant],
+		locations: LOCATIONS.restaurant,
 	},
 	{
 		name: "Papa Murphy's Pizza",
-		locations: [LOCATIONS.restaurant],
+		locations: LOCATIONS.restaurant,
 	},
 	"PB&J",
 	{
@@ -38,11 +38,11 @@ const items = [
 	},
 	{
 		name: "Pizza Hut",
-		locations: [LOCATIONS.restaurant],
+		locations: LOCATIONS.restaurant,
 	},
 	{
 		name: "Pizza Pie Cafe",
-		locations: [LOCATIONS.restaurant],
+		locations: LOCATIONS.restaurant,
 	},
 	{
 		name: "Quesadilla",
@@ -59,7 +59,7 @@ const items = [
 	{
 		name: "Waffle Love",
 		brand: BRANDS.WAFFLE_LOVE,
-		locations: [LOCATIONS.restaurant],
+		locations: LOCATIONS.restaurant,
 	},
 ] as FoodInput[];
 
