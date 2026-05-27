@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 
 import { ErrorBoundary } from "../ErrorBoundary/ErrorBoundary";
+import { TOP_CATEGORIES } from "../const/categories";
 import { LOCATIONS } from "../const/locations.const";
 import { useFoodFilters } from "../context/foodFilters";
 import { BackToTop } from "./BackToTop/BackToTop";
@@ -29,7 +30,7 @@ export const FoodsPage = () => {
 			<Toolbar
 				difficulty={difficulty}
 				hasActiveFilter={
-					!!topCategory ||
+					(!!topCategory && topCategory !== TOP_CATEGORIES.main) ||
 					!!subCategory ||
 					difficulty !== null ||
 					location !== LOCATIONS.home
