@@ -25,16 +25,24 @@ export const Menu = () => {
 
 	return (
 		<FilterSection ariaLabel="Food categories" label="Category:">
-			{topMenu.map((cat) => (
-				<button
-					key={cat.key}
-					className={`category-menu__link ${urlTopCategory === cat.key ? "is-active" : ""}`}
-					onClick={() => handleClick(cat.key)}
-					type="button"
-				>
-					{cat.label}
-				</button>
-			))}
+			{topMenu.map((cat) => {
+				if (
+					urlLocation !== LOCATIONS.home &&
+					cat.key === TOP_CATEGORIES.snack
+				)
+					return null;
+
+				return (
+					<button
+						key={cat.key}
+						className={`category-menu__link ${urlTopCategory === cat.key ? "is-active" : ""}`}
+						onClick={() => handleClick(cat.key)}
+						type="button"
+					>
+						{cat.label}
+					</button>
+				);
+			})}
 		</FilterSection>
 	);
 };
