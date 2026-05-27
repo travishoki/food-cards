@@ -21,12 +21,18 @@ const items = [
 			"Important to get electrolites when excercising and paying hard.",
 	},
 	"Hi-C Fruit Punch",
-	"Horchata",
+	{
+		name: "Horchata",
+		locations: LOCATIONS["fast-food"],
+	},
 	"Hot Chocolate",
 	"Kool-Aid",
 	"Lemonade",
 	"Milk",
-	"Orange Julius",
+	{
+		name: "Orange Julius",
+		locations: [LOCATIONS["fast-food"]],
+	},
 	{
 		name: "Powerade",
 		instructions:
