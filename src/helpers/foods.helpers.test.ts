@@ -50,7 +50,7 @@ describe("buildFood", () => {
 
 		it("defaults locations to [home]", () => {
 			const food = buildFood(CATEGORIES.dairy)("Gogurt");
-			expect(food.locations).toEqual([LOCATIONS.home]);
+			expect(food.locations).toEqual(LOCATIONS.home);
 		});
 
 		it("attaches the category_key", () => {
