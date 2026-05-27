@@ -21,7 +21,6 @@ type FoodListProps = {
 	difficulty: Difficulty | null;
 	location: Location | null;
 	onClearDifficulty: () => void;
-	onClearLocation: () => void;
 	onClearSearch: () => void;
 	search: string;
 	sort: SortDirection;
@@ -33,7 +32,6 @@ export const FoodList = ({
 	difficulty,
 	location,
 	onClearDifficulty,
-	onClearLocation,
 	onClearSearch,
 	search,
 	sort,
@@ -77,12 +75,9 @@ export const FoodList = ({
 		return (
 			<NoResults
 				hasDifficulty={difficulty !== null}
-				hasLocation={location !== null}
+				hasSearch={!!search.trim()}
 				onClearDifficulty={onClearDifficulty}
-				onClearLocation={onClearLocation}
 				onClearSearch={onClearSearch}
-				subCategory={subCategory}
-				topCategory={topCategory}
 			/>
 		);
 	}

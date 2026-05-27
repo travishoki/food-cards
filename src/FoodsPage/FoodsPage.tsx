@@ -47,7 +47,6 @@ export const FoodsPage = () => {
 					difficulty={difficulty}
 					location={location}
 					onClearDifficulty={() => setDifficulty(null)}
-					onClearLocation={() => setLocation(null)}
 					onClearSearch={() => setSearch("")}
 					search={search}
 					sort={sort}
