@@ -13,7 +13,7 @@ import "./index.scss";
 const router = createBrowserRouter([
 	{
 		children: [
-			{ element: <Navigate replace to="/main/entree" />, index: true },
+			{ element: <Navigate replace to="/main" />, index: true },
 			{ element: <FoodPage />, path: "food/:foodName" },
 			{ element: <FoodsPage />, path: ":topCategory" },
 			{ element: <FoodPage />, path: ":topCategory/food/:foodName" },

@@ -9,9 +9,7 @@ import {
 
 const TOP_CATEGORY_DEFAULT_SUB: Partial<
 	Record<keyof typeof TOP_CATEGORIES, string>
-> = {
-	[TOP_CATEGORIES.main]: CATEGORIES.entree,
-};
+> = {};
 
 export function topMenuItems() {
 	return TOP_CATEGORY_ORDER.map((key) => ({
