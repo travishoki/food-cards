@@ -60,11 +60,7 @@ const items = [
 	{
 		name: "Pancakes",
 		difficulty: 4,
-	},
-	{
-		name: "Pancakes",
-		locations: LOCATIONS.restaurant,
-		slug: "pancakes-restaurant",
+		locations: [LOCATIONS.home, LOCATIONS.restaurant],
 	},
 	{
 		name: "Puffy Oven Pancakes",
