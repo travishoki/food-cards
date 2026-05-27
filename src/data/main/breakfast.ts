@@ -69,7 +69,6 @@ const items = [
 	},
 	{
 		name: "Pancakes",
-		difficulty: 4,
 		locations: LOCATIONS.restaurant,
 	},
 	{
