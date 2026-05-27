@@ -47,11 +47,21 @@ const items = [
 		],
 		recipe_link:
 			"https://www.mccormick.com/recipes/breakfast-brunch/quick-and-easy-french-toast",
+		slug: "frend-toast-homemade",
+	},
+	{
+		name: "French Toast",
+		locations: LOCATIONS.restaurant,
 	},
 	{
 		name: "French Toast Sticks",
 		brand: BRANDS.SONIC,
 		locations: LOCATIONS["fast-food"],
+	},
+	{
+		name: "French Toast Sticks",
+		locations: LOCATIONS.home,
+		slug: "french-toast-sticks-homemade",
 	},
 	{
 		name: "Fresh Waffles",
