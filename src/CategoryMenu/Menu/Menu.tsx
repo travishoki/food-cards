@@ -13,16 +13,22 @@ export const Menu = () => {
 
 	return (
 		<FilterSection ariaLabel="Food categories" label="Category:">
-			{topMenu.map((cat) => (
-				<button
-					key={cat.key}
-					className={`category-menu__link ${topCategory === cat.key ? "is-active" : ""}`}
-					onClick={() => navigate(`/${cat.key}`)}
-					type="button"
-				>
-					{cat.label}
-				</button>
-			))}
+			{topMenu.map((cat) => {
+				const path = cat.defaultSubCategory
+					? `/${cat.key}/${cat.defaultSubCategory}`
+					: `/${cat.key}`;
+
+				return (
+					<button
+						key={cat.key}
+						className={`category-menu__link ${topCategory === cat.key ? "is-active" : ""}`}
+						onClick={() => navigate(path)}
+						type="button"
+					>
+						{cat.label}
+					</button>
+				);
+			})}
 		</FilterSection>
 	);
 };
