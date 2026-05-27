@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import { useParams } from "react-router-dom";
 
 import { FoodPageInfoBox } from "./FoodPageInfoBox/FoodPageInfoBox";
@@ -21,12 +23,19 @@ export const FoodPage = () => {
 	if (!food) return <MissingFood />;
 
 	const activity = foodActivityDictionary[foodName ?? ""];
-	const inStock = activity?.inStock ?? true;
 	const docId = activity?.docId;
+
+	const [inStock, setInStock] = useState(activity?.inStock ?? true);
 
 	return (
 		<div className="food-detail">
-			<FoodPageInfoBox docId={docId} inStock={inStock} slug={food.slug} />
+			<FoodPageInfoBox
+				docId={docId}
+				inStock={inStock}
+				locations={food.locations}
+				onToggle={setInStock}
+				slug={food.slug}
+			/>
 			<Card food={food} inStock={inStock} />
 		</div>
 	);

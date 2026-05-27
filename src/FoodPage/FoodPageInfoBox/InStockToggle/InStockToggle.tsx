@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import { addFoodActivity, updateFoodInStock } from "../../../api/foods.api";
 
 import "./InStockToggle.scss";
@@ -7,14 +5,18 @@ import "./InStockToggle.scss";
 type InStockToggleProps = {
 	docId: string | undefined;
 	inStock: boolean;
+	onToggle: (value: boolean) => void;
 	slug: string;
 };
 
-export const InStockToggle = ({ docId, inStock, slug }: InStockToggleProps) => {
-	const [value, setValue] = useState(inStock);
-
+export const InStockToggle = ({
+	docId,
+	inStock,
+	onToggle,
+	slug,
+}: InStockToggleProps) => {
 	const handleClick = async () => {
-		const next = !value;
+		const next = !inStock;
 
 		if (docId) {
 			await updateFoodInStock(docId, next);
@@ -22,14 +24,16 @@ export const InStockToggle = ({ docId, inStock, slug }: InStockToggleProps) => {
 			await addFoodActivity(slug, next);
 		}
 
-		setValue(next);
+		onToggle(next);
 	};
 
 	return (
 		<div className="food-page-in-stock-toggle">
-			<span className="food-page-in-stock-toggle__label">In Stock</span>
+			<span className="food-page-in-stock-toggle__label">
+				{inStock ? "In Stock" : "Out of Stock"}
+			</span>
 			<button
-				aria-checked={value}
+				aria-checked={inStock}
 				className="food-page-in-stock-toggle__track"
 				onClick={handleClick}
 				role="switch"
