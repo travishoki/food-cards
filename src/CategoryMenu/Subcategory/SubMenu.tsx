@@ -2,13 +2,15 @@ import { useMemo } from "react";
 
 import { FilterSection } from "../../FilterSection/FilterSection";
 import { useFoodFilters } from "../../context/foodFilters";
+import { useUrlParams } from "../../hooks/useUrlParams";
 import { subCategoriesForTop } from "../CategoryMenu.helpers";
 
 export const SubMenu = () => {
-	const { setSubCategory, subCategory, topCategory } = useFoodFilters();
+	const { setSubCategory, subCategory } = useFoodFilters();
+	const { urlTopCategory } = useUrlParams();
 	const subMenu = useMemo(
-		() => (topCategory ? subCategoriesForTop(topCategory) : []),
-		[topCategory],
+		() => (urlTopCategory ? subCategoriesForTop(urlTopCategory) : []),
+		[urlTopCategory],
 	);
 
 	if (subMenu.length <= 1) return null;

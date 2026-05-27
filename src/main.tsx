@@ -11,8 +11,13 @@ const router = createBrowserRouter([
 		children: [
 			{ element: <FoodsPage />, index: true },
 			{ element: <FoodPage />, path: "food/:foodName" },
-			{ element: <FoodsPage />, path: ":location" },
-			{ element: <FoodPage />, path: ":location/food/:foodName" },
+			{ element: <FoodsPage />, path: ":segment" },
+			{ element: <FoodPage />, path: ":segment/food/:foodName" },
+			{ element: <FoodsPage />, path: ":location/:topCategory" },
+			{
+				element: <FoodPage />,
+				path: ":location/:topCategory/food/:foodName",
+			},
 		],
 		element: <App />,
 		path: "/",

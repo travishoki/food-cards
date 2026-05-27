@@ -1,19 +1,16 @@
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import "./BackButton.scss";
 
 export const BackButton = () => {
 	const navigate = useNavigate();
-	const { location } = useParams<{ location?: string }>();
 
-	const onClick = () => {
-		navigate(location ? `/${location}` : "/");
-	};
+	if (window.history.length <= 1) return null;
 
 	return (
 		<button
 			className="category-menu__link back-button"
-			onClick={onClick}
+			onClick={() => navigate(-1)}
 			type="button"
 		>
 			Back

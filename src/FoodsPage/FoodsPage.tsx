@@ -1,15 +1,14 @@
-import { useParams } from "react-router-dom";
-
 import { ErrorBoundary } from "../ErrorBoundary/ErrorBoundary";
+import { TOP_CATEGORIES } from "../const/categories";
+import { LOCATIONS } from "../const/locations.const";
 import { useFoodFilters } from "../context/foodFilters";
+import { useUrlParams } from "../hooks/useUrlParams";
 import { BackToTop } from "./BackToTop/BackToTop";
 import { FoodList } from "./FoodList/FoodList";
 import { Toolbar } from "./Toolbar/Toolbar";
-import { TOP_CATEGORIES } from "../const/categories";
-import { LOCATIONS, Location } from "../const/locations.const";
 
 export const FoodsPage = () => {
-	const { location } = useParams<{ location: string }>();
+	const { urlLocation, urlTopCategory } = useUrlParams();
 
 	const {
 		difficulty,
@@ -19,10 +18,7 @@ export const FoodsPage = () => {
 		setSort,
 		sort,
 		subCategory,
-		topCategory,
 	} = useFoodFilters();
-
-	const urlLocation = (location ?? LOCATIONS.home) as Location;
 
 	return (
 		<>
@@ -30,7 +26,7 @@ export const FoodsPage = () => {
 				difficulty={difficulty}
 				hasActiveFilter={
 					urlLocation !== LOCATIONS.home ||
-					topCategory !== TOP_CATEGORIES.main ||
+					urlTopCategory !== TOP_CATEGORIES.main ||
 					!!subCategory ||
 					difficulty !== null
 				}
@@ -49,7 +45,7 @@ export const FoodsPage = () => {
 					search={search}
 					sort={sort}
 					subCategory={subCategory ?? undefined}
-					topCategory={topCategory ?? undefined}
+					topCategory={urlTopCategory}
 				/>
 			</ErrorBoundary>
 			<BackToTop />

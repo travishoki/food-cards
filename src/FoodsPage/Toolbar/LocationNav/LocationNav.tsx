@@ -1,27 +1,40 @@
-import { useParams, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import { FilterSection } from "../../../FilterSection/FilterSection";
+import { TOP_CATEGORIES } from "../../../const/categories";
 import {
 	LOCATION_DATA,
 	LOCATION_ORDER,
 	LOCATIONS,
 } from "../../../const/locations.const";
+import { useFoodFilters } from "../../../context/foodFilters";
+import { useUrlParams } from "../../../hooks/useUrlParams";
 
 export const LocationNav = () => {
-	const { location } = useParams<{ location?: string }>();
+	const { urlLocation, urlTopCategory } = useUrlParams();
+	const { setSubCategory } = useFoodFilters();
 	const navigate = useNavigate();
 
-	const activeLocation = location ?? LOCATIONS.home;
+	const handleClick = (loc: string) => {
+		setSubCategory(null);
+
+		const isHome = loc === LOCATIONS.home;
+		const keepCategory = urlTopCategory !== TOP_CATEGORIES.main;
+
+		if (isHome) {
+			navigate(keepCategory ? `/${urlTopCategory}` : "/");
+		} else {
+			navigate(keepCategory ? `/${loc}/${urlTopCategory}` : `/${loc}`);
+		}
+	};
 
 	return (
 		<FilterSection label="Location:">
 			{LOCATION_ORDER.map((loc) => (
 				<button
 					key={loc}
-					className={`difficulty-filter__option difficulty-filter__option--wide ${activeLocation === loc ? "is-active" : ""}`}
-					onClick={() =>
-						navigate(loc === LOCATIONS.home ? "/" : `/${loc}`)
-					}
+					className={`difficulty-filter__option difficulty-filter__option--wide ${urlLocation === loc ? "is-active" : ""}`}
+					onClick={() => handleClick(loc)}
 					type="button"
 				>
 					{LOCATION_DATA[loc].label}

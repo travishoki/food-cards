@@ -11,10 +11,8 @@ type FoodFiltersContextValue = {
 	setSearch: (value: string) => void;
 	setSort: (value: SortDirection) => void;
 	setSubCategory: (value: string | null) => void;
-	setTopCategory: (value: string | null) => void;
 	sort: SortDirection;
 	subCategory: string | null;
-	topCategory: string | null;
 };
 
 export const FoodFiltersContext = createContext<
