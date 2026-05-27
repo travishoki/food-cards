@@ -7,7 +7,8 @@ const items = [
 	"Bread Pizza",
 	{
 		name: "Dominos Pizza",
-		locations: LOCATIONS.restaurant,
+		brand: BRANDS.DOMINOS,
+		locations: LOCATIONS["fast-food"],
 	},
 	"French Bread Pizza",
 	{
@@ -21,15 +22,16 @@ const items = [
 	},
 	{
 		name: "Marco's Pizza",
-		locations: LOCATIONS.restaurant,
+		brand: BRANDS.MARCOS,
+		locations: LOCATIONS["fast-food"],
 	},
 	{
 		name: "Papa Johnson's Pizza",
-		locations: LOCATIONS.restaurant,
+		locations: LOCATIONS["fast-food"],
 	},
 	{
 		name: "Papa Murphy's Pizza",
-		locations: LOCATIONS.restaurant,
+		locations: LOCATIONS["fast-food"],
 	},
 	"PB&J",
 	{
@@ -38,10 +40,11 @@ const items = [
 	},
 	{
 		name: "Pizza Hut",
-		locations: LOCATIONS.restaurant,
+		locations: LOCATIONS["fast-food"],
 	},
 	{
 		name: "Pizza Pie Cafe",
+		brand: BRANDS.PIZZA_PIE_CAFE,
 		locations: LOCATIONS.restaurant,
 	},
 	{

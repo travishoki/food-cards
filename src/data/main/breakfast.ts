@@ -1,3 +1,4 @@
+import { BRANDS } from "../../const/brands.const";
 import { CATEGORIES } from "../../const/categories";
 import { LOCATIONS } from "../../const/locations.const";
 import { buildFood, FoodInput } from "../../helpers/foods.helpers";
@@ -49,6 +50,7 @@ const items = [
 	},
 	{
 		name: "French Toast Sticks",
+		brand: BRANDS.SONIC,
 		locations: LOCATIONS["fast-food"],
 	},
 	{
@@ -58,6 +60,11 @@ const items = [
 	{
 		name: "Pancakes",
 		difficulty: 4,
+	},
+	{
+		name: "Pancakes",
+		locations: LOCATIONS.restaurant,
+		slug: "pancakes-restaurant",
 	},
 	{
 		name: "Puffy Oven Pancakes",

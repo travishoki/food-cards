@@ -20,6 +20,7 @@ const items = [
 	"Cookie Dough",
 	{
 		name: "Cookie Dough Pizza",
+		brand: BRANDS.PIZZA_PIE_CAFE,
 		locations: LOCATIONS.restaurant,
 	},
 	{
