@@ -4,7 +4,7 @@ import { FOODS } from "../../data";
 import { Food } from "../../types";
 import { Difficulty } from "../Toolbar/DifficultyFilter";
 import { Location } from "../Toolbar/LocationFilter";
-import { SortDirection } from "../Toolbar/SortPanel";
+import { SORT_DIRECTIONS, SortDirection } from "../Toolbar/SortPanel";
 
 type GetVisibleFoodsArgs = {
 	difficulty?: Difficulty | null;
@@ -23,7 +23,7 @@ export const getVisibleFoods = ({
 	location = null,
 	prereleaseMode = "hide",
 	search,
-	sort = "asc",
+	sort = SORT_DIRECTIONS.asc,
 	subCategory,
 	topCategory,
 }: GetVisibleFoodsArgs): Food[] => {
@@ -62,7 +62,7 @@ export const getVisibleFoods = ({
 	if (q) result = result.filter((f) => f.name.toLowerCase().includes(q));
 
 	return [...result].sort((a, b) => {
-		if (sort === "difficulty-asc") {
+		if (sort === SORT_DIRECTIONS.difficultyAsc) {
 			const cmp = a.difficulty - b.difficulty;
 
 			return cmp !== 0 ? cmp : a.name.localeCompare(b.name);
@@ -70,6 +70,6 @@ export const getVisibleFoods = ({
 
 		const cmp = a.name.localeCompare(b.name);
 
-		return sort === "asc" ? cmp : -cmp;
+		return sort === SORT_DIRECTIONS.asc ? cmp : -cmp;
 	});
 };

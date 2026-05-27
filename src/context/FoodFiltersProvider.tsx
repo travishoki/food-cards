@@ -2,16 +2,16 @@ import { ReactNode, useCallback, useState } from "react";
 
 import { FoodFiltersContext } from "./foodFilters";
 import { Difficulty } from "../FoodsPage/Toolbar/DifficultyFilter";
-import { SortDirection } from "../FoodsPage/Toolbar/SortPanel";
+import { SORT_DIRECTIONS, SortDirection } from "../FoodsPage/Toolbar/SortPanel";
 
 export const FoodFiltersProvider = ({ children }: { children: ReactNode }) => {
 	const [search, setSearch] = useState("");
-	const [sort, setSort] = useState<SortDirection>("asc");
+	const [sort, setSort] = useState<SortDirection>(SORT_DIRECTIONS.asc);
 	const [difficulty, setDifficulty] = useState<Difficulty | null>(null);
 	const [subCategory, setSubCategory] = useState<string | null>(null);
 
 	const resetAll = useCallback(() => {
-		setSort("asc");
+		setSort(SORT_DIRECTIONS.asc);
 		setDifficulty(null);
 		setSubCategory(null);
 		setSearch("");

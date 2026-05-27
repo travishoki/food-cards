@@ -6,12 +6,12 @@ import { LocationNav } from "./LocationNav/LocationNav";
 import { SearchButton } from "./SearchButton";
 import { SettingsButton } from "./SettingsButton";
 import { SortButton } from "./SortButton";
-import { SortDirection, SortPanel } from "./SortPanel";
+import { SORT_DIRECTIONS, SortDirection, SortPanel } from "./SortPanel";
 import { CardViewToggle } from "../../CardViewToggle/CardViewToggle";
 import { InStockToggle } from "../../CardViewToggle/InStockToggle";
 import { PrereleaseToggle } from "../../CardViewToggle/PrereleaseToggle";
 import { CategoryMenu } from "../../CategoryMenu/CategoryMenu";
-import { Location } from "../../const/locations.const";
+import { Location, LOCATIONS } from "../../const/locations.const";
 import { isEatingOut } from "../../helpers/locations.helpers";
 import { CloseIcon } from "../../icons/CloseIcon";
 import { SearchInput } from "../SearchInput/SearchInput";
@@ -72,7 +72,7 @@ export const Toolbar = ({
 					onToggle={() => toggle("search")}
 				/>
 				<SortButton
-					hasActiveSort={sort === "desc"}
+					hasActiveSort={sort === SORT_DIRECTIONS.desc}
 					isOpen={openPanel === "sort"}
 					onToggle={() => toggle("sort")}
 				/>
@@ -108,7 +108,11 @@ export const Toolbar = ({
 							<SearchInput onClose={close} />
 						)}
 						{openPanel === "sort" && (
-							<SortPanel onChange={onSortChange} value={sort} />
+							<SortPanel
+								onChange={onSortChange}
+								showDifficultySort={location === LOCATIONS.home}
+								value={sort}
+							/>
 						)}
 						{openPanel === "settings" && (
 							<>
