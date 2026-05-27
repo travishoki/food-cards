@@ -9,10 +9,10 @@ export const TOP_CATEGORIES = {
 export type TopCategoryKey = keyof typeof TOP_CATEGORIES;
 
 export const TOP_CATEGORY_ORDER: TopCategoryKey[] = [
-	"drinks",
 	"main",
 	"sides",
 	"snack",
+	"drinks",
 	"sweets",
 ];
 
