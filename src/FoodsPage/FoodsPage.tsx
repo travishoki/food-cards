@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 
 import { ErrorBoundary } from "../ErrorBoundary/ErrorBoundary";
-import { TOP_CATEGORIES } from "../const/categories";
+import { CATEGORIES, TOP_CATEGORIES } from "../const/categories";
 import { LOCATIONS } from "../const/locations.const";
 import { useFoodFilters } from "../context/foodFilters";
 import { BackToTop } from "./BackToTop/BackToTop";
@@ -31,7 +31,7 @@ export const FoodsPage = () => {
 				difficulty={difficulty}
 				hasActiveFilter={
 					(!!topCategory && topCategory !== TOP_CATEGORIES.main) ||
-					!!subCategory ||
+					(!!subCategory && subCategory !== CATEGORIES.entree) ||
 					difficulty !== null ||
 					location !== LOCATIONS.home
 				}

@@ -20,13 +20,6 @@ export const SubMenu = () => {
 
 	return (
 		<FilterSection ariaLabel="Food subcategories" label="Subcategory:">
-			<button
-				className={`category-menu__link ${!subCategory ? "is-active" : ""}`}
-				onClick={() => navigate(`/${topCategory}`)}
-				type="button"
-			>
-				All
-			</button>
 			{subMenu.map((cat) => (
 				<button
 					key={cat.key}
