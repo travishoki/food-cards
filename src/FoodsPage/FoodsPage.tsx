@@ -5,6 +5,7 @@ import { useFoodFilters } from "../context/foodFilters";
 import { BackToTop } from "./BackToTop/BackToTop";
 import { FoodList } from "./FoodList/FoodList";
 import { Toolbar } from "./Toolbar/Toolbar";
+import { TOP_CATEGORIES } from "../const/categories";
 import { LOCATIONS, Location } from "../const/locations.const";
 
 export const FoodsPage = () => {
@@ -29,7 +30,7 @@ export const FoodsPage = () => {
 				difficulty={difficulty}
 				hasActiveFilter={
 					urlLocation !== LOCATIONS.home ||
-					!!topCategory ||
+					topCategory !== TOP_CATEGORIES.main ||
 					!!subCategory ||
 					difficulty !== null
 				}

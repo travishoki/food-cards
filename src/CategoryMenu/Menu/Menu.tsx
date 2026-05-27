@@ -10,13 +10,6 @@ export const Menu = () => {
 
 	return (
 		<FilterSection ariaLabel="Food categories" label="Category:">
-			<button
-				className={`category-menu__link ${!topCategory ? "is-active" : ""}`}
-				onClick={() => setTopCategory(null)}
-				type="button"
-			>
-				All
-			</button>
 			{topMenu.map((cat) => (
 				<button
 					key={cat.key}
