@@ -1,3 +1,4 @@
+import { Toaster } from "react-hot-toast";
 import { Outlet } from "react-router-dom";
 
 import { AppTitle } from "./AppTitle/AppTitle";
@@ -11,6 +12,7 @@ export const App = () => (
 			<FoodFiltersProvider>
 				<AppTitle />
 				<Outlet />
+				<Toaster position="bottom-center" />
 			</FoodFiltersProvider>
 		</FoodsProvider>
 	</CardViewProvider>

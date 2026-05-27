@@ -12,3 +12,10 @@ export function toFoodSlug(name: string): string {
 		.replace(/\s+/g, "-")
 		.replace(/[^a-z0-9-]/g, "");
 }
+
+export function fromFoodSlug(slug: string): string {
+	return slug
+		.replace(/-/g, " ")
+		.replace(/\band\b/g, "&")
+		.replace(/\b\w/g, (c) => c.toUpperCase());
+}
