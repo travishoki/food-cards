@@ -102,6 +102,12 @@ const items = [
 		instructions: "Extra yummy with Red Robbin seasoning.",
 	},
 	{
+		name: "Steak Fries",
+		brand: BRANDS.RED_ROBIN,
+		locations: LOCATIONS.restaurant,
+		slug: "steak-fries-red-robin",
+	},
+	{
 		name: "Tater Tots",
 		difficulty: 2,
 	},

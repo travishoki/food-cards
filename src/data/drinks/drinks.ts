@@ -50,6 +50,7 @@ const items = [
 	},
 	{
 		name: "Slurpee",
+		brand: BRANDS.SEVEN_ELEVEN,
 		instructions: "Worth the trip to a gas station.",
 		locations: LOCATIONS["fast-food"],
 	},

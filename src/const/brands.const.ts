@@ -8,6 +8,8 @@ export const BRANDS = {
 	DEL_TACO: "del-taco",
 	LITTLE_CAESARS: "little-caesars",
 	OLIVE_GARDEN: "olive-garden",
+	RED_ROBIN: "red-robin",
+	SEVEN_ELEVEN: "7-eleven",
 	SONIC: "sonic",
 	TACO_AMIGO: "taco-amigo",
 	TACO_BELL: "taco-bell",

@@ -15,7 +15,7 @@ export const DifficultyFilter = ({
 	onChange,
 	value,
 }: DifficultyFilterProps) => (
-	<FilterSection label="Difficulty:">
+	<FilterSection label="Cooking Difficulty:">
 		<button
 			aria-pressed={value === null}
 			className={`difficulty-filter__option difficulty-filter__option--all ${value === null ? "is-active" : ""}`}
