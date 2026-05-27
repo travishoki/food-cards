@@ -72,7 +72,7 @@ export const Toolbar = ({
 					onToggle={() => toggle("search")}
 				/>
 				<SortButton
-					hasActiveSort={sort === SORT_DIRECTIONS.desc}
+					hasActiveSort={sort !== SORT_DIRECTIONS.asc}
 					isOpen={openPanel === "sort"}
 					onToggle={() => toggle("sort")}
 				/>

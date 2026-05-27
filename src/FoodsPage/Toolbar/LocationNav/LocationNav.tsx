@@ -9,14 +9,17 @@ import {
 } from "../../../const/locations.const";
 import { useFoodFilters } from "../../../context/foodFilters";
 import { useUrlParams } from "../../../hooks/useUrlParams";
+import { SORT_DIRECTIONS } from "../SortPanel";
 
 export const LocationNav = () => {
 	const { urlLocation, urlTopCategory } = useUrlParams();
-	const { setSubCategory } = useFoodFilters();
+	const { setSort, setSubCategory, sort } = useFoodFilters();
 	const navigate = useNavigate();
 
 	const handleClick = (loc: string) => {
 		if (urlTopCategory === TOP_CATEGORIES.sweets) setSubCategory(null);
+		if (loc !== LOCATIONS.home && sort === SORT_DIRECTIONS.difficultyAsc)
+			setSort(SORT_DIRECTIONS.asc);
 
 		const isHome = loc === LOCATIONS.home;
 		const categoryAllowedAtLoc =
