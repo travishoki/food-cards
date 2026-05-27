@@ -6,6 +6,12 @@ import { buildFood, FoodInput } from "../../helpers/foods.helpers";
 const items = [
 	"Bread Pizza",
 	{
+		name: "Chicken Nuggets",
+		brand: BRANDS.MCDONALDS,
+		locations: LOCATIONS["fast-food"],
+		slug: "chicken-nuggets-mcdonalds",
+	},
+	{
 		name: "Dominos Pizza",
 		brand: BRANDS.DOMINOS,
 		locations: LOCATIONS["fast-food"],
@@ -41,9 +47,16 @@ const items = [
 		prerelease: true,
 	},
 	{
+		name: "Pizza",
+		brand: BRANDS.COSTCO,
+		locations: LOCATIONS["fast-food"],
+		slug: "pizza-costco",
+	},
+	{
 		name: "Pizza Hut",
 		brand: BRANDS.PIZZA_HUT,
 		locations: LOCATIONS["fast-food"],
+		slug: "pizza-hut",
 	},
 	{
 		name: "Pizza Pie Cafe",

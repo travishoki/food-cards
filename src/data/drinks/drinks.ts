@@ -54,6 +54,12 @@ const items = [
 		instructions: "Worth the trip to a gas station.",
 		locations: LOCATIONS["fast-food"],
 	},
+	{
+		name: "Specialty Drinks",
+		brand: BRANDS.LOS_HERMANOS,
+		locations: LOCATIONS.restaurant,
+		slug: "specialty-drink-los-hermanos",
+	},
 	"Sprite",
 	"Sunny D",
 ] as FoodInput[];
