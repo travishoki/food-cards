@@ -58,6 +58,4 @@ const items = [
 	"Sunny D",
 ] as FoodInput[];
 
-export const DRINKS_FOODS = items.map(
-	buildFood(CATEGORIES.drinks, items.length),
-);
+export const DRINKS_FOODS = items.map(buildFood(CATEGORIES.drinks));

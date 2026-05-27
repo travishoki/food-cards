@@ -69,6 +69,4 @@ const items = [
 	},
 ] as FoodInput[];
 
-export const ENTREE_FOODS = items.map(
-	buildFood(CATEGORIES.entree, items.length),
-);
+export const ENTREE_FOODS = items.map(buildFood(CATEGORIES.entree));

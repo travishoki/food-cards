@@ -16,4 +16,4 @@ const items = [
 	"Twizzlers",
 ] as FoodInput[];
 
-export const CANDY_FOODS = items.map(buildFood(CATEGORIES.candy, items.length));
+export const CANDY_FOODS = items.map(buildFood(CATEGORIES.candy));

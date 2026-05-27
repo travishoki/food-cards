@@ -96,6 +96,4 @@ const items = [
 	},
 ] as FoodInput[];
 
-export const DESSERT_FOODS = items.map(
-	buildFood(CATEGORIES.dessert, items.length),
-);
+export const DESSERT_FOODS = items.map(buildFood(CATEGORIES.dessert));

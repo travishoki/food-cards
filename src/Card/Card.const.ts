@@ -38,9 +38,6 @@ export const PRERELEASE_FONT_SIZE = 42;
 export const DIFFICULTY_ICON_SIZE = 26;
 export const DIFFICULTY_ICON_BOTTOM = 50;
 
-// Category position text (e.g. "3 / 19")
-export const CATEGORY_POSITION_FONT_SIZE = 22;
-
 // Card Info Section
 export const CARD_INFO_TOP = Math.round(BACKGROUND_HEIGHT * 0.52);
 export const CARD_INFO_PADDING_BOTTOM = 10;

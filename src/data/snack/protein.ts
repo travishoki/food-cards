@@ -10,6 +10,4 @@ const items = [
 	"Protein Bar",
 ] as FoodInput[];
 
-export const PROTEIN_FOODS = items.map(
-	buildFood(CATEGORIES.protein, items.length),
-);
+export const PROTEIN_FOODS = items.map(buildFood(CATEGORIES.protein));

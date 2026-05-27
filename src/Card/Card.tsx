@@ -8,7 +8,6 @@ import {
 	BACKGROUND_WIDTH,
 	BRAND_SIZE,
 	CARD_BOTTOM_PADDING,
-	CATEGORY_POSITION_FONT_SIZE,
 	CARD_INFO_PADDING_BOTTOM,
 	CARD_INFO_TOP,
 	COOK_TIME_CLOCK_SIZE,
@@ -45,7 +44,6 @@ import {
 	getListCardWidth,
 } from "./Card.helpers";
 import { CardInfo } from "./CardInfo/CardInfo";
-import { CategoryPosition } from "./CategoryPosition/CategoryPosition";
 import { DifficultyIcon } from "./DifficultyIcon/DifficultyIcon";
 import { Graphic } from "./Graphic/Graphic";
 import { Icon } from "./Icon/Icon";
@@ -71,7 +69,6 @@ const designVars: CSSProperties = {
 	"--card-info-padding-bottom": dcqw(CARD_INFO_PADDING_BOTTOM),
 	"--card-info-top": dcqw(CARD_INFO_TOP),
 	"--card-inner-padding": dcqw(CARD_INNER_PADDING),
-	"--category-position-font-size": dcqw(CATEGORY_POSITION_FONT_SIZE),
 	"--cook-time-clock-size": dcqw(COOK_TIME_CLOCK_SIZE),
 	"--cook-time-font-size-instructions": dcqw(
 		COOK_TIME_FONT_SIZE_INSTRUCTIONS,
@@ -165,7 +162,6 @@ export default function Card({ food, inStock }: CardProps) {
 					<Icon categoryKey={food.category_key} />
 					{food.brand && <Brand brand={food.brand} />}
 					<CardInfo food={food} />
-					<CategoryPosition position={food.position} />
 					<DifficultyIcon difficulty={food.difficulty} />
 					{food.prerelease && <PrereleaseLabel />}
 					<Background categoryKey={food.category_key} />

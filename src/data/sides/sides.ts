@@ -128,4 +128,4 @@ const items = [
 	},
 ] as FoodInput[];
 
-export const SIDES_FOODS = items.map(buildFood(CATEGORIES.sides, items.length));
+export const SIDES_FOODS = items.map(buildFood(CATEGORIES.sides));

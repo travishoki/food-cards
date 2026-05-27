@@ -1,9 +1,0 @@
-.category-position {
-	bottom: var(--difficulty-icon-bottom);
-	color: $color-card-text;
-	font-size: var(--category-position-font-size);
-	font-weight: 600;
-	position: absolute;
-	right: calc(var(--card-inner-padding) + var(--difficulty-icon-size) + 0.5rem);
-	z-index: 2;
-}

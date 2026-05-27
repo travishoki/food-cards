@@ -58,4 +58,4 @@ const items = [
 	"Watermelon",
 ] as FoodInput[];
 
-export const FRUIT_FOODS = items.map(buildFood(CATEGORIES.fruit, items.length));
+export const FRUIT_FOODS = items.map(buildFood(CATEGORIES.fruit));

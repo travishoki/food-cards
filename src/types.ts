@@ -14,7 +14,6 @@ export type Food = {
 	instructions?: string | string[];
 	locations: Location | Location[];
 	name: string;
-	position: { index: number; total: number };
 	prerelease?: boolean;
 	recipe_link?: string;
 	slug: string;

@@ -45,6 +45,4 @@ const items = [
 	"Tortilla Chips",
 ] as FoodInput[];
 
-export const GRAINS_FOODS = items.map(
-	buildFood(CATEGORIES.grains, items.length),
-);
+export const GRAINS_FOODS = items.map(buildFood(CATEGORIES.grains));
