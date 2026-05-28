@@ -47,10 +47,10 @@ const items = [
 		],
 		recipe_link:
 			"https://www.mccormick.com/recipes/breakfast-brunch/quick-and-easy-french-toast",
-		slug: "frend-toast-homemade",
 	},
 	{
 		name: "French Toast",
+		brand: BRANDS.JIMS,
 		locations: LOCATIONS.restaurant,
 	},
 	{
@@ -61,7 +61,6 @@ const items = [
 	{
 		name: "French Toast Sticks",
 		locations: LOCATIONS.home,
-		slug: "french-toast-sticks-homemade",
 	},
 	{
 		name: "Fresh Waffles",
@@ -114,6 +113,11 @@ const items = [
 			"Whipped Cream",
 			"Powdered Sugar",
 		],
+	},
+	{
+		name: "Waffles",
+		brand: BRANDS.WAFFLE_LOVE,
+		locations: LOCATIONS.restaurant,
 	},
 ] as FoodInput[];
 

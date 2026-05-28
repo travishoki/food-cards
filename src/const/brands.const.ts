@@ -7,6 +7,7 @@ export const BRANDS = {
 	DAIRY_QUEEN: "dairy-queen",
 	DEL_TACO: "del-taco",
 	DOMINOS: "dominos",
+	JIMS: "jims",
 	LITTLE_CAESARS: "little-caesars",
 	LOS_HERMANOS: "los-hermanos",
 	MARCOS: "marcos",
@@ -23,6 +24,7 @@ export const BRANDS = {
 	TACO_AMIGO: "taco-amigo",
 	TACO_BELL: "taco-bell",
 	TEXAS_ROADHOUSE: "texas-roadhouse",
+	TOSTINOS: "tostinos",
 	WAFFLE_LOVE: "waffle-love",
 	WENDYS: "wendys",
 } as const;

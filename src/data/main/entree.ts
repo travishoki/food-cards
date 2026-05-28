@@ -9,10 +9,9 @@ const items = [
 		name: "Chicken Nuggets",
 		brand: BRANDS.MCDONALDS,
 		locations: LOCATIONS["fast-food"],
-		slug: "chicken-nuggets-mcdonalds",
 	},
 	{
-		name: "Dominos Pizza",
+		name: "Pizza",
 		brand: BRANDS.DOMINOS,
 		locations: LOCATIONS["fast-food"],
 	},
@@ -30,22 +29,22 @@ const items = [
 		prerelease: true,
 	},
 	{
-		name: "Little Caesar's Pizza",
+		name: "Pizza",
 		brand: BRANDS.LITTLE_CAESARS,
 		locations: LOCATIONS["fast-food"],
 	},
 	{
-		name: "Marco's Pizza",
+		name: "Pizza",
 		brand: BRANDS.MARCOS,
 		locations: LOCATIONS["fast-food"],
 	},
 	{
-		name: "Papa Johnson's Pizza",
+		name: "Pizza",
 		brand: BRANDS.PAPA_JOHNS,
 		locations: LOCATIONS["fast-food"],
 	},
 	{
-		name: "Papa Murphy's Pizza",
+		name: "Pizza",
 		brand: BRANDS.PAPA_MURPHYS,
 		locations: LOCATIONS["fast-food"],
 	},
@@ -58,16 +57,14 @@ const items = [
 		name: "Pizza",
 		brand: BRANDS.COSTCO,
 		locations: LOCATIONS["fast-food"],
-		slug: "pizza-costco",
 	},
 	{
-		name: "Pizza Hut",
+		name: "Pizza",
 		brand: BRANDS.PIZZA_HUT,
 		locations: LOCATIONS["fast-food"],
-		slug: "pizza-hut",
 	},
 	{
-		name: "Pizza Pie Cafe",
+		name: "Pizza",
 		brand: BRANDS.PIZZA_PIE_CAFE,
 		locations: LOCATIONS.restaurant,
 	},
@@ -77,17 +74,13 @@ const items = [
 	},
 	{
 		name: "Square Pizza",
+		brand: BRANDS.TOSTINOS,
 		cookTime: { instructions: "Cook in oven", time: "10–12m" },
 		info: "Preheat oven to 450°",
 		instructions:
 			"Unwrap pizza. Put parchment on a cooking sheet. Add pepperonis.",
 	},
 	"Tortilla Pizza",
-	{
-		name: "Waffle Love",
-		brand: BRANDS.WAFFLE_LOVE,
-		locations: LOCATIONS.restaurant,
-	},
 ] as FoodInput[];
 
 export const ENTREE_FOODS = items.map(buildFood(CATEGORIES.entree));

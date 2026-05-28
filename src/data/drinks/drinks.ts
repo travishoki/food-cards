@@ -58,7 +58,6 @@ const items = [
 		name: "Specialty Drinks",
 		brand: BRANDS.LOS_HERMANOS,
 		locations: LOCATIONS.restaurant,
-		slug: "specialty-drink-los-hermanos",
 	},
 	"Sprite",
 	"Sunny D",

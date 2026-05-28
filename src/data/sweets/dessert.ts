@@ -85,7 +85,7 @@ const items = [
 		difficulty: 3,
 	},
 	{
-		name: "Sonic Cream Slush",
+		name: "Cream Slush",
 		brand: BRANDS.SONIC,
 		locations: LOCATIONS["fast-food"],
 	},

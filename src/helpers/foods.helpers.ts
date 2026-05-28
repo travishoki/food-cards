@@ -28,15 +28,17 @@ export const buildFood =
 		const food: FoodInputObject =
 			typeof input === "string" ? { name: input } : input;
 		const slug = food.slug || toFoodSlug(food.name);
+		const fileName = food.brand ? `${slug}-${food.brand}` : slug;
 		const top = TOP_OF_SUB[category_key];
-		const image_url =
-			food.image_url || `/graphics/${top}/${category_key}/${slug}.jpg`;
+		const imageUrl =
+			food.image_url ||
+			`/graphics/${top}/${category_key}/${fileName}.jpg`;
 
 		return {
 			...food,
 			category_key,
 			difficulty: food.difficulty ?? 1,
-			image_url,
+			image_url: imageUrl,
 			locations: food.locations || LOCATIONS.home,
 			slug,
 		};

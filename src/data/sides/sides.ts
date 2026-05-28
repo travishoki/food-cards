@@ -5,7 +5,7 @@ import { buildFood, FoodInput } from "../../helpers/foods.helpers";
 
 const items = [
 	{
-		name: "Aunty Anne's Pretzels",
+		name: "Pretzel",
 		brand: BRANDS.AUNTY_ANNES,
 		locations: LOCATIONS["fast-food"],
 	},
@@ -15,7 +15,8 @@ const items = [
 	},
 	"Bagel with Spread",
 	{
-		name: "Breadsticks Little Ceasars",
+		name: "Breadsticks",
+		brand: BRANDS.LITTLE_CAESARS,
 		locations: LOCATIONS["fast-food"],
 		prerelease: true,
 	},
@@ -91,7 +92,7 @@ const items = [
 		],
 	},
 	{
-		name: "Sonic Pretzle Twists",
+		name: "Pretzle Twists",
 		brand: BRANDS.SONIC,
 		locations: LOCATIONS["fast-food"],
 	},
