@@ -106,7 +106,6 @@ const items = [
 		name: "Steak Fries",
 		brand: BRANDS.RED_ROBIN,
 		locations: LOCATIONS.restaurant,
-		slug: "steak-fries-red-robin",
 	},
 	{
 		name: "Tater Tots",

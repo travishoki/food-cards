@@ -93,8 +93,10 @@ export const FoodList = ({
 			{visibleFoods.map((food) => {
 				const inStock =
 					foodActivityDictionary[food.slug ?? ""]?.inStock ?? true;
+				const { slug } = food;
+				const fileName = food.brand ? `${slug}-${food.brand}` : slug;
 
-				return <Card key={food.slug} food={food} inStock={inStock} />;
+				return <Card key={fileName} food={food} inStock={inStock} />;
 			})}
 		</div>
 	);
