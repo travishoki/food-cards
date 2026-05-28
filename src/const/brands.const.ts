@@ -16,6 +16,7 @@ export const BRANDS = {
 	PAPA_MURPHYS: "papa-murphys",
 	PIZZA_HUT: "pizza-hut",
 	PIZZA_PIE_CAFE: "pizza-pie-cafe",
+	RED_BARON: "red-baron",
 	RED_ROBIN: "red-robin",
 	SEVEN_ELEVEN: "7-eleven",
 	SONIC: "sonic",

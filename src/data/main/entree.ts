@@ -16,7 +16,15 @@ const items = [
 		brand: BRANDS.DOMINOS,
 		locations: LOCATIONS["fast-food"],
 	},
-	"French Bread Pizza",
+	{
+		name: "French Bread Pizza",
+		brand: BRANDS.RED_BARON,
+		info: "Preheat Air Fryer to 375° for 8 minutes",
+		instructions: [
+			"Unwrap the pizza, ypou can scrape off frost",
+			"Add additional pepperoni's",
+		],
+	},
 	{
 		name: "Grilled Cheese",
 		prerelease: true,
