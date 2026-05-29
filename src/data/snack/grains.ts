@@ -15,7 +15,11 @@ const items = [
 		prerelease: true,
 	},
 	"Cheetos",
-	"Chocolate Muffin",
+	"Chocolate Muffin (Fresh)",
+	{
+		name: "Chocolate Muffin",
+		brand: BRANDS.COSTCO,
+	},
 	{
 		name: "Cinnamon Toast",
 		instructions: [

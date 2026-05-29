@@ -2,6 +2,7 @@ export const BRANDS = {
 	ARBYS: "arbys",
 	AUNTY_ANNES: "aunty-annes",
 	CHICK_FIL_A: "chick-fil-a",
+	CHILIS: "chilis",
 	COSTA_VIDA: "costa-vida",
 	COSTCO: "costco",
 	DAIRY_QUEEN: "dairy-queen",
