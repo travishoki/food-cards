@@ -16,6 +16,11 @@ const items = [
 		locations: LOCATIONS["fast-food"],
 	},
 	{
+		name: "Churro (Cream Filled)",
+		brand: BRANDS.BETOS,
+		locations: LOCATIONS["fast-food"],
+	},
+	{
 		name: "Cinnamon Twists",
 		brand: BRANDS.TACO_BELL,
 		locations: LOCATIONS["fast-food"],

@@ -1,6 +1,7 @@
 export const BRANDS = {
 	ARBYS: "arbys",
 	AUNTY_ANNES: "aunty-annes",
+	BETOS: "betos",
 	BLACK_BEAR_DINER: "black-bear-diner",
 	CHICK_FIL_A: "chick-fil-a",
 	CHILIS: "chilis",
@@ -19,6 +20,7 @@ export const BRANDS = {
 	PAPA_MURPHYS: "papa-murphys",
 	PIZZA_HUT: "pizza-hut",
 	PIZZA_PIE_CAFE: "pizza-pie-cafe",
+	RAISING_CANES: "raising-canes",
 	RED_BARON: "red-baron",
 	RED_ROBIN: "red-robin",
 	SEVEN_ELEVEN: "7-eleven",

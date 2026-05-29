@@ -73,6 +73,11 @@ const items = [
 			"Flip over and toast again to make it extra crunchy.",
 		],
 	},
+	{
+		name: "Hashbrown",
+		brand: BRANDS.MCDONALDS,
+		locations: LOCATIONS["fast-food"],
+	},
 	"Hashbrowns (shredded)",
 	{
 		name: "Mashed Potatoes",
@@ -134,6 +139,11 @@ const items = [
 		difficulty: 3,
 		info: "Preheat oven to 425°",
 		instructions: "Put parchment on a cooking sheet.",
+	},
+	{
+		name: "Texas Toast",
+		brand: BRANDS.RAISING_CANES,
+		locations: LOCATIONS["fast-food"],
 	},
 ] as FoodInput[];
 
