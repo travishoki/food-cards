@@ -1,5 +1,4 @@
 import { ErrorBoundary } from "../ErrorBoundary/ErrorBoundary";
-import { TOP_CATEGORIES } from "../const/categories";
 import { LOCATIONS } from "../const/locations.const";
 import { useFoodFilters } from "../context/foodFilters";
 import { useUrlParams } from "../hooks/useUrlParams";
@@ -26,7 +25,7 @@ export const FoodsPage = () => {
 				difficulty={difficulty}
 				hasActiveFilter={
 					urlLocation !== LOCATIONS.home ||
-					urlTopCategory !== TOP_CATEGORIES.main ||
+					urlTopCategory !== null ||
 					!!subCategory ||
 					difficulty !== null
 				}
@@ -45,7 +44,7 @@ export const FoodsPage = () => {
 					search={search}
 					sort={sort}
 					subCategory={subCategory ?? undefined}
-					topCategory={urlTopCategory}
+					topCategory={urlTopCategory ?? undefined}
 				/>
 			</ErrorBoundary>
 			<BackToTop />

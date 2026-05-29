@@ -1,6 +1,5 @@
 import { useParams } from "react-router-dom";
 
-import { TOP_CATEGORIES } from "../const/categories";
 import {
 	LOCATIONS,
 	LOCATION_ORDER,
@@ -9,7 +8,7 @@ import {
 
 export type UrlParams = {
 	urlLocation: Location;
-	urlTopCategory: string;
+	urlTopCategory: string | null;
 };
 
 const NON_HOME_LOCATIONS = new Set<string>(
@@ -31,9 +30,7 @@ export const useUrlParams = (): UrlParams => {
 		(segmentIsLocation ? (segment as Location) : LOCATIONS.home);
 
 	const urlTopCategory =
-		topCategory ??
-		(!segmentIsLocation ? segment : undefined) ??
-		TOP_CATEGORIES.main;
+		topCategory ?? (!segmentIsLocation ? segment : undefined) ?? null;
 
 	return { urlLocation, urlTopCategory };
 };

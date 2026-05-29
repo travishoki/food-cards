@@ -24,8 +24,7 @@ export const LocationNav = () => {
 		const isHome = loc === LOCATIONS.home;
 		const categoryAllowedAtLoc =
 			isHome || urlTopCategory !== TOP_CATEGORIES.snack;
-		const keepCategory =
-			urlTopCategory !== TOP_CATEGORIES.main && categoryAllowedAtLoc;
+		const keepCategory = urlTopCategory !== null && categoryAllowedAtLoc;
 
 		if (isHome) {
 			navigate(keepCategory ? `/${urlTopCategory}` : "/");

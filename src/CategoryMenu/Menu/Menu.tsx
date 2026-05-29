@@ -13,18 +13,27 @@ export const Menu = () => {
 	const navigate = useNavigate();
 	const topMenu = useMemo(() => topMenuItems(), []);
 
-	const handleClick = (catKey: string) => {
-		const isMain = catKey === TOP_CATEGORIES.main;
+	const handleAllClick = () => {
+		navigate(urlLocation === LOCATIONS.home ? "/" : `/${urlLocation}`);
+	};
 
+	const handleClick = (catKey: string) => {
 		if (urlLocation === LOCATIONS.home) {
-			navigate(isMain ? "/" : `/${catKey}`);
+			navigate(`/${catKey}`);
 		} else {
-			navigate(isMain ? `/${urlLocation}` : `/${urlLocation}/${catKey}`);
+			navigate(`/${urlLocation}/${catKey}`);
 		}
 	};
 
 	return (
 		<FilterSection ariaLabel="Food categories" label="Category:">
+			<button
+				className={`category-menu__link ${urlTopCategory === null ? "is-active" : ""}`}
+				onClick={handleAllClick}
+				type="button"
+			>
+				All
+			</button>
 			{topMenu.map((cat) => {
 				if (
 					urlLocation !== LOCATIONS.home &&
