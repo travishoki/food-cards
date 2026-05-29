@@ -40,6 +40,11 @@ const items = [
 		difficulty: 2,
 	},
 	{
+		name: "Corn Doggies",
+		brand: BRANDS.RED_ROBIN,
+		locations: LOCATIONS.restaurant,
+	},
+	{
 		name: "Cresaunts",
 		prerelease: true,
 	},
@@ -112,7 +117,7 @@ const items = [
 		difficulty: 2,
 	},
 	{
-		name: "Texas Roadhouse Rolls",
+		name: "Honey Butter Rolls",
 		brand: BRANDS.TEXAS_ROADHOUSE,
 		locations: LOCATIONS.restaurant,
 	},
