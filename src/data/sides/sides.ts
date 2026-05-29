@@ -117,9 +117,13 @@ const items = [
 		difficulty: 2,
 	},
 	{
-		name: "Honey Butter Rolls",
+		name: "Rolls (Honey Butter)",
 		brand: BRANDS.TEXAS_ROADHOUSE,
 		locations: LOCATIONS.restaurant,
+	},
+	{
+		name: "Toast With Butter",
+		difficulty: 2,
 	},
 	{
 		name: "Texas Toast",

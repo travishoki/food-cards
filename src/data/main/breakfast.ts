@@ -67,6 +67,11 @@ const items = [
 		difficulty: 4,
 	},
 	{
+		name: "Happy Cub Cake",
+		brand: BRANDS.BLACK_BEAR_DINER,
+		locations: LOCATIONS.restaurant,
+	},
+	{
 		name: "Pancakes",
 		difficulty: 4,
 		locations: LOCATIONS.home,
