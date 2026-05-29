@@ -95,6 +95,7 @@ const items = [
 	},
 	"Rice Crispy Treat",
 	"Rootbeer Float",
+	"Scone (Honey Butter)",
 	{
 		name: "Smores",
 		difficulty: 3,
