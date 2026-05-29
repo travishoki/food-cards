@@ -31,3 +31,7 @@ export const writeFoodCache = (data: Food[]): void => {
 		// Storage quota exceeded or unavailable — fail silently
 	}
 };
+
+export const invalidateFoodCache = (): void => {
+	localStorage.removeItem(CACHE_KEY);
+};

@@ -4,6 +4,7 @@ import toast from "react-hot-toast";
 
 import { ConfirmModal } from "../../../ConfirmModal/ConfirmModal";
 import { addFoodActivity, updateFoodInStock } from "../../../api/foods.api";
+import { invalidateFoodCache } from "../../../helpers/foodCache.helpers";
 import { fromFoodSlug } from "../../../helpers/slug.helpers";
 
 import "./InStockToggle.scss";
@@ -37,6 +38,7 @@ export const InStockToggle = ({
 			await addFoodActivity(slug, next);
 		}
 
+		invalidateFoodCache();
 		onToggle(next);
 		toast.success(next ? "Marked as in stock" : "Marked as out of stock");
 	};
