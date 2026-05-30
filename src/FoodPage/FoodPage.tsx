@@ -7,7 +7,6 @@ import { FoodPageInfoBox } from "./FoodPageInfoBox/FoodPageInfoBox";
 import { MissingFood } from "./MissingFood";
 import Card from "../Card/Card";
 import { FoodListLoader } from "../FoodsPage/FoodList/FoodListLoader/FoodListLoader";
-import { LOCATIONS } from "../const/locations.const";
 import { useFoodsContext } from "../context/foods";
 import { FOODS } from "../data";
 import { foodBySlug } from "../helpers/slug.helpers";
@@ -37,7 +36,7 @@ export const FoodPage = () => {
 			<div className="food-detail">
 				<FoodPageInfoBox
 					docId={docId}
-					{...food}
+					food={food}
 					inStock={inStock}
 					onToggle={setInStock}
 				/>
