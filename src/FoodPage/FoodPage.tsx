@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import { useParams } from "react-router-dom";
 
 import { BackButton } from "./BackButton";
@@ -15,7 +13,8 @@ import "./FoodPage.scss";
 
 export const FoodPage = () => {
 	const { foodName } = useParams<{ foodName: string }>();
-	const { foodActivityDictionary, loading } = useFoodsContext();
+	const { foodActivityDictionary, loading, setFoodInStock } =
+		useFoodsContext();
 
 	if (loading) return <FoodListLoader />;
 
@@ -25,8 +24,7 @@ export const FoodPage = () => {
 
 	const activity = foodActivityDictionary[foodName ?? ""];
 	const docId = activity?.docId;
-
-	const [inStock, setInStock] = useState(activity?.inStock ?? true);
+	const inStock = activity?.inStock ?? true;
 
 	return (
 		<div className="food-page">
@@ -38,7 +36,7 @@ export const FoodPage = () => {
 					docId={docId}
 					food={food}
 					inStock={inStock}
-					onToggle={setInStock}
+					onToggle={(value) => setFoodInStock(food.slug, value)}
 				/>
 				<Card food={food} inStock={inStock} />
 			</div>

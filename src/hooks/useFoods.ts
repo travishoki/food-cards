@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 import { Dictionary, keyBy } from "lodash";
 
@@ -11,6 +11,7 @@ type UseFoodsResult = {
 	error: string | null;
 	foodActivityDictionary: Dictionary<Food>;
 	loading: boolean;
+	setFoodInStock: (slug: string, inStock: boolean) => void;
 };
 
 export const useFoods = (): UseFoodsResult => {
@@ -52,5 +53,14 @@ export const useFoods = (): UseFoodsResult => {
 		};
 	}, []);
 
-	return { error, foodActivityDictionary, loading };
+	const setFoodInStock = useCallback((slug: string, inStock: boolean) => {
+		setfoodActivityDictionary((prev) => {
+			const existing = prev[slug];
+			if (!existing) return prev;
+
+			return { ...prev, [slug]: { ...existing, inStock } };
+		});
+	}, []);
+
+	return { error, foodActivityDictionary, loading, setFoodInStock };
 };
