@@ -18,8 +18,10 @@ export const FoodPageInfoBox = ({
 	onToggle,
 }: FoodPageInfoBoxProps) => (
 	<div className="food-page-info-box">
-		<p>{food.name}</p>
-		{food.locations === LOCATIONS.home && (
+		<h2>{food.name}</h2>
+		<p>{food.location}</p>
+
+		{food.location === LOCATIONS.home && (
 			<InStockToggle
 				docId={docId}
 				inStock={inStock}

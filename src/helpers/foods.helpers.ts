@@ -5,11 +5,11 @@ import { Food } from "../types";
 
 type FoodInputObject = Omit<
 	Food,
-	"category_key" | "difficulty" | "image_url" | "locations" | "slug"
+	"category_key" | "difficulty" | "image_url" | "location" | "slug"
 > & {
 	difficulty?: Food["difficulty"];
 	image_url?: string;
-	locations?: Food["locations"];
+	location?: Food["location"];
 	slug?: string;
 };
 
@@ -39,7 +39,7 @@ export const buildFood =
 			category_key,
 			difficulty: food.difficulty ?? 1,
 			image_url: imageUrl,
-			locations: food.locations || LOCATIONS.home,
+			location: food.location || LOCATIONS.home,
 			slug,
 		};
 	};

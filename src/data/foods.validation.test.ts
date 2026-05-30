@@ -12,7 +12,7 @@ const SNACK_CATEGORY_KEYS = new Set(
 );
 
 const hasHomeLocation = (food: Food): boolean =>
-	food.locations === LOCATIONS.home;
+	food.location === LOCATIONS.home;
 
 describe("FOODS data validation", () => {
 	describe("difficulty", () => {
