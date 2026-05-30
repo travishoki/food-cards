@@ -27,7 +27,7 @@ export const buildFood =
 	(input: FoodInput): Food => {
 		const food: FoodInputObject =
 			typeof input === "string" ? { name: input } : input;
-		const slug = food.slug || toFoodSlug(food.name);
+		const slug = toFoodSlug(food.name);
 		const fileName = food.brand ? `${slug}-${food.brand}` : slug;
 		const top = TOP_OF_SUB[category_key];
 		const imageUrl =
