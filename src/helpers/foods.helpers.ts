@@ -33,7 +33,7 @@ export const buildFood =
 	(input: FoodInput): Food => {
 		const food: FoodInputObject =
 			typeof input === "string" ? { name: input } : input;
-		const slug = createFoodSlug(food.name, food.brand);
+		const slug = food.slug ?? createFoodSlug(food.name, food.brand);
 		const top = TOP_OF_SUB[category_key];
 		const imageUrl =
 			food.image_url || `/graphics/${top}/${category_key}/${slug}.jpg`;
