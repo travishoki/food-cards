@@ -35,14 +35,13 @@ export const FoodPage = () => {
 				<BackButton />
 			</div>
 			<div className="food-detail">
-				{food.locations === LOCATIONS.home && (
-					<FoodPageInfoBox
-						docId={docId}
-						inStock={inStock}
-						onToggle={setInStock}
-						slug={food.slug}
-					/>
-				)}
+				<FoodPageInfoBox
+					docId={docId}
+					inStock={inStock}
+					locations={food.locations}
+					onToggle={setInStock}
+					slug={food.slug}
+				/>
 				<Card food={food} inStock={inStock} />
 			</div>
 		</div>
