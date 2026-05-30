@@ -13,17 +13,17 @@ const items = [
 	},
 	{
 		name: "Churro",
-		locations: LOCATIONS["fast-food"],
+		location: LOCATIONS["fast-food"],
 	},
 	{
 		name: "Churro (Cream Filled)",
 		brand: BRANDS.BETOS,
-		locations: LOCATIONS["fast-food"],
+		location: LOCATIONS["fast-food"],
 	},
 	{
 		name: "Cinnamon Twists",
 		brand: BRANDS.TACO_BELL,
-		locations: LOCATIONS["fast-food"],
+		location: LOCATIONS["fast-food"],
 	},
 	"Cinnamon Roll",
 	"Cookie",
@@ -31,7 +31,7 @@ const items = [
 	{
 		name: "Cookie Dough Pizza",
 		brand: BRANDS.PIZZA_PIE_CAFE,
-		locations: LOCATIONS.restaurant,
+		location: LOCATIONS.restaurant,
 	},
 	{
 		name: "Corn Bread",
@@ -40,12 +40,12 @@ const items = [
 	{
 		name: "Cinnamon Tortilla",
 		brand: BRANDS.COSTA_VIDA,
-		locations: LOCATIONS["fast-food"],
+		location: LOCATIONS["fast-food"],
 	},
 	{
 		name: "Cream Slush",
 		brand: BRANDS.SONIC,
-		locations: LOCATIONS["fast-food"],
+		location: LOCATIONS["fast-food"],
 	},
 	"Cupcake",
 	"Donut",
@@ -53,7 +53,7 @@ const items = [
 	{
 		name: "Frosty",
 		brand: BRANDS.WENDYS,
-		locations: LOCATIONS["fast-food"],
+		location: LOCATIONS["fast-food"],
 	},
 	{
 		name: "Fruit Pizza",
@@ -103,12 +103,12 @@ const items = [
 	{
 		name: "Skillet Cookie",
 		brand: BRANDS.CHILIS,
-		locations: LOCATIONS.restaurant,
+		location: LOCATIONS.restaurant,
 	},
 	{
 		name: "Skillet Cookie",
 		difficulty: 4,
-		locations: LOCATIONS.home,
+		location: LOCATIONS.home,
 	},
 ] as FoodInput[];
 

@@ -7,13 +7,13 @@ const items = [
 	{
 		name: "Lemon Freeze",
 		brand: BRANDS.CHICK_FIL_A,
-		locations: LOCATIONS["fast-food"],
+		location: LOCATIONS["fast-food"],
 	},
 	"Chocolate Milk",
 	{
 		name: "Frazzle",
 		instructions: "Worth the trip to a gas station.",
-		locations: LOCATIONS["fast-food"],
+		location: LOCATIONS["fast-food"],
 	},
 	{
 		name: "Gatorade",
@@ -23,7 +23,7 @@ const items = [
 	"Hi-C Fruit Punch",
 	{
 		name: "Horchata",
-		locations: LOCATIONS["fast-food"],
+		location: LOCATIONS["fast-food"],
 	},
 	"Hot Chocolate",
 	"Kool-Aid",
@@ -31,7 +31,7 @@ const items = [
 	"Milk",
 	{
 		name: "Orange Julius",
-		locations: LOCATIONS["fast-food"],
+		location: LOCATIONS["fast-food"],
 	},
 	{
 		name: "Powerade",
@@ -46,18 +46,18 @@ const items = [
 	{
 		name: "Rootbeer Freeze",
 		brand: BRANDS.TACO_AMIGO,
-		locations: LOCATIONS["fast-food"],
+		location: LOCATIONS["fast-food"],
 	},
 	{
 		name: "Slurpee",
 		brand: BRANDS.SEVEN_ELEVEN,
 		instructions: "Worth the trip to a gas station.",
-		locations: LOCATIONS["fast-food"],
+		location: LOCATIONS["fast-food"],
 	},
 	{
 		name: "Specialty Drinks",
 		brand: BRANDS.LOS_HERMANOS,
-		locations: LOCATIONS.restaurant,
+		location: LOCATIONS.restaurant,
 	},
 	"Sprite",
 	"Sunny D",

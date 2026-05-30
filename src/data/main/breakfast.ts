@@ -51,16 +51,16 @@ const items = [
 	{
 		name: "French Toast",
 		brand: BRANDS.JIMS,
-		locations: LOCATIONS.restaurant,
+		location: LOCATIONS.restaurant,
 	},
 	{
 		name: "French Toast Sticks",
 		brand: BRANDS.SONIC,
-		locations: LOCATIONS["fast-food"],
+		location: LOCATIONS["fast-food"],
 	},
 	{
 		name: "French Toast Sticks",
-		locations: LOCATIONS.home,
+		location: LOCATIONS.home,
 	},
 	{
 		name: "Fresh Waffles",
@@ -69,12 +69,12 @@ const items = [
 	{
 		name: "Happy Cub Cake",
 		brand: BRANDS.BLACK_BEAR_DINER,
-		locations: LOCATIONS.restaurant,
+		location: LOCATIONS.restaurant,
 	},
 	{
 		name: "Pancakes",
 		difficulty: 4,
-		locations: LOCATIONS.home,
+		location: LOCATIONS.home,
 	},
 	{
 		name: "Puffy Oven Pancakes",
@@ -117,7 +117,7 @@ const items = [
 	{
 		name: "Waffles",
 		brand: BRANDS.WAFFLE_LOVE,
-		locations: LOCATIONS.restaurant,
+		location: LOCATIONS.restaurant,
 	},
 ] as FoodInput[];
 

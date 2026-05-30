@@ -7,7 +7,7 @@ const items = [
 	{
 		name: "Pretzel",
 		brand: BRANDS.AUNTY_ANNES,
-		locations: LOCATIONS["fast-food"],
+		location: LOCATIONS["fast-food"],
 	},
 	{
 		name: "Bacon",
@@ -17,13 +17,13 @@ const items = [
 	{
 		name: "Breadsticks",
 		brand: BRANDS.LITTLE_CAESARS,
-		locations: LOCATIONS["fast-food"],
+		location: LOCATIONS["fast-food"],
 		prerelease: true,
 	},
 	{
 		name: "Breadsticks",
 		brand: BRANDS.OLIVE_GARDEN,
-		locations: LOCATIONS.restaurant,
+		location: LOCATIONS.restaurant,
 	},
 	{
 		name: "Cheese Sticks (Pizza)",
@@ -32,7 +32,7 @@ const items = [
 	{
 		name: "Waffle Fries",
 		brand: BRANDS.CHICK_FIL_A,
-		locations: LOCATIONS["fast-food"],
+		location: LOCATIONS["fast-food"],
 	},
 	"Cinnamon Bites",
 	{
@@ -42,7 +42,7 @@ const items = [
 	{
 		name: "Corn Doggies",
 		brand: BRANDS.RED_ROBIN,
-		locations: LOCATIONS.restaurant,
+		location: LOCATIONS.restaurant,
 	},
 	{
 		name: "Cresaunts",
@@ -52,17 +52,17 @@ const items = [
 	{
 		name: "Crickle Cut Fries",
 		brand: BRANDS.DEL_TACO,
-		locations: LOCATIONS["fast-food"],
+		location: LOCATIONS["fast-food"],
 	},
 	{
 		name: "Curly Fries",
 		brand: BRANDS.ARBYS,
-		locations: LOCATIONS["fast-food"],
+		location: LOCATIONS["fast-food"],
 	},
 	{
 		name: "Pretzel Sticks",
 		brand: BRANDS.DAIRY_QUEEN,
-		locations: LOCATIONS["fast-food"],
+		location: LOCATIONS["fast-food"],
 	},
 	"French Fries",
 	{
@@ -76,7 +76,7 @@ const items = [
 	{
 		name: "Hashbrown",
 		brand: BRANDS.MCDONALDS,
-		locations: LOCATIONS["fast-food"],
+		location: LOCATIONS["fast-food"],
 	},
 	"Hashbrowns (shredded)",
 	{
@@ -104,7 +104,7 @@ const items = [
 	{
 		name: "Pretzle Twists",
 		brand: BRANDS.SONIC,
-		locations: LOCATIONS["fast-food"],
+		location: LOCATIONS["fast-food"],
 	},
 	"Sour Dough Bread",
 	{
@@ -115,7 +115,7 @@ const items = [
 	{
 		name: "Steak Fries",
 		brand: BRANDS.RED_ROBIN,
-		locations: LOCATIONS.restaurant,
+		location: LOCATIONS.restaurant,
 	},
 	{
 		name: "Tater Tots",
@@ -124,7 +124,7 @@ const items = [
 	{
 		name: "Rolls (Honey Butter)",
 		brand: BRANDS.TEXAS_ROADHOUSE,
-		locations: LOCATIONS.restaurant,
+		location: LOCATIONS.restaurant,
 	},
 	{
 		name: "Toast With Butter",
@@ -143,7 +143,7 @@ const items = [
 	{
 		name: "Texas Toast",
 		brand: BRANDS.RAISING_CANES,
-		locations: LOCATIONS["fast-food"],
+		location: LOCATIONS["fast-food"],
 	},
 ] as FoodInput[];
 

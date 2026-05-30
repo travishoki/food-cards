@@ -4,16 +4,23 @@ import { LOCATIONS } from "../../const/locations.const";
 import { buildFood, FoodInput } from "../../helpers/foods.helpers";
 
 const items = [
-	"Bread Pizza",
+	{
+		name: "Bread Pizza",
+		instructions: [
+			"Toast the bread",
+			"Spread the pizza sauce",
+			"Top with cheese and pepperonis",
+		],
+	},
 	{
 		name: "Chicken Nuggets",
 		brand: BRANDS.MCDONALDS,
-		locations: LOCATIONS["fast-food"],
+		location: LOCATIONS["fast-food"],
 	},
 	{
 		name: "Pizza",
 		brand: BRANDS.DOMINOS,
-		locations: LOCATIONS["fast-food"],
+		location: LOCATIONS["fast-food"],
 	},
 	{
 		name: "French Bread Pizza",
@@ -31,22 +38,22 @@ const items = [
 	{
 		name: "Pizza",
 		brand: BRANDS.LITTLE_CAESARS,
-		locations: LOCATIONS["fast-food"],
+		location: LOCATIONS["fast-food"],
 	},
 	{
 		name: "Pizza",
 		brand: BRANDS.MARCOS,
-		locations: LOCATIONS["fast-food"],
+		location: LOCATIONS["fast-food"],
 	},
 	{
 		name: "Pizza",
 		brand: BRANDS.PAPA_JOHNS,
-		locations: LOCATIONS["fast-food"],
+		location: LOCATIONS["fast-food"],
 	},
 	{
 		name: "Pizza",
 		brand: BRANDS.PAPA_MURPHYS,
-		locations: LOCATIONS["fast-food"],
+		location: LOCATIONS["fast-food"],
 	},
 	"PB&J",
 	{
@@ -56,17 +63,17 @@ const items = [
 	{
 		name: "Pizza",
 		brand: BRANDS.COSTCO,
-		locations: LOCATIONS["fast-food"],
+		location: LOCATIONS["fast-food"],
 	},
 	{
 		name: "Pizza",
 		brand: BRANDS.PIZZA_HUT,
-		locations: LOCATIONS["fast-food"],
+		location: LOCATIONS["fast-food"],
 	},
 	{
 		name: "Pizza",
 		brand: BRANDS.PIZZA_PIE_CAFE,
-		locations: LOCATIONS.restaurant,
+		location: LOCATIONS.restaurant,
 	},
 	{
 		name: "Quesadilla",
