@@ -1,4 +1,4 @@
-import { toFoodSlug } from "./slug.helpers";
+import { titleToSlug } from "./slug.helpers";
 import { TOP_CATEGORY_SUBCATEGORIES } from "../const/categories";
 import { LOCATIONS } from "../const/locations.const";
 import { Food } from "../types";
@@ -22,17 +22,21 @@ const TOP_OF_SUB: Record<string, string> = Object.fromEntries(
 	),
 );
 
+const createFoodSlug = (name: Food["name"], brand: Food["brand"]) => {
+	const slug = titleToSlug(name);
+
+	return brand ? `${slug}-${brand}` : slug;
+};
+
 export const buildFood =
 	(category_key: string) =>
 	(input: FoodInput): Food => {
 		const food: FoodInputObject =
 			typeof input === "string" ? { name: input } : input;
-		const slug = toFoodSlug(food.name);
-		const fileName = food.brand ? `${slug}-${food.brand}` : slug;
+		const slug = createFoodSlug(food.name, food.brand);
 		const top = TOP_OF_SUB[category_key];
 		const imageUrl =
-			food.image_url ||
-			`/graphics/${top}/${category_key}/${fileName}.jpg`;
+			food.image_url || `/graphics/${top}/${category_key}/${slug}.jpg`;
 
 		return {
 			...food,

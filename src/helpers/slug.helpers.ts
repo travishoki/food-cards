@@ -5,7 +5,7 @@ export function foodBySlug<T extends { slug: string }>(
 	return foods.find((f) => f.slug === slug);
 }
 
-export function toFoodSlug(name: string): string {
+export function titleToSlug(name: string): string {
 	return name
 		.replace(/&/g, "and")
 		.toLowerCase()

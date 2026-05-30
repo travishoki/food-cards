@@ -1,4 +1,4 @@
-import { foodBySlug, fromFoodSlug, toFoodSlug } from "./slug.helpers";
+import { foodBySlug, fromFoodSlug, titleToSlug } from "./slug.helpers";
 
 describe("foodBySlug", () => {
 	const foods = [
@@ -38,25 +38,25 @@ describe("foodBySlug", () => {
 	});
 });
 
-describe("toFoodSlug", () => {
+describe("titleToSlug", () => {
 	it("lowercases and hyphenates words", () => {
-		expect(toFoodSlug("Chicken Tacos")).toBe("chicken-tacos");
+		expect(titleToSlug("Chicken Tacos")).toBe("chicken-tacos");
 	});
 
 	it("replaces & with 'and'", () => {
-		expect(toFoodSlug("Mac & Cheese")).toBe("mac-and-cheese");
+		expect(titleToSlug("Mac & Cheese")).toBe("mac-and-cheese");
 	});
 
 	it("strips special characters", () => {
-		expect(toFoodSlug("Jalapeño Poppers!")).toBe("jalapeo-poppers");
+		expect(titleToSlug("Jalapeño Poppers!")).toBe("jalapeo-poppers");
 	});
 
 	it("collapses multiple spaces", () => {
-		expect(toFoodSlug("Fish  Tacos")).toBe("fish-tacos");
+		expect(titleToSlug("Fish  Tacos")).toBe("fish-tacos");
 	});
 
 	it("handles a single word", () => {
-		expect(toFoodSlug("Donut")).toBe("donut");
+		expect(titleToSlug("Donut")).toBe("donut");
 	});
 });
 
@@ -77,13 +77,13 @@ describe("fromFoodSlug", () => {
 		expect(fromFoodSlug("fish-and-chips")).toBe("Fish & Chips");
 	});
 
-	it("is the inverse of toFoodSlug for simple names", () => {
+	it("is the inverse of titleToSlug for simple names", () => {
 		const name = "Chicken Tacos";
-		expect(fromFoodSlug(toFoodSlug(name))).toBe(name);
+		expect(fromFoodSlug(titleToSlug(name))).toBe(name);
 	});
 
-	it("is the inverse of toFoodSlug for names with &", () => {
+	it("is the inverse of titleToSlug for names with &", () => {
 		const name = "Mac & Cheese";
-		expect(fromFoodSlug(toFoodSlug(name))).toBe(name);
+		expect(fromFoodSlug(titleToSlug(name))).toBe(name);
 	});
 });
