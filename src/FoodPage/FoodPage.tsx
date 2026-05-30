@@ -37,10 +37,9 @@ export const FoodPage = () => {
 			<div className="food-detail">
 				<FoodPageInfoBox
 					docId={docId}
+					{...food}
 					inStock={inStock}
-					locations={food.locations}
 					onToggle={setInStock}
-					slug={food.slug}
 				/>
 				<Card food={food} inStock={inStock} />
 			</div>
