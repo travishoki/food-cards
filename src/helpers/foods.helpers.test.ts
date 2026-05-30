@@ -1,6 +1,27 @@
-import { buildFood } from "./foods.helpers";
+import { buildFood, createFoodSlug } from "./foods.helpers";
+import { BRANDS } from "../const/brands.const";
 import { CATEGORIES } from "../const/categories";
 import { LOCATIONS } from "../const/locations.const";
+
+describe("createFoodSlug", () => {
+	it("returns a slugified name when no brand is given", () => {
+		expect(createFoodSlug("Grated Cheese", undefined)).toBe(
+			"grated-cheese",
+		);
+	});
+
+	it("appends the brand when provided", () => {
+		expect(createFoodSlug("String Cheese", BRANDS.COSTCO)).toBe(
+			"string-cheese-costco",
+		);
+	});
+
+	it("slugifies a multi-word name", () => {
+		expect(createFoodSlug("Peanut Butter Cups", undefined)).toBe(
+			"peanut-butter-cups",
+		);
+	});
+});
 
 describe("buildFood", () => {
 	describe("string input", () => {

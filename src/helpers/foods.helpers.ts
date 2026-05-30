@@ -22,7 +22,7 @@ const TOP_OF_SUB: Record<string, string> = Object.fromEntries(
 	),
 );
 
-const createFoodSlug = (name: Food["name"], brand: Food["brand"]) => {
+export const createFoodSlug = (name: Food["name"], brand: Food["brand"]) => {
 	const slug = titleToSlug(name);
 
 	return brand ? `${slug}-${brand}` : slug;
