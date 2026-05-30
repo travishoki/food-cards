@@ -1,6 +1,6 @@
 import "./FoodPageInfoBox.scss";
 import { InStockToggle } from "./InStockToggle/InStockToggle";
-import { LOCATIONS } from "../../const/locations.const";
+import { isHome } from "../../helpers/locations.helpers";
 
 import type { Food } from "../../types";
 
@@ -16,18 +16,22 @@ export const FoodPageInfoBox = ({
 	food,
 	inStock,
 	onToggle,
-}: FoodPageInfoBoxProps) => (
-	<div className="food-page-info-box">
-		<h2>{food.name}</h2>
-		<p>{food.location}</p>
+}: FoodPageInfoBoxProps) => {
+	const { brand, location, name, slug } = food;
 
-		{food.location === LOCATIONS.home && (
-			<InStockToggle
-				docId={docId}
-				inStock={inStock}
-				onToggle={onToggle}
-				slug={food.slug}
-			/>
-		)}
-	</div>
-);
+	return (
+		<div className="food-page-info-box">
+			<h2>{name}</h2>
+			{brand && <p>{brand}</p>}
+
+			{isHome(location) && (
+				<InStockToggle
+					docId={docId}
+					inStock={inStock}
+					onToggle={onToggle}
+					slug={slug}
+				/>
+			)}
+		</div>
+	);
+};
