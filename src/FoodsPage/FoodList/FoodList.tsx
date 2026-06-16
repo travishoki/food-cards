@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 
-import { getVisibleFoods } from "./FoodList.helpers";
+import { getFoodSearchSuggestions, getVisibleFoods } from "./FoodList.helpers";
 import { FoodListLoader } from "./FoodListLoader/FoodListLoader";
 import Card from "../../Card/Card";
 import {
@@ -22,6 +22,7 @@ type FoodListProps = {
 	location: Location | null;
 	onClearDifficulty: () => void;
 	onClearSearch: () => void;
+	onSearchSuggestion: (search: string) => void;
 	search: string;
 	sort: SortDirection;
 	subCategory?: string;
@@ -33,6 +34,7 @@ export const FoodList = ({
 	location,
 	onClearDifficulty,
 	onClearSearch,
+	onSearchSuggestion,
 	search,
 	sort,
 	subCategory,
@@ -64,6 +66,10 @@ export const FoodList = ({
 			prereleaseMode,
 		],
 	);
+	const searchSuggestions = useMemo(
+		() => getFoodSearchSuggestions(search),
+		[search],
+	);
 
 	if (loading) return <FoodListLoader />;
 	if (error) throw new Error(error);
@@ -78,6 +84,8 @@ export const FoodList = ({
 				hasSearch={!!search.trim()}
 				onClearDifficulty={onClearDifficulty}
 				onClearSearch={onClearSearch}
+				onSearchSuggestion={onSearchSuggestion}
+				searchSuggestions={searchSuggestions}
 			/>
 		);
 	}

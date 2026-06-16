@@ -12,8 +12,8 @@ type SearchInputProps = {
 };
 
 export const SearchInput = ({ onClose }: SearchInputProps) => {
-	const { setSearch } = useFoodFilters();
-	const [value, setValue] = useState("");
+	const { search, setSearch } = useFoodFilters();
+	const [value, setValue] = useState(search);
 	const inputRef = useRef<HTMLInputElement>(null);
 
 	useEffect(() => {
@@ -25,6 +25,10 @@ export const SearchInput = ({ onClose }: SearchInputProps) => {
 	useEffect(() => {
 		inputRef.current?.focus();
 	}, []);
+
+	useEffect(() => {
+		setValue(search);
+	}, [search]);
 
 	useEffect(() => {
 		const onKey = (e: KeyboardEvent) => {

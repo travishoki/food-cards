@@ -1,4 +1,13 @@
-import { getVisibleFoods } from "./FoodList.helpers";
+import {
+	getEditDistance,
+	getFoodSearchScore,
+	getFoodSearchSuggestions,
+	getFoodSearchText,
+	getSearchTokens,
+	getTokenScore,
+	getVisibleFoods,
+	normalizeSearchText,
+} from "./FoodList.helpers";
 import { FOODS } from "../../data";
 
 jest.mock("../../data", () => ({
@@ -8,7 +17,9 @@ jest.mock("../../data", () => ({
 			difficulty: 1,
 			image_url: "",
 			inStock: false,
+			ingredients: ["cinnamon"],
 			name: "Apple",
+			slug: "apple",
 		},
 		{
 			category_key: "fruit",
@@ -16,29 +27,131 @@ jest.mock("../../data", () => ({
 			image_url: "",
 			inStock: true,
 			name: "Banana",
+			slug: "banana",
+			toppings: ["peanut butter"],
 		},
 		{
 			category_key: "vegetables",
 			difficulty: 1,
 			image_url: "",
+			info: "Crunchy orange snack",
 			name: "Carrot",
+			slug: "carrot",
 		},
 		{
 			category_key: "dessert",
 			difficulty: 3,
 			image_url: "",
 			name: "Donut",
+			slug: "donut",
 		},
 		{
 			category_key: "breakfast",
 			difficulty: 4,
 			image_url: "",
+			ingredients: ["egg"],
 			name: "Eggs",
+			slug: "eggs",
 		},
 	],
 }));
 
 const [APPLE, BANANA, CARROT, DONUT, EGGS] = FOODS;
+
+describe("normalizeSearchText", () => {
+	it("lowercases, trims, removes punctuation, and normalizes spaces", () => {
+		expect(normalizeSearchText("  Peanut-Butter!!!  ")).toBe(
+			"peanut butter",
+		);
+	});
+
+	it("removes accent marks", () => {
+		expect(normalizeSearchText("Crème Brûlée")).toBe("creme brulee");
+	});
+});
+
+describe("getSearchTokens", () => {
+	it("returns searchable words from a query", () => {
+		expect(getSearchTokens("  Peanut   Butter  ")).toEqual([
+			"peanut",
+			"butter",
+		]);
+	});
+
+	it("returns no tokens for blank search", () => {
+		expect(getSearchTokens("   ")).toEqual([]);
+	});
+});
+
+describe("getFoodSearchText", () => {
+	it("combines the food fields that search should know about", () => {
+		expect(getFoodSearchText(BANANA)).toContain("Banana");
+		expect(getFoodSearchText(BANANA)).toContain("fruit");
+		expect(getFoodSearchText(BANANA)).toContain("peanut butter");
+	});
+
+	it("skips missing optional arrays without adding undefined text", () => {
+		expect(getFoodSearchText(DONUT)).not.toContain("undefined");
+	});
+});
+
+describe("getEditDistance", () => {
+	it("returns 0 for identical words", () => {
+		expect(getEditDistance("apple", "apple")).toBe(0);
+	});
+
+	it("counts one-character edits", () => {
+		expect(getEditDistance("appel", "apple")).toBe(2);
+	});
+
+	it("counts inserting all letters when one side is empty", () => {
+		expect(getEditDistance("", "apple")).toBe(5);
+	});
+});
+
+describe("getTokenScore", () => {
+	it("scores exact matches highest", () => {
+		expect(getTokenScore("apple", "apple")).toBe(120);
+	});
+
+	it("scores prefix matches below exact matches", () => {
+		expect(getTokenScore("app", "apple")).toBe(90);
+	});
+
+	it("scores contains matches below prefix matches", () => {
+		expect(getTokenScore("nan", "banana")).toBe(70);
+	});
+
+	it("does not fuzzy match very short queries", () => {
+		expect(getTokenScore("ap", "at")).toBe(0);
+	});
+
+	it("scores typo matches below substring matches", () => {
+		expect(getTokenScore("appel", "apple")).toBe(48);
+	});
+
+	it("returns 0 when the typo is too far away", () => {
+		expect(getTokenScore("cinnamon", "apple")).toBe(0);
+	});
+});
+
+describe("getFoodSearchScore", () => {
+	it("returns a positive score when any searchable field matches", () => {
+		expect(getFoodSearchScore(BANANA, "peanut butter")).toBeGreaterThan(0);
+	});
+
+	it("requires every query token to match somewhere", () => {
+		expect(getFoodSearchScore(BANANA, "peanut carrot")).toBe(0);
+	});
+
+	it("keeps 1-2 letter searches scoped to the food name", () => {
+		expect(getFoodSearchScore(BANANA, "p")).toBe(0);
+	});
+
+	it("adds a small boost when the phrase appears in the food name", () => {
+		expect(getFoodSearchScore(BANANA, "banana")).toBe(150);
+	});
+});
 
 describe("getVisibleFoods", () => {
 	describe("with no filters", () => {
@@ -110,6 +223,24 @@ describe("getVisibleFoods", () => {
 
 		it("returns empty array when nothing matches", () => {
 			expect(getVisibleFoods({ search: "xyz" })).toEqual([]);
+		});
+
+		it("matches ingredients", () => {
+			expect(getVisibleFoods({ search: "cinnamon" })).toEqual([APPLE]);
+		});
+
+		it("matches toppings", () => {
+			expect(getVisibleFoods({ search: "peanut butter" })).toEqual([
+				BANANA,
+			]);
+		});
+
+		it("matches category keys", () => {
+			expect(getVisibleFoods({ search: "breakfast" })).toEqual([EGGS]);
+		});
+
+		it("matches small typos in food names", () => {
+			expect(getVisibleFoods({ search: "appel" })).toEqual([APPLE]);
 		});
 	});
 
@@ -348,6 +479,22 @@ describe("getVisibleFoods", () => {
 				getVisibleFoods({ difficulty: null, search: "" }),
 			).toHaveLength(5);
 		});
+	});
+});
+
+describe("getFoodSearchSuggestions", () => {
+	it("returns nearby local foods for a search", () => {
+		expect(getFoodSearchSuggestions("appel")).toEqual([
+			{ name: "Apple", slug: "apple" },
+		]);
+	});
+
+	it("limits suggestions", () => {
+		expect(getFoodSearchSuggestions("a", 2)).toHaveLength(2);
+	});
+
+	it("returns no suggestions for blank search", () => {
+		expect(getFoodSearchSuggestions("   ")).toEqual([]);
 	});
 });
 

@@ -41,6 +41,7 @@ export const FoodsPage = () => {
 					location={urlLocation}
 					onClearDifficulty={() => setDifficulty(null)}
 					onClearSearch={() => setSearch("")}
+					onSearchSuggestion={setSearch}
 					search={search}
 					sort={sort}
 					subCategory={subCategory ?? undefined}
