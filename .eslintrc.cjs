@@ -67,7 +67,7 @@ module.exports = {
         "sort-keys": "error",
         "yoda": "error",
 
-        // Layout & Formatting
+		//=================================== Layout & Formatting ===================================//
         "arrow-parens": [1, "always", { requireForBlockBody: false }],
         "comma-dangle": ["error", "always-multiline"],
         "keyword-spacing": [1],
@@ -80,16 +80,18 @@ module.exports = {
         ],
         "space-before-blocks": 1,
 
-        // React
+		//=================================== React ===================================//
         "jsx-quotes": ["error", "prefer-double"],
+
+        "react-refresh/only-export-components": ["warn", { allowConstantExport: true }],
         "react/display-name": 0,
+        "react/jsx-boolean-value": "error",
+        "react/jsx-curly-brace-presence": "error",
         "react/jsx-key": 1,
         "react/jsx-no-duplicate-props": 1,
         "react/jsx-sort-props": ["error", { reservedFirst: ["key"] }],
         "react/jsx-uses-react": 1,
         "react/jsx-uses-vars": 1,
-        "react/jsx-boolean-value": "error",
-        "react/jsx-curly-brace-presence": "error",
         "react/no-danger": 1,
         "react/no-direct-mutation-state": 1,
         "react/no-unknown-property": 1,
@@ -98,8 +100,7 @@ module.exports = {
         "react/react-in-jsx-scope": "off",
         "react/self-closing-comp": 1,
 
-        "react-refresh/only-export-components": ["warn", { allowConstantExport: true }],
-
+        //=================================== Imports ===================================//
         "import/order": [
             "error",
             {
@@ -131,7 +132,7 @@ module.exports = {
             },
         ],
 
-        // Typescript
+		//=================================== Typescript ===================================//
         "@typescript-eslint/explicit-function-return-type": "off",
         "@typescript-eslint/naming-convention": [
             "error",
