@@ -1,15 +1,27 @@
+import {
+	Difficulty,
+	DIFFICULTY_FIVE,
+	DIFFICULTY_FOUR,
+	DIFFICULTY_ONE,
+	DIFFICULTY_THREE,
+	DIFFICULTY_TWO,
+} from "./DifficultyFilter.types";
 import { FilterSection } from "../../FilterSection/FilterSection";
 
 import "./DifficultyFilter.scss";
-
-export type Difficulty = 1 | 2 | 3 | 4 | 5;
 
 type DifficultyFilterProps = {
 	onChange: (value: Difficulty | null) => void;
 	value: Difficulty | null;
 };
 
-const OPTIONS: Difficulty[] = [1, 2, 3, 4, 5];
+const OPTIONS: Difficulty[] = [
+	DIFFICULTY_ONE,
+	DIFFICULTY_TWO,
+	DIFFICULTY_THREE,
+	DIFFICULTY_FOUR,
+	DIFFICULTY_FIVE,
+];
 
 export const DifficultyFilter = ({
 	onChange,

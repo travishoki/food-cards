@@ -1,3 +1,5 @@
+/* eslint-disable no-magic-numbers */
+
 // Background
 export const BACKGROUND_WIDTH = 750; // The cqw sizing is in reference to this
 export const BACKGROUND_HEIGHT = 1050;
@@ -67,3 +69,5 @@ export const INFO_BAR_HEIGHT = 60;
 export const INFO_BAR_TEXT_LEFT_PADDING = 20;
 export const INFO_BAR_TEXT_TOP_PADDING = 5;
 export const INFO_BAR_FONT_SIZE = 28;
+
+/* eslint-eslint no-magic-numbers */

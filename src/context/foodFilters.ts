@@ -5,9 +5,11 @@ import { SortDirection } from "../const/sortDirections.const";
 
 type FoodFiltersContextValue = {
 	difficulty: Difficulty | null;
+	fuzzySearchEnabled: boolean;
 	resetAll: () => void;
 	search: string;
 	setDifficulty: (value: Difficulty | null) => void;
+	setFuzzySearchEnabled: (value: boolean) => void;
 	setSearch: (value: string) => void;
 	setSort: (value: SortDirection) => void;
 	setSubCategory: (value: string | null) => void;

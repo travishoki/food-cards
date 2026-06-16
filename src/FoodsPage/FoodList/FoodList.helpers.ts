@@ -6,7 +6,7 @@ import {
 import { InStockMode, PrereleaseMode } from "../../context/cardView";
 import { FOODS } from "../../data";
 import { Food } from "../../types";
-import { Difficulty } from "../Toolbar/DifficultyFilter";
+import { Difficulty } from "../Toolbar/DifficultyFilter.types";
 import { Location } from "../Toolbar/LocationFilter";
 
 type GetVisibleFoodsArgs = {
@@ -85,6 +85,8 @@ export const getTokenScore = (
 	queryToken: string,
 	foodToken: string,
 ): number => {
+	/* eslint-disable no-magic-numbers */
+
 	// Strong, intentional matches win first.
 	if (foodToken === queryToken) return 120;
 	if (foodToken.startsWith(queryToken)) return 90;
@@ -100,9 +102,13 @@ export const getTokenScore = (
 
 	// Typo matches are useful, but weaker than exact/prefix/contains matches.
 	return distance <= maxDistance ? 50 - distance : 0;
+
+	/* eslint-enable no-magic-numbers */
 };
 
 export const getFoodSearchScore = (food: Food, query: string): number => {
+	/* eslint-disable no-magic-numbers */
+
 	const queryTokens = getSearchTokens(query);
 	if (!queryTokens.length) return 1;
 
@@ -133,6 +139,8 @@ export const getFoodSearchScore = (food: Food, query: string): number => {
 	}
 
 	return score;
+
+	/* eslint-enable no-magic-numbers */
 };
 
 const sortFoods = (foods: Food[], sort: SortDirection): Food[] =>

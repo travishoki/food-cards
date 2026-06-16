@@ -1,3 +1,5 @@
+import { Difficulty } from "./FoodsPage/Toolbar/DifficultyFilter.types";
+
 import type { Brand } from "./const/brands.const";
 import type { Location } from "./const/locations.const";
 
@@ -5,7 +7,7 @@ export type Food = {
 	brand?: Brand;
 	category_key: string;
 	cookTime?: { instructions: string; time: string };
-	difficulty: 1 | 2 | 3 | 4 | 5;
+	difficulty: Difficulty;
 	docId?: string;
 	image_url: string;
 	inStock?: boolean;

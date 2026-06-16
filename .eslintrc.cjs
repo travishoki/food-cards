@@ -46,6 +46,14 @@ module.exports = {
                 caughtErrorsIgnorePattern: "^_",
             },
         ],
+        "no-magic-numbers": [
+			"error",
+			{
+				"ignore": [-1, 0, 1],
+				"ignoreArrayIndexes": true,
+				"ignoreDefaultValues": true,
+			},
+		],
         "no-var": 1,
         "object-shorthand": [1, "properties"],
         "prefer-const": 1,
@@ -171,5 +179,12 @@ module.exports = {
                 ],
             },
         },
+        {
+			"files": ["*.stories.tsx", "*.test.*"],
+			"rules": {
+				"no-magic-numbers": ["off"],
+			},
+		},
+
     ],
 };

@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 
+const DEFAULTED_WIDTH = 1024;
+
 const getWidth = () =>
 	typeof document === "undefined"
-		? 1024
+		? DEFAULTED_WIDTH
 		: document.documentElement.clientWidth;
 
 export const useViewportWidth = () => {

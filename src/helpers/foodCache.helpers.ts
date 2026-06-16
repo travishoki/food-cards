@@ -7,6 +7,7 @@ type FoodCache = {
 	date: string;
 };
 
+// eslint-disable-next-line no-magic-numbers
 const todayString = (): string => new Date().toISOString().slice(0, 10);
 
 export const readFoodCache = (): Food[] | null => {

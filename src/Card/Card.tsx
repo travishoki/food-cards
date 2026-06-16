@@ -61,6 +61,7 @@ type CardProps = {
 };
 
 // Convert design-space px (anchored to BACKGROUND_WIDTH) to a cqw string.
+// eslint-disable-next-line no-magic-numbers
 const dcqw = (px: number) => `${(px / BACKGROUND_WIDTH) * 100}cqw`;
 
 const designVars: CSSProperties = {
