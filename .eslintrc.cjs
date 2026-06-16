@@ -38,14 +38,6 @@ module.exports = {
 		"no-unused-vars": "off",
 		"promise/catch-or-return": ["error", { allowFinally: true }],
 		"promise/no-nesting": "error",
-		"@typescript-eslint/no-unused-vars": [
-			"warn",
-			{
-				argsIgnorePattern: "^_",
-				varsIgnorePattern: "^_",
-				caughtErrorsIgnorePattern: "^_",
-			},
-		],
 		"no-magic-numbers": [
 		"error",
 			{
@@ -160,6 +152,14 @@ module.exports = {
 		"@typescript-eslint/no-empty-interface": "error",
 		"typescript-sort-keys/interface": "error",
 		"typescript-sort-keys/string-enum": "error",
+        "@typescript-eslint/no-unused-vars": [
+			"warn",
+			{
+				argsIgnorePattern: "^_",
+				varsIgnorePattern: "^_",
+				caughtErrorsIgnorePattern: "^_",
+			},
+		],
 	},
 	settings: {
 		react: { version: "detect" },
