@@ -32,13 +32,13 @@ module.exports = {
 		"no-duplicate-imports": "error",
 		"no-else-return": "error",
 		"no-extra-boolean-cast": 0,
+		"no-magic-numbers": [
 		"no-nested-ternary": "error",
 		"no-only-tests/no-only-tests": "error",
 		"no-param-reassign": "error",
 		"no-unused-vars": "off",
 		"promise/catch-or-return": ["error", { allowFinally: true }],
 		"promise/no-nesting": "error",
-		"no-magic-numbers": [
 		"error",
 			{
 				"ignore": [-1, 0, 1],
