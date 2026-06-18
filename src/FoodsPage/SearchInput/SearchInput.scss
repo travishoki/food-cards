@@ -9,6 +9,11 @@
 	min-width: 0;
 	padding: 0.5rem 0.75rem;
 
+	&:focus {
+		border-color: $color-active-border;
+		outline: none;
+	}
+
 	&::placeholder {
 		color: $color-text-muted;
 	}
