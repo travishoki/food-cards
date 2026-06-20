@@ -1,7 +1,7 @@
 import { ReactNode, useCallback, useState } from "react";
 
 import { FoodFiltersContext } from "./foodFilters";
-import { Difficulty } from "../FoodsPage/Toolbar/DifficultyFilter";
+import { Difficulty } from "../FoodsPage/Toolbar/DifficultyFilter.types";
 import { SORT_DIRECTIONS, SortDirection } from "../const/sortDirections.const";
 
 export const FoodFiltersProvider = ({ children }: { children: ReactNode }) => {

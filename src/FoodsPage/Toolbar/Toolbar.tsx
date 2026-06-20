@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 
 import { AiButton } from "./AiSearch/AiButton";
 import { AiSearchInput } from "./AiSearch/AiSearchInput";
-import { Difficulty, DifficultyFilter } from "./DifficultyFilter";
+import { DifficultyFilter } from "./DifficultyFilter";
+import { Difficulty } from "./DifficultyFilter.types";
 import { FilterButton } from "./FilterButton";
 import { LocationNav } from "./LocationNav/LocationNav";
 import { SearchButton } from "./SearchButton";

@@ -1,6 +1,6 @@
 import { createContext, useContext } from "react";
 
-import { Difficulty } from "../FoodsPage/Toolbar/DifficultyFilter";
+import { Difficulty } from "../FoodsPage/Toolbar/DifficultyFilter.types";
 import { SortDirection } from "../const/sortDirections.const";
 
 type FoodFiltersContextValue = {

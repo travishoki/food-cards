@@ -8,12 +8,12 @@ import {
 	CARD_MAX_VIEWPORT,
 	PAGE_SIDE_PADDING,
 } from "../../Card/Card.const";
+import { Location } from "../../const/locations.const";
 import { SortDirection } from "../../const/sortDirections.const";
 import { useCardView } from "../../context/cardView";
 import { useFoodsContext } from "../../context/foods";
 import { NoResults } from "../NoResults/NoResults";
-import { Difficulty } from "../Toolbar/DifficultyFilter";
-import { Location } from "../Toolbar/LocationFilter";
+import { Difficulty } from "../Toolbar/DifficultyFilter.types";
 
 import "./FoodList.scss";
 

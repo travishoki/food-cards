@@ -7,8 +7,6 @@ import {
 
 import "./DifficultyFilter.scss";
 
-export type { Location };
-
 type LocationFilterProps = {
 	onChange: (value: Location | null) => void;
 	value: Location | null;

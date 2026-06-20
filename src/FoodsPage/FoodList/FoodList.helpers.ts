@@ -1,4 +1,5 @@
 import { TOP_CATEGORY_SUBCATEGORIES } from "../../const/categories";
+import { Location } from "../../const/locations.const";
 import {
 	SORT_DIRECTIONS,
 	SortDirection,
@@ -7,7 +8,6 @@ import { InStockMode, PrereleaseMode } from "../../context/cardView";
 import { FOODS } from "../../data";
 import { Food } from "../../types";
 import { Difficulty } from "../Toolbar/DifficultyFilter.types";
-import { Location } from "../Toolbar/LocationFilter";
 
 type GetVisibleFoodsArgs = {
 	difficulty?: Difficulty | null;
