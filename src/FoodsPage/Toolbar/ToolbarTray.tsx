@@ -4,7 +4,7 @@ import { Difficulty } from "./DifficultyFilter.types";
 import { LocationNav } from "./LocationNav/LocationNav";
 import { SortPanel } from "./SortPanel";
 import { CardViewToggle } from "../../CardViewToggle/CardViewToggle";
-import { InStockToggle } from "../../CardViewToggle/InStockToggle";
+import { InStockFilterToggle } from "../../CardViewToggle/InStockFilterToggle";
 import { PrereleaseToggle } from "../../CardViewToggle/PrereleaseToggle";
 import { CategoryMenu } from "../../CategoryMenu/CategoryMenu";
 import { Location, LOCATIONS } from "../../const/locations.const";
@@ -69,7 +69,7 @@ export const ToolbarTray = ({
 				<>
 					<CardViewToggle />
 					<PrereleaseToggle />
-					<InStockToggle />
+					<InStockFilterToggle />
 				</>
 			)}
 		</div>
