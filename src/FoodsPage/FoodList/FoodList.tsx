@@ -1,16 +1,8 @@
-import { useMemo } from "react";
-
-import { getFoodSearchSuggestions, getVisibleFoods } from "./FoodList.helpers";
+import { FoodListGrid } from "./FoodListGrid";
 import { FoodListLoader } from "./FoodListLoader/FoodListLoader";
-import Card from "../../Card/Card";
-import {
-	CARD_GUTTER,
-	CARD_MAX_VIEWPORT,
-	PAGE_SIDE_PADDING,
-} from "../../Card/Card.const";
+import { useFoodListData } from "./useFoodListData";
 import { Location } from "../../const/locations.const";
 import { SortDirection } from "../../const/sortDirections.const";
-import { useCardView } from "../../context/cardView";
 import { useFoodsContext } from "../../context/foods";
 import { NoResults } from "../NoResults/NoResults";
 import { Difficulty } from "../Toolbar/DifficultyFilter.types";
@@ -40,36 +32,15 @@ export const FoodList = ({
 	subCategory,
 	topCategory,
 }: FoodListProps) => {
-	const { inStockMode, prereleaseMode } = useCardView();
-	const { error, foodActivityDictionary, loading } = useFoodsContext();
-
-	const visibleFoods = useMemo(
-		() =>
-			getVisibleFoods({
-				difficulty,
-				inStockMode,
-				location,
-				prereleaseMode,
-				search,
-				sort,
-				subCategory,
-				topCategory,
-			}),
-		[
-			topCategory,
-			subCategory,
-			search,
-			sort,
-			difficulty,
-			inStockMode,
-			location,
-			prereleaseMode,
-		],
-	);
-	const searchSuggestions = useMemo(
-		() => getFoodSearchSuggestions(search),
-		[search],
-	);
+	const { error, loading } = useFoodsContext();
+	const { searchSuggestions, visibleFoods } = useFoodListData({
+		difficulty,
+		location,
+		search,
+		sort,
+		subCategory,
+		topCategory,
+	});
 
 	if (loading) return <FoodListLoader />;
 	if (error) throw new Error(error);
@@ -90,22 +61,5 @@ export const FoodList = ({
 		);
 	}
 
-	const style = {
-		gap: `${CARD_GUTTER}px`,
-		maxWidth: `${CARD_MAX_VIEWPORT}px`,
-		padding: `${PAGE_SIDE_PADDING}px`,
-	};
-
-	return (
-		<div className="food-cards" style={style}>
-			{visibleFoods.map((food) => {
-				const inStock =
-					foodActivityDictionary[food.slug ?? ""]?.inStock ?? true;
-				const { slug } = food;
-				const fileName = food.brand ? `${slug}-${food.brand}` : slug;
-
-				return <Card key={fileName} food={food} inStock={inStock} />;
-			})}
-		</div>
-	);
+	return <FoodListGrid foods={visibleFoods} />;
 };
