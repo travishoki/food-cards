@@ -1,4 +1,5 @@
 import {
+	extractRawText,
 	parseDifficulty,
 	parseSearch,
 	parseSort,
@@ -6,6 +7,20 @@ import {
 	parseTopCategory,
 	stripMarkdownFences,
 } from "./parseNaturalLanguageFilter.helpers";
+
+describe("extractRawText", () => {
+	it("returns text when first content block is text type", () => {
+		expect(extractRawText([{ text: "hello", type: "text" }])).toBe("hello");
+	});
+
+	it("returns empty string when first content block is not text type", () => {
+		expect(extractRawText([{ type: "tool_use" }])).toBe("");
+	});
+
+	it("returns empty string when text is undefined", () => {
+		expect(extractRawText([{ type: "text" }])).toBe("");
+	});
+});
 
 describe("stripMarkdownFences", () => {
 	it("returns plain text unchanged", () => {

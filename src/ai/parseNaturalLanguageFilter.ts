@@ -5,6 +5,7 @@ import {
 	MESSAGE_OPTIONS,
 } from "./parseNaturalLanguageFilter.const";
 import {
+	extractRawText,
 	parseDifficulty,
 	parseSearch,
 	parseSort,
@@ -38,8 +39,7 @@ export const parseNaturalLanguageFilter = async (
 
 	const message = await client.messages.create(MESSAGE_OPTIONS(query));
 
-	const raw =
-		message.content[0].type === "text" ? message.content[0].text : "";
+	const raw = extractRawText(message.content);
 
 	const text = stripMarkdownFences(raw);
 

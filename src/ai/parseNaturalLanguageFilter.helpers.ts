@@ -52,3 +52,7 @@ export const parseTopCategory = (value: unknown): string | null => {
 
 	return null;
 };
+
+export const extractRawText = (
+	content: { text?: string; type: string }[],
+): string => (content[0].type === "text" ? (content[0].text ?? "") : "");
