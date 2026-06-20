@@ -8,6 +8,8 @@ import {
 } from "./DifficultyFilter.types";
 import { FilterSection } from "../../FilterSection/FilterSection";
 
+export type { Difficulty };
+
 import "./DifficultyFilter.scss";
 
 type DifficultyFilterProps = {

@@ -9,6 +9,7 @@ export const FoodFiltersProvider = ({ children }: { children: ReactNode }) => {
 	const [sort, setSort] = useState<SortDirection>(SORT_DIRECTIONS.asc);
 	const [difficulty, setDifficulty] = useState<Difficulty | null>(null);
 	const [subCategory, setSubCategory] = useState<string | null>(null);
+	const [fuzzySearchEnabled, setFuzzySearchEnabled] = useState(false);
 
 	const resetAll = useCallback(() => {
 		setSort(SORT_DIRECTIONS.asc);
@@ -21,9 +22,11 @@ export const FoodFiltersProvider = ({ children }: { children: ReactNode }) => {
 		<FoodFiltersContext.Provider
 			value={{
 				difficulty,
+				fuzzySearchEnabled,
 				resetAll,
 				search,
 				setDifficulty,
+				setFuzzySearchEnabled,
 				setSearch,
 				setSort,
 				setSubCategory,
