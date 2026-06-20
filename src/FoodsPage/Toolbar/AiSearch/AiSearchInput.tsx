@@ -1,5 +1,7 @@
 import { useEffect } from "react";
 
+import { AiSearchError } from "./AiSearchError";
+import { AiSearchForm } from "./AiSearchForm";
 import { useAiSearch } from "./useAiSearch";
 import { FilterSection } from "../../../FilterSection/FilterSection";
 import { useEscapeKey } from "../../../hooks/useEscapeKey";
@@ -22,26 +24,14 @@ export const AiSearchInput = ({ onClose }: AiSearchInputProps) => {
 
 	return (
 		<FilterSection label="AI Filter:" labelFor="ai-search">
-			<form className="ai-search" onSubmit={handleSubmit}>
-				<input
-					className="ai-search__input"
-					disabled={isLoading}
-					id="ai-search"
-					onChange={(e) => setValue(e.target.value)}
-					placeholder='e.g. "easy breakfast" or "difficult desserts"'
-					ref={inputRef}
-					type="text"
-					value={value}
-				/>
-				<button
-					className="ai-search__submit"
-					disabled={isLoading || !value.trim()}
-					type="submit"
-				>
-					{isLoading ? "…" : "Go"}
-				</button>
-			</form>
-			{error && <p className="ai-search__error">{error}</p>}
+			<AiSearchForm
+				inputRef={inputRef}
+				isLoading={isLoading}
+				onSubmit={handleSubmit}
+				setValue={setValue}
+				value={value}
+			/>
+			<AiSearchError error={error} />
 		</FilterSection>
 	);
 };
