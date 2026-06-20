@@ -1,11 +1,8 @@
-import { FormEvent, useEffect, useRef, useState } from "react";
+import { useEffect } from "react";
 
-import { useNavigate } from "react-router-dom";
-
+import { useAiSearch } from "./useAiSearch";
 import { FilterSection } from "../../../FilterSection/FilterSection";
-import { parseNaturalLanguageFilter } from "../../../ai/parseNaturalLanguageFilter";
-import { useFoodFilters } from "../../../context/foodFilters";
-import { useUrlParams } from "../../../hooks/useUrlParams";
+import { useEscapeKey } from "../../../hooks/useEscapeKey";
 
 import "./AiSearchInput.scss";
 
@@ -14,64 +11,14 @@ type AiSearchInputProps = {
 };
 
 export const AiSearchInput = ({ onClose }: AiSearchInputProps) => {
-	const { setDifficulty, setSearch, setSort, setSubCategory } =
-		useFoodFilters();
-	const { urlLocation } = useUrlParams();
-	const navigate = useNavigate();
-	const [value, setValue] = useState("");
-	const [isLoading, setIsLoading] = useState(false);
-	const [error, setError] = useState<string | null>(null);
-	const inputRef = useRef<HTMLInputElement>(null);
+	const { error, handleSubmit, inputRef, isLoading, setValue, value } =
+		useAiSearch(onClose);
+
+	useEscapeKey(onClose);
 
 	useEffect(() => {
 		inputRef.current?.focus();
-	}, []);
-
-	useEffect(() => {
-		const onKey = (e: KeyboardEvent) => {
-			if (e.key === "Escape") onClose();
-		};
-
-		window.addEventListener("keydown", onKey);
-
-		return () => window.removeEventListener("keydown", onKey);
-	}, [onClose]);
-
-	const handleSubmit = async (e: FormEvent) => {
-		e.preventDefault();
-
-		const trimmed = value.trim();
-
-		if (!trimmed) return;
-
-		setIsLoading(true);
-		setError(null);
-
-		try {
-			const result = await parseNaturalLanguageFilter(trimmed);
-
-			setSearch(result.search);
-			setDifficulty(result.difficulty);
-			setSubCategory(result.subCategory);
-
-			if (result.sort !== null) {
-				setSort(result.sort);
-			}
-
-			if (result.topCategory !== null) {
-				const base = urlLocation === "home" ? "" : `/${urlLocation}`;
-				navigate(`${base}/${result.topCategory}`);
-			}
-
-			onClose();
-		} catch (err) {
-			setError(
-				err instanceof Error ? err.message : "Something went wrong.",
-			);
-		} finally {
-			setIsLoading(false);
-		}
-	};
+	}, [inputRef]);
 
 	return (
 		<FilterSection label="AI Filter:" labelFor="ai-search">
