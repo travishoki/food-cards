@@ -53,6 +53,18 @@ export const parseTopCategory = (value: unknown): string | null => {
 	return null;
 };
 
+export const getApiKey = (): string => {
+	const apiKey = import.meta.env.VITE_ANTHROPIC_API_KEY as string | undefined;
+
+	if (!apiKey) {
+		throw new Error(
+			"VITE_ANTHROPIC_API_KEY is not set. Add it to your .env file.",
+		);
+	}
+
+	return apiKey;
+};
+
 export const extractRawText = (
 	content: { text?: string; type: string }[],
 ): string => (content[0].type === "text" ? (content[0].text ?? "") : "");

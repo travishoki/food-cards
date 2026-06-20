@@ -5,6 +5,7 @@ import {
 	MESSAGE_OPTIONS,
 } from "./parseNaturalLanguageFilter.const";
 import {
+	getApiKey,
 	parseDifficulty,
 	parseMessageToFilterResult,
 	parseSearch,
@@ -26,18 +27,9 @@ export type AiFilterResult = {
 export const parseNaturalLanguageFilter = async (
 	query: string,
 ): Promise<AiFilterResult> => {
-	const apiKey = import.meta.env.VITE_ANTHROPIC_API_KEY as string | undefined;
-
-	if (!apiKey) {
-		throw new Error(
-			"VITE_ANTHROPIC_API_KEY is not set. Add it to your .env file.",
-		);
-	}
-
+	const apiKey = getApiKey();
 	const client = new Anthropic(ANTHROPIC_CLIENT_OPTIONS(apiKey));
-
 	const message = await client.messages.create(MESSAGE_OPTIONS(query));
-
 	const parsed = parseMessageToFilterResult(message);
 
 	return {

@@ -1,5 +1,6 @@
 import {
 	extractRawText,
+	getApiKey,
 	parseDifficulty,
 	parseMessageToFilterResult,
 	parseSearch,
@@ -8,6 +9,22 @@ import {
 	parseTopCategory,
 	stripMarkdownFences,
 } from "./parseNaturalLanguageFilter.helpers";
+
+describe("getApiKey", () => {
+	it("returns the api key when set", () => {
+		import.meta.env.VITE_ANTHROPIC_API_KEY = "test-key";
+
+		expect(getApiKey()).toBe("test-key");
+	});
+
+	it("throws when api key is not set", () => {
+		import.meta.env.VITE_ANTHROPIC_API_KEY = undefined;
+
+		expect(() => getApiKey()).toThrow(
+			"VITE_ANTHROPIC_API_KEY is not set. Add it to your .env file.",
+		);
+	});
+});
 
 describe("extractRawText", () => {
 	it("returns text when first content block is text type", () => {
