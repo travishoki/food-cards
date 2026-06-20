@@ -43,6 +43,7 @@
 		}
 	},
 	"dependencies": {
+		"@anthropic-ai/sdk": "^0.104.2",
 		"firebase": "^12.13.0",
 		"lodash": "^4.18.1",
 		"qrcode.react": "^4.2.0",

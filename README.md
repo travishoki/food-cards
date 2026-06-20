@@ -11,3 +11,8 @@
 ## Skills to Run
 
 /fill-missing-images
+
+# Anthropic Connection
+
+console.anthropic.com
+https://platform.claude.com/dashboard

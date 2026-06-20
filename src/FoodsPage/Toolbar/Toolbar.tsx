@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 
+import { AiButton } from "./AiSearch/AiButton";
+import { AiSearchInput } from "./AiSearch/AiSearchInput";
 import { Difficulty, DifficultyFilter } from "./DifficultyFilter";
 import { FilterButton } from "./FilterButton";
 import { LocationNav } from "./LocationNav/LocationNav";
@@ -22,7 +24,7 @@ import { SearchInput } from "../SearchInput/SearchInput";
 
 import "./Toolbar.scss";
 
-type Panel = "filter" | "search" | "settings" | "sort";
+type Panel = "ai" | "filter" | "search" | "settings" | "sort";
 
 type ToolbarProps = {
 	difficulty: Difficulty | null;
@@ -84,6 +86,10 @@ export const Toolbar = ({
 					isOpen={openPanel === "settings"}
 					onToggle={() => toggle("settings")}
 				/>
+				<AiButton
+					isOpen={openPanel === "ai"}
+					onToggle={() => toggle("ai")}
+				/>
 			</div>
 			{openPanel && (
 				<div className="toolbar__tray">
@@ -117,6 +123,9 @@ export const Toolbar = ({
 								showDifficultySort={location === LOCATIONS.home}
 								value={sort}
 							/>
+						)}
+						{openPanel === "ai" && (
+							<AiSearchInput onClose={close} />
 						)}
 						{openPanel === "settings" && (
 							<>
