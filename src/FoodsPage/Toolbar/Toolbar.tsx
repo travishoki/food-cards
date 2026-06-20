@@ -1,31 +1,11 @@
-import { useEffect, useState } from "react";
-
-import { AiButton } from "./AiSearch/AiButton";
-import { AiSearchInput } from "./AiSearch/AiSearchInput";
-import { DifficultyFilter } from "./DifficultyFilter";
 import { Difficulty } from "./DifficultyFilter.types";
-import { FilterButton } from "./FilterButton";
-import { LocationNav } from "./LocationNav/LocationNav";
-import { SearchButton } from "./SearchButton";
-import { SettingsButton } from "./SettingsButton";
-import { SortButton } from "./SortButton";
-import { SortPanel } from "./SortPanel";
-import { CardViewToggle } from "../../CardViewToggle/CardViewToggle";
-import { InStockToggle } from "../../CardViewToggle/InStockToggle";
-import { PrereleaseToggle } from "../../CardViewToggle/PrereleaseToggle";
-import { CategoryMenu } from "../../CategoryMenu/CategoryMenu";
-import { Location, LOCATIONS } from "../../const/locations.const";
-import {
-	SORT_DIRECTIONS,
-	SortDirection,
-} from "../../const/sortDirections.const";
-import { isEatingOut } from "../../helpers/locations.helpers";
-import { CloseIcon } from "../../icons/CloseIcon";
-import { SearchInput } from "../SearchInput/SearchInput";
+import { ToolbarButtonRow } from "./ToolbarButtonRow";
+import { ToolbarTray } from "./ToolbarTray";
+import { useToolbarPanel } from "./useToolbarPanel";
+import { Location } from "../../const/locations.const";
+import { SortDirection } from "../../const/sortDirections.const";
 
 import "./Toolbar.scss";
-
-type Panel = "ai" | "filter" | "search" | "settings" | "sort";
 
 type ToolbarProps = {
 	difficulty: Difficulty | null;
@@ -46,97 +26,27 @@ export const Toolbar = ({
 	onSortChange,
 	sort,
 }: ToolbarProps) => {
-	const [openPanel, setOpenPanel] = useState<Panel | null>(null);
-
-	const toggle = (p: Panel) =>
-		setOpenPanel((curr) => (curr === p ? null : p));
-
-	const close = () => setOpenPanel(null);
-
-	useEffect(() => {
-		if (!openPanel) return;
-
-		const onKey = (e: KeyboardEvent) => {
-			if (e.key === "Escape") close();
-		};
-
-		window.addEventListener("keydown", onKey);
-
-		return () => window.removeEventListener("keydown", onKey);
-	}, [openPanel]);
+	const { close, openPanel, toggle } = useToolbarPanel();
 
 	return (
 		<div className="toolbar">
-			<div className="toolbar__row">
-				<FilterButton
-					hasActiveFilter={hasActiveFilter}
-					isOpen={openPanel === "filter"}
-					onToggle={() => toggle("filter")}
-				/>
-				<SearchButton
-					hasActiveSearch={hasActiveSearch}
-					isOpen={openPanel === "search"}
-					onToggle={() => toggle("search")}
-				/>
-				<SortButton
-					hasActiveSort={sort !== SORT_DIRECTIONS.asc}
-					isOpen={openPanel === "sort"}
-					onToggle={() => toggle("sort")}
-				/>
-				<SettingsButton
-					isOpen={openPanel === "settings"}
-					onToggle={() => toggle("settings")}
-				/>
-				<AiButton
-					isOpen={openPanel === "ai"}
-					onToggle={() => toggle("ai")}
-				/>
-			</div>
+			<ToolbarButtonRow
+				hasActiveFilter={hasActiveFilter}
+				hasActiveSearch={hasActiveSearch}
+				onToggle={toggle}
+				openPanel={openPanel}
+				sort={sort}
+			/>
 			{openPanel && (
-				<div className="toolbar__tray">
-					<button
-						aria-label="Close"
-						className="toolbar__close"
-						onClick={close}
-						type="button"
-					>
-						<CloseIcon />
-					</button>
-					<div className="tray-contents">
-						{openPanel === "filter" && (
-							<>
-								<LocationNav />
-								<CategoryMenu />
-								{!isEatingOut(location) && (
-									<DifficultyFilter
-										onChange={onDifficultyChange}
-										value={difficulty}
-									/>
-								)}
-							</>
-						)}
-						{openPanel === "search" && (
-							<SearchInput onClose={close} />
-						)}
-						{openPanel === "sort" && (
-							<SortPanel
-								onChange={onSortChange}
-								showDifficultySort={location === LOCATIONS.home}
-								value={sort}
-							/>
-						)}
-						{openPanel === "ai" && (
-							<AiSearchInput onClose={close} />
-						)}
-						{openPanel === "settings" && (
-							<>
-								<CardViewToggle />
-								<PrereleaseToggle />
-								<InStockToggle />
-							</>
-						)}
-					</div>
-				</div>
+				<ToolbarTray
+					difficulty={difficulty}
+					location={location}
+					onClose={close}
+					onDifficultyChange={onDifficultyChange}
+					onSortChange={onSortChange}
+					openPanel={openPanel}
+					sort={sort}
+				/>
 			)}
 		</div>
 	);
