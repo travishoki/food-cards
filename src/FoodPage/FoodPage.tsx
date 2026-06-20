@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 
-import { BackButton } from "./BackButton";
+import { BackButton } from "./BackButton/BackButton";
 import { FoodPageInfoBox } from "./FoodPageInfoBox/FoodPageInfoBox";
 import { MissingFood } from "./MissingFood";
 import Card from "../Card/Card";
