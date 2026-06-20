@@ -1,6 +1,9 @@
 import Anthropic from "@anthropic-ai/sdk";
 
-import { SYSTEM_PROMPT } from "./parseNaturalLanguageFilter.const";
+import {
+	ANTHROPIC_CLIENT_OPTIONS,
+	MESSAGE_OPTIONS,
+} from "./parseNaturalLanguageFilter.const";
 import {
 	parseDifficulty,
 	parseSearch,
@@ -31,17 +34,9 @@ export const parseNaturalLanguageFilter = async (
 		);
 	}
 
-	const client = new Anthropic({
-		apiKey,
-		dangerouslyAllowBrowser: true,
-	});
+	const client = new Anthropic(ANTHROPIC_CLIENT_OPTIONS(apiKey));
 
-	const message = await client.messages.create({
-		max_tokens: 256,
-		messages: [{ content: query, role: "user" }],
-		model: "claude-haiku-4-5-20251001",
-		system: SYSTEM_PROMPT,
-	});
+	const message = await client.messages.create(MESSAGE_OPTIONS(query));
 
 	const raw =
 		message.content[0].type === "text" ? message.content[0].text : "";

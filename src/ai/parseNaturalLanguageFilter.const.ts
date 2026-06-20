@@ -1,5 +1,22 @@
 import { TOP_CATEGORY_SUBCATEGORIES } from "../const/categories";
 
+import type { ClientOptions } from "@anthropic-ai/sdk";
+import type { MessageCreateParamsNonStreaming } from "@anthropic-ai/sdk/resources";
+
+export const ANTHROPIC_CLIENT_OPTIONS = (apiKey: string): ClientOptions => ({
+	apiKey,
+	dangerouslyAllowBrowser: true,
+});
+
+export const MESSAGE_OPTIONS = (
+	query: string,
+): MessageCreateParamsNonStreaming => ({
+	max_tokens: 256,
+	messages: [{ content: query, role: "user" }],
+	model: "claude-haiku-4-5-20251001",
+	system: SYSTEM_PROMPT,
+});
+
 export const SYSTEM_PROMPT = `You are a food filter parser. The user will describe what food they want to find in natural language. Extract filter values from their query and respond ONLY with valid JSON matching this shape:
 
 {
