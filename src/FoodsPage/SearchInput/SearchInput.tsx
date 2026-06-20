@@ -1,44 +1,14 @@
-import { useEffect, useRef, useState } from "react";
-
+import { useSearchInput } from "./useSearchInput";
 import { FilterSection } from "../../FilterSection/FilterSection";
-import { useFoodFilters } from "../../context/foodFilters";
 
 import "./SearchInput.scss";
-
-const SEARCH_DEBOUNCE_MS = 250;
 
 type SearchInputProps = {
 	onClose: () => void;
 };
 
 export const SearchInput = ({ onClose }: SearchInputProps) => {
-	const { search, setSearch } = useFoodFilters();
-	const [value, setValue] = useState(search);
-	const inputRef = useRef<HTMLInputElement>(null);
-
-	useEffect(() => {
-		const id = setTimeout(() => setSearch(value), SEARCH_DEBOUNCE_MS);
-
-		return () => clearTimeout(id);
-	}, [value, setSearch]);
-
-	useEffect(() => {
-		inputRef.current?.focus();
-	}, []);
-
-	useEffect(() => {
-		setValue(search);
-	}, [search]);
-
-	useEffect(() => {
-		const onKey = (e: KeyboardEvent) => {
-			if (e.key === "Escape") onClose();
-		};
-
-		window.addEventListener("keydown", onKey);
-
-		return () => window.removeEventListener("keydown", onKey);
-	}, [onClose]);
+	const { inputRef, setValue, value } = useSearchInput(onClose);
 
 	return (
 		<FilterSection label="Search:" labelFor="food-search">
