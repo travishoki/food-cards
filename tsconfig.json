@@ -11,8 +11,7 @@
 		"esModuleInterop": true,
 		"allowSyntheticDefaultImports": true,
 		"resolveJsonModule": true,
-		"isolatedModules": true,
-		"types": ["vitest/globals"]
+		"isolatedModules": true
 	},
 	"include": ["src"]
 }
