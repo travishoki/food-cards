@@ -1,4 +1,4 @@
-import { useSearchInput } from "./useSearchInput";
+import { useSearchInput } from "./SearchInput.hooks";
 import { FilterSection } from "../../FilterSection/FilterSection";
 
 import "./SearchInput.scss";

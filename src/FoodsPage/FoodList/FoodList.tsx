@@ -1,6 +1,6 @@
+import { useFoodListData } from "./FoodList.hooks";
 import { FoodListGrid } from "./FoodListGrid";
 import { FoodListLoader } from "./FoodListLoader/FoodListLoader";
-import { useFoodListData } from "./useFoodListData";
 import { Location } from "../../const/locations.const";
 import { SortDirection } from "../../const/sortDirections.const";
 import { useFoodsContext } from "../../context/foods";

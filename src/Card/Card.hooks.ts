@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 import {
 	getCardHeightForMode,
@@ -7,6 +7,8 @@ import {
 	type ViewMode,
 } from "./Card.helpers";
 import { useViewportWidth } from "../hooks/useViewportWidth";
+
+import type { Food } from "../types";
 
 type CardDimensions = {
 	cardHeight: number;
@@ -26,4 +28,28 @@ export const useCardDimensions = (viewMode: ViewMode): CardDimensions => {
 	const cardHeight = getCardHeightForMode(effectiveMode, cardWidth);
 
 	return { cardHeight, cardWidth, effectiveMode, isDetailView };
+};
+
+export const useCardNavigation = (
+	food: Food,
+	isDetailView: boolean,
+): (() => void) | undefined => {
+	const navigate = useNavigate();
+	const { location, segment, topCategory } = useParams<{
+		location?: string;
+		segment?: string;
+		topCategory?: string;
+	}>();
+
+	if (isDetailView) return undefined;
+
+	return () => {
+		if (location && topCategory) {
+			navigate(`/${location}/${topCategory}/food/${food.slug}`);
+		} else if (segment) {
+			navigate(`/${segment}/food/${food.slug}`);
+		} else {
+			navigate(`/food/${food.slug}`);
+		}
+	};
 };

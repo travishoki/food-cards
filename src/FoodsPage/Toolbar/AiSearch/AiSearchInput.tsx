@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 import { AiSearchError } from "./AiSearchError";
 import { AiSearchForm } from "./AiSearchForm";
-import { useAiSearch } from "./useAiSearch";
+import { useAiSearch } from "./AiSearchInput.hooks";
 import { FilterSection } from "../../../FilterSection/FilterSection";
 import { useEscapeKey } from "../../../hooks/useEscapeKey";
 

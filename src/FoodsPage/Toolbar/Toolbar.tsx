@@ -1,7 +1,7 @@
 import { Difficulty } from "./DifficultyFilter.types";
+import { useToolbarPanel } from "./Toolbar.hooks";
 import { ToolbarButtonRow } from "./ToolbarButtonRow";
 import { ToolbarTray } from "./ToolbarTray";
-import { useToolbarPanel } from "./useToolbarPanel";
 import { Location } from "../../const/locations.const";
 import { SortDirection } from "../../const/sortDirections.const";
 

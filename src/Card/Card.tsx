@@ -36,14 +36,13 @@ import {
 	TOPPINGS_FONT_SIZE,
 } from "./Card.const";
 import { getCardClassName } from "./Card.helpers";
+import { useCardDimensions, useCardNavigation } from "./Card.hooks";
 import { CardInfo } from "./CardInfo/CardInfo";
 import { DifficultyIcon } from "./DifficultyIcon/DifficultyIcon";
 import { Graphic } from "./Graphic/Graphic";
 import { Icon } from "./Icon/Icon";
 import { PrereleaseLabel } from "./PrereleaseLabel/PrereleaseLabel";
 import { Title } from "./Title/Title";
-import { useCardDimensions } from "./useCardDimensions";
-import { useCardNavigation } from "./useCardNavigation";
 import { useCardView } from "../context/cardView";
 
 import type { Food } from "../types";
