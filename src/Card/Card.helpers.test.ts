@@ -3,10 +3,15 @@ import {
 	BACKGROUND_WIDTH,
 	CARD_DETAIL_MAX_WIDTH,
 	CARD_GUTTER,
+	GRAPHIC_HEIGHT,
+	GRAPHIC_WIDTH,
 	PAGE_SIDE_PADDING,
+	TITLES_ONLY_HEIGHT,
 } from "./Card.const";
 import {
+	getCardClassName,
 	getCardHeight,
+	getCardHeightForMode,
 	getDetailCardWidth,
 	getListCardWidth,
 } from "./Card.helpers";
@@ -118,5 +123,71 @@ describe("getListCardWidth", () => {
 		it("clamps very large viewports (2560)", () => {
 			expect(getListCardWidth(2560)).toBe(getListCardWidth(1400));
 		});
+	});
+});
+
+describe("getCardHeightForMode", () => {
+	const width = 300;
+
+	it("returns full card height for 'full' mode", () => {
+		expect(getCardHeightForMode("full", width)).toBe(
+			width * (BACKGROUND_HEIGHT / BACKGROUND_WIDTH),
+		);
+	});
+
+	it("returns graphic aspect ratio height for 'image' mode", () => {
+		expect(getCardHeightForMode("image", width)).toBe(
+			width * (GRAPHIC_HEIGHT / GRAPHIC_WIDTH),
+		);
+	});
+
+	it("returns titles-only height for 'titles' mode", () => {
+		expect(getCardHeightForMode("titles", width)).toBe(
+			width * (TITLES_ONLY_HEIGHT / BACKGROUND_WIDTH),
+		);
+	});
+});
+
+describe("getCardClassName", () => {
+	it("includes the effectiveMode in the class name", () => {
+		expect(getCardClassName("full", true, true, "show")).toContain(
+			"card--full",
+		);
+		expect(getCardClassName("image", true, true, "show")).toContain(
+			"card--image",
+		);
+	});
+
+	it("adds is-clickable when not in detail view", () => {
+		expect(getCardClassName("full", false, true, "show")).toContain(
+			"is-clickable",
+		);
+	});
+
+	it("does not add is-clickable in detail view", () => {
+		expect(getCardClassName("full", true, true, "show")).not.toContain(
+			"is-clickable",
+		);
+	});
+
+	it("adds is-out-of-stock when out of stock and inStockMode is not hide", () => {
+		expect(getCardClassName("full", false, false, "show")).toContain(
+			"is-out-of-stock",
+		);
+		expect(getCardClassName("full", false, false, "only")).toContain(
+			"is-out-of-stock",
+		);
+	});
+
+	it("does not add is-out-of-stock when inStockMode is hide", () => {
+		expect(getCardClassName("full", false, false, "hide")).not.toContain(
+			"is-out-of-stock",
+		);
+	});
+
+	it("does not add is-out-of-stock when in stock", () => {
+		expect(getCardClassName("full", false, true, "show")).not.toContain(
+			"is-out-of-stock",
+		);
 	});
 });

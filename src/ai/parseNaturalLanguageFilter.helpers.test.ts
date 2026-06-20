@@ -11,14 +11,18 @@ import {
 } from "./parseNaturalLanguageFilter.helpers";
 
 describe("getApiKey", () => {
+	afterEach(() => {
+		vi.unstubAllEnvs();
+	});
+
 	it("returns the api key when set", () => {
-		import.meta.env.VITE_ANTHROPIC_API_KEY = "test-key";
+		vi.stubEnv("VITE_ANTHROPIC_API_KEY", "test-key");
 
 		expect(getApiKey()).toBe("test-key");
 	});
 
 	it("throws when api key is not set", () => {
-		import.meta.env.VITE_ANTHROPIC_API_KEY = undefined;
+		vi.stubEnv("VITE_ANTHROPIC_API_KEY", "");
 
 		expect(() => getApiKey()).toThrow(
 			"VITE_ANTHROPIC_API_KEY is not set. Add it to your .env file.",

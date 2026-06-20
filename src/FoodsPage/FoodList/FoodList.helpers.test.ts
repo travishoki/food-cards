@@ -10,7 +10,7 @@ import {
 } from "./FoodList.helpers";
 import { FOODS } from "../../data";
 
-jest.mock("../../data", () => ({
+vi.mock("../../data", () => ({
 	FOODS: [
 		{
 			category_key: "fruit",

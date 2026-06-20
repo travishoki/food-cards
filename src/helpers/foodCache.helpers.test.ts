@@ -1,4 +1,8 @@
-import { readFoodCache, writeFoodCache } from "./foodCache.helpers";
+import {
+	invalidateFoodCache,
+	readFoodCache,
+	writeFoodCache,
+} from "./foodCache.helpers";
 
 import type { Food } from "../types";
 
@@ -23,7 +27,7 @@ const localStorageMock = {
 	},
 };
 
-Object.defineProperty(global, "localStorage", {
+Object.defineProperty(globalThis, "localStorage", {
 	value: localStorageMock,
 	writable: true,
 });
@@ -109,5 +113,18 @@ describe("writeFoodCache", () => {
 		writeFoodCache([]);
 
 		expect(readFoodCache()).toEqual([]);
+	});
+});
+
+describe("invalidateFoodCache", () => {
+	it("causes readFoodCache to return null after invalidation", () => {
+		writeFoodCache([mockFood("taco")]);
+		invalidateFoodCache();
+
+		expect(readFoodCache()).toBeNull();
+	});
+
+	it("does not throw when the cache is already empty", () => {
+		expect(() => invalidateFoodCache()).not.toThrow();
 	});
 });
