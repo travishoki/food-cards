@@ -5,13 +5,12 @@ import {
 	MESSAGE_OPTIONS,
 } from "./parseNaturalLanguageFilter.const";
 import {
-	extractRawText,
 	parseDifficulty,
+	parseMessageToFilterResult,
 	parseSearch,
 	parseSort,
 	parseSubCategory,
 	parseTopCategory,
-	stripMarkdownFences,
 } from "./parseNaturalLanguageFilter.helpers";
 import { type Difficulty } from "../FoodsPage/Toolbar/DifficultyFilter.types";
 import { type SortDirection } from "../const/sortDirections.const";
@@ -39,11 +38,7 @@ export const parseNaturalLanguageFilter = async (
 
 	const message = await client.messages.create(MESSAGE_OPTIONS(query));
 
-	const raw = extractRawText(message.content);
-
-	const text = stripMarkdownFences(raw);
-
-	const parsed = JSON.parse(text) as Record<string, unknown>;
+	const parsed = parseMessageToFilterResult(message);
 
 	return {
 		difficulty: parseDifficulty(parsed.difficulty),

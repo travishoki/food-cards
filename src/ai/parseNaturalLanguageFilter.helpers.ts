@@ -56,3 +56,12 @@ export const parseTopCategory = (value: unknown): string | null => {
 export const extractRawText = (
 	content: { text?: string; type: string }[],
 ): string => (content[0].type === "text" ? (content[0].text ?? "") : "");
+
+export const parseMessageToFilterResult = (message: {
+	content: { text?: string; type: string }[];
+}): Record<string, unknown> => {
+	const raw = extractRawText(message.content);
+	const text = stripMarkdownFences(raw);
+
+	return JSON.parse(text) as Record<string, unknown>;
+};

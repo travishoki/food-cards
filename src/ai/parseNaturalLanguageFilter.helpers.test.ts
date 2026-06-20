@@ -1,6 +1,7 @@
 import {
 	extractRawText,
 	parseDifficulty,
+	parseMessageToFilterResult,
 	parseSearch,
 	parseSort,
 	parseSubCategory,
@@ -19,6 +20,30 @@ describe("extractRawText", () => {
 
 	it("returns empty string when text is undefined", () => {
 		expect(extractRawText([{ type: "text" }])).toBe("");
+	});
+});
+
+describe("parseMessageToFilterResult", () => {
+	it("parses a text content block into an object", () => {
+		const message = {
+			content: [{ text: '{"search":"pizza"}', type: "text" }],
+		};
+
+		expect(parseMessageToFilterResult(message)).toEqual({
+			search: "pizza",
+		});
+	});
+
+	it("strips markdown fences before parsing", () => {
+		const message = {
+			content: [
+				{ text: '```json\n{"search":"pizza"}\n```', type: "text" },
+			],
+		};
+
+		expect(parseMessageToFilterResult(message)).toEqual({
+			search: "pizza",
+		});
 	});
 });
 
