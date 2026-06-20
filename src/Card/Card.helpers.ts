@@ -6,12 +6,43 @@ import {
 	CARD_DETAIL_MAX_WIDTH,
 	CARD_GUTTER,
 	CARD_MAX_VIEWPORT,
+	GRAPHIC_HEIGHT,
+	GRAPHIC_WIDTH,
 	PAGE_SIDE_PADDING,
+	TITLES_ONLY_HEIGHT,
 } from "./Card.const";
+import { InStockMode } from "../context/cardView";
 import { double } from "../helpers/numbers";
+
+export type ViewMode = "full" | "image" | "titles";
 
 export const getCardHeight = (cardW: number) =>
 	cardW * (BACKGROUND_HEIGHT / BACKGROUND_WIDTH);
+
+export const getCardHeightForMode = (
+	effectiveMode: ViewMode,
+	cardWidth: number,
+): number => {
+	if (effectiveMode === "full") return getCardHeight(cardWidth);
+	if (effectiveMode === "image")
+		return cardWidth * (GRAPHIC_HEIGHT / GRAPHIC_WIDTH);
+
+	return cardWidth * (TITLES_ONLY_HEIGHT / BACKGROUND_WIDTH);
+};
+
+export const getCardClassName = (
+	effectiveMode: ViewMode,
+	isDetailView: boolean,
+	inStock: boolean,
+	inStockMode: InStockMode,
+): string => {
+	let className = `card card--${effectiveMode}`;
+	if (!isDetailView) className += " is-clickable";
+	if (inStock === false && inStockMode !== "hide")
+		className += " is-out-of-stock";
+
+	return className;
+};
 
 export const getDetailCardWidth = (viewportWidth: number) =>
 	// eslint-disable-next-line no-magic-numbers

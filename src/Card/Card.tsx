@@ -1,7 +1,5 @@
 import { CSSProperties } from "react";
 
-import { useNavigate, useParams } from "react-router-dom";
-
 import { Background } from "./Background/Background";
 import { Brand } from "./Brand/Brand";
 import {
@@ -35,22 +33,18 @@ import {
 	RECIPE_QR_SIZE,
 	TITLE_FONT_SIZE,
 	TITLE_TOP,
-	TITLES_ONLY_HEIGHT,
 	TOPPINGS_FONT_SIZE,
 } from "./Card.const";
-import {
-	getCardHeight,
-	getDetailCardWidth,
-	getListCardWidth,
-} from "./Card.helpers";
+import { getCardClassName } from "./Card.helpers";
 import { CardInfo } from "./CardInfo/CardInfo";
 import { DifficultyIcon } from "./DifficultyIcon/DifficultyIcon";
 import { Graphic } from "./Graphic/Graphic";
 import { Icon } from "./Icon/Icon";
 import { PrereleaseLabel } from "./PrereleaseLabel/PrereleaseLabel";
 import { Title } from "./Title/Title";
+import { useCardDimensions } from "./useCardDimensions";
+import { useCardNavigation } from "./useCardNavigation";
 import { useCardView } from "../context/cardView";
-import { useViewportWidth } from "../hooks/useViewportWidth";
 
 import type { Food } from "../types";
 import "./Card.scss";
@@ -100,48 +94,19 @@ const designVars: CSSProperties = {
 } as CSSProperties;
 
 export default function Card({ food, inStock }: CardProps) {
-	const navigate = useNavigate();
 	const { inStockMode, viewMode } = useCardView();
-	const { foodName, location, segment, topCategory } = useParams<{
-		foodName?: string;
-		location?: string;
-		segment?: string;
-		topCategory?: string;
-	}>();
-	const viewportWidth = useViewportWidth();
-	const isDetailView = !!foodName;
-	const effectiveMode = isDetailView ? "full" : viewMode;
-	const cardWidth = isDetailView
-		? getDetailCardWidth(viewportWidth)
-		: getListCardWidth(viewportWidth);
-	const cardHeight = (() => {
-		if (effectiveMode === "full") return getCardHeight(cardWidth);
-		if (effectiveMode === "image")
-			return cardWidth * (GRAPHIC_HEIGHT / GRAPHIC_WIDTH);
-
-		return cardWidth * (TITLES_ONLY_HEIGHT / BACKGROUND_WIDTH);
-	})();
-
-	const handleClick = isDetailView
-		? undefined
-		: () => {
-				if (location && topCategory) {
-					navigate(`/${location}/${topCategory}/food/${food.slug}`);
-				} else if (segment) {
-					navigate(`/${segment}/food/${food.slug}`);
-				} else {
-					navigate(`/food/${food.slug}`);
-				}
-			};
-
-	let className = `card card--${effectiveMode}`;
-	if (!isDetailView) className += " is-clickable";
-	if (inStock === false && inStockMode !== "hide")
-		className += " is-out-of-stock";
+	const { cardHeight, cardWidth, effectiveMode, isDetailView } =
+		useCardDimensions(viewMode);
+	const handleClick = useCardNavigation(food, isDetailView);
 
 	return (
 		<div
-			className={className}
+			className={getCardClassName(
+				effectiveMode,
+				isDetailView,
+				inStock,
+				inStockMode,
+			)}
 			data-category={food.category_key}
 			onClick={handleClick}
 			style={{
