@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 
 import { FilterSection } from "../../../FilterSection/FilterSection";
 import { parseNaturalLanguageFilter } from "../../../ai/parseNaturalLanguageFilter";
-import { TOP_CATEGORY_SUBCATEGORIES } from "../../../const/categories";
 import { useFoodFilters } from "../../../context/foodFilters";
 import { useUrlParams } from "../../../hooks/useUrlParams";
 
@@ -59,16 +58,9 @@ export const AiSearchInput = ({ onClose }: AiSearchInputProps) => {
 				setSort(result.sort);
 			}
 
-			if (result.subCategory !== null) {
-				const topCategory = Object.entries(
-					TOP_CATEGORY_SUBCATEGORIES,
-				).find(([, subs]) => subs.includes(result.subCategory!))?.[0];
-
-				if (topCategory) {
-					const base =
-						urlLocation === "home" ? "" : `/${urlLocation}`;
-					navigate(`${base}/${topCategory}`);
-				}
+			if (result.topCategory !== null) {
+				const base = urlLocation === "home" ? "" : `/${urlLocation}`;
+				navigate(`${base}/${result.topCategory}`);
 			}
 
 			onClose();
