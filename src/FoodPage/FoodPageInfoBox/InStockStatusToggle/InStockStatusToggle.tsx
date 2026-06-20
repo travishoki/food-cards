@@ -7,21 +7,21 @@ import { addFoodActivity, updateFoodInStock } from "../../../api/foods.api";
 import { invalidateFoodCache } from "../../../helpers/foodCache.helpers";
 import { fromFoodSlug } from "../../../helpers/slug.helpers";
 
-import "./InStockToggle.scss";
+import "./InStockStatusToggle.scss";
 
-type InStockToggleProps = {
+type InStockStatusToggleProps = {
 	docId: string | undefined;
 	inStock: boolean;
 	onToggle: (value: boolean) => void;
 	slug: string;
 };
 
-export const InStockToggle = ({
+export const InStockStatusToggle = ({
 	docId,
 	inStock,
 	onToggle,
 	slug,
-}: InStockToggleProps) => {
+}: InStockStatusToggleProps) => {
 	const [showConfirm, setShowConfirm] = useState(false);
 
 	const handleClick = () => {

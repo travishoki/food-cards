@@ -4,7 +4,7 @@ import { useCardView } from "../context/cardView";
 
 import "./CardViewToggle.scss";
 
-export const InStockToggle = () => {
+export const InStockFilterToggle = () => {
 	const { inStockMode, setInStockMode } = useCardView();
 
 	return (
