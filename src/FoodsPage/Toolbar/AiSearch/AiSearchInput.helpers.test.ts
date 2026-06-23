@@ -10,6 +10,14 @@ describe("buildTopCategoryPath", () => {
 			"/restaurant/main",
 		);
 	});
+
+	it("returns root when topCategory is null and on home", () => {
+		expect(buildTopCategoryPath("home", null)).toBe("/");
+	});
+
+	it("returns base location when topCategory is null and not on home", () => {
+		expect(buildTopCategoryPath("restaurant", null)).toBe("/restaurant");
+	});
 });
 
 describe("getErrorMessage", () => {

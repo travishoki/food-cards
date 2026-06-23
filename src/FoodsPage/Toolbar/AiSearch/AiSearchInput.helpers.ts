@@ -2,11 +2,11 @@ import { type Location, LOCATIONS } from "../../../const/locations.const";
 
 export const buildTopCategoryPath = (
 	urlLocation: Location,
-	topCategory: string,
+	topCategory: string | null,
 ): string => {
 	const base = urlLocation === LOCATIONS.home ? "" : `/${urlLocation}`;
 
-	return `${base}/${topCategory}`;
+	return topCategory ? `${base}/${topCategory}` : base || "/";
 };
 
 export const getErrorMessage = (err: unknown): string =>

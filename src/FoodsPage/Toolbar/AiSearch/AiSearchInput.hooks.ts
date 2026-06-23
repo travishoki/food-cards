@@ -4,8 +4,8 @@ import { useNavigate } from "react-router-dom";
 
 import { buildTopCategoryPath, getErrorMessage } from "./AiSearchInput.helpers";
 import { parseNaturalLanguageFilter } from "../../../ai/parseNaturalLanguageFilter";
+import { LOCATIONS } from "../../../const/locations.const";
 import { useFoodFilters } from "../../../context/foodFilters";
-import { useUrlParams } from "../../../hooks/useUrlParams";
 
 type UseAiSearchResult = {
 	error: string | null;
@@ -17,9 +17,8 @@ type UseAiSearchResult = {
 };
 
 export const useAiSearch = (onClose: () => void): UseAiSearchResult => {
-	const { setDifficulty, setSearch, setSort, setSubCategory } =
+	const { resetAll, setDifficulty, setSearch, setSort, setSubCategory } =
 		useFoodFilters();
-	const { urlLocation } = useUrlParams();
 	const navigate = useNavigate();
 	const [value, setValue] = useState("");
 	const [isLoading, setIsLoading] = useState(false);
@@ -39,6 +38,7 @@ export const useAiSearch = (onClose: () => void): UseAiSearchResult => {
 		try {
 			const result = await parseNaturalLanguageFilter(trimmed);
 
+			resetAll();
 			setSearch(result.search);
 			setDifficulty(result.difficulty);
 			setSubCategory(result.subCategory);
@@ -47,9 +47,7 @@ export const useAiSearch = (onClose: () => void): UseAiSearchResult => {
 				setSort(result.sort);
 			}
 
-			if (result.topCategory !== null) {
-				navigate(buildTopCategoryPath(urlLocation, result.topCategory));
-			}
+			navigate(buildTopCategoryPath(LOCATIONS.home, result.topCategory));
 
 			onClose();
 		} catch (err) {
