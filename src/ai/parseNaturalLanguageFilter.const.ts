@@ -1,8 +1,4 @@
-import {
-	CATEGORY_DATA,
-	TOP_CATEGORY_DATA,
-	TOP_CATEGORY_SUBCATEGORIES,
-} from "../const/categories";
+import { buildCategoryStructure } from "./parseNaturalLanguageFilter.helpers";
 
 import type { MessageCreateParamsNonStreaming } from "@anthropic-ai/sdk/resources";
 
@@ -15,18 +11,7 @@ export const MESSAGE_OPTIONS = (
 	system: SYSTEM_PROMPT,
 });
 
-const CATEGORY_STRUCTURE = Object.entries(TOP_CATEGORY_SUBCATEGORIES)
-	.map(([top, subs]) => {
-		const topLabel =
-			TOP_CATEGORY_DATA[top as keyof typeof TOP_CATEGORY_DATA]?.label ??
-			top;
-		const subsFormatted = subs
-			.map((s) => `${s} (${CATEGORY_DATA[s]?.label ?? s})`)
-			.join(", ");
-
-		return `- ${top} (${topLabel}): ${subsFormatted || "(no subcategories)"}`;
-	})
-	.join("\n");
+const CATEGORY_STRUCTURE = buildCategoryStructure();
 
 export const SYSTEM_PROMPT = `You are a food filter parser. The user will describe what food they want to find in natural language. Extract filter values from their query and respond ONLY with valid JSON matching this shape:
 

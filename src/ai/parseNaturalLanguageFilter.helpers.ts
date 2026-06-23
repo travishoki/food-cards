@@ -3,7 +3,13 @@ import {
 	DIFFICULTY_ONE,
 	type Difficulty,
 } from "../FoodsPage/Toolbar/DifficultyFilter.types";
-import { CATEGORIES, TOP_CATEGORIES } from "../const/categories";
+import {
+	CATEGORIES,
+	CATEGORY_DATA,
+	TOP_CATEGORIES,
+	TOP_CATEGORY_DATA,
+	TOP_CATEGORY_SUBCATEGORIES,
+} from "../const/categories";
 import {
 	SORT_DIRECTIONS,
 	type SortDirection,
@@ -75,6 +81,20 @@ export const getApiKey = (): string => {
 export const extractRawText = (
 	content: { text?: string; type: string }[],
 ): string => (content[0].type === "text" ? (content[0].text ?? "") : "");
+
+export const buildCategoryStructure = (): string =>
+	Object.entries(TOP_CATEGORY_SUBCATEGORIES)
+		.map(([top, subs]) => {
+			const topLabel =
+				TOP_CATEGORY_DATA[top as keyof typeof TOP_CATEGORY_DATA]
+					?.label ?? top;
+			const subsFormatted = subs
+				.map((s) => `${s} (${CATEGORY_DATA[s]?.label ?? s})`)
+				.join(", ");
+
+			return `- ${top} (${topLabel}): ${subsFormatted || "(no subcategories)"}`;
+		})
+		.join("\n");
 
 export const parseMessageToFilterResult = (message: {
 	content: { text?: string; type: string }[];
