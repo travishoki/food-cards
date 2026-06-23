@@ -1,10 +1,8 @@
 import Anthropic from "@anthropic-ai/sdk";
 
+import { MESSAGE_OPTIONS } from "./parseNaturalLanguageFilter.const";
 import {
-	ANTHROPIC_CLIENT_OPTIONS,
-	MESSAGE_OPTIONS,
-} from "./parseNaturalLanguageFilter.const";
-import {
+	getAnthropicClientOptions,
 	getApiKey,
 	parseDifficulty,
 	parseMessageToFilterResult,
@@ -28,7 +26,7 @@ export const parseNaturalLanguageFilter = async (
 	query: string,
 ): Promise<AiFilterResult> => {
 	const apiKey = getApiKey();
-	const client = new Anthropic(ANTHROPIC_CLIENT_OPTIONS(apiKey));
+	const client = new Anthropic(getAnthropicClientOptions(apiKey));
 	const message = await client.messages.create(MESSAGE_OPTIONS(query));
 	const parsed = parseMessageToFilterResult(message);
 

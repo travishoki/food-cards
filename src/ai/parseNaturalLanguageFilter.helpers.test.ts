@@ -1,5 +1,6 @@
 import {
 	extractRawText,
+	getAnthropicClientOptions,
 	getApiKey,
 	parseDifficulty,
 	parseMessageToFilterResult,
@@ -9,6 +10,15 @@ import {
 	parseTopCategory,
 	stripMarkdownFences,
 } from "./parseNaturalLanguageFilter.helpers";
+
+describe("getAnthropicClientOptions", () => {
+	it("returns client options with the api key and browser access enabled", () => {
+		expect(getAnthropicClientOptions("test-key")).toEqual({
+			apiKey: "test-key",
+			dangerouslyAllowBrowser: true,
+		});
+	});
+});
 
 describe("getApiKey", () => {
 	afterEach(() => {

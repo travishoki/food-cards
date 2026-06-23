@@ -1,12 +1,10 @@
-import { TOP_CATEGORY_SUBCATEGORIES } from "../const/categories";
+import {
+	CATEGORY_DATA,
+	TOP_CATEGORY_DATA,
+	TOP_CATEGORY_SUBCATEGORIES,
+} from "../const/categories";
 
-import type { ClientOptions } from "@anthropic-ai/sdk";
 import type { MessageCreateParamsNonStreaming } from "@anthropic-ai/sdk/resources";
-
-export const ANTHROPIC_CLIENT_OPTIONS = (apiKey: string): ClientOptions => ({
-	apiKey,
-	dangerouslyAllowBrowser: true,
-});
 
 export const MESSAGE_OPTIONS = (
 	query: string,
@@ -16,6 +14,19 @@ export const MESSAGE_OPTIONS = (
 	model: "claude-haiku-4-5-20251001",
 	system: SYSTEM_PROMPT,
 });
+
+const CATEGORY_STRUCTURE = Object.entries(TOP_CATEGORY_SUBCATEGORIES)
+	.map(([top, subs]) => {
+		const topLabel =
+			TOP_CATEGORY_DATA[top as keyof typeof TOP_CATEGORY_DATA]?.label ??
+			top;
+		const subsFormatted = subs
+			.map((s) => `${s} (${CATEGORY_DATA[s]?.label ?? s})`)
+			.join(", ");
+
+		return `- ${top} (${topLabel}): ${subsFormatted || "(no subcategories)"}`;
+	})
+	.join("\n");
 
 export const SYSTEM_PROMPT = `You are a food filter parser. The user will describe what food they want to find in natural language. Extract filter values from their query and respond ONLY with valid JSON matching this shape:
 
@@ -27,21 +38,8 @@ export const SYSTEM_PROMPT = `You are a food filter parser. The user will descri
   "sort": string | null         // one of the valid sort values below, or null
 }
 
-Category structure (topCategory → subcategories):
-${Object.entries(TOP_CATEGORY_SUBCATEGORIES)
-	.map(([top, subs]) =>
-		subs.length > 0
-			? `- ${top}: ${subs.join(", ")}`
-			: `- ${top}: (no subcategories)`,
-	)
-	.join("\n")}
-
-Category hints:
-- main = meals, lunch, dinner, breakfast, entrees
-- sides = side dishes
-- snack = snacking, quick bites, dairy, fruit, grains, protein, vegetables
-- drinks = beverages
-- sweets = sweet things, candy, dessert, cakes, cookies
+Category structure (topCategory (label): subcategory (label), ...):
+${CATEGORY_STRUCTURE}
 
 Valid sort values:
 - "asc" (alphabetical A-Z)
