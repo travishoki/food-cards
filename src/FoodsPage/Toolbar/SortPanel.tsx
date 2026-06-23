@@ -1,6 +1,7 @@
 import { FilterSection } from "../../FilterSection/FilterSection";
 import {
 	SORT_DIRECTIONS,
+	SORT_OPTIONS,
 	SortDirection,
 } from "../../const/sortDirections.const";
 
@@ -15,19 +16,13 @@ type SortPanelProps = {
 	value: SortDirection;
 };
 
-const OPTIONS: { dir: SortDirection; label: string }[] = [
-	{ dir: SORT_DIRECTIONS.asc, label: "A → Z" },
-	{ dir: SORT_DIRECTIONS.desc, label: "Z → A" },
-	{ dir: SORT_DIRECTIONS.difficultyAsc, label: "Easy → Hard" },
-];
-
 export const SortPanel = ({
 	onChange,
 	showDifficultySort,
 	value,
 }: SortPanelProps) => (
 	<FilterSection label="Sort:">
-		{OPTIONS.map((opt) => {
+		{SORT_OPTIONS.map((opt) => {
 			if (
 				opt.dir === SORT_DIRECTIONS.difficultyAsc &&
 				!showDifficultySort

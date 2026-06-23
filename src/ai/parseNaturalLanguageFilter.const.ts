@@ -1,4 +1,7 @@
-import { buildCategoryStructure } from "./parseNaturalLanguageFilter.helpers";
+import {
+	buildCategoryStructure,
+	buildSortValues,
+} from "./parseNaturalLanguageFilter.helpers";
 
 import type { MessageCreateParamsNonStreaming } from "@anthropic-ai/sdk/resources";
 
@@ -12,6 +15,7 @@ export const MESSAGE_OPTIONS = (
 });
 
 const CATEGORY_STRUCTURE = buildCategoryStructure();
+const SORT_VALUES = buildSortValues();
 
 export const SYSTEM_PROMPT = `You are a food filter parser. The user will describe what food they want to find in natural language. Extract filter values from their query and respond ONLY with valid JSON matching this shape:
 
@@ -27,9 +31,7 @@ Category structure (topCategory (label): subcategory (label), ...):
 ${CATEGORY_STRUCTURE}
 
 Valid sort values:
-- "asc" (alphabetical A-Z)
-- "desc" (alphabetical Z-A)
-- "difficulty-asc" (easiest first)
+${SORT_VALUES}
 
 IMPORTANT rules:
 - When you set subCategory, you MUST set topCategory to its parent from the category structure above

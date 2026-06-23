@@ -12,6 +12,7 @@ import {
 } from "../const/categories";
 import {
 	SORT_DIRECTIONS,
+	SORT_OPTIONS,
 	type SortDirection,
 } from "../const/sortDirections.const";
 
@@ -81,6 +82,9 @@ export const getApiKey = (): string => {
 export const extractRawText = (
 	content: { text?: string; type: string }[],
 ): string => (content[0].type === "text" ? (content[0].text ?? "") : "");
+
+export const buildSortValues = (): string =>
+	SORT_OPTIONS.map((opt) => `- "${opt.dir}" (${opt.description})`).join("\n");
 
 export const buildCategoryStructure = (): string =>
 	Object.entries(TOP_CATEGORY_SUBCATEGORIES)

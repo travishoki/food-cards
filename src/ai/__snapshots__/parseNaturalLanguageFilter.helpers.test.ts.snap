@@ -7,3 +7,9 @@ exports[`buildCategoryStructure > matches snapshot 1`] = `
 - snack (Snack): dairy (Dairy), fruit (Fruit), grains (Grain/Bread), protein (Protein), vegetables (Vegetables)
 - sweets (Sweets): candy (Candy), dessert (Dessert)"
 `;
+
+exports[`buildSortValues > matches snapshot 1`] = `
+"- "asc" (alphabetical A-Z)
+- "desc" (alphabetical Z-A)
+- "difficulty-asc" (easiest first)"
+`;

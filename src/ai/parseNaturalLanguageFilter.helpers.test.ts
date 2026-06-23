@@ -1,5 +1,6 @@
 import {
 	buildCategoryStructure,
+	buildSortValues,
 	extractRawText,
 	getAnthropicClientOptions,
 	getApiKey,
@@ -11,6 +12,12 @@ import {
 	parseTopCategory,
 	stripMarkdownFences,
 } from "./parseNaturalLanguageFilter.helpers";
+
+describe("buildSortValues", () => {
+	it("matches snapshot", () => {
+		expect(buildSortValues()).toMatchSnapshot();
+	});
+});
 
 describe("buildCategoryStructure", () => {
 	it("matches snapshot", () => {
