@@ -3,7 +3,13 @@ import {
 	buildSortValues,
 } from "./parseNaturalLanguageFilter.helpers";
 
+import type { ClientOptions } from "@anthropic-ai/sdk";
 import type { MessageCreateParamsNonStreaming } from "@anthropic-ai/sdk/resources";
+
+export const ANTHROPIC_CLIENT_OPTIONS = (apiKey: string): ClientOptions => ({
+	apiKey,
+	dangerouslyAllowBrowser: true,
+});
 
 export const MESSAGE_OPTIONS = (
 	query: string,

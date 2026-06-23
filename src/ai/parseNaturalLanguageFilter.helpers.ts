@@ -16,8 +16,6 @@ import {
 	type SortDirection,
 } from "../const/sortDirections.const";
 
-import type { ClientOptions } from "@anthropic-ai/sdk";
-
 export const stripMarkdownFences = (raw: string): string =>
 	raw
 		.replace(/^```[a-z]*\n?/i, "")
@@ -61,11 +59,6 @@ export const parseTopCategory = (value: unknown): string | null => {
 
 	return null;
 };
-
-export const getAnthropicClientOptions = (apiKey: string): ClientOptions => ({
-	apiKey,
-	dangerouslyAllowBrowser: true,
-});
 
 export const getApiKey = (): string => {
 	const apiKey = import.meta.env.VITE_ANTHROPIC_API_KEY as string | undefined;
