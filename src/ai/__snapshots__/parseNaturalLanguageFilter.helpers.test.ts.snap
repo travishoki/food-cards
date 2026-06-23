@@ -1,0 +1,9 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`buildCategoryStructure > matches snapshot 1`] = `
+"- drinks (Drinks): drinks (Drinks)
+- main (Main): breakfast (Breakfast), entree (Lunch/Dinner)
+- sides (Sides): sides (Sides)
+- snack (Snack): dairy (Dairy), fruit (Fruit), grains (Grain/Bread), protein (Protein), vegetables (Vegetables)
+- sweets (Sweets): candy (Candy), dessert (Dessert)"
+`;

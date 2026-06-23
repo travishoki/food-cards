@@ -13,27 +13,8 @@ import {
 } from "./parseNaturalLanguageFilter.helpers";
 
 describe("buildCategoryStructure", () => {
-	it("includes each topCategory key and label", () => {
-		const result = buildCategoryStructure();
-
-		expect(result).toContain("main (Main)");
-		expect(result).toContain("sweets (Sweets)");
-		expect(result).toContain("snack (Snack)");
-	});
-
-	it("includes subcategory keys and labels", () => {
-		const result = buildCategoryStructure();
-
-		expect(result).toContain("breakfast (Breakfast)");
-		expect(result).toContain("entree (Lunch/Dinner)");
-		expect(result).toContain("grains (Grain/Bread)");
-	});
-
-	it("produces one line per topCategory", () => {
-		const lines = buildCategoryStructure().split("\n");
-
-		expect(lines).toHaveLength(5);
-		expect(lines.every((l) => l.startsWith("- "))).toBe(true);
+	it("matches snapshot", () => {
+		expect(buildCategoryStructure()).toMatchSnapshot();
 	});
 });
 
