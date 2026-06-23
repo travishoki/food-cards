@@ -2,7 +2,6 @@ import {
 	buildCategoryStructure,
 	buildSortValues,
 	extractRawText,
-	getAnthropicClientOptions,
 	getApiKey,
 	parseDifficulty,
 	parseMessageToFilterResult,
@@ -22,15 +21,6 @@ describe("buildSortValues", () => {
 describe("buildCategoryStructure", () => {
 	it("matches snapshot", () => {
 		expect(buildCategoryStructure()).toMatchSnapshot();
-	});
-});
-
-describe("getAnthropicClientOptions", () => {
-	it("returns client options with the api key and browser access enabled", () => {
-		expect(getAnthropicClientOptions("test-key")).toEqual({
-			apiKey: "test-key",
-			dangerouslyAllowBrowser: true,
-		});
 	});
 });
 
