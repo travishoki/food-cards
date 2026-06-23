@@ -11,7 +11,7 @@ export const InfoBar = ({ text }: InfoBarProps) => (
 			<img
 				alt="Info Bar"
 				loading="lazy"
-				src="/card-accents/info-bar.png"
+				src="/images/card-accents/info-bar.png"
 			/>
 		</div>
 	</div>

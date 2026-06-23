@@ -9,6 +9,6 @@ export const Background = ({ categoryKey }: BackgroundProps) => (
 		alt=""
 		className="cardBg"
 		loading="lazy"
-		src={`/backgrounds/${categoryKey}.png`}
+		src={`/images/backgrounds/${categoryKey}.png`}
 	/>
 );

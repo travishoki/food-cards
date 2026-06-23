@@ -9,6 +9,6 @@ export const Icon = ({ categoryKey }: IconProps) => (
 		alt=""
 		className="iconImg"
 		loading="lazy"
-		src={`/icons/${categoryKey}.png`}
+		src={`/images/icons/${categoryKey}.png`}
 	/>
 );

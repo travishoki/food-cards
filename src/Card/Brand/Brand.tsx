@@ -17,7 +17,7 @@ export const Brand = ({ brand }: BrandProps) => {
 			className="brand-img"
 			loading="lazy"
 			onError={() => setErrored(true)}
-			src={`/brands/${brand}.png`}
+			src={`/images/brands/${brand}.png`}
 		/>
 	);
 };

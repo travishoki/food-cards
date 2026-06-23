@@ -36,7 +36,8 @@ export const buildFood =
 		const slug = food.slug ?? createFoodSlug(food.name, food.brand);
 		const top = TOP_OF_SUB[category_key];
 		const imageUrl =
-			food.image_url || `/graphics/${top}/${category_key}/${slug}.jpg`;
+			food.image_url ||
+			`/images/graphics/${top}/${category_key}/${slug}.jpg`;
 
 		return {
 			...food,

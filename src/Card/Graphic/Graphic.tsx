@@ -12,7 +12,7 @@ export const Graphic = ({ fullWidth, name, src }: GraphicProps) => (
 		className={`graphicImg ${fullWidth ? "graphicImg--full" : ""}`}
 		loading="lazy"
 		onError={(e) => {
-			e.currentTarget.src = "/missing/missing.jpg";
+			e.currentTarget.src = "/images/missing/missing.jpg";
 		}}
 		src={src}
 	/>

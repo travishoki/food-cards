@@ -42,7 +42,7 @@ $category-keys: (
 
 @each $key in $category-keys {
 	.card--titles[data-category="#{$key}"] {
-		background-image: url("/background-titles/#{$key}.png");
+		background-image: url("/images/background-titles/#{$key}.png");
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;

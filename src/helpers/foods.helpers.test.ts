@@ -81,21 +81,25 @@ describe("buildFood", () => {
 	});
 
 	describe("image_url derivation", () => {
-		it("uses /graphics/{top}/{sub}/{slug}.jpg from the slug", () => {
+		it("uses /images/graphics/{top}/{sub}/{slug}.jpg from the slug", () => {
 			const food = buildFood(CATEGORIES.dairy)("Grated Cheese");
 			expect(food.image_url).toBe(
-				"/graphics/snack/dairy/grated-cheese.jpg",
+				"/images/graphics/snack/dairy/grated-cheese.jpg",
 			);
 		});
 
 		it("uses the correct top category for entree", () => {
 			const food = buildFood(CATEGORIES.entree)("Pizza");
-			expect(food.image_url).toBe("/graphics/main/entree/pizza.jpg");
+			expect(food.image_url).toBe(
+				"/images/graphics/main/entree/pizza.jpg",
+			);
 		});
 
 		it("uses the correct top category for candy", () => {
 			const food = buildFood(CATEGORIES.candy)("Skittles");
-			expect(food.image_url).toBe("/graphics/sweets/candy/skittles.jpg");
+			expect(food.image_url).toBe(
+				"/images/graphics/sweets/candy/skittles.jpg",
+			);
 		});
 	});
 
